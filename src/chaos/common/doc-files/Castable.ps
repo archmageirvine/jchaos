@@ -1,0 +1,414 @@
+%!PS-Adobe-2.0
+%%Creator: dot version gviz1.5 (06-14-99)
+%%For: (sean) 
+%%Title: castable
+%%Pages: (atend)
+%%BoundingBox: 36 36 508 361
+%%EndComments
+%%BeginProlog
+save
+/DotDict 200 dict def
+DotDict begin
+
+%%BeginResource: procset
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+	dup 1 exch div /InvScaleFactor exch def
+	dup scale
+} bind def
+
+% styles
+/solid { } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw aligned label in bounding box aligned to current point
+% alignfactor tells what fraction to place on the left.
+% -.5 is centered.
+/alignedtext {			% text labelwidth fontsz alignfactor
+	/alignfactor exch def
+	/fontsz exch def
+	/width exch def
+	/text exch def
+	gsave
+		% even if node or edge is dashed, don't paint text with dashes
+		[] 0 setdash
+		currentpoint newpath moveto
+		text stringwidth pop
+		alignfactor mul fontsz -.3 mul rmoveto
+		text show
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+%%EndProlog
+%%Page: 1 1
+%%PageBoundingBox: 36 36 508 361
+%%PageOrientation: Portrait
+gsave
+35 35 473 326 boxprim clip newpath
+36 36 translate
+0 0 1 beginpage
+0 0 translate 0 rotate
+0.000 0.000 0.000 graphcolor
+14.00 /Times-Roman set_font
+
+%	Castable
+gsave 10 dict begin
+170 306 34 18 ellipse_path
+stroke
+gsave 10 dict begin
+170 307 moveto (Castable) 48 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	FreeCastable
+gsave 10 dict begin
+117 234 47 18 ellipse_path
+stroke
+gsave 10 dict begin
+117 235 moveto (FreeCastable) 72 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Castable -> FreeCastable
+newpath 157 289 moveto
+151 280 143 269 136 260 curveto
+stroke
+newpath 134 262 moveto
+130 252 lineto
+138 259 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	Actor
+gsave 10 dict begin
+224 234 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+224 235 moveto (Actor) 31 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Castable -> Actor
+newpath 183 289 moveto
+190 280 198 268 206 258 curveto
+stroke
+newpath 204 257 moveto
+212 251 lineto
+207 260 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	FreePowerUp
+gsave 10 dict begin
+49 162 49 18 ellipse_path
+stroke
+gsave 10 dict begin
+49 163 moveto (FreePowerUp) 77 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	FreeCastable -> FreePowerUp
+newpath 101 217 moveto
+92 208 81 197 72 186 curveto
+stroke
+newpath 70 188 moveto
+65 179 lineto
+74 184 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	MaterialGrowth
+gsave 10 dict begin
+171 162 55 18 ellipse_path
+stroke
+gsave 10 dict begin
+171 163 moveto (MaterialGrowth) 90 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Actor -> MaterialGrowth
+newpath 212 218 moveto
+206 209 197 197 190 187 curveto
+stroke
+newpath 189 189 moveto
+184 180 lineto
+192 186 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	Monster
+gsave 10 dict begin
+277 162 33 18 ellipse_path
+stroke
+gsave 10 dict begin
+277 163 moveto (Monster) 46 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Actor -> Monster
+newpath 236 218 moveto
+243 208 252 197 259 187 curveto
+stroke
+newpath 257 186 moveto
+265 179 lineto
+261 189 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	AbstractGenerator
+gsave 10 dict begin
+390 162 62 18 ellipse_path
+stroke
+gsave 10 dict begin
+390 163 moveto (AbstractGenerator) 103 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Actor -> AbstractGenerator
+newpath 247 224 moveto
+273 213 316 194 348 180 curveto
+stroke
+newpath 345 179 moveto
+355 177 lineto
+347 183 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	MaterialMonster
+gsave 10 dict begin
+132 90 57 18 ellipse_path
+stroke
+gsave 10 dict begin
+132 91 moveto (MaterialMonster) 93 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Monster -> MaterialMonster
+newpath 252 150 moveto
+230 138 196 122 171 109 curveto
+stroke
+newpath 171 112 moveto
+163 105 lineto
+173 107 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	Dragon
+gsave 10 dict begin
+238 90 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+238 91 moveto (Dragon) 41 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Monster -> Dragon
+newpath 268 145 moveto
+263 136 258 125 252 116 curveto
+stroke
+newpath 250 117 moveto
+247 107 lineto
+254 115 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	Caster
+gsave 10 dict begin
+315 90 28 18 ellipse_path
+stroke
+gsave 10 dict begin
+315 91 moveto (Caster) 35 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Monster -> Caster
+newpath 286 145 moveto
+291 136 296 125 302 116 curveto
+stroke
+newpath 300 115 moveto
+306 107 lineto
+304 117 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	UndeadMonster
+gsave 10 dict begin
+416 90 55 18 ellipse_path
+stroke
+gsave 10 dict begin
+416 91 moveto (UndeadMonster) 90 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Monster -> UndeadMonster
+newpath 301 149 moveto
+322 138 354 123 378 110 curveto
+stroke
+newpath 376 108 moveto
+386 105 lineto
+379 112 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	Wizard
+gsave 10 dict begin
+229 18 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+229 19 moveto (Wizard) 41 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Caster -> Wizard
+newpath 298 75 moveto
+285 65 268 50 254 39 curveto
+stroke
+newpath 253 41 moveto
+247 33 lineto
+256 38 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	Unicaster
+gsave 10 dict begin
+315 18 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+315 19 moveto (Unicaster) 53 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Caster -> Unicaster
+newpath 315 72 moveto
+315 64 315 55 315 46 curveto
+stroke
+newpath 313 46 moveto
+315 36 lineto
+318 46 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+
+%	Polycaster
+gsave 10 dict begin
+409 18 39 18 ellipse_path
+stroke
+gsave 10 dict begin
+409 19 moveto (Polycaster) 58 14.00 -0.50 alignedtext
+end grestore
+end grestore
+
+%	Caster -> Polycaster
+newpath 333 76 moveto
+347 66 366 51 381 39 curveto
+stroke
+newpath 379 37 moveto
+389 34 lineto
+382 41 lineto
+closepath
+gsave 0 setgray stroke grestore fill
+endpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+end
+restore
+%%EOF

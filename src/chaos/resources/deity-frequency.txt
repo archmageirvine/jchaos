@@ -1,0 +1,44 @@
+#
+# This file contains the frequency table for deities.
+#
+# It lists the spells that can be case by deities and their relative
+# frequency. It is used during spell casting by deities to select
+# which spell to use.  This file is only read once per game, so any
+# parsing cost is minimal.
+#
+# Each number should be in the range 0 to 100 inclusive.
+#
+chaos.common.spell.Archery                      10
+chaos.common.free.Points                        10
+chaos.common.spell.TouchOfGod                   2
+chaos.common.free.Bless                         10
+chaos.common.free.Curse                         5
+chaos.common.monster.Bat                        2
+chaos.common.monster.DireWolf                   2
+chaos.common.monster.GiantBeetle                2
+chaos.common.monster.GiantRat                   2
+chaos.common.monster.GiantSpider                2
+chaos.common.monster.Orc                        2
+chaos.common.monster.Skeleton                   2
+chaos.common.monster.Spider                     2
+chaos.common.growth.Fire                        2
+chaos.common.growth.Balefire                    10
+chaos.common.growth.DarkMatter                  30
+chaos.common.growth.Flood                       2
+chaos.common.spell.Vanish                       2
+chaos.common.growth.Earthquake                  2
+chaos.common.growth.Magma                       4
+chaos.common.spell.Bury                         2
+chaos.common.spell.Consecrate                   2
+chaos.common.free.LifeGiver                     2
+chaos.common.free.Storm                         2
+chaos.common.spell.Wake                         2
+chaos.common.spell.Thunderbolt                  10
+chaos.common.spell.Demote                       100
+chaos.common.spell.Promote                      100
+chaos.common.inanimate.Spawner                  40
+chaos.common.free.Horde                         20
+chaos.common.free.ForceSlam                     1
+chaos.common.free.SpaceMaker                    30
+chaos.common.spell.Armour                       20
+chaos.common.spell.Sanctify                     100

@@ -1,0 +1,9 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="notice" value="Copyright (c) &amp;#36;today.year. Real Time Genomics Limited.&#10;&#10;Use of this source code is bound by the Real Time Genomics Limited Software Licence Agreement&#10;for Academic Non-commercial Research Purposes only.&#10;&#10;If you did not receive a license accompanying this file, a copy must first be obtained by email&#10;from support@realtimegenomics.com.  On downloading, using and/or continuing to use this source&#10;code you accept the terms of that license agreement and any amendments to those terms that may&#10;be made from time to time by Real Time Genomics Limited." />
+    <option name="keyword" value="Copyright" />
+    <option name="allowReplaceKeyword" value="" />
+    <option name="myName" value="RTG" />
+    <option name="myLocal" value="true" />
+  </copyright>
+</component>

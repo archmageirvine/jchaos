@@ -1,0 +1,10 @@
+.#*
+*~
+*.class
+build.tmp
+.chaos
+.chaos_savedgame
+.settings
+.idea/workspace.xml
+.made
+out

@@ -1,0 +1,4 @@
+#Scenario=V1.0
+# Test file
+#width=3
+NoSuchCreature,WoodElf:1,chaos.common.inanimate.Rock

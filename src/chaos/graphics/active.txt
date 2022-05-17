@@ -1,0 +1,436 @@
+# These lines specify the graphics.  The first field is the name of the
+# spell class without the package prefix, the second field is "p" for
+# ping-pong mode, the third field is the main graphic sequence, the
+# fourth field, when present, is the death image.  Image numbers are
+# given in hexadecimal.
+#
+# Meaning of second field:
+# p ping-pong mode
+# s static mode (one image slected at random from among them)
+# x cycle mode
+# q 4-way context sensitive
+#
+# Entries with "_M" are used for mounted versions.
+# Entries with "_(number)" are used for images that change based on life/10
+#
+Abath           p       1,2,3   0
+Abduction       x       4
+Achiyalabopa    p       6,7,8   5
+AcidRain        x       9
+AerialServant   p       b,c,d   a
+Aesculapius     x       f       e
+Agathion        x       11      10
+AirElemental    x       12,13,14
+Alliance        x       15
+AlterReality    x       16
+Amnesia         x       a2
+Amphisbaena     p       18,19,1a,1b     17
+Animate         x       1c
+AppleWood       s       1d,ee,c8,42b
+Arborist        x       1e
+Archery         x       1f
+ArcticWolf      p       21,22,23        20
+Armour          x       24
+Aviary          x       25
+Azer            p       27,28,29,2a,2b  26
+Baboon          p       2d,2e,2f        2c
+BallLightning   x       30
+Banderlog       p       32,33,34        31
+Bandit          x       36              35
+BasaltGolem     x       38              37
+Basilisk        p       3a,3b,3c        39
+Bat             p       3e,3f,40        3d
+BattleCry       x       41
+Betrayal        x       42
+Biohazard       x       43
+BipedalGenerator        x       44,45
+BirdLord        p       47,48,49        46
+Bless           x       4a
+BlueDragon      p       4c,4d,4e        4b
+Bodak           p       50,51,52        4f
+Boil            x       53
+Bolter          x       55,56,57,58     54
+Wisdom          x       59
+Idiocy          x       5a
+BrownBear       p       5c,5d,5e        5b
+Bury            p       5f
+Camel           p       61,62,63        60
+CatLord         x       65,66,67,68     64
+Centaur         p       6a,6b,6c        69
+NamedCentaur    p       3b6,3b7,3b8     3b9
+ChaosLord       x       6d
+Charm           x       6e
+Cheetah         p       70,71,72        6f
+Chronomancer    x       74              73
+ClayGolem       x       76              75
+Cloak           x       77
+Coercion        x       78
+Combat          x       79
+Command         x       7a
+Confidence      x       7b
+Consecrate      x       7c
+Convert         x       7d
+CrimsonDeath    p       7e,7f,80
+Crocodile       p       82,83,84        81
+CrystalBall     x       85
+Curse           x       86
+CursedSword     x       87
+Dalek           p       89,8a,8b        88
+Dao             x       8d              8c
+DarkCitadel     x       8e
+DarkPower       x       8f
+DarkWood        x       90
+DeadRevenge     x       91
+DeathBringer    x       92
+Demon           p       93,94,95
+DemonicTouch    x       96
+Depth           x       97
+Derro           p       99,9a,9b        98
+DestroyWall     x       9c
+Devastation     x       9d
+DireWolf        p       9f,a0,a1        9e
+Disection       x       a3
+Disrupt         x       a4
+Double          x       a5
+DragonNest      x       a6,a7,a8
+Drain           x       a9
+DreadElf        p       ab,ac,ad        aa
+Drelb           p       ae,af,b0
+Earthbind       x       b2
+Eagle           p       b4,b5,b6,b7,b8  b3
+EarthElemental  p       b9,ba,bb
+Earthquake      x       bc
+EarthquakeShield        x       bd
+Elephant        p       bf,c0,c1        be
+ElfBoots        x       c2
+Elm             x       c3
+EmeraldDragon   p       c5,c6,c7        c4
+Exit            x       3cd,3ce,3cf,3d0,3d1,3d2,3d3,3d4,3d5,3d6,3d7,3d8
+Exorcise        x       c9
+Falcon          p       cc,cd,ce        cb
+Faun            p       d0,d1,d2        cf
+Fir             x       d3
+Fire            x       d4,d5,d6
+FireBat         p       d8,d9,da        d7
+FireDemon       p       db,dc,dd
+FireElemental   p       de,df,e0
+FireShield      x       e1
+Fireball        x       e2
+FleshToStone    x       e3
+FloatingEye     x       e5      e4
+FloodShield     x       e9
+Fly             x       ea
+Free            x       eb
+FreeAll         x       ec
+Freeze          x       ed
+Generator       x       3c1,3c2,3c3,3c4,3c5,3c6,3c7,3c8,3c9,3ca,3cb,3cc
+Ghast           p       ef,f0,f1
+Ghost           p       f2,f3,f4
+Ghoul           p       f5,f6,f7
+GiantBeetle     p       f9,fa,fb        f8
+Megabeetle      p       3ee,3ef,3f0     3f1
+GiantRat        p       fd,fe,ff        fc
+GiantSpider     p       101,102,103     100
+Goblin          p       105,106,107     104
+GoblinBomb      p       43c,43d,43e     104
+GoldenDragon    p       109,10a,10b     108
+GooeyBlob       p       10c,10d,10e
+Gorilla         p       110,111,112     10f
+Hex             x       113,303,304,305,306,307,308,309,30a,30b,30c,30d
+GrayElf         p       115,116,117     114
+GreenDragon     p       119,11a,11b     118
+GrizzlyBear     p       120,121,122     11f
+Gryphon         p       124,125,126     123
+Halfling        p       128,129,12a     127
+Harpy           p       12c,12d,12e     12b
+Haste           x       12f
+Haunt           p       130,131,132
+HiddenHorror    p       1ab,1ac,1ad     1aa
+Hide            x       133
+HigherDevil     p       134,135,136
+Hippocrates     x       138     137
+Horror          x       139
+Horse           p       13b,13c,13d     13a
+Hybsil          p       13f,140,141     13e
+Hydra           p       143,144,145     142
+Hyperclone      x       146
+IceBreath       x       147
+Imp             p       149,14a,14b,14c,14d     148
+Invert          x       14e
+Iridium         p       150,151,152     14f
+IrvinesInvulnerability  x               153
+Jaguar          p       155,156,157     154
+Jann            p       159             158
+Joker           x       15a
+JujuZombie      p       15b,15c,15d
+Justice         x       15e
+Kill            x       15f
+KingCobra       p       161,162,163     160
+Leopard         p       165,166,167     164
+LesserDevil     p       168,169,16a
+Level           x       16b
+Lich            x       16c
+LichLord        x       16d
+LifeGiver       x       3f2
+Lightning       x       16e
+Lion            p       170,171,172     16f
+LifeAttack      x       173
+MagicBolt       x       174
+MagicBow        x       175
+MagicCastle     x       176
+MagicGlass      x       177
+MagicKnife      x       178
+Protection      x       179
+MagicSword      x       17a
+MagicWand       x       17b
+MagicWood       x       17c
+ManaBattery     x       17d
+Manticore       p       17f,180,181     17e
+Marid           x       183             182
+MassMorph       x       184
+Materialize     x       185
+Meddle          x       186
+MeteorStorm     x       187
+MightyOrc       p       1ab,1ac,1ad     1aa
+MindFlayer      p       189,18a,18b     188
+Willy           p       18c
+Mount           x       18d
+MoveIt          x       18e
+MudMan          p       190     18f
+MullacDeIrvine  p       192     191
+Mutate          x       193
+Necromancer     p       195     194
+Necropotence    x       196
+NeoOtyugh       p       198,199,19a     197
+Nightmare       p       19b,19c,19d
+NoMount         x       19f
+Nuke            x       1a0
+Ogre            p       1a2,1a3,1a4     1a1
+OgreAssassin    p       1a2,1a3,1a4     1a1
+OgreMage        p       1a2,1a3,1a4     1a1
+OgreWarrior     p       1a2,1a3,1a4     1a1
+OrangeJelly     p       1a7,1a8,1a9
+Orc             p       1ab,1ac,1ad     1aa
+Orcs            x       1ab
+ParadigmShift   x       1ae
+Pegasus         p       1b1,1b2,1b3,1b4 1b0
+Pit             x       1b5
+PlasmaBeam      x       1b6
+PlatinumDragon  p       1b8,1b9,1ba     1b7
+Points          x       1bb
+PoisonDagger    x       1bc
+Pool            x       1bd
+PowerWall       x       1be
+PowerWallHorizontal     x       1bf
+PowerWallVertical       x       1c0
+Pseudodragon    p       1c2,1c3,1c4     1c1
+Pyrohydra       p       143,144,145     142
+Pyrotechnics    x       1c5
+Python          p       1c7,1c8,1c9     1c6
+Quench          x       1ca
+Quickshot       x       1cb
+Nuked           x       1cc,1cd,1ce
+RaiseDead       x       1cf
+RangeBoost      x       1d0
+Sanctify        x       1d1
+RedDragon       p       1d3,1d4,1d5     1d2
+Reflector       x       1d6
+Reincarnate     x       1d7
+Replicate       x       1d8
+Repulsion       x       1d9
+Request         x       1da
+Restoration     x       1db
+Reveal          x       1dc
+Ride            x       1dd
+Robot           p       1df,1e0,1e1     1de
+Rock            s       1e2,3bd,3be,3bf,3c0
+Roper           p       1e3,1e4,1e5,1e6,1e7,1e8,1e9,1ea,1eb
+Elixir          x       1ec
+Separation      x       1ed
+Shadow          p       1ee,1ef,1f0,1f1,1f2,1f3,1f4
+ShadowCity      x       1f5
+ShadowDragon    p       1f7,1f8,1f9     1f6
+ShadowWood      x       1fa
+ShapeChanger    x       1fc,1fd,1fe,1ff,200,201,202,203,203,205,206,207,208     1fb
+Shocker         x       209
+Simulacrum      x       20a
+Skeleton        p       20b,20c,20d,20e,20f,210,211
+SkeletonWarrior p       20b,20c,20d,20e,20f,210,211
+Sleep           x       212
+Stop            x       213
+SnowLeopard     p       215,216,217     214
+Solar           p       218,219,21a
+Spectator       x       21c,21d,21e     21b
+Speed           x       220
+Spider          p       222,223,224     221
+Spriggan        p       226,227,228,229,22a     225
+StandardWall    s       324,325,326,327,328,329,32a,22b
+Still           x       22c
+StoneGiant      p       22e,22f,230     22d
+StoneGolem      p       232             231
+Storm           x       233
+StrongWall      s       333,334,335,336,337
+Subversion      x       235
+Summons         x       236
+Swap            x       237
+TRex            p       239,23a,23b     238
+Teleport        x       23c
+Tempest         x       23d,23e,23f,3e5,3e6,3e7,3e8,3e9
+Priest          p       241,242,243     240
+Thundermare     p       245,246,247     244
+Tiger           p       249,24a,24b     248
+Torment         x       24c
+TouchOfGod      x       24d
+Triple          x       24e
+Troll           p       250,251,252     24f
+Turmoil         x       253
+Uncertainty     x       255
+Unicorn         p       257,258,259     256
+Vampire         p       25b,25c,25d     25a
+Vanish          x       25e
+Vengeance       x       25f
+VioletFungi     p       260,261,262
+Virtue          x       263
+Vitality        x       264
+Volcano         x       265,ca,e6,e7,e8,11c,11d,11e
+Vortex          x       266,267,268
+Vulture         p       26a,26b,26c     269
+Wake            x       26d
+WaspNest        x       26e
+WaterElemental  p       26f,270,271
+WeakWall        s       32b,32c,32d,32e,32f,330,331,332
+Web             s       273,274,275,276
+WhiteDragon     p       278,279,27a     277
+Wight           p       27b,27c,27d
+Wizard1         p       27e
+Wizard2         p       27f,280,281
+Wizard15         p       282
+Wizard4         p       283
+Wizard13         p       284
+Wizard6         x       285,286,287,288,289,28a
+Wizard7         x       28b,28c,28d,28e,28f,290,291,292,293,294,295,296
+Wizard8         x       297
+Wizard11        x       1af
+Wizard12        x       3de,3df,3e0,3e1
+Wizard5         x       3e2
+Wizard14        x       3e3
+Wizard3         x       3e4
+WizardWings     x       298
+Wolverine       p       29a,29b,29c     299
+WoodElf         p       29e,29f,2a0     29d
+Wraith          p       2a1,2a2,2a3
+XRay            x       2a4
+Zombie          p       2a5,2a6,2a7
+Heal            x       2a8
+MassResurrect   x       2a9
+Fortitude       x       2aa
+Dexterity       x       2ab
+Assurance       x       2ac
+Anger           x       2ad
+Sharpshooting   x       2ae
+Venom           x       2af
+Helmet          x       2b0
+MagicShield     x       2b1
+Talisman        x       2b2
+Amulet          x       2b3
+Arsenal         p       2b4,2b5,2b6
+Armoury         p       2b7,2b8,2b9
+Wizard9         x       2ba
+Wizard10        x       2bb
+Spring          x       2bc,2bd,2be
+Pentagram       x       2bf,2f8,2f9,2fa,2fb,2fc,2fd,2fe,2ff,300,301,302
+Horse_M         p       2c0,2c1,2c2     13a
+Nightmare_M     p       2c3,2c4,2c5
+Unicorn_M       p       2c6,2c7,2c8     256
+Pegasus_M       p       2c9,2ca,2cb,2cc 1b0
+Gryphon_M       p       124,2cd,2ce     123
+Manticore_M     p       2cf,2d0,2d1     17e
+Thundermare_M   p       2d2,2d3,2d4     244
+Iridium_M       p       2d5,2d6,2d7     14f
+Centaur_M       p       2d8,2d9,2da     69
+NamedCentaur_M  p       3ba,3bb,3bc     3b9
+Hybsil_M        p       2db,2dc,2dd     13e
+Abath_M         p       2de,2df,2e0     0
+Camel_M         p       2e1,2e2,2e3     60
+ToxicWaste      x       2e4,2e5,2e6
+Disease         x       2e7
+Stupidity       x       2e8
+Clumsy          x       2e9
+Countermand     x       2ea
+Insecurity      x       2eb
+Conifer         x       2ec
+Enfeeblement    x       2ed
+Nullify         x       2ee
+Shortsightedness        x       2f0
+Impair          x       2ef
+BowBreaker      x       2f1
+Heptagram       x       2f2,30e,30f,310,311,312
+Spectre         p       21f,2f3,2f4,2f5,2f6
+Druid           x       b1      2f7
+Opinicus        p       314,315,316     313
+Opinicus_M      p       314,317,318     313
+Phoenix         x       319,31a,31b,31c 31d
+MrStrong        p       1a6,254,31e     31f
+FenceHorizontal x       320
+FenceVertical   x       321
+Acquisition     x       322
+Ferengi         x       323
+Merge           x       272
+Gollop_9        x       338,339,33a,33b,33c,33d,33e,33f,340,341,342,343
+Gollop_8        x       344,345,346,347,348,349,34a,34b,34c,34d,34e,34f
+Gollop_7        x       350,351,352,353,354,355,356,357,358,359,35a,35b
+Gollop_6        x       35c,35d,35e,35f,360,361,362,363,364,365,366,367
+Gollop_5        x       368,369,36a,36b,36c,36d,36e,36f,370,371,372,373
+Gollop_4        x       374,375,376,377,378,379,37a,37b,37c,37d,37e,37f
+Gollop_3        x       380,381,382,383,384,385,386,387,388,389,38a,38b
+Gollop_2        x       38c,38d,38e,38f,390,391,392,393,394,395,396,397
+Gollop_1        x       398,399,39a,39b,39c,39d,39e,39f,3a0,3a1,3a2,3a3
+Gollop_0        x       3a4,3a5,3a6,3a7,3a8,3a9,3aa,3ab,3ac,3ad,3ae,3af
+Gollop          x       3a4,3a5,3a6,3a7,3a8,3a9,3aa,3ab,3ac,3ad,3ae,3af
+Herbicide       x       19e
+DarthVader      p       3b0,3b1,3b2,3b3,3b4,3b5 234
+Superman        p       3d9,3da,3db,3dc 3dd
+DarkElf         p       3eb,3ec,3ed     3ea
+CarnivorousApe  p       3f3,3f4,3f5     3f6
+Rampage         x       3f7
+BlackDragon     p       3f8,3f9,3fa     3fb
+Orange          p       3fc,3fd,3fe     3ff
+Pliers          p       400,401,402,403     404
+SwissKnife      p       405,406,407,408     409
+Diplodocus      p       40a,40b,40c         40d
+Horace          x       40e,40f,410,411,412,413,414
+LifeLeech       x       415
+NamedDeity      x       416,429,42a
+Thunderbolt     x       417
+Demote          x       418
+Balefire        x       419,41a,41b
+DarkMatter      x       41c,41d,41e,41f,420,421
+Promote         x       422
+Magma           x       423
+ForceSlam       x       424
+SpaceMaker      x       425
+Shadowmare      p       426,427,428
+NamedSnake      p       42c,42d,42e     42f
+Balrog          p       430,431,432
+DiamondSword    p       433,434
+Tombstone       s       435
+Flerken         p       436,437,438,439,43a     43b
+Nilbog          p       43f,440,441             442
+Hyadic          x       443
+Demonify        x       444
+DragonAscent    x       445
+Alien8          p       446,447,448     449
+Spiky           x       44a
+CrackedEgg      x       44b
+Cylinder        x       44c,44d,44e,450     44f
+Skulkrin        p       451,452,453         454
+ForceFence      q       455,456,457,458,459,45a,45b,45c,45d,45e,45f,460,461,462,463,464
+Quazatron       x       465,466,467,468,469     46a
+Vampyr          p       46b,46c,46d         46e
+DarkCitadel_M   x       46f,470
+MagicCastle_M   p       471,472,473
+ShadowCity_M    x       474
+SkeletonLord    p       475,476,477,478,479
+Acromantula     p       47a,47b,47c     47d
+
+#next free 47e

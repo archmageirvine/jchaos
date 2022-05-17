@@ -1,0 +1,50 @@
+# Mapping from Castable to one or more sound resources that can
+# be played during special combat for the nominated Castable.
+# Lines starting with # are comments; empty lines are ignored.
+# Expects lines with the form of a fully-qualified Castable,
+# whitespace, fully-qualified resource name.
+
+chaos.common.inanimate.WaspNest chaos/resources/sound/special/wasp
+chaos.common.inanimate.Roper chaos/resources/sound/special/slurp
+chaos.common.inanimate.Roper chaos/resources/sound/special/slurp1
+chaos.common.inanimate.Roper chaos/resources/sound/special/slurp2
+chaos.common.monster.MindFlayer chaos/resources/sound/special/slurp
+chaos.common.monster.MindFlayer chaos/resources/sound/special/slurp1
+chaos.common.monster.MindFlayer chaos/resources/sound/special/slurp2
+chaos.common.monster.Iridium chaos/resources/sound/special/blast
+chaos.common.monster.OgreMage chaos/resources/sound/special/zingzing
+chaos.common.monster.Priest chaos/resources/sound/special/zingzing
+chaos.common.mythos.DarthVader chaos/resources/sound/special/saber
+chaos.common.mythos.Orange chaos/resources/sound/special/squirt
+chaos.common.mythos.Alien8 chaos/resources/sound/special/alien
+chaos.common.mythos.Skulkrin chaos/resources/sound/special/skulkrin
+chaos.common.mythos.Quazatron chaos/resources/sound/special/skulkrin
+chaos.common.monster.Shadowmare chaos/resources/sound/special/hic
+
+chaos.common.inanimate.DarkWood chaos/resources/sound/special/tree_attack
+chaos.common.inanimate.Conifer chaos/resources/sound/special/crowd
+chaos.common.inanimate.Fir chaos/resources/sound/special/crowd
+chaos.common.inanimate.MagicGlass chaos/resources/sound/special/gasps
+chaos.common.inanimate.ToxicWaste chaos/resources/sound/special/drain
+chaos.common.inanimate.Heptagram chaos/resources/sound/special/hic
+chaos.common.inanimate.Hex chaos/resources/sound/special/hic
+chaos.common.inanimate.Web chaos/resources/sound/special/web
+chaos.common.inanimate.Armoury chaos/resources/sound/special/armoury
+chaos.common.inanimate.Arsenal chaos/resources/sound/special/armoury
+chaos.common.inanimate.Vortex chaos/resources/sound/special/vortex
+chaos.common.inanimate.Spring chaos/resources/sound/special/spring
+chaos.common.inanimate.Pentagram chaos/resources/sound/special/pentagram
+chaos.common.growth.VioletFungi chaos/resources/sound/special/sneeze
+chaos.common.growth.VioletFungi chaos/resources/sound/special/fungi
+chaos.common.growth.VioletFungi chaos/resources/sound/special/squirt
+chaos.common.growth.Spiky chaos/resources/sound/special/electric
+chaos.common.growth.Spiky chaos/resources/sound/special/alien
+
+# Healers
+chaos.common.monster.Hippocrates chaos/resources/sound/special/heal
+chaos.common.monster.Aesculapius chaos/resources/sound/special/heal
+chaos.common.monster.SkeletonLord chaos/resources/sound/special/heal
+chaos.common.inanimate.AppleWood chaos/resources/sound/special/heal
+chaos.common.inanimate.Pool chaos/resources/sound/special/heal
+chaos.common.inanimate.Volcano chaos/resources/sound/special/volcano
+

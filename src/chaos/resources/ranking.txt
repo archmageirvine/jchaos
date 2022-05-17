@@ -1,0 +1,137 @@
+#
+# This file contains a ranking table for Domination.
+#
+# It is recommended that you do not alter this file without first making
+# a backup copy of the file. When altering the file please heed the
+# warnings below; failure to do so could result in faulty game behaviour.
+# If you are not confident at altering text files, this is probably
+# not a good place to practice.
+#
+# Anything appearing after a # in this file is treated as a comment.
+# It is read once at the start of the game.
+#
+# Each Castable which can appear on a spell list should appear exactly
+# once in this file.  It provides a ranking for the spells used in by
+# the OrdinarySelector for spell selection.
+#
+# Each line is a list of spell of the same rank.  The lowest ranked
+# spells appear on the first line and the highest ranked spells on
+# the last line.  Roughly speaking, the rank is how useful the spell
+# is in the absence of all other information.  Thus, very powerful
+# spells like "Touch of God" have a high rank and dubious spells like
+# "FreeAll" have a low rank.
+#
+# Based on 50000 AI games and hand tweaks.
+#
+chaos.common.free.FreeAll,chaos.common.spell.Invert,chaos.common.free.Hide
+chaos.common.inanimate.FenceHorizontal,chaos.common.inanimate.Web
+chaos.common.free.Countermand,chaos.common.spell.Earthbind,chaos.common.spell.Clumsy,chaos.common.free.Command
+chaos.common.spell.Fly,chaos.common.inanimate.ToxicWaste,chaos.common.inanimate.Hex,chaos.common.inanimate.Heptagram,chaos.common.spell.Bury
+chaos.common.free.Separation,chaos.common.spell.Betrayal,chaos.common.spell.Convert
+chaos.common.inanimate.Volcano
+chaos.common.inanimate.Tempest,chaos.common.inanimate.Vortex,chaos.common.inanimate.Willy
+chaos.common.free.MeteorStorm,chaos.common.spell.Swap,chaos.common.free.Pyrotechnics
+chaos.common.growth.Fire,chaos.common.growth.Balefire,chaos.common.growth.DarkMatter,chaos.common.growth.Earthquake,chaos.common.growth.Magma,chaos.common.growth.Flood,chaos.common.free.Still,chaos.common.free.AcidRain,chaos.common.free.Quench,chaos.common.spell.Restoration,chaos.common.free.Boil,chaos.common.free.Storm,chaos.common.free.DestroyWall
+chaos.common.spell.PoisonDagger
+chaos.common.free.ElfBoots,chaos.common.free.Mutate,chaos.common.free.Disection,chaos.common.free.Meddle,chaos.common.free.Virtue
+chaos.common.free.Assurance,chaos.common.free.Insecurity,chaos.common.free.Stupidity,chaos.common.spell.Idiocy
+chaos.common.spell.CursedSword,chaos.common.spell.DemonicTouch
+chaos.common.spell.Reveal,chaos.common.free.Turmoil
+chaos.common.monster.Spectator
+chaos.common.spell.FireShield,chaos.common.spell.FloodShield,chaos.common.spell.EarthquakeShield,chaos.common.spell.Protection,chaos.common.free.MagicShield,chaos.common.free.Amulet,chaos.common.spell.Wisdom
+chaos.common.monster.AerialServant
+chaos.common.monster.MindFlayer,chaos.common.monster.Chronomancer
+chaos.common.monster.GiantRat,chaos.common.monster.GiantSpider,chaos.common.monster.GiantBeetle,chaos.common.monster.GoblinBomb,chaos.common.monster.Goblin,chaos.common.monster.Orc,chaos.common.monster.Spider,chaos.common.monster.Python,chaos.common.monster.KingCobra
+chaos.common.spell.Disease,chaos.common.spell.BowBreaker
+chaos.common.spell.MagicSword,chaos.common.free.MagicKnife
+chaos.common.free.CrystalBall
+chaos.common.free.MoveIt,chaos.common.spell.Hyadic
+chaos.common.free.Drain,chaos.common.spell.Demote
+chaos.common.spell.LifeAttack,chaos.common.spell.Fireball
+chaos.common.free.MagicWand
+chaos.common.free.BattleCry,chaos.common.spell.Freeze
+chaos.common.monster.Haunt,chaos.common.monster.Solar
+chaos.common.monster.DireWolf,chaos.common.monster.Troll,chaos.common.monster.Ogre,chaos.common.monster.Faun,chaos.common.monster.Gorilla,chaos.common.monster.Derro,chaos.common.monster.Spriggan,chaos.common.monster.Bandit,chaos.common.monster.Imp,chaos.common.monster.Halfling
+chaos.common.free.Points
+chaos.common.inanimate.MagicGlass,chaos.common.inanimate.WeakWall,chaos.common.inanimate.StandardWall,chaos.common.inanimate.PowerWall,chaos.common.inanimate.Rock,chaos.common.inanimate.Fir,chaos.common.inanimate.Elm,chaos.common.inanimate.Pit,chaos.common.inanimate.CrackedEgg,chaos.common.inanimate.AppleWood,chaos.common.inanimate.StrongWall,chaos.common.inanimate.ForceFence
+chaos.common.monster.JujuZombie,chaos.common.monster.Zombie,chaos.common.monster.Skeleton,chaos.common.monster.Ghost,chaos.common.monster.Wraith,chaos.common.monster.Wight,chaos.common.monster.Ghoul,chaos.common.monster.Spectre,chaos.common.monster.Drelb,chaos.common.monster.CrimsonDeath,chaos.common.monster.Ghast
+chaos.common.monster.Harpy,chaos.common.monster.Horse,chaos.common.monster.Elephant,chaos.common.monster.Lion,chaos.common.monster.BrownBear,chaos.common.monster.GrizzlyBear,chaos.common.monster.Crocodile,chaos.common.monster.MightyOrc,chaos.common.monster.Basilisk,chaos.common.monster.Bat,chaos.common.monster.Vulture,chaos.common.monster.Hippocrates,chaos.common.monster.WoodElf,chaos.common.monster.GrayElf,chaos.common.monster.Amphisbaena,chaos.common.monster.Banderlog,chaos.common.monster.Baboon,chaos.common.monster.Azer,chaos.common.monster.FireBat,chaos.common.monster.Wolverine,chaos.common.monster.ArcticWolf,chaos.common.monster.OgreWarrior,chaos.common.monster.Phoenix,chaos.common.monster.MudMan,chaos.common.monster.Falcon,chaos.common.monster.Druid,chaos.common.monster.NeoOtyugh
+chaos.common.spell.Animate,chaos.common.spell.Teleport,chaos.common.spell.Sleep,chaos.common.spell.Wake,chaos.common.spell.FleshToStone
+chaos.common.spell.Armour,chaos.common.spell.Speed
+chaos.common.free.Coercion,chaos.common.free.Necropotence,chaos.common.free.Amnesia,chaos.common.spell.Archery
+chaos.common.inanimate.Roper
+chaos.common.free.Materialize,chaos.common.spell.Promote
+chaos.common.spell.DarkPower,chaos.common.spell.Justice,chaos.common.spell.Vengeance,chaos.common.spell.Exorcise,chaos.common.spell.Consecrate
+chaos.common.free.Bless
+chaos.common.monster.Eagle,chaos.common.monster.Dalek,chaos.common.monster.BirdLord
+chaos.common.spell.Stop,chaos.common.free.Haste
+chaos.common.spell.Subversion,chaos.common.free.Abduction
+chaos.common.spell.Replicate,chaos.common.spell.Simulacrum
+chaos.common.inanimate.ShadowWood,chaos.common.inanimate.WaspNest
+chaos.common.free.Curse,chaos.common.free.MagicBow,chaos.common.free.Helmet,chaos.common.free.WizardWings
+chaos.common.inanimate.MagicCastle,chaos.common.inanimate.DarkCitadel,chaos.common.inanimate.ShadowCity
+chaos.common.spell.XRay,chaos.common.spell.IceBreath
+chaos.common.spell.Reincarnate
+chaos.common.spell.Horror
+chaos.common.free.Devastation,chaos.common.spell.Alliance
+chaos.common.free.Double,chaos.common.spell.RaiseDead,chaos.common.free.Biohazard
+chaos.common.free.Torment
+chaos.common.free.Vitality
+chaos.common.spell.Lightning,chaos.common.spell.MagicBolt,chaos.common.spell.BallLightning
+chaos.common.spell.Heal
+chaos.common.monster.Gryphon,chaos.common.monster.Unicorn,chaos.common.monster.Abath,chaos.common.monster.Manticore,chaos.common.monster.Camel,chaos.common.monster.Hybsil,chaos.common.monster.Pegasus
+chaos.common.spell.Cloak,chaos.common.spell.RangeBoost,chaos.common.spell.LifeLeech
+chaos.common.free.ParadigmShift
+chaos.common.spell.AlterReality,chaos.common.spell.Request
+chaos.common.monster.Centaur,chaos.common.monster.Bolter,chaos.common.monster.StoneGiant,chaos.common.monster.Hydra,chaos.common.monster.StoneGolem,chaos.common.monster.ClayGolem,chaos.common.monster.Bodak,chaos.common.monster.OgreMage,chaos.common.monster.Marid,chaos.common.monster.SkeletonWarrior,chaos.common.monster.OgreAssassin,chaos.common.monster.Pseudodragon,chaos.common.monster.Shadow,chaos.common.monster.BasaltGolem,chaos.common.monster.SnowLeopard,chaos.common.monster.Cheetah,chaos.common.monster.Leopard,chaos.common.monster.Jaguar,chaos.common.monster.Tiger,chaos.common.monster.Robot,chaos.common.monster.Achiyalabopa,chaos.common.monster.ShapeChanger,chaos.common.monster.Jann,chaos.common.monster.Aesculapius,chaos.common.monster.CarnivorousApe,chaos.common.monster.Diplodocus
+chaos.common.spell.Free
+chaos.common.free.Arborist,chaos.common.free.Ride,chaos.common.free.Repulsion,chaos.common.free.ForceSlam
+chaos.common.spell.Dexterity,chaos.common.spell.Nullify
+chaos.common.monster.MullacDeIrvine,chaos.common.growth.VioletFungi,chaos.common.growth.GooeyBlob,chaos.common.growth.GreenOoze,chaos.common.growth.OrangeJelly,chaos.common.growth.Spiky
+chaos.common.inanimate.Pool,chaos.common.inanimate.Spring,chaos.common.inanimate.Arsenal,chaos.common.inanimate.Armoury
+chaos.common.spell.Vanish,chaos.common.spell.DragonAscent
+chaos.common.free.MassResurrect
+chaos.common.monster.FireElemental,chaos.common.monster.AirElemental,chaos.common.monster.EarthElemental,chaos.common.monster.WaterElemental,chaos.common.monster.Pyrohydra,chaos.common.monster.TRex,chaos.common.mythos.DarthVader,chaos.common.mythos.MrStrong,chaos.common.mythos.Superman,chaos.common.mythos.Orange,chaos.common.mythos.Pliers,chaos.common.mythos.DiamondSword,chaos.common.mythos.SwissKnife,chaos.common.mythos.Horace,chaos.common.monster.Priest,chaos.common.mythos.Alien8,chaos.common.mythos.Cylinder,chaos.common.mythos.Skulkrin,chaos.common.mythos.Quazatron
+chaos.common.inanimate.DarkWood,chaos.common.inanimate.Conifer
+chaos.common.beam.PlasmaBeam,chaos.common.free.SpaceMaker
+chaos.common.monster.Dao,chaos.common.monster.Necromancer,chaos.common.monster.Agathion,chaos.common.monster.NamedDeity,chaos.common.monster.NamedSnake
+chaos.common.monster.FloatingEye,chaos.common.monster.Thundermare,chaos.common.monster.NamedCentaur,chaos.common.monster.Shadowmare
+chaos.common.spell.Sanctify
+chaos.common.free.Elixir,chaos.common.spell.Reflector
+chaos.common.free.Level
+chaos.common.free.LichLord,chaos.common.spell.Lich,chaos.common.spell.Demonify
+chaos.common.spell.Herbicide
+chaos.common.free.Confidence,chaos.common.free.Enfeeblement
+chaos.common.free.DeathBringer,chaos.common.spell.Thunderbolt
+chaos.common.spell.Merge,chaos.common.free.Acquisition,chaos.common.free.NoMount
+chaos.common.free.Fortitude,chaos.common.free.Venom,chaos.common.free.Shortsightedness,chaos.common.free.Impair
+chaos.common.spell.Kill,chaos.common.free.LifeGiver,chaos.common.free.Rampage
+chaos.common.monster.Nightmare,chaos.common.monster.Vampire
+chaos.common.spell.Quickshot,chaos.common.free.Triple
+chaos.common.spell.Combat,chaos.common.free.Anger,chaos.common.free.Sharpshooting
+chaos.common.inanimate.Pentagram
+chaos.common.free.IrvinesInvulnerability,chaos.common.free.Depth
+chaos.common.free.Joker
+chaos.common.free.Disrupt
+chaos.common.free.Talisman,chaos.common.spell.Shocker,chaos.common.mythos.Flerken
+chaos.common.free.Summons
+chaos.common.free.Horde
+chaos.common.free.DeadRevenge,chaos.common.free.Ferengi
+chaos.common.inanimate.MagicWood
+chaos.common.monster.CatLord,chaos.common.monster.Nilbog,chaos.common.monster.Megabeetle,chaos.common.monster.Acromantula
+chaos.common.monster.HiddenHorror,chaos.common.dragon.RedDragon,chaos.common.dragon.GreenDragon,chaos.common.dragon.ShadowDragon,chaos.common.dragon.BlueDragon,chaos.common.dragon.GoldenDragon,chaos.common.dragon.WhiteDragon
+chaos.common.free.Uncertainty
+chaos.common.free.Charm
+chaos.common.monster.Gollop,chaos.common.monster.SkeletonLord
+chaos.common.inanimate.ManaBattery,chaos.common.inanimate.Spawner
+chaos.common.spell.Nuke
+chaos.common.dragon.PlatinumDragon,chaos.common.dragon.BlackDragon
+chaos.common.monster.LesserDevil,chaos.common.monster.HigherDevil
+chaos.common.monster.Iridium,chaos.common.monster.Vampyr
+chaos.common.monster.Demon,chaos.common.monster.FireDemon,chaos.common.monster.Balrog
+chaos.common.spell.MassMorph
+chaos.common.inanimate.BipedalGenerator,chaos.common.inanimate.Aviary,chaos.common.inanimate.DragonNest,chaos.common.inanimate.Tombstone
+chaos.common.inanimate.Generator
+chaos.common.free.Hyperclone
+chaos.common.spell.TouchOfGod,chaos.common.free.ChaosLord
+

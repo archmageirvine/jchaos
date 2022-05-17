@@ -1,0 +1,22 @@
+package chaos.common.monster;
+
+import chaos.common.AbstractMonsterTest;
+import chaos.common.Castable;
+import chaos.common.PowerUps;
+
+/**
+ * Tests this monster.
+ *
+ * @author Sean A. Irvine
+ */
+public class VampireTest extends AbstractMonsterTest {
+
+  @Override
+  public Castable getCastable() {
+    return new Vampire();
+  }
+
+  public void test() {
+    assertTrue(new Vampire().is(PowerUps.FLYING));
+  }
+}

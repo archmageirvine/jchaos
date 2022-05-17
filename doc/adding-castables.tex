@@ -1,0 +1,147 @@
+\documentclass{article}
+\usepackage{a4}
+
+\title{Instructions For Adding New Castables}
+\author{Sean A. Irvine}
+\date{\today}
+
+% chktex-file 29
+
+\begin{document}
+\maketitle
+
+This document provides guidance on adding a new castable to {\em Chaos}.  There are a number of steps involved the difficulty of which will depend on the nature of the addition.  If the new castable is similar to an existing item, then the addition will be simply a matter of following the quick instructions.
+
+There is a tendency to want to create ever stronger creatures that can beat all opposition.  This tendency should be avoided to ensure that game play remains balanced.  It is far better to create new castables with some special features making then useful in some circumstances.  However, while it is possible to add new functionality to the game engine, it is best if new castables operate within the framework already provided (e.g., in terms of the kind of attacks available).
+
+\section{Definitions}
+
+The following are different kinds of items that can appear in the game. Any particular object can belong to one or more of these categories.
+
+A {\bf castable} is any item which can appear on a spell list or appear on the game board. It includes creatures, inanimate objects, as well as magic spells.
+
+An {\bf actor} is any item which can appear on the board. All actors are castables, but not all castables are actors.
+
+A {\bf monster} is an actor that can move, a creature.  This includes things like the bolter and violet fungi which don't normally move, but can acquire movement points.  Any actor that can perform ordinary combat or ranged combat must be a monster.
+
+A {\bf caster} is a monster capable of casting spells.  This can be something like a faun which can only cast the one spell right up to a wizard.
+
+A {\bf wizard} is a caster that can be selected at the start of the game and controlled as a separate player.
+
+A {\bf growth} is an actor that expands by periodically spawning of new instances of itself.
+
+A {\bf conveyance} is an actor which can be ``mounted'' by a wizard (or certain other monsters).
+
+A {\bf mount} is a conveyance which is a monster (e.g., the horse).
+
+A {\bf meditation} is a conveyance that will eventually collapse awarding new castables (e.g., the dark citadel).
+
+A {\bf free castable} is a castable which does not require the selection of a target during casting.
+
+A {\bf power-up} is a (typically free) castable which confers some extra ability or debility on a wizard (e.g., talisman, necropotence).
+
+In addition there other properties and terms that an object may have, but which are enforced to different degrees by the game engine. A {\bf (magic) spell} is a castable which is not an actor. An {\bf inanimate} is an actor which is not a monster. A {\bf promotable} is a monster that promotes to another monster after some number of kills. A {\bf bonus} is an actor that results in bonus spells for its killer. An {\bf elemental} is a monster that decays into some other object at death. A {\bf humanoid} is (roughly) something walking on two legs. A {\bf cat} is a cat. There are a bunch of other less important categories.
+
+\section{Quick Guide}
+
+Minimal instructions to add a new castable.  For each line here, further detail can be found in the subsequent section. It is best to think through each of these steps at the outset to ensure the new idea covers all required aspects.
+
+\begin{enumerate}
+
+\item Design $32\times32$ image tiles.
+
+\item Insert image tiles and update {\tt active.txt}.
+
+\item Add backdrop image.
+
+\item Add Java class for new castable.
+
+\item Add corresponding JUnit test class and link it to {\tt AllTests}.
+
+\item Update {\tt CastResource.properties}.
+
+\item Update {\tt frequency.txt}.
+
+\item Update {\tt ranking.txt}.
+
+\item Optional: Install appropriate sound effects.
+
+\item Optional: Set ranged combat graphics.
+
+\item Verify the addition by running the corresponding unit test.
+
+\end{enumerate}
+
+\section{Detailed Guide}
+
+This section provides additional detail for each of the steps listed in the previous section.
+
+\begin{enumerate}
+
+\item The images for each castable are called {\bf tiles}. Non-actor castables require a single tile which will be displayed in castable list as appropriate. Actors support an arbitrary number of tiles for the main animation sequence. Three arrangements are supported: ({\tt s}) select a single static tile (a particular tile from the set of possibilities will be chosen per instance), ({\tt p}) ping-pong which will run forward and backward through the supplied tiles (i.e., for three tiles, 1, 2, 3, 2, 1, 2, 3, \ldots), or ({\tt x}) cycle mode (i.e., 1, 2, 3, 1, 2, 3, \ldots).  If there is a single image use {\tt x}. In addition, a ``dead'' tile should be provided in many cases. When there are multiple images, the first image is the one used for the spell list.
+
+  When design imagery for actors care should be taken to fit within the norms.  The background should be black. For example, most monsters do not extend to the full size of the $32\times32$ tile.  Most monsters with feet start on the third to bottom row of the tile and have one or two blank rows at the top. Dead images start on the second to bottom row and typically occupy only the bottom third of the tile. Very large monsters like dragons can occupy more space. Look at existing examples to ensure the new creation fits within the normal expectations.
+
+  For a conveyance, especially a mount, consider drawing additional tiles corresponding to the mounted version.  This is typically accomplished by adding a small flesh coloured blob to represent the rider onto the existing images. There is no need for a mounted version of the dead image.
+
+  Certain other versions of the tiles will be produced algorithmically during game play (e.g., versions with a blue ring for a spawner). In these cases, the first image will be taken as the defining image.
+
+  It is possible to extract existing images using the {\tt TileSet} utility. This can sometimes be a useful starting point for designing new images.
+
+  For non-actor tiles there are certain colour conventions that can help cue the player as to what the spell is likely to do.  Certain spells (e.g., those containing text or letters, walls, and those overlaid with a red ``X'') can be produced algorithmically. These have the advantage that they can be automatically scaled to any size. See the {\tt GenerateGraphics} classes.
+
+  A certain amount of effort has been made to retain the look and feel of the original ZX~Spectrum sprites. On the Spectrum all sprites were monochrome. On the Amiga version this was relaxed, although early versions still had a restricted palette. New sprites are free to use any available colour and as many colours are necessary. Updating existing sprites is desirable.
+
+\item The overall allocation of tiles is defined in the file {\tt active.txt}.  This file assigns tile numbers to each tile image and specifies the rendering instructions in terms of ping-pong, cycle, or static.  The header describes the format. The numbers are given in hexadecimal. The last line of {\tt active.txt} indicates the next available slot.  So, create a new line for the new castable using the intended class name for the castable without the package prefix.  The ordering of castables within the file is irrelevant. Make sure to include an allocation for the dead tile if appropriate. Also update the next free slot comment at the bottom.
+
+  Actual images are stored in PNG files named {\tt 0}, {\tt 1}, {\tt 2}, \ldots, within subdirectories for each size. These files can be manipulated using the {\tt TileSet} utility which can store and retrieve invidual tiles from these files.
+
+  Ensure that the intended tiles are in PNG format and of the correct dimensions. Using the numbers determined above insert the tiles using the {\tt TileSet} utility. To set a particular tile:
+
+  \begin{center}
+    {\small\tt java irvine.tile.TileSet -s 0x100 my-tile.png 5}
+  \end{center}
+
+  \noindent where the last number (5) indicate the bit-width of the tile set; that is, $2^5=32$. Note the {\tt 0x} prefix to the hexadecimal number (otherwise {\tt TileSet} will assume decimal). The {\tt -s} indicates you want to set the tile, to retrieve the tile omit the {\tt -s}:
+
+  \begin{center}
+    {\small\tt java irvine.tile.TileSet 0x100 output.png 5}
+  \end{center}
+
+  The game supports $16\times16$, $32\times32$, and $64\times64$ pixel tile sets. The most important of these is the $32\times32$ set.  Images can be designed at $64\times64$ or $32\times32$ and then scaled to produce images at the other required sizes.  The {\tt rescale-image.sh} script is useful for automatically updating the $16\times16$ and $64\times64$ images once the $32\times32$ images are inserted.
+
+  After setting all the tiles for the new castable, check the changes in the packed tile files look correct. Note that {\tt git status} will conveniently indicate which files have changed. For some image viewers it may be necessary to copy the image files to something with a \verb|.png| extension before viewing.
+
+\item Backdrop images are stored in the {\tt chaos/resources/backdrops} directory. The image should be $w\times100$ pixel grayscale PNG file. The file name should be the castable name written in lower case will all spaces replaced by underscores, all apostrophes deleted, and with the extension \verb|.png|. The netpbm package makes scaling and conversion to this format easy:
+  \begin{center}
+    {
+      \small
+      \verb#jpegtopnm <in.jpg | pnmscale -h 100 | ppmtopgm | pnmtopng >out.png#
+    }
+  \end{center}
+
+\item Each castable is implemented in its own Java class which ultimately implements {\tt Castable} (along with potentially other interfaces). The easiest way is to copy a class for an existing castable and modify it accordingly. The amount of work involved in this step is strongly dependent on the type of castable being introduced. Check that the package of the new castable is appropriate. Check that all relevant interfaces are implemented.  For a creature, check the realm, statistics, reincarnation, promotion (if appropriate), spell list (if appropriate), and so on. For a spell, ensure appropriate AI hints are provided.
+
+  For a creature an LOS mask is required.  This is a condensed $8\times8$ bit mask corresponding to a reduced $8\times8$ pixel image indicating which pixels are opaque for the purposes of line-of-sight calculations. For a transparent object the value of {\tt 0} should be used. Otherwise {\tt MaskTest} provides a convenient way of determining the correct mask.
+
+  For non-creatures pay attention to the kinds of actors on which the spell case be cast.
+
+\item Copy an existing test class and link it into the corresponding {\tt AllTests}. It is possible to run the test at this stage and get some indication of what remains to be done.
+
+\item The {\tt CastResource.properties} file specifies the name and description of every castable. Be careful with spelling. Note that is a description is too long, it might not fit in the available space in the information panel. Even if a castable never appears on a spell list, it still requires an entry in this file.
+
+\item Add an entry for the new castable into {\tt frequency.txt}.  This control the overall frequency of occurrence for each castable. During testing using the value of 100 is a good idea, but don't forget to set it sensibly after testing. A ``B'' indicates the spell is only available as a bonus. A value of 0 can be used for monsters only available via promotion or some other special mechanism.
+
+\item The ranking file is used by the AI and during bonus selection to determine the overall desirability of a castable. Ideally this file is determined by empirical utility by running thousands of games. Since this is not generally possible with each new addition, simply add the new castable on the same line as some roughly comparable castable.
+
+\item Specific sounds can be added for attack and defence.  They need to be added under {\tt chaos/resources/sound} subdirectories and possibly in various files association castables with corresponding sounds.
+
+\item If the new castable supports ranged combat, consider updating the appropriate locations to specify what the ranged combat will look like (e.g., arrow show, dragon breath). See {\tt RangedCombatGraphics}.
+
+\item Correct any problems arising from the test run (e.g., the LOS mask).
+  
+  
+\end{enumerate}
+
+
+\end{document}

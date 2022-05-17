@@ -1,0 +1,41 @@
+<body>
+Multiplayer strategy game for wizards and their minions.
+
+This document is really for programmers.  If you just want details on playing you'll need to wait for the players handbook.<p>
+
+<h1>The Chaos Universe</h1>
+
+Chaos takes place on a rectangular board of cells. Each cell may contain one or more objects (as will be described below). Normally only the top contents of a given cell are visible or active.
+
+The details of why the world is the way it is are recorded in the <i>Sirconia</i>. [much more is needed here] <p>
+
+<h1>Vital Statistics</h1>
+
+Anything item which can appear in a cell of the Chaos world is called an <b>actor</b>. Actors very greatly in appearance and capabilities.  They range from static objects like walls through to wizards.  In between there is a full gamut of trees, animals, and slimy things.  Each has a role to play.  Interaction between actors is essential through a collection of <i>vital statistics</i> which measure various characteristics of the actors.  Not all actors have all the statistics.  Unlike earlier Chaos games, our game does not, for example, assign an intelligence value to walls.<p>
+
+Each statistic support an absolute maximum value of 100, although for many statistics the actual values used are much smaller to ensure a good balance during game play.<p>
+
+The following table describes all available variable statistics.  All actors have the first four statistics. Additional details can be found in the documentation for the Actor and Monster classes.<p>
+
+<ul>
+<li><i>Life</i>: Arguably the most important statistic; it is a measure of stamina or energy.  Once this quantity drops to 0 or less the actor is dead.  The initial value ranges from 1 to about 64, but can climb above 64 if armour or certain other healing spells are used.  Its value is reduced during combat and by a variety of other spells.</li>
+<li><i>Life Recovery</i>: This value is added once per round to the current Life value.  Despite the name this value can also be negative to handle the situation of poisoning or some other life draining effect.  Its value is usually small, usually in the range -7 &lt;= Life Recovery &lt;= 7.  When it is positive the addition is done such that the value of life does not exceed its natural maximum.  However, with a negative recovery the actor can be killed as a result of the addition forcing life to become 0 or negative.</li>
+<li><i>Magical Resistance</i>: A measure of the actor's ability to sustain damage from magical attack.  Its value is normally in the range 0 to 100.  A large number of spells can cause reductions in this statistic.  In various cases if this value goes below 0 then the actor dies.</li>
+<li><i>Magical Resistance Recovery</i>: Like Life Recovery but applies to the magical resistance statistic.</li>
+<li><i>Agility</i>: A measure of how good the actor is at escaping from combat. The higher the value the more able the actor is to escape from a combat. Agility ranges from 0 to 100.</li>
+<li><i>Agility Recovery</i>: Like Life Recovery but applies to the magical resistance statistic.</li>
+<li><i>Intelligence</i>: A measure of the actor's intelligence.  Its value is normally in the range 0 to 100.  Certain spells modify this statistic, if the value drops below zero the actor dies.</li>
+<li><i>Intelligence Recovery</i>: Like Life Recovery but applies to the intelligence statistic.</li>
+<li><i>Movement</i>: A measure of the actor's movement; that is, the number of cells this actor can move in a single turn.  Its value is normally in the range 0 to about 15. Its value can be changed by certain spells or as the result of combat.  If the value is 0 then the actor is effectively paralysed and cannot move.</li>
+<li><i>Movement Recovery</i>: Like Life Recovery but applies to the movement statistic.</li>
+<li><i>Combat</i>: Specifies the monster's combat ability for standard combat. The higher the number the better the combat. However, the value can also be negative indicating a healing ability. The statistics this combat applies to are specified by the Combat Apply statistic.</li>
+<li><i>Combat Recovery</i>: Life Life Recovery but applies to the combat statistic.</li>
+<li><i>Ranged Combat</i>: Like Combat but applies to ranged combat, used in conjunction with the Range statistic. Its value represents the damage done by ranged combat. The statistics this combat applies to are specified by the Ranged Combat Apply statistic.</li>
+<li><i>Ranged Combat Recovery</i>: Life Life Recovery but applies to the Ranged Combat statistic.</li>
+<li><i>Range</i>: Specifies the distance, if any, that a monster can shoot, use a breath weapon, or other form of ranged combat. Used in conjunction with ranged combat.
+<li><i>Range Recovery</i>: Life Life Recovery but applies to the range statistic.</li>
+<li><i>Special Combat</i>: Attacking ability of an involuntary attack performed once per round. Example users are the Roper, Wasp Nest, Volcano, and Pool.  The value can be negative indicating a healing ability. The statistics this combat applies to are specified by the Special Combat Apply and Special Combat Except statistics.</li>
+<li><i>Special Combat Recovery</i>: Life Life Recovery but applies to the Special Combat statistic.<li>
+</ul>
+
+</body>

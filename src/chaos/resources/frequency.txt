@@ -1,0 +1,424 @@
+#
+# This file contains the frequency table for jChaos.
+#
+# It is recommended that you do not alter this file without first making
+# a backup copy of the file. When altering the file please heed the
+# warnings below; failure to do so could result in faulty game behaviour.
+# If you are not confident at altering text files, this is probably
+# not a good place to practice.
+#
+# Anything appearing after a # in this file is treated as a comment
+# when jChaos loads this file. The file is read once at the start of the
+# game, so please DO NOT delete the comments in an attempt to make the
+# game faster.
+#
+# There is a line for each item which can possibly appear on a
+# player's spell list.  The format of each line is the name of the
+# Java class for the spell, its frequency of occurrence in the
+# range 0 to 100 inclusive and an optional flag.  A flag value of "B"
+# indicates the spell can only be obtained as a bonus; that is, either
+# as an explicit bonus spell or through meditation.  The order of
+# the lines is not significant.  A spell with frequency 0 will never
+# appear on a spell list.  Thus, for instance, if you hate the
+# cloaked creatures you can set the Cloak frequency to 0 and then
+# nobody will ever get a cloak spell.
+#
+# Be aware that it is easy to ruin the game by making powerful spells
+# like demons and hyperclone common. In my experience once you cheat
+# at a game much of the original enjoyment you get from the game
+# is lost.
+#
+chaos.common.free.Ferengi                       15
+chaos.common.free.Acquisition                   15
+chaos.common.free.Abduction                     44
+chaos.common.monster.Abath                      23
+chaos.common.monster.Achiyalabopa               20      B
+chaos.common.free.AcidRain                      16      B
+chaos.common.monster.AerialServant              38
+chaos.common.monster.Aesculapius                1       B
+chaos.common.monster.Amphisbaena                63
+chaos.common.free.Arborist                      70
+chaos.common.monster.ArcticWolf                 22      B
+chaos.common.monster.Azer                       40      B
+chaos.common.monster.Baboon                     71      B
+chaos.common.monster.Banderlog                  30      B
+chaos.common.monster.BasaltGolem                18      B
+chaos.common.monster.Basilisk                   7
+chaos.common.monster.Bat                        65
+chaos.common.monster.BirdLord                   7
+chaos.common.free.Bless                         76
+chaos.common.dragon.BlueDragon                  10      B
+chaos.common.monster.Bolter                     10
+chaos.common.monster.BrownBear                  41
+chaos.common.monster.Camel                      23
+chaos.common.monster.CarnivorousApe             0
+chaos.common.monster.CatLord                    3
+chaos.common.monster.Centaur                    30
+chaos.common.monster.NamedCentaur               0
+chaos.common.monster.Cheetah                    11      B
+chaos.common.monster.Chronomancer               7       B
+chaos.common.monster.ClayGolem                  13      B
+chaos.common.monster.Crocodile                  50
+chaos.common.monster.Dalek                      8
+chaos.common.inanimate.DarkCitadel              55
+chaos.common.monster.Derro                      16
+chaos.common.monster.DireWolf                   63
+chaos.common.free.Double                        15
+chaos.common.free.Drain                         6
+chaos.common.free.Countermand                   12
+chaos.common.monster.DreadElf                   0
+chaos.common.monster.DarkElf                    0
+chaos.common.monster.Druid                      18
+chaos.common.monster.Eagle                      42
+chaos.common.dragon.EmeraldDragon               0
+chaos.common.monster.Falcon                     8       B
+chaos.common.monster.Faun                       70
+chaos.common.monster.FireBat                    19      B
+chaos.common.monster.FloatingEye                18
+chaos.common.monster.Ghast                      45      B
+chaos.common.monster.Ghoul                      45
+chaos.common.monster.GiantBeetle                75
+chaos.common.monster.GiantRat                   80
+chaos.common.monster.GiantSpider                43
+chaos.common.monster.Goblin                     67
+chaos.common.monster.GoblinBomb                 31
+chaos.common.dragon.GoldenDragon                5
+chaos.common.monster.Gorilla                    60
+chaos.common.monster.GrayElf                    10
+chaos.common.dragon.GreenDragon                 12
+chaos.common.monster.GrizzlyBear                30
+chaos.common.monster.Gryphon                    30
+chaos.common.monster.Halfling                   75
+chaos.common.monster.Harpy                      55
+chaos.common.free.Haste                         76
+chaos.common.monster.Haunt                      31
+chaos.common.monster.HiddenHorror               8
+chaos.common.monster.Hippocrates                21
+chaos.common.spell.Horror                       9
+chaos.common.monster.Horse                      72
+chaos.common.monster.Hybsil                     10
+chaos.common.monster.Hydra                      15
+chaos.common.monster.Imp                        40      B
+chaos.common.monster.Iridium                    1       B
+chaos.common.monster.Jaguar                     15      B
+chaos.common.monster.KingCobra                  70
+chaos.common.monster.Leopard                    15      B
+chaos.common.monster.Lion                       50
+chaos.common.monster.Manticore                  25
+chaos.common.monster.Megabeetle                 0
+chaos.common.monster.MightyOrc                  9
+chaos.common.monster.MindFlayer                 8
+chaos.common.monster.MudMan                     21      B
+chaos.common.monster.Necromancer                20      B
+chaos.common.monster.NeoOtyugh                  33      B
+chaos.common.monster.Ogre                       62
+chaos.common.monster.OgreAssassin               27      B
+chaos.common.monster.OgreMage                   7
+chaos.common.monster.OgreWarrior                30      B
+chaos.common.monster.Orc                        80
+chaos.common.monster.Pegasus                    30
+chaos.common.dragon.PlatinumDragon              5       B
+chaos.common.monster.Pseudodragon               13      B
+chaos.common.monster.Pyrohydra                  8       B
+chaos.common.monster.Python                     70
+chaos.common.dragon.RedDragon                   10
+chaos.common.spell.Reincarnate                  35
+chaos.common.monster.Robot                      15      B
+chaos.common.inanimate.Roper                    26
+chaos.common.monster.Shadow                     20      B
+chaos.common.dragon.ShadowDragon                3       B
+chaos.common.dragon.BlackDragon                 1       B
+chaos.common.monster.ShapeChanger               20      B
+chaos.common.monster.Skeleton                   68
+chaos.common.monster.SkeletonWarrior            10      B
+chaos.common.spell.Stop                         49
+chaos.common.spell.Clumsy                       49
+chaos.common.monster.SnowLeopard                14      B
+chaos.common.monster.Solar                      13
+chaos.common.monster.Spectator                  3
+chaos.common.monster.Spectre                    31
+chaos.common.monster.Spider                     71
+chaos.common.monster.Spriggan                   20
+chaos.common.monster.StoneGiant                 8
+chaos.common.monster.StoneGolem                 12
+chaos.common.monster.Thundermare                2
+chaos.common.monster.Tiger                      20      B
+chaos.common.monster.Troll                      45
+chaos.common.monster.Unicorn                    30
+chaos.common.monster.Vulture                    42
+chaos.common.inanimate.Web                      5       B
+chaos.common.dragon.WhiteDragon                 13      B
+chaos.common.monster.Wight                      20
+chaos.common.monster.Wolverine                  52      B
+chaos.common.monster.WoodElf                    50
+chaos.common.monster.Wraith                     18
+chaos.common.monster.Zombie                     65
+chaos.common.free.Quench                        29      B
+chaos.common.growth.Fire                        13
+chaos.common.growth.Flood                       17
+chaos.common.growth.GooeyBlob                   17
+chaos.common.growth.GreenOoze                   8
+chaos.common.growth.OrangeJelly                 18
+chaos.common.inanimate.MagicCastle              55
+chaos.common.inanimate.MagicWood                15
+chaos.common.spell.Kill                         21      B
+chaos.common.spell.Lightning                    61
+chaos.common.spell.RaiseDead                    35
+chaos.common.spell.Sleep                        18
+chaos.common.spell.FleshToStone                 18
+chaos.common.spell.Vanish                       8
+chaos.common.spell.Protection                   70
+chaos.common.spell.FireShield                   20
+chaos.common.spell.FloodShield                  20
+chaos.common.free.LichLord                      20
+chaos.common.free.DeadRevenge                   60      B
+chaos.common.inanimate.Generator                3       B
+chaos.common.growth.VioletFungi                 25
+chaos.common.spell.EarthquakeShield             20
+chaos.common.growth.Earthquake                  8
+chaos.common.free.Vitality                      7
+chaos.common.free.Command                       90
+chaos.common.monster.Agathion                   6
+chaos.common.inanimate.Tempest                  12
+chaos.common.monster.AirElemental               10      B
+chaos.common.spell.Alliance                     40
+chaos.common.spell.AlterReality                 42
+chaos.common.free.Anger                         40      B
+chaos.common.inanimate.Vortex                   12
+chaos.common.inanimate.DarkWood                 22
+chaos.common.inanimate.WaspNest                 26
+chaos.common.monster.HigherDevil                5       B
+chaos.common.monster.Vampire                    5
+chaos.common.monster.Ghost                      15
+chaos.common.inanimate.Fir                      40
+chaos.common.inanimate.Elm                      40      B
+chaos.common.inanimate.AppleWood                26
+chaos.common.inanimate.Pool                     20
+chaos.common.inanimate.Volcano                  13
+chaos.common.inanimate.MagicGlass               10
+chaos.common.inanimate.StandardWall             18
+chaos.common.inanimate.WeakWall                 17
+chaos.common.inanimate.StrongWall               25      B
+chaos.common.inanimate.Rock                     40
+chaos.common.inanimate.PowerWall                1
+chaos.common.inanimate.PowerWallHorizontal      0
+chaos.common.inanimate.PowerWallVertical        0
+chaos.common.inanimate.FenceHorizontal          1
+chaos.common.inanimate.FenceVertical            0
+chaos.common.inanimate.ShadowCity               12
+chaos.common.inanimate.Willy                    3
+chaos.common.spell.Animate                      4
+chaos.common.spell.Archery                      12
+chaos.common.spell.Armour                       95
+chaos.common.inanimate.Aviary                   3       B
+chaos.common.spell.BallLightning                63
+chaos.common.monster.Bandit                     17
+chaos.common.free.BattleCry                     12
+chaos.common.spell.Betrayal                     44
+chaos.common.free.Biohazard                     5
+chaos.common.inanimate.BipedalGenerator         3       B
+chaos.common.monster.Bodak                      7       B
+chaos.common.free.Boil                          8
+chaos.common.spell.Wisdom                       60
+chaos.common.spell.Idiocy                       62
+chaos.common.spell.Bury                         18
+chaos.common.free.ChaosLord                     2       B
+chaos.common.free.Charm                         14      B
+chaos.common.spell.Cloak                        18
+chaos.common.free.Coercion                      8
+chaos.common.spell.Combat                       22
+chaos.common.free.Confidence                    55      B
+chaos.common.spell.Consecrate                   60      B
+chaos.common.spell.Convert                      39
+chaos.common.monster.CrimsonDeath               8       B
+chaos.common.free.CrystalBall                   4
+chaos.common.free.Curse                         6
+chaos.common.free.Stupidity                     5
+chaos.common.spell.CursedSword                  10
+chaos.common.monster.Dao                        26      B
+chaos.common.spell.DarkPower                    45
+chaos.common.free.DeathBringer                  24      B
+chaos.common.monster.Demon                      6       B
+chaos.common.mythos.Flerken                     6       B
+chaos.common.spell.DemonicTouch                 25
+chaos.common.free.Depth                         6
+chaos.common.free.DestroyWall                   29      B
+chaos.common.free.Devastation                   2       B
+chaos.common.free.Amnesia                       10
+chaos.common.free.Disection                     7
+chaos.common.free.Disrupt                       23      B
+chaos.common.inanimate.DragonNest               3       B
+chaos.common.inanimate.Tombstone                3       B
+chaos.common.monster.Drelb                      10      B
+chaos.common.spell.Earthbind                    22
+chaos.common.monster.EarthElemental             10      B
+chaos.common.monster.Elephant                   20
+chaos.common.free.ElfBoots                      70
+chaos.common.inanimate.Exit                     0
+chaos.common.spell.Exorcise                     45
+chaos.common.monster.FireDemon                  4       B
+chaos.common.monster.Balrog                     1       B
+chaos.common.monster.FireElemental              10      B
+chaos.common.spell.Fireball                     68
+chaos.common.spell.Fly                          22
+chaos.common.spell.Free                         14
+chaos.common.free.FreeAll                       20      B
+chaos.common.spell.Freeze                       11
+chaos.common.spell.Heal                         76
+chaos.common.free.Hide                          90      B
+chaos.common.monster.LesserDevil                8       B
+chaos.common.free.Hyperclone                    5       B
+chaos.common.spell.IceBreath                    68
+chaos.common.spell.Invert                       12
+chaos.common.free.IrvinesInvulnerability        80
+chaos.common.monster.Jann                       30      B
+chaos.common.free.Joker                         10      B
+chaos.common.monster.JujuZombie                 4
+chaos.common.spell.Justice                      45
+chaos.common.free.Level                         48
+chaos.common.spell.Lich                         9
+chaos.common.spell.Demonify                     7
+chaos.common.spell.DragonAscent                 11
+chaos.common.spell.LifeAttack                   39
+chaos.common.free.LifeGiver                     24      B
+chaos.common.spell.MagicBolt                    68
+chaos.common.free.MagicBow                      20
+chaos.common.free.MagicKnife                    65
+chaos.common.spell.MagicSword                   65
+chaos.common.free.MagicWand                     15
+chaos.common.monster.Marid                      15      B
+chaos.common.spell.Speed                        49
+chaos.common.spell.MassMorph                    4       B
+chaos.common.free.MassResurrect                 6       B
+chaos.common.free.Materialize                   2
+chaos.common.free.Meddle                        18      B
+chaos.common.free.MeteorStorm                   8
+chaos.common.free.MoveIt                        40
+chaos.common.monster.MullacDeIrvine             9
+chaos.common.free.Mutate                        7       B
+chaos.common.free.Necropotence                  11
+chaos.common.monster.Nightmare                  15
+chaos.common.spell.Nuke                         10      B
+chaos.common.free.ParadigmShift                 3
+chaos.common.beam.PlasmaBeam                    40
+chaos.common.free.Points                        80
+chaos.common.spell.PoisonDagger                 15
+chaos.common.free.Pyrotechnics                  50      B
+chaos.common.spell.Quickshot                    20
+chaos.common.inanimate.Pit                      13
+chaos.common.inanimate.Nuked                    0
+chaos.common.spell.RangeBoost                   40
+chaos.common.spell.Sanctify                     65
+chaos.common.spell.Disease                      60
+chaos.common.spell.Reflector                    12
+chaos.common.spell.LifeLeech                    12
+chaos.common.spell.Replicate                    30
+chaos.common.free.Repulsion                     25
+chaos.common.spell.Request                      10
+chaos.common.spell.Restoration                  46
+chaos.common.spell.Reveal                       18
+chaos.common.free.Ride                          36
+chaos.common.free.Elixir                        43
+chaos.common.free.Separation                    20
+chaos.common.spell.Shocker                      23      B
+chaos.common.spell.Simulacrum                   35
+chaos.common.free.Still                         10
+chaos.common.free.Storm                         10      B
+chaos.common.spell.Subversion                   44
+chaos.common.free.Summons                       23
+chaos.common.spell.Swap                         2
+chaos.common.monster.TRex                       13      B
+chaos.common.monster.Diplodocus                 12      B
+chaos.common.spell.Teleport                     25
+chaos.common.free.Torment                       12
+chaos.common.spell.TouchOfGod                   15      B
+chaos.common.free.Triple                        5
+chaos.common.free.Turmoil                       3       B
+chaos.common.free.Uncertainty                   40      B
+chaos.common.spell.Vengeance                    45
+chaos.common.free.Virtue                        8       B
+chaos.common.spell.Wake                         18
+chaos.common.monster.WaterElemental             10      B
+chaos.common.free.WizardWings                   29
+chaos.common.spell.XRay                         40
+chaos.common.inanimate.ShadowWood               26
+chaos.common.wizard.Wizard1                     0
+chaos.common.wizard.Wizard2                     0
+chaos.common.wizard.Wizard3                     0
+chaos.common.wizard.Wizard4                     0
+chaos.common.wizard.Wizard5                     0
+chaos.common.wizard.Wizard6                     0
+chaos.common.wizard.Wizard7                     0
+chaos.common.wizard.Wizard8                     0
+chaos.common.wizard.Wizard9                     0
+chaos.common.wizard.Wizard10                    0
+chaos.common.wizard.Wizard11                    0
+chaos.common.wizard.Wizard12                    0
+chaos.common.wizard.Wizard13                    0
+chaos.common.wizard.Wizard14                    0
+chaos.common.wizard.Wizard15                    0
+chaos.common.free.Fortitude                     32      B
+chaos.common.spell.Dexterity                    6
+chaos.common.free.Assurance                     8
+chaos.common.free.Sharpshooting                 8       B
+chaos.common.free.Venom                         10      B
+chaos.common.free.Helmet                        70
+chaos.common.free.MagicShield                   70
+chaos.common.free.Talisman                      40      B
+chaos.common.free.Amulet                        70
+chaos.common.inanimate.Arsenal                  8       B
+chaos.common.inanimate.Armoury                  8       B
+chaos.common.inanimate.Spring                   5       B
+chaos.common.inanimate.ToxicWaste               5       B
+chaos.common.inanimate.Pentagram                5       B
+chaos.common.inanimate.Hex                      5       B
+chaos.common.inanimate.Heptagram                2       B
+chaos.common.free.Insecurity                    22
+chaos.common.inanimate.Conifer                  35      B
+chaos.common.free.Enfeeblement                  12      B
+chaos.common.free.Impair                        40      B
+chaos.common.free.Shortsightedness              30      B
+chaos.common.spell.Nullify                      66      B
+chaos.common.spell.BowBreaker                   2
+chaos.common.monster.Opinicus                   0
+chaos.common.monster.Phoenix                    2       B
+chaos.common.mythos.MrStrong                    1
+chaos.common.mythos.DarthVader                  1
+chaos.common.mythos.Superman                    1
+chaos.common.mythos.Orange                      1       B
+chaos.common.mythos.Pliers                      1       B
+chaos.common.mythos.DiamondSword                1       B
+chaos.common.mythos.SwissKnife                  1       B
+chaos.common.mythos.Horace                      1       B
+chaos.common.spell.Merge                        30
+chaos.common.monster.Gollop                     1
+chaos.common.spell.Herbicide                    40
+chaos.common.inanimate.ManaBattery              20      B
+chaos.common.free.Rampage                       1       B
+chaos.common.spell.Thunderbolt                  1       B
+chaos.common.spell.Demote                       1       B
+chaos.common.growth.Balefire                    1       B
+chaos.common.growth.DarkMatter                  1       B
+chaos.common.inanimate.Spawner                  4       B
+chaos.common.free.Horde                         3       B
+chaos.common.spell.Promote                      1       B
+chaos.common.growth.Magma                       1       B
+chaos.common.monster.Shadowmare                 0
+chaos.common.free.ForceSlam                     1       B
+chaos.common.free.SpaceMaker                    10
+chaos.common.monster.NamedDeity                 0
+chaos.common.monster.NamedSnake                 1       B
+chaos.common.monster.Nilbog                     0
+chaos.common.spell.Hyadic                       7
+chaos.common.monster.Priest                     7       B
+chaos.common.mythos.Alien8                      1       B
+chaos.common.growth.Spiky                       22      B
+chaos.common.inanimate.CrackedEgg               13      B
+chaos.common.mythos.Cylinder                    1       B
+chaos.common.mythos.Skulkrin                    2       B
+chaos.common.inanimate.ForceFence               9       B
+chaos.common.mythos.Quazatron                   1       B
+chaos.common.monster.Vampyr                     0
+chaos.common.free.NoMount                       5
+chaos.common.monster.SkeletonLord               0
+chaos.common.monster.Acromantula                0

@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+<project name="chaos" default="release">
+
+  <property name="src.dir" value="src"/>
+  <property name="test.dir" value="test"/>
+  <property name="internal.dir" value="internal"/>
+  <property name="build.dir" value="build.tmp"/>
+  <property name="lib.dir" value="lib"/>
+
+  <taskdef resource="net/sf/antcontrib/antlib.xml">
+    <classpath>
+      <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+    </classpath>
+  </taskdef>
+
+  <target name="compile-src" description="Compile the source">
+    <mkdir dir="${build.dir}/classes"/>
+    <javac srcdir="${src.dir}" destdir="${build.dir}/classes" source="1.8" includeantruntime="false">
+      <classpath>
+        <fileset dir="${lib.dir}" includes="**/*.jar" />
+      </classpath>
+      <compilerarg value="-Xlint:unchecked" />
+    </javac>
+  </target>
+
+  <target name="compile-internal" description="Compile the internal">
+    <javac srcdir="${internal.dir}" source="1.8" includeantruntime="false">
+      <classpath>
+        <pathelement path="${src.dir}"/>
+        <fileset dir="${lib.dir}" includes="**/*.jar" />
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="compile-test" description="Compile the tests">
+    <javac srcdir="${test.dir}" source="1.8" destdir="${build.dir}/classes" includeantruntime="false">
+      <classpath>
+        <pathelement path="${src.dir}"/>
+        <pathelement path="${internal.dir}"/>
+        <fileset dir="${lib.dir}" includes="**/*.jar" />
+      </classpath>
+      <compilerarg value="-Xlint:unchecked" />
+    </javac>
+  </target>
+
+  <target name="release" description="Make a release of Chaos">
+    <delete dir="${build.dir}/classes"/>
+    <mkdir dir="${build.dir}/classes"/>
+    <javac destdir="${build.dir}/classes" srcdir="${src.dir}" nowarn="true" source="1.8" target="1.8" classpath="${src.dir}" includeantruntime="false">
+      <include name="chaos/**/*.java"/>
+      <include name="irvine/tile/*.java"/>
+      <include name="irvine/heraldry/*.java"/>
+      <include name="irvine/util/*.java"/>
+      <include name="irvine/util/graphics/*.java"/>
+      <include name="irvine/simplegames/ImageLoader.java"/>
+      <include name="irvine/math/IntegerUtils.java"/>
+      <include name="irvine/math/Shuffle.java"/>
+      <include name="irvine/math/r/Constants.java"/>
+      <include name="irvine/math/r/DoubleUtils.java"/>
+      <include name="irvine/util/array/*.java"/>
+      <include name="irvine/util/string/StringUtils.java"/>
+      <include name="irvine/util/string/TextTable.java"/>
+      <include name="irvine/util/string/WrappingStringBuffer.java"/>
+      <include name="irvine/util/io/**/*.java"/>
+      <include name="irvine/world/*.java"/>
+    </javac>
+
+    <jar destfile="${build.dir}/chaos.jar" update="false">
+      <fileset dir="${build.dir}/classes"/>
+      <fileset dir="${src.dir}" includes="chaos/resources/**"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/*.jpg"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/*.png"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/0"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/1"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/2"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active.txt"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/generic/*.jpg"/>
+      <fileset dir="${src.dir}" includes="irvine/tile/6pt.txt"/>
+      <fileset dir="${src.dir}" includes="irvine/tile/7pt.txt"/>
+      <fileset dir="${src.dir}" includes="irvine/tile/zxfont.txt"/>
+      <fileset dir="${src.dir}" includes="chaos/scenario/*.dat"/>
+      <manifest>
+        <attribute name="Main-Class" value="chaos.Chaos"/>
+        <attribute name="Implementation-Title" value="Chaos"/>
+        <attribute name="Implementation-Version" value="4.0"/>
+        <attribute name="Implementation-Vendor" value="Sean A. Irvine"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="testrelease" description="Make a release of Chaos which includes unit tests">
+    <delete dir="${build.dir}/classes"/>
+    <mkdir dir="${build.dir}/classes"/>
+    <javac destdir="${build.dir}/classes" srcdir="${src.dir}" nowarn="true" source="1.8" target="1.8" classpath="${src.dir}" debug="on" includeantruntime="false">
+      <include name="chaos/**/*.java"/>
+      <include name="irvine/tile/*.java"/>
+      <include name="irvine/heraldry/*.java"/>
+      <include name="irvine/util/*.java"/>
+      <include name="irvine/util/graphics/*.java"/>
+      <include name="irvine/simplegames/ImageLoader.java"/>
+      <include name="irvine/math/IntegerUtils.java"/>
+      <include name="irvine/math/Shuffle.java"/>
+      <include name="irvine/math/r/Constants.java"/>
+      <include name="irvine/math/r/DoubleUtils.java"/>
+      <include name="irvine/util/array/*.java"/>
+      <include name="irvine/util/string/StringUtils.java"/>
+      <include name="irvine/util/string/TextTable.java"/>
+      <include name="irvine/util/string/WrappingStringBuffer.java"/>
+      <include name="irvine/util/io/**/*.java"/>
+      <include name="irvine/world/*.java"/>
+    </javac>
+    <javac destdir="${build.dir}/classes" srcdir="${test.dir}" nowarn="true" source="1.8" target="1.8" classpath="${test.dir}:${lib.dir}/junit.jar" debug="on">
+      <include name="irvine/TestUtils.java"/>
+      <include name="irvine/StandardIoTestCase.java"/>
+      <include name="chaos/**/*.java"/>
+      <exclude name="chaos/graphics/active16/GenerateShields.java"/>
+    </javac>
+
+    <jar destfile="${build.dir}/chaos.jar" update="false">
+      <fileset dir="${build.dir}/classes"/>
+      <fileset dir="${src.dir}" includes="chaos/resources/**"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/*.jpg"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/*.png"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/0"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/1"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active*/2"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/static*/0"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/static*/1"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/active.txt"/>
+      <fileset dir="${src.dir}" includes="chaos/graphics/generic/*.jpg"/>
+      <fileset dir="${src.dir}" includes="irvine/tile/6pt.txt"/>
+      <fileset dir="${src.dir}" includes="irvine/tile/7pt.txt"/>
+      <fileset dir="${src.dir}" includes="irvine/tile/zxfont.txt"/>
+      <fileset dir="${src.dir}" includes="chaos/scenario/*.dat"/>
+      <fileset dir="${test.dir}" includes="chaos/words.txt"/>
+      <fileset dir="${test.dir}" includes="chaos/sound/swoosh"/>
+      <fileset dir="${test.dir}" includes="chaos/sound/bigswoosh"/>
+      <fileset dir="${test.dir}" includes="chaos/graphics/*.gif"/>
+      <fileset dir="${test.dir}" includes="chaos/scenario/test.dat"/>
+      <zipfileset src="${lib.dir}/junit.jar" excludes="META-INF/**"/>
+      <manifest>
+        <attribute name="Main-Class" value="chaos.AllTests"/>
+        <attribute name="Implementation-Title" value="Chaos"/>
+        <attribute name="Implementation-Version" value="1.8"/>
+        <attribute name="Implementation-Vendor" value="Sean A. Irvine"/>
+      </manifest>
+    </jar>
+  </target>
+
+</project>

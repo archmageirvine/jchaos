@@ -1,0 +1,21 @@
+#
+# This file contains the frequency table for named snakes.
+#
+# It lists the spells that can be case by deities and their relative
+# frequency. It is used during spell casting by deities to select
+# which spell to use.  This file is only read once per game, so any
+# parsing cost is minimal.
+#
+# Each number should be in the range 0 to 100 inclusive.
+#
+chaos.common.monster.Amphisbaena                100
+chaos.common.monster.KingCobra                  100
+chaos.common.monster.Python                     100
+chaos.common.monster.Spider                     10
+chaos.common.monster.GiantBeetle                10
+chaos.common.free.Venom                         2
+chaos.common.free.Curse                         2
+chaos.common.free.Bless                         2
+chaos.common.monster.NamedSnake                 2
+chaos.common.free.Triple                        10
+chaos.common.free.MagicWand                     20
