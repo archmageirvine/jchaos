@@ -24,6 +24,9 @@ java chaos.Chaos -h
 There are many things that could be improved, but I do not have the time.
 The game play itself is reasonably solid.
 
+![example-screen](doc/example-screen.png)
+
+
 Coding Standards
 ----------------
 
