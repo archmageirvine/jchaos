@@ -65,7 +65,7 @@
       <include name="irvine/world/*.java"/>
     </javac>
 
-    <jar destfile="${build.dir}/chaos.jar" update="false">
+    <jar destfile="${build.dir}/jchaos.jar" update="false">
       <fileset dir="${build.dir}/classes"/>
       <fileset dir="${src.dir}" includes="chaos/resources/**"/>
       <fileset dir="${src.dir}" includes="chaos/graphics/active*/*.jpg"/>
@@ -116,7 +116,7 @@
       <exclude name="chaos/graphics/active16/GenerateShields.java"/>
     </javac>
 
-    <jar destfile="${build.dir}/chaos.jar" update="false">
+    <jar destfile="${build.dir}/jchaos.jar" update="false">
       <fileset dir="${build.dir}/classes"/>
       <fileset dir="${src.dir}" includes="chaos/resources/**"/>
       <fileset dir="${src.dir}" includes="chaos/graphics/active*/*.jpg"/>
