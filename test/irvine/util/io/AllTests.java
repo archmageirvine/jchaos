@@ -14,6 +14,7 @@ public class AllTests extends TestSuite {
     final TestSuite suite = new TestSuite();
     suite.addTest(irvine.util.io.java.AllTests.suite());
     suite.addTestSuite(CustomURLStreamHandlerFactoryTest.class);
+    suite.addTestSuite(MappingInputStreamTest.class);
     suite.addTestSuite(IOUtilsTest.class);
     return suite;
   }

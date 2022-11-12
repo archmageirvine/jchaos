@@ -7,11 +7,11 @@ if [ ! "${HOME}" ]; then
 fi
 
 export JAVA=/usr/local/java/jdk
-export SYSNAME=cvscheck_chaos
+export SYSNAME=cvscheck_jchaos
 
-export WEB=${HOME}/public_html/cvscheck_chaos
+export WEB=${HOME}/public_html/cvscheck_jchaos
 
-export CODEHOME=${HOME}/chaos
+export CODEHOME=${HOME}/jchaos
 
 export MAIN_MODULE="."
 export SRC_MODULES="src internal"
@@ -37,7 +37,7 @@ export PLOT_PACKAGE_DEPENDENCIES_OPTS='irvine irvine 2 2'
 export LINKAGE_OPTS="--alltests"
 export FINDBUGS_OPTS="-pluginList ${HOME}/java_apps/spotbugs-3.1.0-RC5/lib/fb-contrib-7.0.5.sb.jar"
 
-COLUMN_SEQUENCE=('cleancodedirs' 'compilemodules' 'localtests' 'sh-peepingdave.sh')
+COLUMN_SEQUENCE=('cleancodedirs' 'compilemodules' 'localtests')
 export COLUMN_SEQUENCE
 
 if [ "$1" ]; then
