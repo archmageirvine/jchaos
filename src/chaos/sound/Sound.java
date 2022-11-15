@@ -154,14 +154,14 @@ public final class Sound {
     mLine = null;
   }
 
-  @Override
-  protected void finalize() {
-    if (mLine != null) {
-      mLine.drain();
-      mLine.stop();
-      mLine.close();
-    }
-  }
+//  @Override
+//  protected void finalize() {
+//    if (mLine != null) {
+//      mLine.drain();
+//      mLine.stop();
+//      mLine.close();
+//    }
+//  }
 
   /**
    * Provides the only way to get a handle to the sound engine.

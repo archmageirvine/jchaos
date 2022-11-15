@@ -2,6 +2,7 @@ package chaos;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Locale;
 
@@ -72,14 +73,14 @@ public class MaskTest extends TestCase {
     return "0x" + t.substring(t.length() - 16) + "L";
   }
 
-  private Castable getCastable(final String clazz) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+  private Castable getCastable(final String clazz) throws InstantiationException, IllegalAccessException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException {
     // For some named castables a specific instance to match the mask since not all of them do
     if (clazz.contains("NamedDeity")) {
       return new NamedDeity("Zeus");
     } else if (clazz.contains("NamedSnake")) {
       return new NamedSnake("Apep");
     } else {
-      return (Castable) Class.forName(clazz).newInstance();
+      return (Castable) Class.forName(clazz).getDeclaredConstructor().newInstance();
     }
   }
 

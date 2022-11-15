@@ -192,7 +192,7 @@ public abstract class AbstractActorTest extends AbstractCastableTest {
       assertTrue("Null promo class", pr != null);
       assertTrue("Cannot promote to self", mCastable.getClass() != pr);
       try {
-        final Object o = pr.newInstance();
+        final Object o = pr.getDeclaredConstructor().newInstance();
         assertTrue(o instanceof Actor);
       } catch (final Exception e) {
         e.printStackTrace();

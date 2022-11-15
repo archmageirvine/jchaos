@@ -1,5 +1,6 @@
 package chaos.common.spell;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Random;
 
@@ -28,7 +29,7 @@ public class AlterRealityTest extends AbstractCastableTest {
     return new AlterReality();
   }
 
-  public void testCast() throws IllegalAccessException, InstantiationException {
+  public void testCast() throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
     final World world = new World(20, 2);
     final AlterReality a = new AlterReality();
     assertEquals(5, a.getCastRange());
@@ -57,7 +58,7 @@ public class AlterRealityTest extends AbstractCastableTest {
           assertEquals(z.getName(), rein, mz.is(PowerUps.REINCARNATE));
         }
         // A few creatures have predefined horror -- so have to account for that
-        final Actor t = mz.getClass().newInstance();
+        final Actor t = mz.getClass().getDeclaredConstructor().newInstance();
         assertEquals(horror + t.get(PowerUps.HORROR), mz.get(PowerUps.HORROR));
       }
       res.add(z.getClass());

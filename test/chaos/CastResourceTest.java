@@ -40,7 +40,7 @@ public class CastResourceTest extends TestCase {
             // first check we can instantiate the class from frequency.txt
             final String clazz = line.substring(0, sp);
             try {
-              assertTrue(Class.forName(clazz).newInstance() instanceof Castable);
+              assertTrue(Class.forName(clazz).getDeclaredConstructor().newInstance() instanceof Castable);
             } catch (final ClassNotFoundException e) {
               sb.append(clazz).append(" is not found\n");
             }

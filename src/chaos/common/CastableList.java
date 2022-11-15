@@ -1,6 +1,7 @@
 package chaos.common;
 
 import java.io.Serializable;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -174,8 +175,8 @@ public class CastableList implements Serializable {
     for (int i = 0; i < mList.length; ++i) {
       if (mList[i] != null) {
         try {
-          mList[i] = FrequencyTable.DEFAULT.getUniformRandom().newInstance();
-        } catch (final InstantiationException | IllegalAccessException e) {
+          mList[i] = FrequencyTable.DEFAULT.getUniformRandom().getDeclaredConstructor().newInstance();
+        } catch (final InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
           throw new RuntimeException(e);
         }
       }

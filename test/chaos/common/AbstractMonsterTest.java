@@ -274,7 +274,7 @@ public abstract class AbstractMonsterTest extends AbstractActorTest {
       }
       if (re != null) {
         try {
-          a = re.newInstance();
+          a = re.getDeclaredConstructor().newInstance();
         } catch (final Exception e) {
           e.printStackTrace();
           fail(e.getMessage());

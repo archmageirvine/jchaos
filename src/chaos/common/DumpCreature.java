@@ -1,5 +1,6 @@
 package chaos.common;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Locale;
 
 import chaos.common.wizard.Wizard;
@@ -53,12 +54,12 @@ public final class DumpCreature {
     return cst instanceof Named ? "Named " + cst.getName() : cst.getName();
   }
 
-  private static String getReincarnation(final Actor cst) throws IllegalAccessException, InstantiationException {
+  private static String getReincarnation(final Actor cst) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
     if (cst instanceof Monster) {
       final Monster m = (Monster) cst;
       final Class<? extends Monster> reincarnation = m.reincarnation();
       if (reincarnation != null) {
-        return getName(reincarnation.newInstance());
+        return getName(reincarnation.getDeclaredConstructor().newInstance());
       }
     }
     return "";
@@ -71,11 +72,11 @@ public final class DumpCreature {
     notes.append(s);
   }
 
-  private static final String sanitize(final String s) {
+  private static String sanitize(final String s) {
     return s.toLowerCase(Locale.getDefault()).replace('_', ' ');
   }
 
-  private static String dumpCsvActor(final Actor cst) throws InstantiationException, IllegalAccessException {
+  private static String dumpCsvActor(final Actor cst) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
     final StringBuilder sb = new StringBuilder(getName(cst)).append(',')
       .append(FrequencyTable.DEFAULT.getFrequency(cst.getClass())).append(',')
       .append(cst.getRealm()).append(',')
@@ -93,7 +94,7 @@ public final class DumpCreature {
     final StringBuilder notes = new StringBuilder();
     if (cst instanceof Promotion) {
       final Promotion p = (Promotion) cst;
-      notes.append("Promotes to ").append(getName(p.promotion().newInstance())).append('(').append(p.promotionCount()).append(')');
+      notes.append("Promotes to ").append(getName(p.promotion().getDeclaredConstructor().newInstance())).append('(').append(p.promotionCount()).append(')');
     }
     if (cst instanceof Monster) {
       final Monster m = (Monster) cst;
@@ -140,10 +141,10 @@ public final class DumpCreature {
     return sb.toString();
   }
 
-  private static void dumpCsvAll() throws IllegalAccessException, InstantiationException {
+  private static void dumpCsvAll() throws IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException {
     System.out.println(HEADER);
     for (final Class<? extends Castable> castable : FrequencyTable.ALL.getCastableClasses()) {
-      final Castable cst = castable.newInstance();
+      final Castable cst = castable.getDeclaredConstructor().newInstance();
       if (cst instanceof Actor && (!(cst instanceof Wizard) || cst instanceof Wizard1)) {
         System.out.println(dumpCsvActor((Actor) cst));
       }
@@ -151,7 +152,7 @@ public final class DumpCreature {
   }
 
   /**
-   * Dump all the information about a castable.
+   * Dump all the information about a Castable.
    * @param args class name
    * @exception Exception if an error occurs
    */
@@ -167,7 +168,7 @@ public final class DumpCreature {
     }
 
     final Class<? extends Castable> cl = Class.forName(args[0]).asSubclass(Castable.class);
-    final Castable cst = cl.newInstance();
+    final Castable cst = cl.getDeclaredConstructor().newInstance();
     System.out.println(cst.getName());
     System.out.println(cst.getDescription());
     System.out.println("Frequency:          " + FrequencyTable.DEFAULT.getFrequency(cl));

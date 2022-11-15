@@ -299,7 +299,7 @@ public class LineOfSightTest extends TestCase {
       for (int i = 0; i < size; ++i) {
         if (r.nextInt(density) == 0) {
           Castable c;
-          while (!((c = FrequencyTable.DEFAULT.getUniformRandom().newInstance()) instanceof Actor) || c instanceof MagicGlass) {
+          while (!((c = FrequencyTable.DEFAULT.getUniformRandom().getDeclaredConstructor().newInstance()) instanceof Actor) || c instanceof MagicGlass) {
             // do nothing
           }
           w.getCell(i).push((Actor) c);
@@ -341,7 +341,7 @@ public class LineOfSightTest extends TestCase {
       for (int i = 0; i < size; ++i) {
         if (r.nextInt(density) == 0) {
           Castable c;
-          while (!((c = FrequencyTable.DEFAULT.getUniformRandom().newInstance()) instanceof Actor)) {
+          while (!((c = FrequencyTable.DEFAULT.getUniformRandom().getDeclaredConstructor().newInstance()) instanceof Actor)) {
             // do nothing
           }
           w.getCell(i).push((Actor) c);

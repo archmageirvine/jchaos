@@ -4,6 +4,7 @@ import static chaos.util.RankingTable.getRanking;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -109,8 +110,8 @@ public final class FrequencyTable {
    */
   public static Castable instantiate(final Class<? extends Castable> clazz) {
     try {
-      return clazz.newInstance();
-    } catch (final InstantiationException | IllegalAccessException e) {
+      return clazz.getDeclaredConstructor().newInstance();
+    } catch (final InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
       throw new RuntimeException(e);
     }
   }
@@ -255,11 +256,11 @@ public final class FrequencyTable {
   public Actor getUniformRandomActor() {
     while (true) {
       try {
-        final Castable c = getUniformRandom().newInstance();
+        final Castable c = getUniformRandom().getConstructor().newInstance();
         if (c instanceof Actor && !(c instanceof Wizard)) {
           return (Actor) c;
         }
-      } catch (final InstantiationException | IllegalAccessException e) {
+      } catch (final InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
         throw new RuntimeException(e);
       }
     }
@@ -277,11 +278,11 @@ public final class FrequencyTable {
   public Monster getUniformRandomMonster() {
     while (true) {
       try {
-        final Castable c = getUniformRandom().newInstance();
+        final Castable c = getUniformRandom().getDeclaredConstructor().newInstance();
         if (checkAllowedMonster(c)) {
           return (Monster) c;
         }
-      } catch (final InstantiationException | IllegalAccessException e) {
+      } catch (final InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
         throw new RuntimeException(e);
       }
     }
@@ -324,8 +325,8 @@ public final class FrequencyTable {
       if (c.getName().endsWith(name)) {
         if (bestMatch == null || c.getName().endsWith("." + name)) {
           try {
-            bestMatch = c.newInstance();
-          } catch (final InstantiationException | IllegalAccessException e) {
+            bestMatch = c.getDeclaredConstructor().newInstance();
+          } catch (final InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
             throw new RuntimeException(e);
           }
         }

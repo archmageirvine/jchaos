@@ -1,15 +1,11 @@
 package chaos.common;
 
 /**
- * Tests variables defined for a Unicaster.
- *
+ * Tests variables defined for a polycaster.
  * @author Sean A. Irvine
  */
 public abstract class AbstractPolycasterTest extends AbstractMonsterTest {
 
-  /**
-   * Test supplied Monster is really a Polycaster.
-   */
   @Override
   public void testInstanceOf() {
     super.testInstanceOf();
@@ -26,7 +22,7 @@ public abstract class AbstractPolycasterTest extends AbstractMonsterTest {
     assertTrue("Spells bad", u.mCastClass.length > 1);
     for (int i = 0; i < u.mCastClass.length; ++i) {
       try {
-        final Object o = u.mCastClass[i].newInstance();
+        final Object o = u.mCastClass[i].getDeclaredConstructor().newInstance();
         assertTrue("Spell is not a Castable", o instanceof Castable);
       } catch (final Exception e) {
         fail(e.getMessage());

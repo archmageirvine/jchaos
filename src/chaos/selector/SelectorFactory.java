@@ -37,8 +37,8 @@ public final class SelectorFactory {
         // try next one
       }
       // fall back to zero arg constructor
-      return clazz.newInstance();
-    } catch (final ClassNotFoundException | InstantiationException | InvocationTargetException | IllegalAccessException e) {
+      return clazz.getConstructor().newInstance();
+    } catch (final ClassNotFoundException | InstantiationException | InvocationTargetException | IllegalAccessException | NoSuchMethodException e) {
       throw new RuntimeException(e);
     }
   }

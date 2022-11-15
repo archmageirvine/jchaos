@@ -1,5 +1,6 @@
 package irvine.util.io;
 
+import java.lang.reflect.InvocationTargetException;
 import java.net.URLStreamHandler;
 import java.net.URLStreamHandlerFactory;
 import java.util.HashMap;
@@ -45,8 +46,8 @@ public class CustomURLStreamHandlerFactory implements URLStreamHandlerFactory {
     final Class<? extends URLStreamHandler> c = mHandlerMap.get(protocol);
     if (c != null) {
       try {
-        return c.newInstance();
-      } catch (final InstantiationException | IllegalAccessException e) {
+        return c.getDeclaredConstructor().newInstance();
+      } catch (final InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
         System.err.println("Couldn't create URLStreamHandler " + c.getName());
       }
     }

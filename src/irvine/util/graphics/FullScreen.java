@@ -242,9 +242,4 @@ public class FullScreen extends JFrame implements AutoCloseable {
       // underlying internal error when trying to set the display mode.
     }
   }
-
-  @Override
-  protected void finalize() {
-    close();
-  }
 }

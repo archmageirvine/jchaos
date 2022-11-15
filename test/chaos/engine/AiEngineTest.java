@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 
 import chaos.Chaos;
@@ -122,8 +123,8 @@ public class AiEngineTest extends TestCase {
             // first check we can instantiate the class from frequency.txt
             final String clazz = line.substring(0, sp);
             try {
-              set.add((Castable) Class.forName(clazz).newInstance());
-            } catch (final ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+              set.add((Castable) Class.forName(clazz).getDeclaredConstructor().newInstance());
+            } catch (final ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
               // too bad
             }
           }
