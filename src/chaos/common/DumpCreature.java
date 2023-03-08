@@ -210,7 +210,7 @@ public final class DumpCreature {
         System.out.print(re == null ? "null" : (re.getName() + "->"));
         if (re != null) {
           try {
-            r = re.newInstance();
+            r = re.getDeclaredConstructor().newInstance();
           } catch (final Exception e) {
             e.printStackTrace();
           }

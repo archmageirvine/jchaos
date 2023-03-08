@@ -1,5 +1,6 @@
 package chaos.common.free;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Random;
 
@@ -25,7 +26,7 @@ public class MutateTest extends AbstractFreeCastableTest {
     return new Mutate();
   }
 
-  public void test1() throws IllegalAccessException, InstantiationException {
+  public void test1() throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
     final Mutate a = new Mutate();
     assertEquals(Castable.CAST_SINGLE, a.getCastFlags());
     final World world = new World(1, 6);
@@ -62,7 +63,7 @@ public class MutateTest extends AbstractFreeCastableTest {
         } else {
           assertEquals(z.getName(), rein, mz.is(PowerUps.REINCARNATE));
         }
-        final Actor t = mz.getClass().newInstance();
+        final Actor t = mz.getClass().getDeclaredConstructor().newInstance();
         assertEquals(horror + t.get(PowerUps.HORROR), mz.get(PowerUps.HORROR));
       }
       res.add(z.getClass());

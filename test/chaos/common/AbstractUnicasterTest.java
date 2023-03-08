@@ -24,7 +24,7 @@ public abstract class AbstractUnicasterTest extends AbstractMonsterTest {
     assertTrue("Delay bad", u.mDelay > 0);
     assertTrue("Spell bad", u.mCastClass != null);
     try {
-      final Object o = u.mCastClass.newInstance();
+      final Object o = u.mCastClass.getDeclaredConstructor().newInstance();
       assertTrue("Spell in not a Castable", o instanceof Castable);
     } catch (final Exception e) {
       fail(e.getMessage());
