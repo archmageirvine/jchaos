@@ -427,16 +427,10 @@ public final class Chaos implements Serializable {
   }
 
   private void initTransients() {
-    switch (getConfig().getCellBits()) {
-    case 6:
-      mTM = TileManagerFactory.getTileManager(TileManagerFactory.ACTIVE64);
-      break;
-    case 5:
+    if (getConfig().getCellBits() == 5) {
       mTM = TileManagerFactory.getTileManager(TileManagerFactory.ACTIVE32);
-      break;
-    default:
+    } else {
       mTM = TileManagerFactory.getTileManager(TileManagerFactory.ACTIVE16);
-      break;
     }
     mCastMaster = new CastMaster(mWorld);
     mGrower = new Grower(mWorld);

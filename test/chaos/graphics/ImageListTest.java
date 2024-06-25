@@ -1,12 +1,11 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
-
 import java.awt.image.BufferedImage;
+
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ImageListTest extends TestCase {
@@ -26,6 +25,5 @@ public class ImageListTest extends TestCase {
   public void test() {
     checkFireBall(4);
     checkFireBall(5);
-    checkFireBall(6);
   }
 }

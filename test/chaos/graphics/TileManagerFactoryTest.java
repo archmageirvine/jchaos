@@ -4,7 +4,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class TileManagerFactoryTest extends TestCase {
@@ -18,6 +17,5 @@ public class TileManagerFactoryTest extends TestCase {
     }
     assertNotNull(TileManagerFactory.getTileManager(TileManagerFactory.ACTIVE16));
     assertNotNull(TileManagerFactory.getTileManager(TileManagerFactory.ACTIVE32));
-    assertNotNull(TileManagerFactory.getTileManager(TileManagerFactory.ACTIVE64));
   }
 }

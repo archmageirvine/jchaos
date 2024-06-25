@@ -58,7 +58,6 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(WizardExplodeEffectTest.class);
     suite.addTestSuite(chaos.graphics.active16.Active16TileManagerTest.class);
     suite.addTestSuite(chaos.graphics.active32.Active32TileManagerTest.class);
-    suite.addTestSuite(chaos.graphics.active64.Active64TileManagerTest.class);
     return suite;
   }
 
