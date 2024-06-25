@@ -5,9 +5,10 @@ import chaos.common.Humanoid;
 import chaos.common.ListCaster;
 import chaos.common.Monster;
 import chaos.common.free.Bless;
+import chaos.common.growth.Wheat;
 
 /**
- * Marid.
+ * Ceres.
  * @author Sean A. Irvine
  */
 public class Ceres extends ListCaster implements Humanoid {
@@ -28,13 +29,13 @@ public class Ceres extends ListCaster implements Humanoid {
 
   @Override
   public Class<? extends Monster> reincarnation() {
-    return Necromancer.class;
+    return Agathion.class;
   }
 
   /** Ceres. */
   @SuppressWarnings("unchecked")
   public Ceres() {
-    super(Eagle.class, Bless.class);
+    super(Wheat.class, Bless.class, Eagle.class, Wheat.class);
     setCombatApply(Attribute.LIFE);
     setRangedCombatApply(Attribute.LIFE);
     setSpecialCombatApply(Attribute.LIFE);

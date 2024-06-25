@@ -433,5 +433,6 @@ ShadowCity_M    x       474
 SkeletonLord    p       475,476,477,478,479
 Acromantula     p       47a,47b,47c     47d
 Ceres           x       47e             47f
+Wheat           p       480,481,482,483,484
 
-#next free 480
+#next free 485

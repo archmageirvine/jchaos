@@ -23,6 +23,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(OrangeJellyTest.class);
     suite.addTestSuite(SpikyTest.class);
     suite.addTestSuite(VioletFungiTest.class);
+    suite.addTestSuite(WheatTest.class);
     return suite;
   }
 

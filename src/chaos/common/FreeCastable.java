@@ -12,8 +12,7 @@ public abstract class FreeCastable extends Castable {
 
   @Override
   public int getCastRange() {
-    // These spells have infinite range, which it is convenient to represent
-    // by zero.
+    // These spells have infinite range, which it is convenient to represent by zero.
     return 0;
   }
 

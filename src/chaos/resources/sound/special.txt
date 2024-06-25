@@ -41,6 +41,7 @@ chaos.common.growth.Spiky chaos/resources/sound/special/electric
 chaos.common.growth.Spiky chaos/resources/sound/special/alien
 
 # Healers
+chaos.common.growth.Wheat chaos/resources/sound/special/heal
 chaos.common.monster.Hippocrates chaos/resources/sound/special/heal
 chaos.common.monster.Aesculapius chaos/resources/sound/special/heal
 chaos.common.monster.SkeletonLord chaos/resources/sound/special/heal

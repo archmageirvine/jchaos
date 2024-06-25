@@ -82,7 +82,6 @@ public interface Growth extends TargetFilter {
 
   /**
    * Grow this growth (if possible).
-   *
    * @param cell the cell containing this growth
    * @param world world to grow in
    */
@@ -90,7 +89,6 @@ public interface Growth extends TargetFilter {
 
   /**
    * Return the type of this growth, either GROW_OVER, GROW_BY_COMBAT, or GROW_FOUR_WAY.
-   *
    * @return growth type
    */
   int getGrowthType();
@@ -100,7 +98,7 @@ public interface Growth extends TargetFilter {
    * and should generally be bigger than about 10.  The rate is the
    * percentage chance that a growth will expand on a given turn.  A value
    * of 100 means the growth will attempt expansion every turn, a value of
-   * 50 once every two turns turns, and a value of 25 once every four turns
+   * 50 once every two turns, and a value of 25 once every four turns
    * on average.
    *
    * @return growth rate
