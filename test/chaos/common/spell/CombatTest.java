@@ -1,6 +1,5 @@
 package chaos.common.spell;
 
-import junit.framework.Assert;
 import chaos.board.World;
 import chaos.common.AbstractCastableTest;
 import chaos.common.Attribute;
@@ -13,6 +12,7 @@ import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
 import chaos.util.Event;
 import chaos.util.EventListener;
+import junit.framework.Assert;
 
 /**
  * Tests this spell.

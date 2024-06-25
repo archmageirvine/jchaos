@@ -1,8 +1,8 @@
 package irvine.util;
 
-import junit.framework.TestCase;
-
 import java.util.Map;
+
+import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.

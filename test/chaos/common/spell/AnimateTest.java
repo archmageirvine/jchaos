@@ -1,11 +1,13 @@
 package chaos.common.spell;
 
+import java.util.Collection;
+import java.util.HashSet;
+
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.AbstractCastableTest;
 import chaos.common.Castable;
 import chaos.common.State;
-import chaos.common.wizard.Wizard;
 import chaos.common.free.MyEventListener;
 import chaos.common.inanimate.MagicWood;
 import chaos.common.inanimate.ShadowWood;
@@ -14,15 +16,13 @@ import chaos.common.monster.HigherDevil;
 import chaos.common.monster.Horse;
 import chaos.common.monster.Lion;
 import chaos.common.monster.WoodElf;
+import chaos.common.wizard.Wizard;
 import chaos.common.wizard.Wizard1;
 import chaos.util.CellEffectEvent;
 import chaos.util.Event;
 import chaos.util.EventListener;
 import chaos.util.PolycellEffectEvent;
 import junit.framework.Assert;
-
-import java.util.Collection;
-import java.util.HashSet;
 
 /**
  * Tests this spell.

@@ -2,7 +2,6 @@ package chaos.util;
 
 import java.util.HashSet;
 
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.board.WizardManager;
 import chaos.board.World;
@@ -10,6 +9,7 @@ import chaos.common.State;
 import chaos.common.inanimate.Pit;
 import chaos.common.monster.Horse;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.

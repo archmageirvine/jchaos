@@ -1,5 +1,7 @@
 package chaos.common.beam;
 
+import java.util.Set;
+
 import chaos.board.Cell;
 import chaos.board.Team;
 import chaos.board.World;
@@ -14,8 +16,6 @@ import chaos.util.CastUtils;
 import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
 import chaos.util.Random;
-
-import java.util.Set;
 
 /**
  * Plasma beam.

@@ -2,12 +2,12 @@ package chaos.common.free;
 
 import java.util.Arrays;
 
-import junit.framework.Assert;
 import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
 import chaos.util.Event;
 import chaos.util.EventListener;
 import chaos.util.PolycellEffectEvent;
+import junit.framework.Assert;
 
 /**
  * Listener that expects to see particular event types.

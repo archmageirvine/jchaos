@@ -19,9 +19,7 @@ import irvine.util.AbstractIterator;
 
 /**
  * Provides implementations of common aspects of a world.
- *
  * @param <C> fundamental cell type of the world.
- *
  * @author Sean A. Irvine
  */
 abstract class AbstractWorld<C> implements World<C>, Iterable<C> {

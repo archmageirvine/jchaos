@@ -1,9 +1,9 @@
 package chaos.engine;
 
-import junit.framework.TestCase;
 import chaos.board.CastMaster;
 import chaos.board.MoveMaster;
 import chaos.board.World;
+import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.

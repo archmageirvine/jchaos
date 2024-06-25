@@ -2,10 +2,10 @@ package chaos.selector;
 
 import java.util.HashSet;
 
-import junit.framework.TestCase;
 import chaos.board.CastMaster;
 import chaos.board.World;
 import chaos.common.wizard.Wizard;
+import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.

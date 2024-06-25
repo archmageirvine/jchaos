@@ -1,15 +1,15 @@
 package chaos.common.inanimate;
 
-import chaos.common.growth.Magma;
-import irvine.TestUtils;
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.AbstractMonsterTest;
 import chaos.common.Attribute;
 import chaos.common.Castable;
 import chaos.common.State;
+import chaos.common.growth.Magma;
 import chaos.common.monster.Lion;
 import chaos.common.wizard.Wizard1;
+import irvine.TestUtils;
 
 /**
  * Tests this inanimate.

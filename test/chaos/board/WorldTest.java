@@ -1,5 +1,8 @@
 package chaos.board;
 
+import java.util.Random;
+import java.util.Set;
+
 import chaos.common.Attribute;
 import chaos.common.State;
 import chaos.common.growth.VioletFungi;
@@ -9,9 +12,6 @@ import chaos.common.monster.Bolter;
 import chaos.common.monster.CatLord;
 import chaos.common.monster.Lion;
 import junit.framework.TestCase;
-
-import java.util.Random;
-import java.util.Set;
 
 /**
  * JUnit tests for the corresponding class.

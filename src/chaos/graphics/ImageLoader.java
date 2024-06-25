@@ -1,8 +1,5 @@
 package chaos.graphics;
 
-import irvine.util.graphics.Stipple;
-
-import javax.imageio.ImageIO;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Polygon;
@@ -10,6 +7,10 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
+
+import javax.imageio.ImageIO;
+
+import irvine.util.graphics.Stipple;
 
 /**
  * Convenience for loading images and certain other predefined images.

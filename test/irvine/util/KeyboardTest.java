@@ -1,10 +1,10 @@
 package irvine.util;
 
-import irvine.TestUtils;
-import junit.framework.TestCase;
-
 import java.awt.GraphicsEnvironment;
 import java.awt.Label;
+
+import irvine.TestUtils;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

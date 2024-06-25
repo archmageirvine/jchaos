@@ -1,6 +1,5 @@
 package chaos.engine;
 
-import junit.framework.TestCase;
 import chaos.common.Attribute;
 import chaos.common.State;
 import chaos.common.dragon.EmeraldDragon;
@@ -24,6 +23,7 @@ import chaos.common.monster.Solar;
 import chaos.common.monster.WoodElf;
 import chaos.common.mythos.MrStrong;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.

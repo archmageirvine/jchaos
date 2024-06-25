@@ -2,9 +2,9 @@ package chaos.util;
 
 import java.util.HashSet;
 
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.common.monster.Lion;
+import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.

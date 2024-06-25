@@ -1,5 +1,7 @@
 package chaos.common.free;
 
+import java.util.HashSet;
+
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.Caster;
@@ -10,8 +12,6 @@ import chaos.util.AudioEvent;
 import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
 import chaos.util.PolycellEffectEvent;
-
-import java.util.HashSet;
 
 /**
  * Acid rain.

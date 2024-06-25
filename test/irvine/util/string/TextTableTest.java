@@ -1,8 +1,8 @@
 package irvine.util.string;
 
-import junit.framework.TestCase;
-
 import java.io.IOException;
+
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

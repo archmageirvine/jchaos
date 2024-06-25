@@ -3,9 +3,9 @@ package chaos.common.spell;
 import chaos.board.World;
 import chaos.common.Attribute;
 import chaos.common.Castable;
-import chaos.common.wizard.Wizard;
 import chaos.common.free.AbstractDecrementTest;
 import chaos.common.monster.Lion;
+import chaos.common.wizard.Wizard;
 import chaos.common.wizard.Wizard1;
 
 /**

@@ -1,6 +1,5 @@
 package chaos.common.free;
 
-import irvine.TestUtils;
 import chaos.board.World;
 import chaos.common.Attribute;
 import chaos.common.Castable;
@@ -9,6 +8,7 @@ import chaos.common.monster.Horse;
 import chaos.common.monster.Lion;
 import chaos.common.wizard.Wizard1;
 import chaos.util.CellEffectType;
+import irvine.TestUtils;
 
 /**
  * Tests this spell.

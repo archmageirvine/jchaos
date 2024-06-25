@@ -33,7 +33,7 @@ public class Wheat extends MaterialMonster implements UndyingGrowth {
 
   @Override
   public int getCastRange() {
-    return 0;
+    return 1; // this is ignored but cannot be 0!
   }
 
   @Override
@@ -48,7 +48,7 @@ public class Wheat extends MaterialMonster implements UndyingGrowth {
 
   @Override
   public int growthRate() {
-    return 4;
+    return 1; // very slow to grow by itself
   }
 
   @Override
@@ -111,7 +111,7 @@ public class Wheat extends MaterialMonster implements UndyingGrowth {
     // cell is ignored here, this is effectively a free castable
     if (world != null && casterCell != null) {
       final HashSet<Cell> affected = new HashSet<>();
-      for (final Cell c : world.getCells(casterCell.getCellNumber(), 2, 3, false)) {
+      for (final Cell c : world.getCells(casterCell.getCellNumber(), 2, 2, false)) {
         if (c.peek() == null || c.peek().getState() == State.DEAD) {
           affected.add(c);
         }

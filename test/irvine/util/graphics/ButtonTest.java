@@ -1,10 +1,9 @@
 package irvine.util.graphics;
 
-import irvine.tile.TileImage;
-
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import irvine.tile.TileImage;
 import junit.framework.TestCase;
 
 /**

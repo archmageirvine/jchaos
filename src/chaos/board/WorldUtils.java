@@ -1,13 +1,12 @@
 package chaos.board;
 
-import irvine.util.MaximumSeparation;
-
 import java.util.Random;
 
 import chaos.common.Actor;
 import chaos.common.State;
-import chaos.common.wizard.Wizard;
 import chaos.common.inanimate.Generator;
+import chaos.common.wizard.Wizard;
+import irvine.util.MaximumSeparation;
 
 /**
  * Various utility functions operating on the whole world.

@@ -1,6 +1,5 @@
 package chaos.common.free;
 
-import junit.framework.Assert;
 import chaos.board.World;
 import chaos.common.AbstractFreeDecrement;
 import chaos.common.Attribute;
@@ -12,6 +11,7 @@ import chaos.util.Event;
 import chaos.util.EventListener;
 import chaos.util.PolycellEffectEvent;
 import chaos.util.PolyshieldDestroyEvent;
+import junit.framework.Assert;
 
 /**
  * Tests this spell.

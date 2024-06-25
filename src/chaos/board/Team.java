@@ -1,10 +1,10 @@
 package chaos.board;
 
-import chaos.common.Actor;
-import chaos.util.Random;
-
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import chaos.common.Actor;
+import chaos.util.Random;
 
 /**
  * Maintains team information.

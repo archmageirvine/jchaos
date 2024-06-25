@@ -4,10 +4,10 @@ import java.io.Serializable;
 import java.util.Comparator;
 import java.util.TreeSet;
 
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.monster.Lion;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

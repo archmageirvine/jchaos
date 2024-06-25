@@ -1,8 +1,8 @@
 package chaos.common;
 
+import chaos.common.free.MagicWand;
 import irvine.TestUtils;
 import junit.framework.TestCase;
-import chaos.common.free.MagicWand;
 
 /**
  * Tests the corresponding class.

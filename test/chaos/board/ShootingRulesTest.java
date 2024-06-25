@@ -1,6 +1,5 @@
 package chaos.board;
 
-import junit.framework.TestCase;
 import chaos.common.Attribute;
 import chaos.common.PowerUps;
 import chaos.common.State;
@@ -10,6 +9,7 @@ import chaos.common.monster.Iridium;
 import chaos.common.monster.Skeleton;
 import chaos.common.monster.WoodElf;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.

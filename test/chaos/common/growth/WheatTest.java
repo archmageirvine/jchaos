@@ -18,11 +18,6 @@ public class WheatTest extends AbstractMonsterTest {
   }
 
   @Override
-  public void testCastRange() {
-    assertEquals(0, getCastable().getCastRange());
-  }
-
-  @Override
   public void testReincarnation() {
     assertNull(new Wheat().reincarnation());
   }

@@ -1,7 +1,5 @@
 package chaos.sound;
 
-import irvine.util.io.IOUtils;
-
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -13,6 +11,8 @@ import java.util.Map;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.UnsupportedAudioFileException;
+
+import irvine.util.io.IOUtils;
 
 
 /**

@@ -1,7 +1,7 @@
 package chaos.common;
 
-import junit.framework.TestCase;
 import chaos.common.inanimate.Pool;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

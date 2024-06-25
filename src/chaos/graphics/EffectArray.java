@@ -1,16 +1,16 @@
 package chaos.graphics;
 
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import irvine.tile.ExplodingCircleEffect;
 import irvine.tile.ExplodingSquareEffect;
 import irvine.tile.ExplosionEffect;
 import irvine.tile.TileEffect;
 import irvine.tile.TileImage;
 import irvine.tile.TwirlEffect;
-
-import java.awt.Color;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Various arrays of effects.

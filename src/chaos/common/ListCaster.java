@@ -2,7 +2,6 @@ package chaos.common;
 
 import chaos.Chaos;
 import chaos.board.Cell;
-import chaos.util.Random;
 
 /**
  * A type of Caster which casts down a predefined list of spells.

@@ -1,10 +1,10 @@
 package irvine.tile;
 
-import junit.framework.TestCase;
-
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
 import java.util.Random;
+
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

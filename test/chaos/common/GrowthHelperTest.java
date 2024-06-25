@@ -2,11 +2,11 @@ package chaos.common;
 
 import java.util.HashSet;
 
-import chaos.common.wizard.Wizard;
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.board.WizardManager;
 import chaos.board.World;
+import chaos.common.wizard.Wizard;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

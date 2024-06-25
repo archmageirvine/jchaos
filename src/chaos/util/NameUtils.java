@@ -1,7 +1,5 @@
 package chaos.util;
 
-import irvine.util.io.IOUtils;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,6 +9,7 @@ import java.util.Random;
 
 import chaos.common.Castable;
 import chaos.common.Named;
+import irvine.util.io.IOUtils;
 
 /**
  * Name utility functions.

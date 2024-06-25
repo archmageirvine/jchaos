@@ -1,10 +1,10 @@
 package chaos.util;
 
-import junit.framework.TestCase;
 import chaos.board.Team;
 import chaos.board.WizardManager;
 import chaos.board.World;
 import chaos.common.State;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

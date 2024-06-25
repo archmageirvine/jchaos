@@ -1,12 +1,12 @@
 package chaos.common;
 
-import junit.framework.Assert;
 import chaos.board.World;
 import chaos.common.wizard.Wizard1;
 import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
 import chaos.util.Event;
 import chaos.util.EventListener;
+import junit.framework.Assert;
 
 /**
  * Superclass for testing shield spells.

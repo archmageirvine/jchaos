@@ -1,10 +1,10 @@
 package chaos.graphics;
 
-import irvine.simplegames.ImageLoader;
-import irvine.util.Point;
-
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
+
+import irvine.simplegames.ImageLoader;
+import irvine.util.Point;
 
 /**
  * Seamless tiling of an image.

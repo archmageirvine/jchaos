@@ -2,7 +2,6 @@ package chaos.board;
 
 import java.util.Random;
 
-import junit.framework.TestCase;
 import chaos.Chaos;
 import chaos.common.Actor;
 import chaos.common.Castable;
@@ -15,6 +14,7 @@ import chaos.common.monster.Leopard;
 import chaos.common.monster.Tiger;
 import chaos.common.monster.WoodElf;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.

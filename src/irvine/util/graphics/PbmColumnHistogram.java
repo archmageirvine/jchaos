@@ -2,8 +2,8 @@ package irvine.util.graphics;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Produce a histogram of the number of black pixels per column in a PBM image.

@@ -1,9 +1,9 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
 import chaos.board.World;
 import chaos.util.WeaponEffectEvent;
 import chaos.util.WeaponEffectType;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

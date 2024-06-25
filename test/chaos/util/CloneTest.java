@@ -1,11 +1,11 @@
 package chaos.util;
 
-import chaos.common.PowerUps;
-import junit.framework.TestCase;
 import chaos.common.Attribute;
+import chaos.common.PowerUps;
 import chaos.common.Realm;
 import chaos.common.State;
 import chaos.common.monster.Lion;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

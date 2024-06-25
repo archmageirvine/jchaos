@@ -1,9 +1,9 @@
 package chaos.graphics.active16;
 
+import java.io.IOException;
+
 import irvine.tile.TileImage;
 import irvine.tile.TileSet;
-
-import java.io.IOException;
 
 /**
  * Generate shields for attribute increase spells.

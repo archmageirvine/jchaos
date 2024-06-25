@@ -4,8 +4,8 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 
-import junit.framework.TestCase;
 import chaos.util.ChaosProperties;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

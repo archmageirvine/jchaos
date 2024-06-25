@@ -1,8 +1,8 @@
 package chaos.graphics;
 
-import chaos.util.Sleep;
-
 import java.awt.Graphics;
+
+import chaos.util.Sleep;
 
 /**
  * Plotting based on a list of images

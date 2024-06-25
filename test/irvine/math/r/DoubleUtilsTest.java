@@ -2,6 +2,7 @@ package irvine.math.r;
 
 import static irvine.math.r.DoubleUtils.dmsToRadians;
 import static irvine.math.r.DoubleUtils.sgn;
+
 import junit.framework.TestCase;
 
 /**

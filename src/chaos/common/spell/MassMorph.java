@@ -1,5 +1,8 @@
 package chaos.common.spell;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.AbstractGenerator;
@@ -8,15 +11,12 @@ import chaos.common.Castable;
 import chaos.common.Caster;
 import chaos.common.State;
 import chaos.common.TargetFilter;
-import chaos.common.wizard.Wizard;
 import chaos.common.inanimate.MagicWood;
+import chaos.common.wizard.Wizard;
 import chaos.util.CastUtils;
 import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
 import chaos.util.PolycellEffectEvent;
-
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Mass morph.

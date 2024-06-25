@@ -1,9 +1,9 @@
 package chaos.util;
 
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.common.PowerUps;
 import chaos.common.monster.Lion;
+import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.

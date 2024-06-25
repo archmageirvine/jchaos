@@ -1,6 +1,5 @@
 package chaos.common.free;
 
-import irvine.math.Shuffle;
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.Actor;
@@ -10,6 +9,7 @@ import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
 import chaos.util.WeaponEffectEvent;
 import chaos.util.WeaponEffectType;
+import irvine.math.Shuffle;
 
 /**
  * Turmoil.  This was the only extra spell available by meditation in Spectrum

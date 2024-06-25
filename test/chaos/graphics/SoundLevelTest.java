@@ -1,6 +1,5 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
 import chaos.Chaos;
 import chaos.common.Actor;
 import chaos.common.State;
@@ -11,6 +10,7 @@ import chaos.common.wizard.Wizard2;
 import chaos.engine.AiEngine;
 import chaos.engine.HumanEngine;
 import chaos.sound.Sound;
+import junit.framework.TestCase;
 
 /**
  * Tests for corresponding class.

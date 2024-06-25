@@ -1,9 +1,9 @@
 package chaos.common;
 
-import junit.framework.TestCase;
 import chaos.common.monster.Hydra;
 import chaos.common.monster.Lion;
 import chaos.common.monster.Ogre;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

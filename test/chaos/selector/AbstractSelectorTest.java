@@ -1,6 +1,5 @@
 package chaos.selector;
 
-import junit.framework.TestCase;
 import chaos.common.Castable;
 import chaos.common.dragon.RedDragon;
 import chaos.common.free.Quench;
@@ -10,6 +9,7 @@ import chaos.common.monster.Hydra;
 import chaos.common.monster.Lion;
 import chaos.common.monster.Ogre;
 import chaos.common.monster.Skeleton;
+import junit.framework.TestCase;
 
 /**
  * Tests basic functionality that all Selectors should satisfy.

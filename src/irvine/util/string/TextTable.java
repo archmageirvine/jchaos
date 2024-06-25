@@ -1,9 +1,9 @@
 package irvine.util.string;
 
-import irvine.math.IntegerUtils;
-
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import irvine.math.IntegerUtils;
 
 /**
  * A class to format a table of data using aligned columns.

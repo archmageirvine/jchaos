@@ -1,10 +1,10 @@
 package chaos.common;
 
-import junit.framework.Assert;
-import junit.framework.TestCase;
 import chaos.board.World;
 import chaos.common.monster.Lion;
 import chaos.common.wizard.Wizard1;
+import junit.framework.Assert;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

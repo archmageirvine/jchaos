@@ -1,8 +1,8 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
-
 import java.awt.image.BufferedImage;
+
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

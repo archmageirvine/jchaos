@@ -2,10 +2,10 @@ package chaos.graphics;
 
 import java.util.TreeSet;
 
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.util.ChaosProperties;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

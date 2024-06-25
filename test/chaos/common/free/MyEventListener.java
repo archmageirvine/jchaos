@@ -1,9 +1,9 @@
 package chaos.common.free;
 
-import junit.framework.Assert;
 import chaos.util.CellEffectEvent;
 import chaos.util.Event;
 import chaos.util.EventListener;
+import junit.framework.Assert;
 
 /**
  * Used for testing events.

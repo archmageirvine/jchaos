@@ -1,5 +1,7 @@
 package chaos.util;
 
+import java.util.HashSet;
+
 import chaos.board.Cell;
 import chaos.board.Team;
 import chaos.board.World;
@@ -7,8 +9,6 @@ import chaos.common.Actor;
 import chaos.common.Conveyance;
 import chaos.common.State;
 import chaos.common.wizard.Wizard;
-
-import java.util.HashSet;
 
 /**
  * Team utility functions.

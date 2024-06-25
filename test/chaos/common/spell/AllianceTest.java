@@ -4,8 +4,8 @@ import chaos.board.World;
 import chaos.common.AbstractCastableTest;
 import chaos.common.Actor;
 import chaos.common.Castable;
-import chaos.common.wizard.Wizard;
 import chaos.common.monster.Lion;
+import chaos.common.wizard.Wizard;
 import chaos.common.wizard.Wizard1;
 
 /**

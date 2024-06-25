@@ -1,9 +1,8 @@
 package chaos.common;
 
-import irvine.TestUtils;
-
 import java.awt.Color;
 
+import irvine.TestUtils;
 import junit.framework.TestCase;
 
 /**

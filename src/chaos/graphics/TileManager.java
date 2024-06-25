@@ -1,8 +1,8 @@
 package chaos.graphics;
 
-import chaos.common.Castable;
-
 import java.awt.image.BufferedImage;
+
+import chaos.common.Castable;
 
 /**
  * Provides access to a set of tiles.  Given an arbitrary castable

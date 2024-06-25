@@ -1,5 +1,8 @@
 package chaos.common.free;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import chaos.board.Cell;
 import chaos.board.Team;
 import chaos.board.World;
@@ -8,13 +11,10 @@ import chaos.common.Attribute;
 import chaos.common.Caster;
 import chaos.common.FreeCastable;
 import chaos.common.State;
+import chaos.util.CastUtils;
 import chaos.util.CellEffectType;
 import chaos.util.PolycellAttackEvent;
 import chaos.util.PolycellEffectEvent;
-import chaos.util.CastUtils;
-
-import java.util.Set;
-import java.util.HashSet;
 
 /**
  * Rampage.

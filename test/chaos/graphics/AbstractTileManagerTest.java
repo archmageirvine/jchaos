@@ -1,12 +1,12 @@
 package chaos.graphics;
 
+import java.awt.image.BufferedImage;
+
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.Castable;
 import chaos.common.Caster;
 import junit.framework.TestCase;
-
-import java.awt.image.BufferedImage;
 
 /**
  * Tests basic functionality that all TileManagers should satisfy.

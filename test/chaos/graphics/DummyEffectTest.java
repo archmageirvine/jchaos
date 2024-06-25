@@ -3,9 +3,9 @@ package chaos.graphics;
 import java.awt.Graphics;
 import java.util.Collection;
 
+import chaos.board.Cell;
 import junit.framework.Assert;
 import junit.framework.TestCase;
-import chaos.board.Cell;
 
 /**
  * Tests the corresponding class.

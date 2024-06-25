@@ -1,10 +1,10 @@
 package chaos.graphics;
 
-import irvine.util.Pair;
-
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import irvine.util.Pair;
 
 /**
  * A list of images obtained via a resource.

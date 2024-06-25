@@ -1,12 +1,12 @@
 package chaos.common.free;
 
+import java.util.ArrayList;
+
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.Actor;
 import chaos.common.Caster;
 import chaos.common.FreeCastable;
-
-import java.util.ArrayList;
 
 /**
  * Repulsion.

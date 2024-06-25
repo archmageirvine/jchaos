@@ -1,5 +1,7 @@
 package chaos.common.spell;
 
+import java.util.Set;
+
 import chaos.board.Cell;
 import chaos.board.Team;
 import chaos.board.World;
@@ -16,8 +18,6 @@ import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
 import chaos.util.WeaponEffectEvent;
 import chaos.util.WeaponEffectType;
-
-import java.util.Set;
 
 /**
  * Ball lightning.

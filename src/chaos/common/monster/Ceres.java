@@ -4,6 +4,7 @@ import chaos.common.Attribute;
 import chaos.common.Humanoid;
 import chaos.common.ListCaster;
 import chaos.common.Monster;
+import chaos.common.Singleton;
 import chaos.common.free.Bless;
 import chaos.common.growth.Wheat;
 
@@ -11,7 +12,7 @@ import chaos.common.growth.Wheat;
  * Ceres.
  * @author Sean A. Irvine
  */
-public class Ceres extends ListCaster implements Humanoid {
+public class Ceres extends ListCaster implements Humanoid, Singleton {
   {
     setDefault(Attribute.LIFE, 15);
     setDefault(Attribute.LIFE_RECOVERY, 4);

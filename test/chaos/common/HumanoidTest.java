@@ -1,6 +1,5 @@
 package chaos.common;
 
-import junit.framework.TestCase;
 import chaos.common.growth.Fire;
 import chaos.common.monster.Bolter;
 import chaos.common.monster.Eagle;
@@ -8,6 +7,7 @@ import chaos.common.monster.Lion;
 import chaos.common.monster.Ogre;
 import chaos.common.monster.Orc;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 
 /**

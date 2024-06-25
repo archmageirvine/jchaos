@@ -1,6 +1,5 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
 import chaos.Chaos;
 import chaos.board.WizardManager;
 import chaos.board.World;
@@ -13,6 +12,7 @@ import chaos.common.monster.Orc;
 import chaos.common.monster.Vampire;
 import chaos.common.monster.WoodElf;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

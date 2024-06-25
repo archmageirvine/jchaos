@@ -1,9 +1,8 @@
 package chaos.util;
 
-import chaos.common.PowerUps;
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.common.Attribute;
+import chaos.common.PowerUps;
 import chaos.common.State;
 import chaos.common.monster.Lion;
 import chaos.common.monster.Manticore;
@@ -11,6 +10,7 @@ import chaos.common.monster.Wight;
 import chaos.common.monster.WoodElf;
 import chaos.common.monster.Wraith;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.

@@ -1,9 +1,9 @@
 package irvine.tile;
 
+import java.util.Set;
+
 import irvine.util.Point;
 import irvine.world.FlatWorld;
-
-import java.util.Set;
 
 /**
  * A graphical effect in which a circle expands from the centre to fill most

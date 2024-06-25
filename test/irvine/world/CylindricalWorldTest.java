@@ -1,9 +1,9 @@
 package irvine.world;
 
-import irvine.TestUtils;
-
 import java.util.List;
 import java.util.Set;
+
+import irvine.TestUtils;
 
 /**
  * Tests the corresponding class.

@@ -1,5 +1,7 @@
 package chaos.common.free;
 
+import java.util.Set;
+
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.Actor;
@@ -14,8 +16,6 @@ import chaos.util.CellEffectType;
 import chaos.util.Random;
 import chaos.util.WeaponEffectEvent;
 import chaos.util.WeaponEffectType;
-
-import java.util.Set;
 
 /**
  * Pyrotechnics.

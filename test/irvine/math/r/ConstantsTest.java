@@ -1,8 +1,8 @@
 package irvine.math.r;
 
-import junit.framework.TestCase;
-
 import static irvine.TestUtils.assertEqualsLocal;
+
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

@@ -2,7 +2,6 @@ package chaos.common.free;
 
 import java.util.Collection;
 
-import junit.framework.Assert;
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.Castable;
@@ -16,6 +15,7 @@ import chaos.util.CellEffectEvent;
 import chaos.util.Event;
 import chaos.util.EventListener;
 import chaos.util.PolycellEffectEvent;
+import junit.framework.Assert;
 
 /**
  * Tests this spell.

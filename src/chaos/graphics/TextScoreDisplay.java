@@ -1,14 +1,14 @@
 package chaos.graphics;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 import chaos.board.World;
 import chaos.common.Actor;
 import chaos.common.Attribute;
 import chaos.common.State;
 import chaos.common.wizard.Wizard;
 import irvine.util.string.TextTable;
-
-import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * Text version of current scores.

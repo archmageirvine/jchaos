@@ -1,12 +1,13 @@
 package chaos.graphics;
 
 import static java.lang.Math.abs;
-import irvine.tile.AttackEffect;
-import irvine.tile.TileImage;
 
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.List;
+
+import irvine.tile.AttackEffect;
+import irvine.tile.TileImage;
 
 /**
  * Draw the standard attack graphics.

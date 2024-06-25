@@ -4,9 +4,9 @@ import chaos.board.WizardManager;
 import chaos.board.World;
 import chaos.common.Actor;
 import chaos.common.Castable;
-import chaos.common.wizard.Wizard;
 import chaos.common.monster.Lion;
 import chaos.common.spell.Alliance;
+import chaos.common.wizard.Wizard;
 import chaos.common.wizard.Wizard1;
 import chaos.util.CellEffectType;
 

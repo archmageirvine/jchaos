@@ -2,9 +2,6 @@ package chaos.util;
 
 import java.util.HashSet;
 
-import chaos.common.inanimate.Generator;
-import junit.framework.Assert;
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.board.MoveMaster;
 import chaos.board.Team;
@@ -14,9 +11,9 @@ import chaos.common.Attribute;
 import chaos.common.Castable;
 import chaos.common.Conveyance;
 import chaos.common.State;
-import chaos.common.wizard.Wizard;
 import chaos.common.dragon.RedDragon;
 import chaos.common.growth.GooeyBlob;
+import chaos.common.inanimate.Generator;
 import chaos.common.inanimate.MagicWood;
 import chaos.common.inanimate.ManaBattery;
 import chaos.common.inanimate.Rock;
@@ -32,8 +29,11 @@ import chaos.common.monster.MindFlayer;
 import chaos.common.monster.Robot;
 import chaos.common.monster.Shadow;
 import chaos.common.spell.MassMorph;
+import chaos.common.wizard.Wizard;
 import chaos.common.wizard.Wizard1;
 import chaos.common.wizard.Wizard2;
+import junit.framework.Assert;
+import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.

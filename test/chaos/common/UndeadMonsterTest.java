@@ -1,7 +1,7 @@
 package chaos.common;
 
-import junit.framework.TestCase;
 import chaos.common.monster.Ghost;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

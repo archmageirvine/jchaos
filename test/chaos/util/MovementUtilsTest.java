@@ -1,6 +1,5 @@
 package chaos.util;
 
-import junit.framework.TestCase;
 import chaos.board.World;
 import chaos.common.Monster;
 import chaos.common.State;
@@ -9,6 +8,7 @@ import chaos.common.monster.CatLord;
 import chaos.common.monster.Lion;
 import chaos.common.monster.WoodElf;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.

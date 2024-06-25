@@ -1,12 +1,12 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
 import chaos.board.World;
 import chaos.common.State;
 import chaos.common.dragon.RedDragon;
 import chaos.common.monster.Dalek;
 import chaos.common.monster.Orc;
 import chaos.common.monster.WoodElf;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

@@ -1,6 +1,5 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
 import chaos.Configuration;
 import chaos.board.WizardManager;
 import chaos.board.World;
@@ -8,6 +7,7 @@ import chaos.common.Attribute;
 import chaos.common.State;
 import chaos.common.wizard.Wizard;
 import chaos.util.ChaosProperties;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

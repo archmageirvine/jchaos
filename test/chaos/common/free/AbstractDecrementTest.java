@@ -1,6 +1,5 @@
 package chaos.common.free;
 
-import junit.framework.Assert;
 import chaos.board.World;
 import chaos.common.AbstractCastableTest;
 import chaos.common.Castable;
@@ -12,6 +11,7 @@ import chaos.util.Event;
 import chaos.util.EventListener;
 import chaos.util.WeaponEffectEvent;
 import chaos.util.WeaponEffectType;
+import junit.framework.Assert;
 
 /**
  * Tests this spell.

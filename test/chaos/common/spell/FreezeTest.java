@@ -8,8 +8,8 @@ import chaos.common.AbstractCastableTest;
 import chaos.common.Castable;
 import chaos.common.PowerUps;
 import chaos.common.State;
-import chaos.common.wizard.Wizard;
 import chaos.common.monster.Lion;
+import chaos.common.wizard.Wizard;
 import chaos.common.wizard.Wizard1;
 
 /**

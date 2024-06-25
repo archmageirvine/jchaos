@@ -1,11 +1,11 @@
 package irvine.tile;
 
+import static java.lang.Math.PI;
+import static java.lang.Math.min;
+
 import java.awt.image.BufferedImage;
 import java.util.Arrays;
 import java.util.Random;
-
-import static java.lang.Math.PI;
-import static java.lang.Math.min;
 
 /**
  * A lightweight image structure without all the baggage of the standard

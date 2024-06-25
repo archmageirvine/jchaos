@@ -1,8 +1,8 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
 import chaos.common.free.Arborist;
 import chaos.common.free.IrvinesInvulnerability;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

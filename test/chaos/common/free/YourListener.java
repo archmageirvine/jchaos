@@ -1,5 +1,7 @@
 package chaos.common.free;
 
+import java.util.Collection;
+
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.util.AudioEvent;
@@ -8,8 +10,6 @@ import chaos.util.Event;
 import chaos.util.EventListener;
 import chaos.util.PolycellEffectEvent;
 import junit.framework.Assert;
-
-import java.util.Collection;
 
 /**
  * Used for testing events.

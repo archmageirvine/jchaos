@@ -2,9 +2,9 @@ package chaos.common.monster;
 
 import chaos.common.Attribute;
 import chaos.common.Humanoid;
-import chaos.common.Unicaster;
 import chaos.common.Monster;
 import chaos.common.PowerUps;
+import chaos.common.Unicaster;
 import chaos.common.free.Rampage;
 
 /**

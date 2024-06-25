@@ -8,8 +8,8 @@ import chaos.common.Conveyance;
 import chaos.common.Growth;
 import chaos.common.Meditation;
 import chaos.common.State;
-import chaos.common.wizard.Wizard;
 import chaos.common.monster.GoblinBomb;
+import chaos.common.wizard.Wizard;
 
 /**
  * Field for a wizard. This reflects the desirability of a cell from a

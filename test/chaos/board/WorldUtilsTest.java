@@ -1,11 +1,11 @@
 package chaos.board;
 
-import junit.framework.TestCase;
 import chaos.common.Actor;
 import chaos.common.State;
-import chaos.common.wizard.Wizard;
 import chaos.common.inanimate.Generator;
+import chaos.common.wizard.Wizard;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * Tests for the corresponding class.

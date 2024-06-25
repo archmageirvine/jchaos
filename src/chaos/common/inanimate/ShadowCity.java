@@ -1,5 +1,7 @@
 package chaos.common.inanimate;
 
+import java.util.Set;
+
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.Actor;
@@ -14,8 +16,6 @@ import chaos.common.Realm;
 import chaos.common.TargetFilter;
 import chaos.common.monster.Wraith;
 import chaos.util.CastUtils;
-
-import java.util.Set;
 
 /**
  * Shadow city.

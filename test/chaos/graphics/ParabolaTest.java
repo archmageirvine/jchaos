@@ -2,8 +2,8 @@ package chaos.graphics;
 
 import java.awt.Color;
 
-import junit.framework.TestCase;
 import chaos.board.World;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

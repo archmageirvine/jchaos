@@ -1,9 +1,9 @@
 package chaos.util;
 
-import junit.framework.TestCase;
 import chaos.common.Castable;
 import chaos.common.monster.Horse;
 import chaos.common.spell.TouchOfGod;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

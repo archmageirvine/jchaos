@@ -1,11 +1,11 @@
 package chaos.graphics;
 
-import junit.framework.TestCase;
 import chaos.board.Cell;
 import chaos.board.World;
 import chaos.common.State;
 import chaos.common.monster.Lion;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

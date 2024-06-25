@@ -1,6 +1,5 @@
 package chaos.common;
 
-import junit.framework.Assert;
 import chaos.board.World;
 import chaos.common.inanimate.Generator;
 import chaos.common.inanimate.Roper;
@@ -13,6 +12,7 @@ import chaos.util.EventListener;
 import chaos.util.TextEvent;
 import chaos.util.WeaponEffectEvent;
 import chaos.util.WeaponEffectType;
+import junit.framework.Assert;
 
 /**
  * Tests this generator.

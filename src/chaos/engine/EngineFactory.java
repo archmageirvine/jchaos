@@ -1,12 +1,12 @@
 package chaos.engine;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 import chaos.Chaos;
 import chaos.board.CastMaster;
 import chaos.board.MoveMaster;
 import chaos.board.World;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * Construct player engines using reflection.

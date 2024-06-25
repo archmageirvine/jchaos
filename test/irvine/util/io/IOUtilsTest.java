@@ -1,8 +1,5 @@
 package irvine.util.io;
 
-import irvine.TestUtils;
-import junit.framework.TestCase;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -13,6 +10,9 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import irvine.TestUtils;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

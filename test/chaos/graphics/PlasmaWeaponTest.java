@@ -2,12 +2,12 @@ package chaos.graphics;
 
 import java.util.Arrays;
 
-import junit.framework.TestCase;
 import chaos.board.World;
 import chaos.common.Attribute;
 import chaos.util.ChaosProperties;
 import chaos.util.WeaponEffectEvent;
 import chaos.util.WeaponEffectType;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.

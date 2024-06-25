@@ -1,12 +1,12 @@
 package chaos.selector;
 
-import junit.framework.TestCase;
 import chaos.common.Castable;
 import chaos.common.State;
 import chaos.common.free.Hide;
 import chaos.common.free.Points;
 import chaos.common.monster.Iridium;
 import chaos.common.wizard.Wizard1;
+import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
