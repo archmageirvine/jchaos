@@ -10,14 +10,12 @@ import chaos.engine.Weight;
 
 /**
  * Prefers weak creatures to anything else.
- *
  * @author Sean A. Irvine
  */
 public class WeakCreaturologist extends Strategiser {
 
   /**
    * Construct a selector for the specified wizard and world.
-   *
    * @param wizard the wizard
    * @param world the world
    * @param castMaster casting rules

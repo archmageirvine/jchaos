@@ -8,7 +8,6 @@ import chaos.common.Realm;
 
 /**
  * Shadowmare.
- *
  * @author Sean A. Irvine
  * @author Gregory B. Irvine
  */

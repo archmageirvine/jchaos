@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * The amphisbaena.
- *
  * @author Sean A. Irvine
  */
 public class Amphisbaena extends MaterialMonster {
@@ -19,10 +18,12 @@ public class Amphisbaena extends MaterialMonster {
     setDefault(Attribute.AGILITY_RECOVERY, 12);
     setDefault(Attribute.MOVEMENT, 2);
   }
+
   @Override
   public long getLosMask() {
     return 0x00003E3E7E7F7E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return KingCobra.class;

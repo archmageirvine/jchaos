@@ -13,7 +13,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Teleport.
- *
  * @author Sean A. Irvine
  */
 public class Teleport extends Castable {
@@ -21,6 +20,7 @@ public class Teleport extends Castable {
   public int getCastFlags() {
     return CAST_ANY;
   }
+
   @Override
   public int getCastRange() {
     return MAX_CAST_RANGE;

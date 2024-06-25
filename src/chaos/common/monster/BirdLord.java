@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * The Bird Lord.
- *
  * @author Sean A. Irvine
  */
 public class BirdLord extends MaterialMonsterRide {
@@ -23,10 +22,12 @@ public class BirdLord extends MaterialMonsterRide {
     setDefault(Attribute.RANGED_COMBAT, 2);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0040FE7E7F660000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Eagle.class;

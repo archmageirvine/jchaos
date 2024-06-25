@@ -9,7 +9,6 @@ import chaos.common.Virtuous;
 
 /**
  * Gryphon.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -24,18 +23,22 @@ public class Gryphon extends MaterialMonsterMount implements Virtuous, Promotion
     setDefault(Attribute.MOVEMENT, 5);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x187B7F7F7F1D1800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Manticore.class;
   }
+
   @Override
   public Class<? extends Monster> promotion() {
     return Opinicus.class;
   }
+
   @Override
   public int promotionCount() {
     return 3;

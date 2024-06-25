@@ -8,7 +8,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ShapeTest extends TestCase {
@@ -49,7 +48,7 @@ public class ShapeTest extends TestCase {
     "0.000 0.000 1.000 setrgbcolor#gsave 1 1.3333333333333333 scale newpath 0.5 0.5 0.5 0 360 arc fill grestore#gsave#1.000 0.000 0.000 setrgbcolor#gsave#0.16666666666666666 0.2222222222222222 translate#0.6666666666666666 0.6666666666666666 scale#1.000 0.000 0.000 setrgbcolor#newpath 0.0 0.8660254037844386 1.0 -60.0 0.0 arc 0.0 0.8660254037844386 lineto closepath fill#newpath 1.0 0.8660254037844386 1.0 180.0 240.0 arc 1.0 0.8660254037844386 lineto closepath fill#0.0 0.8660254037844386 1.0 0.46730792954889466 rectfill#grestore#0.3333333333333333 0.4444444444444444 translate#0.3333333333333333 0.3333333333333333 scale#0.000 0.000 1.000 setrgbcolor#newpath 0.5 0.0 moveto 1.0 0.6666666666666666 lineto 0.5 1.3333333333333333 lineto 0.0 0.6666666666666666 lineto closepath fill#grestore#1.000 1.000 1.000 setrgbcolor#gsave 1 1.3333333333333333 scale newpath 0.5 0.5 0.5 0 360 arc stroke grestore#", // RUSTRE
     "0.000 0.000 1.000 setrgbcolor#gsave 1 1.3333333333333333 scale newpath 0.5 0.5 0.5 0 360 arc fill grestore#gsave#1.000 0.000 0.000 setrgbcolor#newpath 0.0625 1.3333333333333333 moveto 0.5 0.75 lineto 0.9375 1.3333333333333333 lineto 1.0625 1.3333333333333333 lineto 0.5625 0.6666666666666666 lineto 1.0625 0.0 lineto 0.9375 0.0 lineto 0.5 0.5833333333333333 lineto 0.0625 0.0 lineto -0.0625 0.0 lineto 0.4375 0.6666666666666666 lineto -0.0625 1.3333333333333333 lineto closepath clip#1.000 0.000 0.000 setrgbcolor#gsave 1 1.3333333333333333 scale newpath 0.5 0.5 0.5 0 360 arc fill grestore#grestore#1.000 1.000 1.000 setrgbcolor#gsave 1 1.3333333333333333 scale newpath 0.5 0.5 0.5 0 360 arc stroke grestore#", // SALTIRE
   };
-  
+
   public void testShapePS() {
     final Shape shape = new Cartouche();
     shape.setBorderTincture(Tincture.ARGENT);

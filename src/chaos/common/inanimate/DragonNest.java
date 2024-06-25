@@ -20,13 +20,13 @@ import chaos.util.Random;
 
 /**
  * Dragon nest.
- *
  * @author Sean A. Irvine
  */
 public class DragonNest extends AbstractGenerator implements Bonus {
 
   /** List of classes this generator can produce. */
   private static final ArrayList<Class<? extends Actor>> GENERATEES = new ArrayList<>();
+
   static {
     GENERATEES.add(RedDragon.class);
     GENERATEES.add(BlackDragon.class);
@@ -43,14 +43,17 @@ public class DragonNest extends AbstractGenerator implements Bonus {
     setDefault(Attribute.LIFE_RECOVERY, 7);
     setDefault(Attribute.MAGICAL_RESISTANCE_RECOVERY, 1);
   }
+
   @Override
   public int getCastRange() {
     return 12;
   }
+
   @Override
   public int getBonus() {
     return 3;
   }
+
   @Override
   public Actor chooseWhatToGenerate() {
     if (Random.nextInt(4) == 0) {

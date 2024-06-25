@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Harpy.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -22,10 +21,12 @@ public class Harpy extends MaterialMonster {
     setDefault(Attribute.MOVEMENT, 5);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x001E7E3C3C3C3800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return FireBat.class;

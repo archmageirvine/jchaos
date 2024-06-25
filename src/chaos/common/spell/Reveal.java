@@ -19,7 +19,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Reveal.
- *
  * @author Sean A. Irvine
  */
 public class Reveal extends Castable implements TargetFilter {
@@ -54,7 +53,7 @@ public class Reveal extends Castable implements TargetFilter {
     final Team teams = world.getTeamInformation();
     final int t = teams.getTeam(caster);
     CastUtils.keepEnemies(targets, t, teams);
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (!(a instanceof Monster) || !a.is(PowerUps.CLOAKED)) {
         it.remove();

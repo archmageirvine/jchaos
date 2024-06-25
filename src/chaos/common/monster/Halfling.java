@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Halfling.
- *
  * @author Sean A. Irvine
  */
 public class Halfling extends MaterialMonster implements Humanoid {
@@ -21,10 +20,12 @@ public class Halfling extends MaterialMonster implements Humanoid {
     setDefault(Attribute.AGILITY, 40);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000303E3C383800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GiantBeetle.class;

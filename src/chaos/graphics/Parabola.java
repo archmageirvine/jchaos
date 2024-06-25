@@ -7,7 +7,6 @@ import chaos.board.World;
 
 /**
  * Routines to draw parabolas.
- *
  * @author Sean A. Irvine
  */
 public class Parabola {
@@ -36,7 +35,6 @@ public class Parabola {
 
   /**
    * Construct a new parabola drawing facility for the given world.
-   *
    * @param world world
    * @param screen where to draw
    * @param graphics where to draw
@@ -64,7 +62,6 @@ public class Parabola {
    * source cell to the target in the given color.  Does not undraw
    * itself; thus, you will generally want to call this with black
    * to undraw.
-   *
    * @param source source cell
    * @param target target cell
    * @param color color to draw in

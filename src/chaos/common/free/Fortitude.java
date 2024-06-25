@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Fortitude.
- *
  * @author Sean A. Irvine
  */
 public class Fortitude extends AbstractIncrement {

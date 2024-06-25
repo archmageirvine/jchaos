@@ -17,7 +17,6 @@ import chaos.util.CastUtils;
 
 /**
  * Dark wood.
- *
  * @author Sean A. Irvine
  */
 public class DarkWood extends UndeadMonster implements Multiplicity, Tree, NoDeadImage, Blocker, Animateable {
@@ -33,32 +32,39 @@ public class DarkWood extends UndeadMonster implements Multiplicity, Tree, NoDea
   public long getLosMask() {
     return 0x30FFEEFE7E7E3C18L;
   }
+
   @Override
   public int getCastRange() {
     return 12;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_GROWTH | CAST_EMPTY | CAST_LOS;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new Baboon();
     a.setOwner(getOwner());
     return a;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     CastUtils.castTree(this, caster, c, casterCell);
   }
+
   @Override
   public int getMultiplicity() {
     return 6;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;
   }
+
   @Override
   public int getDefaultWeight() {
     return -1;

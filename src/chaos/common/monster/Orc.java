@@ -10,7 +10,6 @@ import chaos.util.Random;
 
 /**
  * Orc.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -23,22 +22,27 @@ public class Orc extends MaterialMonster implements Promotion, Humanoid, Multipl
     setDefault(Attribute.AGILITY, 27);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00387E7E3E183800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Spider.class;
   }
+
   @Override
   public Class<? extends Monster> promotion() {
     return MightyOrc.class;
   }
+
   @Override
   public int promotionCount() {
     return 3;
   }
+
   @Override
   public int getMultiplicity() {
     return 1 + Random.nextInt(8);

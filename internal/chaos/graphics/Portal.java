@@ -16,12 +16,12 @@ import irvine.math.IntegerUtils;
 
 /**
  * Draw the graphics for the Portal object.
- *
  * @author Sean A. Irvine
  */
 public final class Portal {
 
-  private Portal() { }
+  private Portal() {
+  }
 
   private static double textWidth(final String s, final Graphics g) {
     final Rectangle2D r = g.getFontMetrics().getStringBounds(s, g);
@@ -120,7 +120,6 @@ public final class Portal {
 
   /**
    * Used for testing.
-   *
    * @param args See usage.
    */
   public static void main(final String[] args) {

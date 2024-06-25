@@ -28,7 +28,6 @@ import chaos.util.TextEvent;
 
 /**
  * Performs the update phase.
- *
  * @author Sean A. Irvine
  */
 public class Updater {
@@ -38,9 +37,8 @@ public class Updater {
 
   /**
    * Construct a new updater for the specified world.
-   *
    * @param world the world
-   * @exception NullPointerException if <code>world</code> is null.
+   * @throws NullPointerException if <code>world</code> is null.
    */
   public Updater(final World world) {
     if (world == null) {

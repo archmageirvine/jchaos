@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Triple.
- *
  * @author Sean A. Irvine
  */
 public class Triple extends FreePowerUp {
@@ -12,10 +11,12 @@ public class Triple extends FreePowerUp {
   protected int getPowerUpCount() {
     return 5;
   }
+
   @Override
   public PowerUps getPowerUpType() {
     return PowerUps.TRIPLE;
   }
+
   @Override
   protected boolean cumulative() {
     return true;

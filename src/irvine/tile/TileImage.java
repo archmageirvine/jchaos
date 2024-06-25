@@ -12,7 +12,6 @@ import java.util.Random;
  * Java image classes.  Provides a simple &alpha;RGB value per pixel.
  * The data can be accessed directly for maximum speed or converted to
  * a standard Java BufferedImage.
- *
  * @author Sean A. Irvine
  */
 public class TileImage {
@@ -28,10 +27,9 @@ public class TileImage {
 
   /**
    * Construct a new opaque black image of the given dimensions.
-   *
    * @param width width in pixels
    * @param height height in pixels
-   * @exception IllegalArgumentException if either dimension is less than 1.
+   * @throws IllegalArgumentException if either dimension is less than 1.
    */
   public TileImage(final int width, final int height) {
     if (width < 1) {
@@ -47,9 +45,8 @@ public class TileImage {
 
   /**
    * Construct a new image for a buffered image.
-   *
    * @param image the image
-   * @exception NullPointerException if <code>raster</code> is <code>null</code>.
+   * @throws NullPointerException if <code>raster</code> is <code>null</code>.
    */
   public TileImage(final BufferedImage image) {
     mWidth = image.getWidth();
@@ -78,7 +75,7 @@ public class TileImage {
   @Override
   public int hashCode() {
     int r = (mWidth << 16) + mHeight;
-    for (int i = 0; i < mAlphaRGB.length;) {
+    for (int i = 0; i < mAlphaRGB.length; ) {
       r ^= mAlphaRGB[i++] * i;
     }
     return r;
@@ -86,7 +83,6 @@ public class TileImage {
 
   /**
    * Return the width of the image in pixels.
-   *
    * @return width of image
    */
   public int getWidth() {
@@ -95,7 +91,6 @@ public class TileImage {
 
   /**
    * Return the height of the image in pixels.
-   *
    * @return height of image
    */
   public int getHeight() {
@@ -106,7 +101,6 @@ public class TileImage {
    * Return a copy of this image.  The copy is distinct in the sense
    * that changes pixels in the copy will not affect the original.
    * However, prior to such changes the two images are equal.
-   *
    * @return copy
    */
   public TileImage copy() {
@@ -118,7 +112,6 @@ public class TileImage {
   /**
    * Set the given pixel to the given color value.  No bounds checking is
    * performed, so this method should be used with care.
-   *
    * @param x <code>x</code>-coordinate
    * @param y <code>y</code>-coordinate
    * @param argb &alpha;RGB value (8-bits per component)
@@ -129,7 +122,6 @@ public class TileImage {
 
   /**
    * Get the color value of a given pixel.
-   *
    * @param x <code>x</code>-coordinate
    * @param y <code>y</code>-coordinate
    * @return color value
@@ -140,7 +132,6 @@ public class TileImage {
 
   /**
    * Fill the entire image with the given color.
-   *
    * @param argb color
    */
   public void fill(final int argb) {
@@ -151,7 +142,6 @@ public class TileImage {
    * Return an image which is this image flipped vertically.  That is, the
    * top row of this image is the bottom row of the returned image and
    * vice versa.
-   *
    * @return the flipped image
    */
   public TileImage vFlip() {
@@ -169,7 +159,6 @@ public class TileImage {
    * Return an image which is this image flipped horizontally.  That is, the
    * left row of this image is the right row of the returned image and
    * vice versa.
-   *
    * @return the flipped image
    */
   public TileImage hFlip() {
@@ -186,7 +175,6 @@ public class TileImage {
   /**
    * Return this image rotated 90 degrees clockwise about the centre.  This
    * rotation is perfect in that no color modification occurs.
-   *
    * @return rotated image.
    */
   public TileImage rotate90() {
@@ -204,7 +192,6 @@ public class TileImage {
   /**
    * Return this image rotated 180 degrees about the centre.  This rotation
    * is perfect in that no color modification occurs.
-   *
    * @return rotated image.
    */
   public TileImage rotate180() {
@@ -221,7 +208,6 @@ public class TileImage {
   /**
    * Return this image rotated 270 degrees clockwise about the centre.  This
    * rotation is perfect in that no color modification occurs.
-   *
    * @return rotated image.
    */
   public TileImage rotate270() {
@@ -239,13 +225,12 @@ public class TileImage {
   /**
    * Extract a subimage from this image.  All the bounds must within this
    * image or an exception occurs.
-   *
    * @param x x-offset
    * @param y y-offset
    * @param w width
    * @param h height
    * @return subimage
-   * @exception IllegalArgumentException if any parameter would cause a
+   * @throws IllegalArgumentException if any parameter would cause a
    * pixel access outside this image.
    */
   public TileImage getSubimage(final int x, int y, final int w, final int h) {
@@ -289,7 +274,6 @@ public class TileImage {
 
   /**
    * Rotate this image by the specified angle with optional blending.
-   *
    * @param angleInDegrees angle
    * @param bg color to use for any exposed pixels
    * @param blend true for blending
@@ -376,7 +360,6 @@ public class TileImage {
    * are interpreted modulo the image height, so it is possible to roll by
    * amounts greater than the image height and a roll of -1 and h-1 are
    * equivalent.
-   *
    * @param delta amount to roll
    * @return rolled image
    */
@@ -403,7 +386,6 @@ public class TileImage {
    * are interpreted modulo the image width, so it is possible to roll by
    * amounts greater than the image width and a roll of -1 and w-1 are
    * equivalent.
-   *
    * @param delta amount to roll
    * @return rolled image
    */
@@ -431,7 +413,6 @@ public class TileImage {
 
   /**
    * Replace all occurrences of a given color with another color in this image.
-   *
    * @param oldColor old color
    * @param newColor new color
    * @return image with color replacement
@@ -449,11 +430,10 @@ public class TileImage {
    * Randomize the specified number of bits of any pixel of the given color in
    * this image.  This is sometimes useful to break up large block of monotonous
    * color.  Does not modify the alpha channel.
-   *
    * @param color color to texture
    * @param bits number of bits to affect
    * @return image with color replacement
-   * @exception IllegalArgumentException if <code>bits</code> is not in the range
+   * @throws IllegalArgumentException if <code>bits</code> is not in the range
    * 0 to 8.
    */
   public TileImage textureColor(final int color, final int bits) {
@@ -479,13 +459,12 @@ public class TileImage {
    * this image are simply replaced with those of the given image.  Any pixels
    * outside the rectangle are unmodified.  As a convenience the jammed image is
    * returned.
-   *
    * @param x0 x-offset
    * @param y0 y-offset
    * @param image image to jam in
    * @return jammed image
-   * @exception NullPointerException if <code>image</code> is null
-   * @exception IllegalArgumentException if the bounding rectangle will exceed
+   * @throws NullPointerException if <code>image</code> is null
+   * @throws IllegalArgumentException if the bounding rectangle will exceed
    * in any way the dimensions of this image.
    */
   public TileImage jam(final int x0, final int y0, final TileImage image) {
@@ -506,7 +485,6 @@ public class TileImage {
   /**
    * Return a pixel value for color <code>a</code> over color <code>b</code>.
    * //Assumes the RGB components are premultiplied by alpha.
-   *
    * @param b lower color
    * @param a upper color
    * @return combined color
@@ -534,13 +512,12 @@ public class TileImage {
    * Place the given image over this image using the alpha channel information.
    * Assumes the color values have been premultiplied by alpha. As a convenience
    * the blended image is returned.
-   *
    * @param x0 x-offset
    * @param y0 y-offset
    * @param image image to over in
    * @return blend image
-   * @exception NullPointerException if <code>image</code> is null
-   * @exception IllegalArgumentException if the bounding rectangle will exceed
+   * @throws NullPointerException if <code>image</code> is null
+   * @throws IllegalArgumentException if the bounding rectangle will exceed
    * in any way the dimensions of this image.
    */
   public TileImage over(final int x0, final int y0, final TileImage image) {
@@ -559,7 +536,6 @@ public class TileImage {
 
   /**
    * Convert this image into a standard Java BufferedImage.
-   *
    * @return a BufferedImage
    */
   public BufferedImage toBufferedImage() {

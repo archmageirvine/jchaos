@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Pseudodragon.
- *
  * @author Sean A. Irvine
  */
 public class Pseudodragon extends MaterialMonsterRide {
@@ -23,10 +22,12 @@ public class Pseudodragon extends MaterialMonsterRide {
     setDefault(Attribute.RANGE, 7);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0xF07C7EFFFEFF6F6EL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return TRex.class;

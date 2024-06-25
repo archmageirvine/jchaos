@@ -206,9 +206,9 @@ public class AiEngine implements PlayerEngine, Serializable {
             // Don't try and move onto own things unless combat < 0 or it is
             // something the wizard can mount or meditate in
             if (!(combat < 0
-                  || ac instanceof Mountable
-                  || (ac instanceof Rideable && m.is(PowerUps.RIDE))
-                  || (ac instanceof Meditation && ((Meditation) ac).getMount() == null))) {
+              || ac instanceof Mountable
+              || (ac instanceof Rideable && m.is(PowerUps.RIDE))
+              || (ac instanceof Meditation && ((Meditation) ac).getMount() == null))) {
               continue;
             }
           } else if (mTeam.getTeam(p) == mTeam.getTeam(acp)) {
@@ -269,7 +269,6 @@ public class AiEngine implements PlayerEngine, Serializable {
    * Test if the cell at t contains something which is valid to attack when
    * engaged cell c is moving. This function is robust enough to handle invalid
    * targets.
-   *
    * @param wizard who is moving
    * @param t target cell number
    * @param c cell of mover
@@ -340,8 +339,8 @@ public class AiEngine implements PlayerEngine, Serializable {
       for (final Cell c : mWorld.getCells(source, 1, 1, false)) {
         final Actor a = c.peek();
         if (a != null
-            && a.get(Attribute.LIFE) > currentConveyanceLife
-            && (a.getOwner() == p || (a instanceof Meditation && ((Meditation) a).getMount() == null))) {
+          && a.get(Attribute.LIFE) > currentConveyanceLife
+          && (a.getOwner() == p || (a instanceof Meditation && ((Meditation) a).getMount() == null))) {
           // Found a better conveyance, so swap
           mMoveMaster.dismount(wizard, source, c.getCellNumber());
         }
@@ -353,7 +352,6 @@ public class AiEngine implements PlayerEngine, Serializable {
    * Attempt move of cell.  Given that <code>wizard</code> is currently
    * in the movement phase, attempt to move the contents of cell
    * <code>source</code>.
-   *
    * @param wizard wizard currently in movement phase
    * @param source cell to move
    */
@@ -407,13 +405,13 @@ public class AiEngine implements PlayerEngine, Serializable {
     final Team team = mWorld.getTeamInformation();
     final int rc = shooter.get(Attribute.RANGED_COMBAT);
     final int shooterTeam = team.getTeam(shooter);
-    for (final Iterator<Cell> it = candidates.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = candidates.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a == null
-          || a.getState() == State.DEAD
-          || a instanceof Killer
-          || (rc >= 0) == (shooterTeam == team.getTeam(a))
-          || !Realm.realmCheck(shooter, a)) {
+        || a.getState() == State.DEAD
+        || a instanceof Killer
+        || (rc >= 0) == (shooterTeam == team.getTeam(a))
+        || !Realm.realmCheck(shooter, a)) {
         it.remove();
       }
     }

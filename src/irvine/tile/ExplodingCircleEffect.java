@@ -8,7 +8,6 @@ import irvine.world.FlatWorld;
 /**
  * A graphical effect in which a circle expands from the centre to fill most
  * of the tile, then disappears from the centre outwards.
- *
  * @author Sean A. Irvine
  */
 public class ExplodingCircleEffect extends AbstractTileEffect {
@@ -28,11 +27,10 @@ public class ExplodingCircleEffect extends AbstractTileEffect {
 
   /**
    * A new exploding circle effect using the given color.
-   *
    * @param width width of tile
    * @param back background color
    * @param fore foreground color
-   * @exception IllegalArgumentException if <code>width</code> is less than 1.
+   * @throws IllegalArgumentException if <code>width</code> is less than 1.
    */
   public ExplodingCircleEffect(final int width, final int back, final int fore) {
     if (width < 1) {

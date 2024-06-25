@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Depth.
- *
  * @author Sean A. Irvine
  */
 public class Depth extends FreePowerUp {

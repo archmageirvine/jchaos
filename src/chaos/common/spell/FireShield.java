@@ -5,7 +5,6 @@ import chaos.common.PowerUps;
 
 /**
  * Fire shield.
- *
  * @author Sean A. Irvine
  */
 public class FireShield extends AbstractPowerUp implements Multiplicity {

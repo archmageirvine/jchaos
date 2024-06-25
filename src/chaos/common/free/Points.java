@@ -9,7 +9,6 @@ import chaos.util.AudioEvent;
 
 /**
  * Points.
- *
  * @author Sean A. Irvine
  */
 public class Points extends FreeCastable {

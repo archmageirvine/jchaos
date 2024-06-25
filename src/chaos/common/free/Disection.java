@@ -14,7 +14,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Disection.
- *
  * @author Sean A. Irvine
  */
 public class Disection extends FreeCastable {

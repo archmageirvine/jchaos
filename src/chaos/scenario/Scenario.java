@@ -29,7 +29,6 @@ import irvine.util.string.StringUtils;
 
 /**
  * Manager for a scrolling level read from a resource.
- *
  * @author Sean A. Irvine
  */
 public final class Scenario implements Serializable {
@@ -261,7 +260,6 @@ public final class Scenario implements Serializable {
 
   /**
    * Reads next line from scenario and jams objects into the top row of the world.
-   *
    * @param world the world
    */
   public void update(final World world) {
@@ -280,7 +278,6 @@ public final class Scenario implements Serializable {
 
   /**
    * Validate a scenario file.
-   *
    * @param args resource name
    * @throws IOException if an I/O error occurs.
    */

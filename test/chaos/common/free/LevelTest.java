@@ -8,7 +8,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class LevelTest extends AbstractFreeCastableTest {

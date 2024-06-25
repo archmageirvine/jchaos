@@ -13,7 +13,6 @@ import chaos.common.monster.Vampire;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class TombstoneTest extends AbstractGeneratorTest {

@@ -11,7 +11,6 @@ import java.util.List;
 
 /**
  * Process lines of a stream or file.
- *
  * @author Sean A. Irvine
  */
 public abstract class StreamProcessor {
@@ -19,9 +18,8 @@ public abstract class StreamProcessor {
   /**
    * Process all the non-empty non-comment lines of a stream, by passing them
    * one at a time to a process method.
-   *
    * @param is input stream
-   * @exception IOException if an I/O error occurs
+   * @throws IOException if an I/O error occurs
    */
   public void process(final InputStream is) throws IOException {
     try (final BufferedReader r = new BufferedReader(new InputStreamReader(is))) {
@@ -37,9 +35,8 @@ public abstract class StreamProcessor {
   /**
    * Process all the non-empty non-comment lines of a stream, by passing them
    * one at a time to a process method.
-   *
    * @param file file to read
-   * @exception IOException if an I/O error occurs
+   * @throws IOException if an I/O error occurs
    */
   public void process(final File file) throws IOException {
     try (final FileInputStream is = new FileInputStream(file)) {
@@ -49,9 +46,8 @@ public abstract class StreamProcessor {
 
   /**
    * Process a line.
-   *
    * @param line the line
-   * @exception IOException if input was invalid
+   * @throws IOException if input was invalid
    */
   public abstract void process(final String line) throws IOException;
 
@@ -67,10 +63,9 @@ public abstract class StreamProcessor {
 
   /**
    * Return a list of string comprising non-comment lines from the input.
-   *
    * @param is input stream
    * @return list of strings
-   * @exception IOException if an I/O error occurs.
+   * @throws IOException if an I/O error occurs.
    */
   public static List<String> list(final InputStream is) throws IOException {
     final ListStreamProcessor lsp = new ListStreamProcessor();

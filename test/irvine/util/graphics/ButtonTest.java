@@ -8,12 +8,9 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ButtonTest extends TestCase {
-
-
 
 
   public void testNull() {

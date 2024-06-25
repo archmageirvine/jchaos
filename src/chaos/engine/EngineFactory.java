@@ -10,17 +10,16 @@ import chaos.board.World;
 
 /**
  * Construct player engines using reflection.
- *
  * @author Sean A. Irvine
  */
 public final class EngineFactory {
 
-  private EngineFactory() { }
+  private EngineFactory() {
+  }
 
   /**
    * Construct a new engine.  Since different engines require different parameters,
    * this method looks at the constructors to choose an appropriate one.
-   *
    * @param className a <code>String</code> value
    * @param world a <code>World</code> value
    * @param moveMaster a <code>MoveMaster</code> value

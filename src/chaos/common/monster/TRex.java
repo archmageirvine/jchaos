@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Tyrannosaurus rex.
- *
  * @author Sean A. Irvine
  */
 public class TRex extends MaterialMonsterRide {
@@ -19,10 +18,12 @@ public class TRex extends MaterialMonsterRide {
     setDefault(Attribute.AGILITY, 5);
     setDefault(Attribute.MOVEMENT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0x60F078787C3E3F00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Elephant.class;

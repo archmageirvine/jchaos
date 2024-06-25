@@ -6,7 +6,6 @@ import chaos.common.Multiplicity;
 
 /**
  * Wisdom.
- *
  * @author Sean A. Irvine
  */
 public class Wisdom extends AbstractShield implements Multiplicity {

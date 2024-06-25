@@ -18,7 +18,6 @@ import irvine.math.IntegerUtils;
  * 128, or 256.  Multiple tiles are crammed into actual image files that are
  * 512 by 256 pixels.  The system automatically creates and reads as many of
  * these larger files as necessary.
- *
  * @author Sean A. Irvine
  */
 public class TileSet {
@@ -40,11 +39,10 @@ public class TileSet {
   /**
    * Construct a tile set object for images with width and height given by
    * 2^bits and stored in the specified directory.
-   *
    * @param bits bit width
    * @param directory directory for directory holding image files
-   * @exception NullPointerException if <code>directory</code> is null.
-   * @exception IllegalArgumentException if <code>bits</code> is less than
+   * @throws NullPointerException if <code>directory</code> is null.
+   * @throws IllegalArgumentException if <code>bits</code> is less than
    * 3 or more than 8.
    */
   public TileSet(final int bits, final String directory) {
@@ -61,10 +59,9 @@ public class TileSet {
 
   /**
    * Retrieve a block of images, using the cached version if possible.
-   *
    * @param block block to retrieve
    * @return the block
-   * @exception IOException if an I/O problem occurs
+   * @throws IOException if an I/O problem occurs
    */
   private BufferedImage getBlock(final int block) throws IOException {
     BufferedImage r = mCache.get(block);
@@ -85,10 +82,9 @@ public class TileSet {
    * Retrieve the image with the given index.  Asking for images beyond
    * those currently defined can result in either an empty image or
    * null.
-   *
    * @param index image index
    * @return the image
-   * @exception IOException if an I/O problem occurs
+   * @throws IOException if an I/O problem occurs
    */
   public BufferedImage getImage(final int index) throws IOException {
     final BufferedImage i = getBlock(index >>> BLOCK_BITS);
@@ -102,10 +98,9 @@ public class TileSet {
   /**
    * Set the image to associate with a given index.  Causes the block to
    * be flushed to disk afterwards.
-   *
    * @param index index
    * @param image image
-   * @exception IOException if an I/O problem occurs
+   * @throws IOException if an I/O problem occurs
    */
   public void setImage(final int index, final BufferedImage image) throws IOException {
     final BufferedImage i = getBlock(index >>> BLOCK_BITS);
@@ -129,11 +124,11 @@ public class TileSet {
   }
 
   // Warning there are scripts and makefiles that depend on this
+
   /**
    * Retrieve or set specific images in the Chaos tile set.
-   *
    * @param args image number
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String[] args) throws Exception {
     // Usage: TileSet [-s] index file.png [bits]

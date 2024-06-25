@@ -10,7 +10,6 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Magic bow.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

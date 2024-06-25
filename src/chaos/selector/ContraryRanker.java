@@ -10,14 +10,12 @@ import chaos.util.RankingComparator;
 
 /**
  * Selector that chooses lowest ranking spell that can be cast.
- *
  * @author Sean A. Irvine
  */
 public class ContraryRanker extends Ranker {
 
   /**
    * Construct a selector.
-   *
    * @param wizard the wizard
    * @param world the world
    * @param castMaster casting rules

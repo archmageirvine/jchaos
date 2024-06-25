@@ -5,7 +5,6 @@ import chaos.common.PowerUps;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class AmnesiaTest extends TormentTest {

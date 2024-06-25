@@ -2,7 +2,6 @@ package chaos.engine;
 
 /**
  * Represents a real-valued scalar field.
- *
  * @author Sean A. Irvine
  */
 public interface ScalarField {

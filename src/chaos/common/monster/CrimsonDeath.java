@@ -8,7 +8,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Crimson death.
- *
  * @author Sean A. Irvine
  */
 public class CrimsonDeath extends UndeadMonster implements NoDeadImage {
@@ -22,6 +21,7 @@ public class CrimsonDeath extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.MOVEMENT, 3);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Imp.class;

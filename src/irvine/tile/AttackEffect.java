@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 /**
  * A graphical effect for an attack.
- *
  * @author Sean A. Irvine
  */
 public class AttackEffect extends AbstractTileEffect {
@@ -18,11 +17,10 @@ public class AttackEffect extends AbstractTileEffect {
    * size / phi, where phi is the golden ratio.  The pixels of the background
    * are white and of the character are black.  Results are cached so that
    * images can be returned quickly on subsequent calls.
-   *
    * @param s string to draw
    * @param size height of image
    * @return black and white image of character
-   * @exception IllegalArgumentException if <code>size</code> is less than 8
+   * @throws IllegalArgumentException if <code>size</code> is less than 8
    * or the string is longer than 2 characters.
    */
   private static TileImage getStringImage(final String s, final int size) {
@@ -36,20 +34,20 @@ public class AttackEffect extends AbstractTileEffect {
     TileImage ci = CACHE.get(sc);
     if (ci == null) {
       switch (s.length()) {
-      case 1:
-        ci = ImageUtils.getCharImage(s.charAt(0), size);
-        break;
-      case 2:
-        final TileImage left = getStringImage(s.substring(0, 1), size);
-        final TileImage right = getStringImage(s.substring(1), size);
-        final int lw = left.getWidth() - 1;
-        ci = new TileImage(lw + right.getWidth(), left.getHeight()).jam(0, 0, left).over(lw, 0, right);
-        break;
-      default:
-        // handle empty string
-        ci = new TileImage(size, size);
-        ci.fill(~0);
-        break;
+        case 1:
+          ci = ImageUtils.getCharImage(s.charAt(0), size);
+          break;
+        case 2:
+          final TileImage left = getStringImage(s.substring(0, 1), size);
+          final TileImage right = getStringImage(s.substring(1), size);
+          final int lw = left.getWidth() - 1;
+          ci = new TileImage(lw + right.getWidth(), left.getHeight()).jam(0, 0, left).over(lw, 0, right);
+          break;
+        default:
+          // handle empty string
+          ci = new TileImage(size, size);
+          ci.fill(~0);
+          break;
       }
       CACHE.put(sc, ci);
     }
@@ -77,7 +75,6 @@ public class AttackEffect extends AbstractTileEffect {
    *
    * The effect supports the display of an optional string of up to two characters
    * in length.  If no string is to be displayed <code>null</code> can be used.
-   *
    * @param w width of effect
    * @param s string to display in effect
    * @param bg background color for effect
@@ -85,7 +82,7 @@ public class AttackEffect extends AbstractTileEffect {
    * @param tc color for the text
    * @param ec emphasis color for star boundary
    * @param steps number of steps
-   * @exception IllegalArgumentException if the length of the string exceeds 2 or
+   * @throws IllegalArgumentException if the length of the string exceeds 2 or
    * the number of steps is negative.
    */
   public AttackEffect(final int w, final String s, final int bg, final int fg, final int tc, final int ec, final int steps) {

@@ -4,7 +4,6 @@ import chaos.common.Actor;
 
 /**
  * Attack on a cell event.
- *
  * @author Sean A. Irvine
  */
 public class AttackCellEffectEvent extends CellEffectEvent {
@@ -18,7 +17,6 @@ public class AttackCellEffectEvent extends CellEffectEvent {
 
   /**
    * Construct a new attack cell effect event.
-   *
    * @param cell the cell this event is for
    * @param damage the damage incurred
    * @param offence the cell making the attack
@@ -33,7 +31,6 @@ public class AttackCellEffectEvent extends CellEffectEvent {
 
   /**
    * Return the damage recorded by this event.
-   *
    * @return damage value
    */
   public int getDamage() {
@@ -42,7 +39,6 @@ public class AttackCellEffectEvent extends CellEffectEvent {
 
   /**
    * Return the actor making the attack.
-   *
    * @return offence cell
    */
   public Actor getOffence() {
@@ -51,7 +47,6 @@ public class AttackCellEffectEvent extends CellEffectEvent {
 
   /**
    * Get the type of the attack.
-   *
    * @return attack type
    */
   public int getType() {

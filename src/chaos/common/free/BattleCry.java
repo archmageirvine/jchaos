@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Battle cry.
- *
  * @author Sean A. Irvine
  */
 public class BattleCry extends FreePowerUp {
@@ -14,6 +13,7 @@ public class BattleCry extends FreePowerUp {
     // immediately after casting
     return 2;
   }
+
   @Override
   public PowerUps getPowerUpType() {
     return PowerUps.BATTLE_CRY;

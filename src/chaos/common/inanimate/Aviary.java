@@ -22,7 +22,6 @@ import chaos.util.Random;
 
 /**
  * Aviary.
- *
  * @author Sean A. Irvine
  */
 public class Aviary extends AbstractGenerator implements Bonus {
@@ -32,6 +31,7 @@ public class Aviary extends AbstractGenerator implements Bonus {
    * this list influences its frequency, normal frequencies are ignored.
    */
   private static final ArrayList<Class<? extends Monster>> GENERATEES = new ArrayList<>();
+
   static {
     GENERATEES.add(Achiyalabopa.class);
     GENERATEES.add(Bat.class);
@@ -53,14 +53,17 @@ public class Aviary extends AbstractGenerator implements Bonus {
     setDefault(Attribute.LIFE_RECOVERY, 7);
     setDefault(Attribute.MAGICAL_RESISTANCE_RECOVERY, 1);
   }
+
   @Override
   public int getCastRange() {
     return 12;
   }
+
   @Override
   public int getBonus() {
     return 3;
   }
+
   @Override
   public Actor chooseWhatToGenerate() {
     // Every call, attempt to select one creature from the list specified above,

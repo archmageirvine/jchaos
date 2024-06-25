@@ -11,18 +11,17 @@ import irvine.util.string.StringUtils;
 
 /**
  * Utility functions for integers.
- *
  * @author Sean A. Irvine
  */
 public final class IntegerUtils {
 
-  private IntegerUtils() { }
+  private IntegerUtils() {
+  }
 
   /**
    * Approximate binary logarithm of an integer. If the given integer is 0 then
    * 0 is the result, otherwise the result is the binary logarithm of the
    * absolute value of the given number.
-   *
    * @param n integer to get logarithm of
    * @return binary logarithm
    */
@@ -52,7 +51,6 @@ public final class IntegerUtils {
   /**
    * Convert a digit character to a value, returns -1 if not a valid digit.
    * Understands about use of letters in higher bases.
-   *
    * @param c a character
    * @return integer value
    */
@@ -81,10 +79,9 @@ public final class IntegerUtils {
   /**
    * Compute the integer square root of the given integer.  This is
    * faster than <code>(int) Math.sqrt(n)</code>.
-   *
    * @param n integer to take the square root of
    * @return an <code>int</code> value
-   * @exception IllegalArgumentException if <code>r</code> is negative.
+   * @throws IllegalArgumentException if <code>r</code> is negative.
    */
   public static int sqrt(final int n) {
     if (n < 0) {
@@ -107,15 +104,14 @@ public final class IntegerUtils {
   /**
    * Compute <code>a^e mod n</code> for non-negative <code>a</code> and
    * <code>n &lt; sqrt(Integer.MAX_VALUE)</code>.
-   *
    * @param a base
    * @param e exponent
    * @param n modulus
    * @return <code>a^e mod n</code>
-   * @exception IllegalArgumentException if <code>a</code> is negative or
+   * @throws IllegalArgumentException if <code>a</code> is negative or
    * if <code>n</code> exceeds <code>sqrt(Integer.MAX_VALUE)</code> or
    * <code>n</code> is negative.
-   * @exception ArithmeticException if <code>n</code> is zero
+   * @throws ArithmeticException if <code>n</code> is zero
    */
   public static int modPow(int a, int e, final int n) {
     if (a < 0 || n > N_LIMIT || n < 0) {
@@ -152,7 +148,6 @@ public final class IntegerUtils {
   /**
    * Compute the number of leading zeros in an integer.  On my machine
    * this is faster than the built-in function.
-   *
    * @param x value to count leading zeros of
    * @return number of leading zeros
    */
@@ -167,7 +162,6 @@ public final class IntegerUtils {
 
   /**
    * Compute the greatest common denominator of two integers.
-   *
    * @param a first integer
    * @param b second integer
    * @return <code>gcd(a,b)</code>
@@ -178,7 +172,6 @@ public final class IntegerUtils {
 
   /**
    * Compute the least common multiple of two integers.
-   *
    * @param a first integer
    * @param b second integer
    * @return <code>lcm(a,b)</code>
@@ -193,7 +186,6 @@ public final class IntegerUtils {
    * <code>Integer.MIN_VALUE</code> (which is the correct result if
    * the result is considered to be unsigned). If <code>x &lt; 0</code>,
    * then the result is 0.
-   *
    * @param x value to round up
    * @return a power of 2
    */
@@ -210,7 +202,6 @@ public final class IntegerUtils {
   /**
    * Return the next larger number containing exactly the same number of
    * set bits as the supplied number. Does not work for 0.
-   *
    * @param x parameter
    * @return next higher value with the same population count
    */
@@ -345,7 +336,6 @@ public final class IntegerUtils {
    * Read numbers from a stream into an array.  Empty lines or lines starting
    * with <code>#</code> are ignored. Behaviour on out of range numbers is
    * undefined.
-   *
    * @param reader source
    * @return array of numbers
    * @throws IOException if an I/O error occurs.
@@ -369,7 +359,6 @@ public final class IntegerUtils {
    * Read numbers from a stream into an array.  Empty lines or lines starting
    * with <code>#</code> are ignored. Behaviour on out of range numbers is
    * undefined.
-   *
    * @param resource reader source
    * @return array of numbers
    */

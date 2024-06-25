@@ -9,7 +9,6 @@ import chaos.common.Promotion;
 
 /**
  * Fire.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

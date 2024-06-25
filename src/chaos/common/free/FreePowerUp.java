@@ -12,7 +12,6 @@ import chaos.util.PowerUpEvent;
 
 /**
  * Convenience class for cast a free wizard power up.
- *
  * @author Sean A. Irvine
  */
 public abstract class FreePowerUp extends FreeCastable implements PowerUp {
@@ -25,7 +24,6 @@ public abstract class FreePowerUp extends FreeCastable implements PowerUp {
   /**
    * Defines the count used with this power up.  This is normally 1 but may
    * be overridden by certain spells, such as Double.
-   *
    * @return power up count
    */
   protected int getPowerUpCount() {
@@ -34,7 +32,6 @@ public abstract class FreePowerUp extends FreeCastable implements PowerUp {
 
   /**
    * Should this power up add to any existing count of this power up.
-   *
    * @return true to add
    */
   protected boolean cumulative() {

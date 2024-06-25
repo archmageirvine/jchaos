@@ -65,7 +65,7 @@ public class Freeze extends Castable implements TargetFilter {
     }
     if (best != -1) {
       // Found something better than random
-      for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+      for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
         final Wizard w = wm.getWizard(it.next().peek());
         if (w == null || w.getMass() < best) {
           it.remove();

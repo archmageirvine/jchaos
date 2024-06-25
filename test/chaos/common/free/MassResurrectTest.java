@@ -19,7 +19,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class MassResurrectTest extends AbstractFreeCastableTest {
@@ -31,9 +30,11 @@ public class MassResurrectTest extends AbstractFreeCastableTest {
 
   private static class MyListener implements EventListener {
     private final World mWorld;
+
     MyListener(final World world) {
       mWorld = world;
     }
+
     @Override
     public void update(final Event e) {
       if (e instanceof CellEffectEvent) {

@@ -19,7 +19,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Pyrotechnics.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

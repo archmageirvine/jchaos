@@ -8,7 +8,6 @@ import chaos.common.PowerUps;
 
 /**
  * Emerald dragon.
- *
  * @author Sean A. Irvine
  */
 public class EmeraldDragon extends Dragon implements Bonus {
@@ -24,14 +23,17 @@ public class EmeraldDragon extends Dragon implements Bonus {
     setDefault(Attribute.RANGE, 9);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public int getBonus() {
     return 4;
   }
+
   @Override
   public long getLosMask() {
     return 0x1F3EFEFF7FFFF676L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GreenDragon.class;

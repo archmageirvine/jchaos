@@ -33,7 +33,6 @@ import chaos.util.RankingTable;
 
 /**
  * A rule-based selector.
- *
  * @author Sean A. Irvine
  */
 public class OrdinarySelector implements Selector {
@@ -76,7 +75,6 @@ public class OrdinarySelector implements Selector {
 
   /**
    * Construct a selector for the specified wizard and world.
-   *
    * @param wizard the wizard
    * @param world the world
    * @param castMaster casting rules
@@ -89,7 +87,6 @@ public class OrdinarySelector implements Selector {
 
   /**
    * Make a pass over the entire world collecting some statistics.
-   *
    * @return statistics array
    */
   private int[] gatherStats(final Cell wcell, final int wizardNumber) {
@@ -135,7 +132,6 @@ public class OrdinarySelector implements Selector {
   /**
    * Get a score for the given castable.  The higher the score the
    * better this spell.
-   *
    * @param c the castable to get a score for
    * @param s sundry statistics
    * @param casterCell cell containing the caster

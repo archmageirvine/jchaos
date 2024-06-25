@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Lich lord.
- *
  * @author Sean A. Irvine
  */
 public class LichLord extends FreePowerUp {
@@ -12,6 +11,7 @@ public class LichLord extends FreePowerUp {
   public PowerUps getPowerUpType() {
     return PowerUps.LICH_LORD;
   }
+
   @Override
   protected boolean cumulative() {
     return true;

@@ -15,7 +15,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Acid rain.
- *
  * @author Sean A. Irvine
  */
 public class AcidRain extends FreeCastable {

@@ -7,48 +7,48 @@ import irvine.tile.TileSet;
 
 /**
  * Generate shields for attribute increase spells.
- *
  * @author Sean A. Irvine
  */
 public final class GenerateOwnerChangers {
 
-  private GenerateOwnerChangers() { }
+  private GenerateOwnerChangers() {
+  }
 
   private static final String SUBVERSION_DATA =
-      "~~~~~~~~~~~~~~~."
-    + "~....#.##.#....%"
-    + "~.....####.....%"
-    + "~......##......%"
-    + "~.....++++.....%"
-    + "~...+++//+++...%"
-    + "~..++//XX//++..%"
-    + "~.++f##ff##f++.%"
-    + "~.++ff#ff#ff++.%"
-    + "~.++ffffffff++.%"
-    + "~.++fffrrfff++.%"
-    + "~..++fr//rf++..%"
-    + "~...+++//+++...%"
-    + "~.....++++.....%"
-    + "~..............%"
-    + ".%%%%%%%%%%%%%%%";
+    "~~~~~~~~~~~~~~~."
+      + "~....#.##.#....%"
+      + "~.....####.....%"
+      + "~......##......%"
+      + "~.....++++.....%"
+      + "~...+++//+++...%"
+      + "~..++//XX//++..%"
+      + "~.++f##ff##f++.%"
+      + "~.++ff#ff#ff++.%"
+      + "~.++ffffffff++.%"
+      + "~.++fffrrfff++.%"
+      + "~..++fr//rf++..%"
+      + "~...+++//+++...%"
+      + "~.....++++.....%"
+      + "~..............%"
+      + ".%%%%%%%%%%%%%%%";
 
   private static final String KEY_DATA =
-      "~~~~~~~~~~~~~~~."
-    + "~..............%"
-    + "~..............%"
-    + "~..............%"
-    + "~..............%"
-    + "~.$##$.........%"
-    + "~$#$$#$$$$$$$$$%"
-    + "~#$..$#########%"
-    + "~#$..$#$$$#$##.%"
-    + "~$#$$#$.....##.%"
-    + "~.$##$......$$.%"
-    + "~..............%"
-    + "~..............%"
-    + "~..............%"
-    + "~..............%"
-    + ".%%%%%%%%%%%%%%%";
+    "~~~~~~~~~~~~~~~."
+      + "~..............%"
+      + "~..............%"
+      + "~..............%"
+      + "~..............%"
+      + "~.$##$.........%"
+      + "~$#$$#$$$$$$$$$%"
+      + "~#$..$#########%"
+      + "~#$..$#$$$#$##.%"
+      + "~$#$$#$.....##.%"
+      + "~.$##$......$$.%"
+      + "~..............%"
+      + "~..............%"
+      + "~..............%"
+      + "~..............%"
+      + ".%%%%%%%%%%%%%%%";
 
   static int average(final int x, final int y) {
     final int b = ((x & 0xFF) + (y & 0xFF)) / 2;
@@ -68,39 +68,39 @@ public final class GenerateOwnerChangers {
       for (int x = 0; x < 16; ++x) {
         final int color;
         switch (imageData.charAt(c++)) {
-        case '#':
-          color = fg;
-          break;
-        case '~':
-          color = b;
-          break;
-        case '%':
-          color = d;
-          break;
-        case '$':
-          color = a;
-          break;
-        case '+':
-          color = 0xFFA90000;
-          break;
-        case 'r':
-          color = 0xFFCC0000;
-          break;
-        case 'f':
-          color = face;
-          break;
-        case 'b':
-          color = 0xFF2132BA;
-          break;
-        case 'X':
-          color = 0xFF000000;
-          break;
-        case '/':
-          color = face | 0xFF454545;
-          break;
-        default:
-          color = bg;
-          break;
+          case '#':
+            color = fg;
+            break;
+          case '~':
+            color = b;
+            break;
+          case '%':
+            color = d;
+            break;
+          case '$':
+            color = a;
+            break;
+          case '+':
+            color = 0xFFA90000;
+            break;
+          case 'r':
+            color = 0xFFCC0000;
+            break;
+          case 'f':
+            color = face;
+            break;
+          case 'b':
+            color = 0xFF2132BA;
+            break;
+          case 'X':
+            color = 0xFF000000;
+            break;
+          case '/':
+            color = face | 0xFF454545;
+            break;
+          default:
+            color = bg;
+            break;
         }
         i.setPixel(x, y, color);
       }
@@ -118,9 +118,8 @@ public final class GenerateOwnerChangers {
 
   /**
    * Algorithmically produce some tiles.
-   *
    * @param args ignored
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String[] args) throws Exception {
     makeSpecial(SUBVERSION_DATA, 0xFF0000FF, 0xFF646464, 0xFF905040, 0x235);

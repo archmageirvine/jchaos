@@ -12,17 +12,18 @@ import irvine.util.io.IOUtils;
 /**
  * Ranking of all spells which can appear on a CastableList.  Used
  * by the AI has part of the spell selection process.
- *
  * @author Sean A. Irvine
  */
 public final class RankingTable {
 
-  private RankingTable() { }
+  private RankingTable() {
+  }
 
   /** Maps class names to ranking number. */
   private static final HashMap<Class<? extends Castable>, Integer> RANKING = new HashMap<>();
   /** Largest rank allocated. */
   private static final int MAX_RANK;
+
   static {
     try {
       try (final BufferedReader is = IOUtils.reader("chaos/resources/ranking.txt")) {
@@ -55,7 +56,6 @@ public final class RankingTable {
   /**
    * Return the ranking for the specified castable.  If no such
    * ranking is available then -1 is returned.
-   *
    * @param c castable to get ranking for
    * @return ranking
    */
@@ -69,7 +69,6 @@ public final class RankingTable {
 
   /**
    * Return the maximum rank of any castable.
-   *
    * @return maximum rank
    */
   public static int getMaximumRanking() {

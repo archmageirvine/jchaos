@@ -2,12 +2,12 @@ package irvine.heraldry;
 
 /**
  * Utility functions to help with PostScript rendering.
- *
  * @author Sean A. Irvine
  */
 final class PostScriptHelper {
 
-  private PostScriptHelper() { }
+  private PostScriptHelper() {
+  }
 
   private static String path(final double[] x, final double[] y, final String op) {
     assert x.length == y.length;

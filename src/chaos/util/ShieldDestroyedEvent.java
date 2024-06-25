@@ -6,7 +6,6 @@ import chaos.common.Attribute;
 
 /**
  * A cell effect event.
- *
  * @author Sean A. Irvine
  */
 public class ShieldDestroyedEvent extends CellEffectEvent {
@@ -16,7 +15,6 @@ public class ShieldDestroyedEvent extends CellEffectEvent {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cell the cell effected
    * @param cause the cause of this event
    * @param attr attribute this event is for
@@ -28,7 +26,6 @@ public class ShieldDestroyedEvent extends CellEffectEvent {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cell the cell effected
    * @param cause the cause of this event
    * @param attr attribute this event is for
@@ -39,7 +36,6 @@ public class ShieldDestroyedEvent extends CellEffectEvent {
 
   /**
    * The attribute this event is for. May be null.
-   *
    * @return the attribute
    */
   public Attribute getAttribute() {

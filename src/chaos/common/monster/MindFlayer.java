@@ -6,7 +6,6 @@ import chaos.common.Realm;
 
 /**
  * Mind flayer.
- *
  * @author Sean A. Irvine
  * @author Ingo Holewczuk
  */
@@ -27,10 +26,12 @@ public class MindFlayer extends Monster {
     setRangedCombatApply(Attribute.INTELLIGENCE);
     setSpecialCombatApply(Attribute.INTELLIGENCE);
   }
+
   @Override
   public long getLosMask() {
     return 0x20F7F77B7F7C3E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return NeoOtyugh.class;

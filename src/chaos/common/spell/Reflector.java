@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Reflector.
- *
  * @author Sean A. Irvine
  */
 public class Reflector extends AbstractPowerUp {

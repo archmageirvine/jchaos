@@ -22,7 +22,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Subversion.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

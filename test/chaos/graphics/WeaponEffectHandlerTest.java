@@ -37,7 +37,7 @@ public class WeaponEffectHandlerTest extends TestCase {
       "fillOval(15,16,6,6)",
       "setColor(java.awt.Color[r=0,g=0,b=0])",
       "fillOval(15,23,6,6)"
-      );
+    );
   }
 
   public void testTriBeam() {

@@ -6,7 +6,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the Attack class.
- *
  * @author Sean A. Irvine
  */
 public class AttackTest extends TestCase {

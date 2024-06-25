@@ -9,7 +9,6 @@ import chaos.common.Virtuous;
 
 /**
  * Skeleton lord.
- *
  * @author Sean A. Irvine
  * @author Gregory B. Irvine
  */

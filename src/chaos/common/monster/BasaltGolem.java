@@ -8,7 +8,6 @@ import chaos.common.Realm;
 
 /**
  * The basalt golem.
- *
  * @author Sean A. Irvine
  */
 public class BasaltGolem extends Monster implements Bonus, Humanoid {
@@ -26,14 +25,17 @@ public class BasaltGolem extends Monster implements Bonus, Humanoid {
     setRangedCombatApply(Attribute.MOVEMENT);
     setSpecialCombatApply(Attribute.LIFE);
   }
+
   @Override
   public int getBonus() {
     return 3;
   }
+
   @Override
   public long getLosMask() {
     return 0x00081C3E3E1C1C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return StoneGolem.class;

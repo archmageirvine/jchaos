@@ -9,7 +9,6 @@ import chaos.common.PowerUps;
 
 /**
  * Wizard wings.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

@@ -11,7 +11,6 @@ import chaos.common.Promotion;
 
 /**
  * Demon.
- *
  * @author Sean A. Irvine
  * @author Ingo Holewczuk
  */
@@ -25,14 +24,17 @@ public class Demon extends DemonicMonster implements Humanoid, Bonus, NoDeadImag
     setDefault(Attribute.AGILITY, 54);
     setDefault(Attribute.MOVEMENT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0xFEFFFFFFFFFFFFBFL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Spectre.class;
   }
+
   @Override
   public int getBonus() {
     return 3;

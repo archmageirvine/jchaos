@@ -14,7 +14,6 @@ import chaos.common.spell.Stop;
 
 /**
  * Dao.
- *
  * @author Sean A. Irvine
  */
 public class Dao extends Polycaster implements Humanoid {
@@ -27,10 +26,12 @@ public class Dao extends Polycaster implements Humanoid {
     setDefault(Attribute.INTELLIGENCE, 60);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x667E3C3C38387C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Orc.class;

@@ -4,12 +4,12 @@ import java.util.Random;
 
 /**
  * Generate graphs appearing in documentation.
- *
  * @author Sean A. Irvine
  */
 public final class BadShuffle {
 
-  private BadShuffle() { }
+  private BadShuffle() {
+  }
 
   private static final Random RANDOM = new Random();
 
@@ -32,7 +32,6 @@ public final class BadShuffle {
 
   /**
    * Perform a million trials.
-   *
    * @param args sides
    */
   public static void main(final String[] args) {

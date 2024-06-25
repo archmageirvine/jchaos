@@ -17,8 +17,8 @@ import irvine.math.r.Constants;
  */
 public class Reachable implements Serializable {
 
-  private static final int[] DELTA_X = {1, -1,  0,  0,  1,  1, -1, -1};
-  private static final int[] DELTA_Y = {0,  0,  1, -1,  1, -1,  1, -1};
+  private static final int[] DELTA_X = {1, -1, 0, 0, 1, 1, -1, -1};
+  private static final int[] DELTA_Y = {0, 0, 1, -1, 1, -1, 1, -1};
 
   private final World mWorld;
   private final int[] mCellCoords = new int[2];

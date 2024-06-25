@@ -75,15 +75,15 @@ public class BooleanLockTest extends TestCase {
     final BooleanLock bl = new BooleanLock(true);
     mValue = false;
     final Thread t = new Thread() {
-        @Override
-        public synchronized void run() {
-          try {
-            mValue = bl.waitToSetTrue(500);
-          } catch (final InterruptedException e) {
-            // ok -- leaves mValue false
-          }
+      @Override
+      public synchronized void run() {
+        try {
+          mValue = bl.waitToSetTrue(500);
+        } catch (final InterruptedException e) {
+          // ok -- leaves mValue false
         }
-      };
+      }
+    };
     t.start();
     Thread.sleep(50);
     bl.setValue(false);
@@ -96,15 +96,15 @@ public class BooleanLockTest extends TestCase {
     final BooleanLock bl = new BooleanLock(true);
     mValue = true;
     final Thread t = new Thread(new Runnable() {
-        @Override
-        public synchronized void run() {
-          try {
-            mValue = bl.waitToSetTrue(20);
-          } catch (final InterruptedException e) {
-            mValue = false;
-          }
+      @Override
+      public synchronized void run() {
+        try {
+          mValue = bl.waitToSetTrue(20);
+        } catch (final InterruptedException e) {
+          mValue = false;
         }
-      });
+      }
+    });
     t.start();
     t.join();
     assertTrue(bl.isTrue());
@@ -115,16 +115,16 @@ public class BooleanLockTest extends TestCase {
     final BooleanLock bl = new BooleanLock(true);
     mValue = false;
     final Thread t = new Thread(new Runnable() {
-        @Override
-        public synchronized void run() {
-          try {
-            mValue = bl.waitUntilStateIs(false, 1000000L);
-          } catch (final InterruptedException e) {
-            // ok -- leaves mValue false
-          }
-          bl.setValue(true);
+      @Override
+      public synchronized void run() {
+        try {
+          mValue = bl.waitUntilStateIs(false, 1000000L);
+        } catch (final InterruptedException e) {
+          // ok -- leaves mValue false
         }
-      });
+        bl.setValue(true);
+      }
+    });
     t.start();
     Thread.sleep(50);
     synchronized (bl) {

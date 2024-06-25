@@ -8,7 +8,6 @@ import chaos.common.Virtuous;
 
 /**
  * Falcon.
- *
  * @author Sean A. Irvine
  */
 public class Falcon extends MaterialMonster implements Virtuous {
@@ -22,10 +21,12 @@ public class Falcon extends MaterialMonster implements Virtuous {
     setDefault(Attribute.MOVEMENT, 10);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000007C7C000000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Vulture.class;

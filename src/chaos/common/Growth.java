@@ -68,7 +68,6 @@ import chaos.board.World;
  * <img src="doc-files/count.gif" alt="count graph"><p>
  *
  * Actual growing is performed by the Grower class.
- *
  * @author Sean A. Irvine
  */
 public interface Growth extends TargetFilter {
@@ -100,7 +99,6 @@ public interface Growth extends TargetFilter {
    * of 100 means the growth will attempt expansion every turn, a value of
    * 50 once every two turns, and a value of 25 once every four turns
    * on average.
-   *
    * @return growth rate
    */
   int growthRate();

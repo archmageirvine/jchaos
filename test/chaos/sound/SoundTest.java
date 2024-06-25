@@ -19,7 +19,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the Sound class.
- *
  * @author Sean A. Irvine
  */
 public class SoundTest extends TestCase {

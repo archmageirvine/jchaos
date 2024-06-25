@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Curse.
- *
  * @author Sean A. Irvine
  */
 public class Curse extends AbstractFreeDecrement {

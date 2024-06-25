@@ -4,7 +4,6 @@ import java.util.Random;
 
 /**
  * An effect that fades one image into another.
- *
  * @author Sean A. Irvine
  */
 public class PixelFadeEffect extends AbstractTileEffect {
@@ -32,12 +31,11 @@ public class PixelFadeEffect extends AbstractTileEffect {
   /**
    * Fade the first image into the second image.  This transformation always
    * takes exactly 8 steps but could be modified for other lengths if required.
-   *
    * @param image1 first image
    * @param image2 second image
    * @param steps number of steps in effect
-   * @exception NullPointerException if either image is null.
-   * @exception IllegalArgumentException if the images have different sizes or
+   * @throws NullPointerException if either image is null.
+   * @throws IllegalArgumentException if the images have different sizes or
    * if the number of steps does not divide the number of pixels in the images
    * or the number of steps is less than 1.
    */
@@ -74,11 +72,10 @@ public class PixelFadeEffect extends AbstractTileEffect {
   /**
    * Fade the first image to the given color.  This transformation always
    * takes exactly eight steps but could be modified for other lengths if required.
-   *
    * @param image initial image
    * @param color target color
    * @param steps number of steps in effect
-   * @exception NullPointerException if the number of steps does not divide the
+   * @throws NullPointerException if the number of steps does not divide the
    * number of pixels in the images or the number of steps is less than 1.
    */
   public PixelFadeEffect(final TileImage image, final int color, final int steps) {

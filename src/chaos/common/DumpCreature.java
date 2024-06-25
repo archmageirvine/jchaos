@@ -8,12 +8,12 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Dump a text detailing the specified class.
- *
  * @author Sean A. Irvine
  */
 public final class DumpCreature {
 
-  private DumpCreature() { }
+  private DumpCreature() {
+  }
 
   private static final Attribute[] ATTRIBUTES = {
     Attribute.LIFE,
@@ -79,8 +79,7 @@ public final class DumpCreature {
   private static String dumpCsvActor(final Actor cst) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
     final StringBuilder sb = new StringBuilder(getName(cst)).append(',')
       .append(FrequencyTable.DEFAULT.getFrequency(cst.getClass())).append(',')
-      .append(cst.getRealm()).append(',')
-      ;
+      .append(cst.getRealm()).append(',');
     for (final Attribute attr : ATTRIBUTES) {
       sb.append(cst.get(attr)).append(',');
     }
@@ -154,7 +153,7 @@ public final class DumpCreature {
   /**
    * Dump all the information about a Castable.
    * @param args class name
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String[] args) throws Exception {
 

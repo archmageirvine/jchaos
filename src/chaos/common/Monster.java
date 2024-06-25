@@ -14,7 +14,6 @@ import chaos.util.WeaponEffectType;
  * can move, take an active part in combat, or have a mind. As such it
  * provides further statistics for these characteristics and refinements
  * to the <code>update</code> method to maintain these characteristics.
- *
  * @author Sean A. Irvine
  */
 public abstract class Monster extends Actor {
@@ -124,7 +123,6 @@ public abstract class Monster extends Actor {
   /**
    * Perform an update cycle on this actor. This involves applying
    * the recovery rates to the relevant statistics.
-   *
    * @param world the world containing the actor, may be null
    * @param cell the cell containing the actor. may be null
    * @return true if the monster dies as a result of the update.
@@ -179,23 +177,23 @@ public abstract class Monster extends Actor {
   public void increment(final Attribute attr, final int inc) {
     if (attr != null) {
       switch (attr) {
-      case MOVEMENT:
-        if (!(this instanceof Inanimate)) {
-          set(attr, get(attr) + inc);
-        }
-        break;
-      case COMBAT:
-      case RANGED_COMBAT:
-      case SPECIAL_COMBAT:
-        if (getDefault(attr) >= 0) {
-          set(attr, get(attr) + inc);
-        } else {
-          set(attr, get(attr) - inc);
-        }
-        break;
-      default:
-        super.increment(attr, inc);
-        break;
+        case MOVEMENT:
+          if (!(this instanceof Inanimate)) {
+            set(attr, get(attr) + inc);
+          }
+          break;
+        case COMBAT:
+        case RANGED_COMBAT:
+        case SPECIAL_COMBAT:
+          if (getDefault(attr) >= 0) {
+            set(attr, get(attr) + inc);
+          } else {
+            set(attr, get(attr) - inc);
+          }
+          break;
+        default:
+          super.increment(attr, inc);
+          break;
       }
     }
   }
@@ -204,34 +202,34 @@ public abstract class Monster extends Actor {
   public boolean decrement(final Attribute attr, final int dec) {
     if (attr != null) {
       switch (attr) {
-      case MOVEMENT:
-      case MOVEMENT_RECOVERY:
-      case INTELLIGENCE_RECOVERY:
-      case AGILITY_RECOVERY:
-      case COMBAT_RECOVERY:
-      case SPECIAL_COMBAT_RECOVERY:
-      case RANGE_RECOVERY:
-      case RANGED_COMBAT_RECOVERY:
-      case AGILITY:
-      case RANGE:
-      case SHOTS:
-        set(attr, get(attr) - dec);
-        return false;
-      case INTELLIGENCE:
-        final int intelligence = get(Attribute.INTELLIGENCE) - dec;
-        set(attr, intelligence);
-        return intelligence < 0;
-      case COMBAT:
-      case SPECIAL_COMBAT:
-      case RANGED_COMBAT:
-        if (getDefault(attr) >= 0) {
-          set(attr, Math.max(0, get(attr) - dec));
-        } else {
-          set(attr, Math.min(0, get(attr) + dec));
-        }
-        return false;
-      default:
-        return super.decrement(attr, dec);
+        case MOVEMENT:
+        case MOVEMENT_RECOVERY:
+        case INTELLIGENCE_RECOVERY:
+        case AGILITY_RECOVERY:
+        case COMBAT_RECOVERY:
+        case SPECIAL_COMBAT_RECOVERY:
+        case RANGE_RECOVERY:
+        case RANGED_COMBAT_RECOVERY:
+        case AGILITY:
+        case RANGE:
+        case SHOTS:
+          set(attr, get(attr) - dec);
+          return false;
+        case INTELLIGENCE:
+          final int intelligence = get(Attribute.INTELLIGENCE) - dec;
+          set(attr, intelligence);
+          return intelligence < 0;
+        case COMBAT:
+        case SPECIAL_COMBAT:
+        case RANGED_COMBAT:
+          if (getDefault(attr) >= 0) {
+            set(attr, Math.max(0, get(attr) - dec));
+          } else {
+            set(attr, Math.min(0, get(attr) + dec));
+          }
+          return false;
+        default:
+          return super.decrement(attr, dec);
       }
     }
     return false;

@@ -48,7 +48,8 @@ import irvine.util.io.IOUtils;
  */
 public final class RankingModeExperiment {
 
-  private RankingModeExperiment() { }
+  private RankingModeExperiment() {
+  }
 
   private static final int MAX_FIGHT_TURNS = 20;
   private static final int RUNS = 5;
@@ -251,8 +252,7 @@ public final class RankingModeExperiment {
       }
     }
     final double[] sc = new double[totalScores.size()];
-    @SuppressWarnings("unchecked")
-    final Class<? extends Castable>[] classes = (Class<? extends Castable>[]) new Class<?>[totalScores.size()];
+    @SuppressWarnings("unchecked") final Class<? extends Castable>[] classes = (Class<? extends Castable>[]) new Class<?>[totalScores.size()];
     int k = 0;
     for (final Map.Entry<Class<? extends Castable>, Integer> e : totalScores.entrySet()) {
       sc[k] = e.getValue() / (2.0 * RUNS * totalScores.size());
@@ -266,7 +266,7 @@ public final class RankingModeExperiment {
     System.out.print("<body><table class=\"my-spacing\">");
     // Header row
     final StringBuilder header = new StringBuilder("<tr><th></th>");
-    for (int i = sc.length; --i >= 0;) {
+    for (int i = sc.length; --i >= 0; ) {
       final Class<? extends Castable> colClass = classes[i];
       final String colName = htmlName(colClass);
       header.append("<th class=\"rotate\"><div><span>").append(colName).append("</span></div></th>");
@@ -274,11 +274,11 @@ public final class RankingModeExperiment {
     header.append("</tr>");
     System.out.println(header);
     // Data rows
-    for (int j = sc.length; --j >= 0;) {
+    for (int j = sc.length; --j >= 0; ) {
       final Class<? extends Castable> rowClass = classes[j];
       final String rowName = htmlName(rowClass);
       final StringBuilder row = new StringBuilder("<tr><th align=\"right\">").append(rowName).append("</th>");
-      for (int i = sc.length; --i >= 0;) {
+      for (int i = sc.length; --i >= 0; ) {
         final Class<? extends Castable> colClass = classes[i];
         row.append("<td bgcolor=\"#")
           .append(getColor(pairScores.get(new Pair<Class<? extends Castable>, Class<? extends Castable>>(rowClass, colClass))))

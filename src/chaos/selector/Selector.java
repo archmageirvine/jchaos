@@ -8,7 +8,6 @@ import chaos.common.Castable;
  * The interface used by a wizard to perform spell selection.
  * Defines a method which is called with the set of
  * castables from which the selection is to be made.
- *
  * @author Sean A. Irvine
  */
 public interface Selector extends Serializable {
@@ -20,7 +19,6 @@ public interface Selector extends Serializable {
    * should all be non-null.  The supplied array must be at least the
    * same length as count.  The <code>count</code> parameter should be
    * nonnegative.
-   *
    * @param castables castables to select from
    * @param count maximum number of castables to select
    * @return selected castables
@@ -35,7 +33,6 @@ public interface Selector extends Serializable {
    * may be assumed to be non-null.  Implementations may throw a
    * RuntimeException is the array contains more entries than the
    * implementation is prepared to deal with.
-   *
    * @param castables castables to choose from
    * @param texas true if Texas mode is active
    * @return chosen castables

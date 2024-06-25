@@ -18,12 +18,12 @@ import irvine.math.r.DoubleUtils;
 
 /**
  * Helper routines for the human engine.
- *
  * @author Sean A. Irvine
  */
 public final class HumanEngineHelper {
 
-  private HumanEngineHelper() { }
+  private HumanEngineHelper() {
+  }
 
   /**
    * Mark the actor as moved (if possible).

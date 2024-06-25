@@ -11,12 +11,12 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Movement utility functions.
- *
  * @author Sean A. Irvine
  */
 public final class MovementUtils {
 
-  private MovementUtils() { }
+  private MovementUtils() {
+  }
 
   private static void setOrClearMovement(final Actor a, final boolean setMovement) {
     if (a != null) {
@@ -32,7 +32,6 @@ public final class MovementUtils {
 
   /**
    * Clear movement of actors of a given class and set movement of everything else.
-   *
    * @param world the world
    * @param clazz class of entity to clear movement flag for
    * @param newOwner new owner of this entity type (or -1 if owner should not be changed)
@@ -74,7 +73,6 @@ public final class MovementUtils {
 
   /**
    * Mark all cats as having already moved if the cat lord is alive.
-   *
    * @param world the world
    * @return true if the cat lord is alive
    */

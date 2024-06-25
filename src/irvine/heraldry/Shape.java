@@ -24,8 +24,11 @@ public abstract class Shape {
   private Ordinary mOrdinary = null;
 
   protected abstract void renderShape(final Graphics g, final int w);
+
   protected abstract void renderShape(final Graphics g, final int w, final Tincture t);
+
   protected abstract void renderShapePS(final PrintStream out);
+
   protected abstract void renderShapePS(final PrintStream out, final Tincture t);
 
   protected int midHeight(final int w) {
@@ -85,20 +88,20 @@ public abstract class Shape {
 
   private void renderBendlets(final Graphics g, final int w, final Tincture t) {
     clipAndRender(g, w, t,
-                  new int[] {w / 16, 3 * w / 16, w, w},
-                  new int[] {0, 0, heightAsInt(13 * w / 16.0), heightAsInt(15 * w / 16.0)});
+      new int[] {w / 16, 3 * w / 16, w, w},
+      new int[] {0, 0, heightAsInt(13 * w / 16.0), heightAsInt(15 * w / 16.0)});
     clipAndRender(g, w, t,
-                  new int[] {0, 0, 15 * w / 16, 13 * w / 16},
-                  new int[] {heightAsInt(3 * w / 16.0), heightAsInt(w / 16.0), heightAsInt(w), heightAsInt(w)});
+      new int[] {0, 0, 15 * w / 16, 13 * w / 16},
+      new int[] {heightAsInt(3 * w / 16.0), heightAsInt(w / 16.0), heightAsInt(w), heightAsInt(w)});
   }
 
   private void renderBendletsSinister(final Graphics g, final int w, final Tincture t) {
     clipAndRender(g, w, t,
-                  new int[] {15 * w / 16, 13 * w / 16, 0, 0},
-                  new int[] {0, 0, heightAsInt(13 * w / 16.0), heightAsInt(15 * w / 16.0)});
+      new int[] {15 * w / 16, 13 * w / 16, 0, 0},
+      new int[] {0, 0, heightAsInt(13 * w / 16.0), heightAsInt(15 * w / 16.0)});
     clipAndRender(g, w, t,
-                  new int[] {w, w, w / 16, 3 * w / 16},
-                  new int[] {heightAsInt(3 * w / 16.0), heightAsInt(w / 16.0), heightAsInt(w), heightAsInt(w)});
+      new int[] {w, w, w / 16, 3 * w / 16},
+      new int[] {heightAsInt(3 * w / 16.0), heightAsInt(w / 16.0), heightAsInt(w), heightAsInt(w)});
   }
 
   private void renderChevronels(final Graphics g, final int w, final Tincture t) {
@@ -108,9 +111,9 @@ public abstract class Shape {
     final int h15 = heightAsInt(15 * w / 16.0);
     final int[] chevX = {0, w / 2, w, w, w / 2, 0};
     clipAndRender(g, w, t, chevX,
-                  new int[] {h15 - w8, h9 - w8, h15 - w8, h15, h9, h15});
+      new int[] {h15 - w8, h9 - w8, h15 - w8, h15, h9, h15});
     clipAndRender(g, w, t, chevX,
-                  new int[] {h15 - w8 + w4, h9 - w8 + w4, h15 - w8 + w4, h15 + w4, h9 + w4, h15 + w4});
+      new int[] {h15 - w8 + w4, h9 - w8 + w4, h15 - w8 + w4, h15 + w4, h9 + w4, h15 + w4});
   }
 
   private void renderSaltire(final Graphics g, final int w, final Tincture t) {
@@ -119,8 +122,8 @@ public abstract class Shape {
     final int w2 = 15 * w / 16;
     final int w3 = 17 * w / 16;
     clipAndRender(g, w, t,
-                  new int[] {w0, w / 2, w2, w3, w / 2 + w0, w3, w2, w / 2, w0, -w0, w / 2 - w0, -w0},
-                  new int[] {0, 7 * m / 8, 0, 0, m, 2 * m, 2 * m, 9 * m / 8, 2 * m, 2 * m, m, 0});
+      new int[] {w0, w / 2, w2, w3, w / 2 + w0, w3, w2, w / 2, w0, -w0, w / 2 - w0, -w0},
+      new int[] {0, 7 * m / 8, 0, 0, m, 2 * m, 2 * m, 9 * m / 8, 2 * m, 2 * m, m, 0});
   }
 
   private void renderFlanches(final Graphics g, final int w, final Tincture t) {
@@ -234,129 +237,129 @@ public abstract class Shape {
       if (t != null && t != getFieldTincture()) {
         final Rectangle r = g.getClipBounds();
         switch (ord) {
-        case ANNULET:
-          renderAnnulet(g, w, t);
-          break;
-        case BARRY:
-          renderBarry(g, w, t);
-          break;
-        case PALY:
-          renderPaly(g, w, t);
-          break;
-        case BENDY:
-          renderBendy(g, w, t);
-          break;
-        case FUSIL:
-          renderFusil(g, w, t);
-          break;
-        case RUSTRE:
-          renderRustre(g, w, t);
-          break;
-        case BARS:
-          renderBars(g, w, t);
-          break;
-        case BEND:
-          clipAndRender(g, w, t,
-                        new int[] {0, w / 8, w, w, 7 * w / 8, 0},
-                        new int[] {0, 0, heightAsInt(7 * w) / 8, heightAsInt(w), heightAsInt(w), heightAsInt(w * 0.125)});
-          break;
-        case BEND_SINISTER:
-          clipAndRender(g, w, t,
-                        new int[] {0, w / 8, w, w, 7 * w / 8, 0},
-                        new int[] {heightAsInt(w), heightAsInt(w), heightAsInt(w * 0.125), 0, 0, heightAsInt(7 * w / 8.0)});
-          break;
-        case BENDLETS:
-          renderBendlets(g, w, t);
-          break;
-        case BENDLETS_SINISTER:
-          renderBendletsSinister(g, w, t);
-          break;
-        case BILLETS:
-          renderBillets(g, w);
-          break;
-        case BORDURE:
-          g.translate(w / 8, heightAsInt(w * 0.125));
-          renderShape(g, 3 * w / 4, t);
-          g.translate(-w / 8, -heightAsInt(w * 0.125));
-          break;
-        case CANTON:
-          g.setClip(0, 0, w / 2, midHeight(w));
-          renderShape(g, w, t);
-          break;
-        case CHIEF:
-          g.setClip(0, 0, w, heightAsInt(0.25 * w));
-          renderShape(g, w, t);
-          break;
-        case CHEVRONELS:
-          renderChevronels(g, w, t);
-          break;
-        case CROSS:
-          renderCross(g, w, t);
-          break;
-        case FESS:
-          g.setClip(0, heightAsInt(w * 0.5), w, heightAsInt(w * 0.125));
-          renderShape(g, w, t);
-          break;
-        case FLANCHES:
-          renderFlanches(g, w, t);
-          break;
-        case ORLE:
-          renderOrle(g, w, t);
-          break;
-        case GYRONNY:
-          renderGyronny(g, w, t);
-          break;
-        case INESCUTCHEON:
-          g.translate(w / 3, heightAsInt(w * THIRD));
-          renderShape(g, w / 3, t);
-          g.translate(-w / 3, -heightAsInt(w * THIRD));
-          break;
-        case PALE:
-          g.setClip(w / 4, 0, w / 2, heightAsInt(w));
-          renderShape(g, w, t);
-          break;
-        case PALLETS:
-          g.setClip(w / 4, 0, w / 8, heightAsInt(w));
-          renderShape(g, w, t);
-          g.setClip(5 * w / 8, 0, w / 8, heightAsInt(w));
-          renderShape(g, w, t);
-          break;
-        case PARTY_PER_BEND:
-          clipAndRender(g, w, t, new int[] {0, w, 0}, new int[] {0, heightAsInt(w), heightAsInt(w)});
-          break;
-        case PARTY_PER_BEND_SINISTER:
-          clipAndRender(g, w, t, new int[] {w, 0, w}, new int[] {0, heightAsInt(w), heightAsInt(w)});
-          break;
-        case PARTY_PER_CHEVRON:
-          clipAndRender(g, w, t, new int[] {0, w / 2, w}, new int[] {heightAsInt(w), heightAsInt(w * 0.5), heightAsInt(w)});
-          break;
-        case PARTY_PER_SALTIRE:
-          final int[] sy = {2 * midHeight(w), midHeight(w), 0};
-          clipAndRender(g, w, t, new int[] {0, w / 2, 0}, sy);
-          clipAndRender(g, w, t, new int[] {w, w / 2, w}, sy);
-          break;
-        case PARTY_PER_CROSS:
-          g.setClip(0, heightAsInt(w * 0.5), w / 2, heightAsInt(w * 0.5) + 1);
-          renderShape(g, w, t);
-          g.setClip(w / 2, 0, w, heightAsInt(w * 0.5));
-          renderShape(g, w, t);
-          break;
-        case PARTY_PER_FESS:
-          g.setClip(0, heightAsInt(w * 0.5), w, heightAsInt(w * 0.5) + 1);
-          renderShape(g, w, t);
-          break;
-        case PARTY_PER_PALE:
-          g.setClip(0, 0, w / 2, heightAsInt(w));
-          renderShape(g, w, t);
-          break;
-        case PILE:
-          clipAndRender(g, w, t, new int[] {0, w, w / 2}, new int[] {0, 0, (int) height(0.5 * w)});
-          break;
-        case SALTIRE:
-          renderSaltire(g, w, t);
-          break;
-        default:
-          break; // too bad, don't know how to draw it
+          case ANNULET:
+            renderAnnulet(g, w, t);
+            break;
+          case BARRY:
+            renderBarry(g, w, t);
+            break;
+          case PALY:
+            renderPaly(g, w, t);
+            break;
+          case BENDY:
+            renderBendy(g, w, t);
+            break;
+          case FUSIL:
+            renderFusil(g, w, t);
+            break;
+          case RUSTRE:
+            renderRustre(g, w, t);
+            break;
+          case BARS:
+            renderBars(g, w, t);
+            break;
+          case BEND:
+            clipAndRender(g, w, t,
+              new int[] {0, w / 8, w, w, 7 * w / 8, 0},
+              new int[] {0, 0, heightAsInt(7 * w) / 8, heightAsInt(w), heightAsInt(w), heightAsInt(w * 0.125)});
+            break;
+          case BEND_SINISTER:
+            clipAndRender(g, w, t,
+              new int[] {0, w / 8, w, w, 7 * w / 8, 0},
+              new int[] {heightAsInt(w), heightAsInt(w), heightAsInt(w * 0.125), 0, 0, heightAsInt(7 * w / 8.0)});
+            break;
+          case BENDLETS:
+            renderBendlets(g, w, t);
+            break;
+          case BENDLETS_SINISTER:
+            renderBendletsSinister(g, w, t);
+            break;
+          case BILLETS:
+            renderBillets(g, w);
+            break;
+          case BORDURE:
+            g.translate(w / 8, heightAsInt(w * 0.125));
+            renderShape(g, 3 * w / 4, t);
+            g.translate(-w / 8, -heightAsInt(w * 0.125));
+            break;
+          case CANTON:
+            g.setClip(0, 0, w / 2, midHeight(w));
+            renderShape(g, w, t);
+            break;
+          case CHIEF:
+            g.setClip(0, 0, w, heightAsInt(0.25 * w));
+            renderShape(g, w, t);
+            break;
+          case CHEVRONELS:
+            renderChevronels(g, w, t);
+            break;
+          case CROSS:
+            renderCross(g, w, t);
+            break;
+          case FESS:
+            g.setClip(0, heightAsInt(w * 0.5), w, heightAsInt(w * 0.125));
+            renderShape(g, w, t);
+            break;
+          case FLANCHES:
+            renderFlanches(g, w, t);
+            break;
+          case ORLE:
+            renderOrle(g, w, t);
+            break;
+          case GYRONNY:
+            renderGyronny(g, w, t);
+            break;
+          case INESCUTCHEON:
+            g.translate(w / 3, heightAsInt(w * THIRD));
+            renderShape(g, w / 3, t);
+            g.translate(-w / 3, -heightAsInt(w * THIRD));
+            break;
+          case PALE:
+            g.setClip(w / 4, 0, w / 2, heightAsInt(w));
+            renderShape(g, w, t);
+            break;
+          case PALLETS:
+            g.setClip(w / 4, 0, w / 8, heightAsInt(w));
+            renderShape(g, w, t);
+            g.setClip(5 * w / 8, 0, w / 8, heightAsInt(w));
+            renderShape(g, w, t);
+            break;
+          case PARTY_PER_BEND:
+            clipAndRender(g, w, t, new int[] {0, w, 0}, new int[] {0, heightAsInt(w), heightAsInt(w)});
+            break;
+          case PARTY_PER_BEND_SINISTER:
+            clipAndRender(g, w, t, new int[] {w, 0, w}, new int[] {0, heightAsInt(w), heightAsInt(w)});
+            break;
+          case PARTY_PER_CHEVRON:
+            clipAndRender(g, w, t, new int[] {0, w / 2, w}, new int[] {heightAsInt(w), heightAsInt(w * 0.5), heightAsInt(w)});
+            break;
+          case PARTY_PER_SALTIRE:
+            final int[] sy = {2 * midHeight(w), midHeight(w), 0};
+            clipAndRender(g, w, t, new int[] {0, w / 2, 0}, sy);
+            clipAndRender(g, w, t, new int[] {w, w / 2, w}, sy);
+            break;
+          case PARTY_PER_CROSS:
+            g.setClip(0, heightAsInt(w * 0.5), w / 2, heightAsInt(w * 0.5) + 1);
+            renderShape(g, w, t);
+            g.setClip(w / 2, 0, w, heightAsInt(w * 0.5));
+            renderShape(g, w, t);
+            break;
+          case PARTY_PER_FESS:
+            g.setClip(0, heightAsInt(w * 0.5), w, heightAsInt(w * 0.5) + 1);
+            renderShape(g, w, t);
+            break;
+          case PARTY_PER_PALE:
+            g.setClip(0, 0, w / 2, heightAsInt(w));
+            renderShape(g, w, t);
+            break;
+          case PILE:
+            clipAndRender(g, w, t, new int[] {0, w, w / 2}, new int[] {0, 0, (int) height(0.5 * w)});
+            break;
+          case SALTIRE:
+            renderSaltire(g, w, t);
+            break;
+          default:
+            break; // too bad, don't know how to draw it
         }
         g.setClip(r);
       }
@@ -562,136 +565,136 @@ public abstract class Shape {
         out.println("gsave");
         out.println(PostScript.setRgbColor(t.color()));
         switch (ord) {
-        case ANNULET:
-          renderAnnuletPS(out);
-          break;
-        case BARRY:
-          renderBarryPS(out, t);
-          break;
-        case BENDY:
-          renderBendyPS(out, t);
-          break;
-        case RUSTRE:
-          renderRustrePS(out, t);
-          break;
-        case PALY:
-          renderPalyPS(out, t);
-          break;
-        case FUSIL:
-          renderFusilPS(out, t);
-          break;
-        case BARS:
-          renderBarsPS(out, t);
-          break;
-        case BEND:
-          out.println(PostScriptHelper.clip(BEND_X_PS, BEND_Y_PS));
-          renderShapePS(out, t);
-          break;
-        case BEND_SINISTER:
-          out.println(PostScriptHelper.clip(BEND_X_PS, BEND_YS_PS));
-          renderShapePS(out, t);
-          break;
-        case BENDLETS:
-          renderBendletsPS(out, t);
-          break;
-        case BENDLETS_SINISTER:
-          renderBendletsSinisterPS(out, t);
-          break;
-        case BILLETS:
-          renderBilletsPS(out);
-          break;
-        case BORDURE:
-          out.println("0.125 " + HX2 + " translate");
-          out.println("0.75 0.75 scale");
-          renderShapePS(out, t);
-          break;
-        case CANTON:
-          final double mh = midHeightPS();
-          out.println(PostScriptHelper.clipRect(0, HEIGHT_SCALING_FACTOR - mh, 0.5, mh));
-          renderShapePS(out, t);
-          break;
-        case CHEVRONELS:
-          out.println("gsave");
-          out.println(PostScriptHelper.clip(CHEVRONELS_X_PS, CHEVRONELS_Y1_PS));
-          renderShapePS(out, t);
-          out.println("grestore");
-          out.println(PostScriptHelper.clip(CHEVRONELS_X_PS, CHEVRONELS_Y2_PS));
-          renderShapePS(out, t);
-          break;
-        case CHIEF:
-          out.println(PostScriptHelper.clipRect(0, HX12, 1, HEIGHT_SCALING_FACTOR));
-          renderShapePS(out, t);
-          break;
-        case CROSS:
-          renderCrossPS(out, t);
-          break;
-        case ORLE:
-          renderOrlePS(out, t);
-          break;
-        case GYRONNY:
-          renderGyronnyPS(out, t);
-          break;
-        case FESS:
-          out.println(PostScriptHelper.clipRect(0, HX6, 1, HX2));
-          renderShapePS(out, t);
-          break;
-        case FLANCHES:
-          renderFlanchesPS(out, t);
-          break;
-        case INESCUTCHEON:
-          out.println(THIRD + " " + THIRD * HEIGHT_SCALING_FACTOR + " translate");
-          out.println(THIRD + " " + THIRD + " scale");
-          renderShapePS(out, t);
-          break;
-        case PALE:
-          out.println(PostScriptHelper.clipRect(0.25, 0, 0.5, HEIGHT_SCALING_FACTOR));
-          renderShapePS(out, t);
-          break;
-        case PALLETS:
-          renderPalletsPS(out, t);
-          break;
-        case PARTY_PER_FESS:
-          out.println(PostScriptHelper.clipRect(0, 0, 1, HX8));
-          renderShapePS(out, t);
-          break;
-        case PARTY_PER_PALE:
-          out.println(PostScriptHelper.clipRect(0, 0, 0.5, HEIGHT_SCALING_FACTOR));
-          renderShapePS(out, t);
-          break;
-        case PARTY_PER_BEND:
-          out.println(PostScriptHelper.clip(PARTY_PER_BEND_X_PS, PARTY_PER_BEND_Y_PS));
-          renderShapePS(out, t);
-          break;
-        case PARTY_PER_CHEVRON:
-          out.println(PostScriptHelper.clip(PARTY_PER_CHEVRON_X_PS, PARTY_PER_CHEVRON_Y_PS));
-          renderShapePS(out, t);
-          break;
-        case PARTY_PER_BEND_SINISTER:
-          out.println(PostScriptHelper.clip(PARTY_PER_BEND_SINISTER_X_PS, PARTY_PER_BEND_Y_PS));
-          renderShapePS(out, t);
-          break;
-        case PARTY_PER_CROSS:
-          out.println("gsave");
-          out.println(PostScriptHelper.clipRect(0, 0, 0.5, HX8));
-          renderShapePS(out, t);
-          out.println("grestore");
-          out.println(PostScriptHelper.clipRect(0.5, HX8, 1, HX8));
-          renderShapePS(out, t);
-          break;
-        case PILE:
-          out.println(PostScriptHelper.clip(PILE_X_PS, PILE_Y_PS));
-          renderShapePS(out, t);
-          break;
-        case SALTIRE:
-          final double m = midHeightPS();
-          out.println(PostScriptHelper.clip(SALTIRE_X, new double[] {HEIGHT_SCALING_FACTOR, HEIGHT_SCALING_FACTOR - 0.875 * m, HEIGHT_SCALING_FACTOR, HEIGHT_SCALING_FACTOR, HEIGHT_SCALING_FACTOR - m, HEIGHT_SCALING_FACTOR - 2 * m, HEIGHT_SCALING_FACTOR - 2 * m, HEIGHT_SCALING_FACTOR - 1.125 * m, HEIGHT_SCALING_FACTOR - 2 * m, HEIGHT_SCALING_FACTOR - 2 * m, HEIGHT_SCALING_FACTOR - m, HEIGHT_SCALING_FACTOR}));
-          renderShapePS(out, t);
-          break;
-        case PARTY_PER_SALTIRE:
-          renderPartyPerSaltirePS(out, t);
-          break;
-        default:
-          break; // too bad, don't know how to draw it
+          case ANNULET:
+            renderAnnuletPS(out);
+            break;
+          case BARRY:
+            renderBarryPS(out, t);
+            break;
+          case BENDY:
+            renderBendyPS(out, t);
+            break;
+          case RUSTRE:
+            renderRustrePS(out, t);
+            break;
+          case PALY:
+            renderPalyPS(out, t);
+            break;
+          case FUSIL:
+            renderFusilPS(out, t);
+            break;
+          case BARS:
+            renderBarsPS(out, t);
+            break;
+          case BEND:
+            out.println(PostScriptHelper.clip(BEND_X_PS, BEND_Y_PS));
+            renderShapePS(out, t);
+            break;
+          case BEND_SINISTER:
+            out.println(PostScriptHelper.clip(BEND_X_PS, BEND_YS_PS));
+            renderShapePS(out, t);
+            break;
+          case BENDLETS:
+            renderBendletsPS(out, t);
+            break;
+          case BENDLETS_SINISTER:
+            renderBendletsSinisterPS(out, t);
+            break;
+          case BILLETS:
+            renderBilletsPS(out);
+            break;
+          case BORDURE:
+            out.println("0.125 " + HX2 + " translate");
+            out.println("0.75 0.75 scale");
+            renderShapePS(out, t);
+            break;
+          case CANTON:
+            final double mh = midHeightPS();
+            out.println(PostScriptHelper.clipRect(0, HEIGHT_SCALING_FACTOR - mh, 0.5, mh));
+            renderShapePS(out, t);
+            break;
+          case CHEVRONELS:
+            out.println("gsave");
+            out.println(PostScriptHelper.clip(CHEVRONELS_X_PS, CHEVRONELS_Y1_PS));
+            renderShapePS(out, t);
+            out.println("grestore");
+            out.println(PostScriptHelper.clip(CHEVRONELS_X_PS, CHEVRONELS_Y2_PS));
+            renderShapePS(out, t);
+            break;
+          case CHIEF:
+            out.println(PostScriptHelper.clipRect(0, HX12, 1, HEIGHT_SCALING_FACTOR));
+            renderShapePS(out, t);
+            break;
+          case CROSS:
+            renderCrossPS(out, t);
+            break;
+          case ORLE:
+            renderOrlePS(out, t);
+            break;
+          case GYRONNY:
+            renderGyronnyPS(out, t);
+            break;
+          case FESS:
+            out.println(PostScriptHelper.clipRect(0, HX6, 1, HX2));
+            renderShapePS(out, t);
+            break;
+          case FLANCHES:
+            renderFlanchesPS(out, t);
+            break;
+          case INESCUTCHEON:
+            out.println(THIRD + " " + THIRD * HEIGHT_SCALING_FACTOR + " translate");
+            out.println(THIRD + " " + THIRD + " scale");
+            renderShapePS(out, t);
+            break;
+          case PALE:
+            out.println(PostScriptHelper.clipRect(0.25, 0, 0.5, HEIGHT_SCALING_FACTOR));
+            renderShapePS(out, t);
+            break;
+          case PALLETS:
+            renderPalletsPS(out, t);
+            break;
+          case PARTY_PER_FESS:
+            out.println(PostScriptHelper.clipRect(0, 0, 1, HX8));
+            renderShapePS(out, t);
+            break;
+          case PARTY_PER_PALE:
+            out.println(PostScriptHelper.clipRect(0, 0, 0.5, HEIGHT_SCALING_FACTOR));
+            renderShapePS(out, t);
+            break;
+          case PARTY_PER_BEND:
+            out.println(PostScriptHelper.clip(PARTY_PER_BEND_X_PS, PARTY_PER_BEND_Y_PS));
+            renderShapePS(out, t);
+            break;
+          case PARTY_PER_CHEVRON:
+            out.println(PostScriptHelper.clip(PARTY_PER_CHEVRON_X_PS, PARTY_PER_CHEVRON_Y_PS));
+            renderShapePS(out, t);
+            break;
+          case PARTY_PER_BEND_SINISTER:
+            out.println(PostScriptHelper.clip(PARTY_PER_BEND_SINISTER_X_PS, PARTY_PER_BEND_Y_PS));
+            renderShapePS(out, t);
+            break;
+          case PARTY_PER_CROSS:
+            out.println("gsave");
+            out.println(PostScriptHelper.clipRect(0, 0, 0.5, HX8));
+            renderShapePS(out, t);
+            out.println("grestore");
+            out.println(PostScriptHelper.clipRect(0.5, HX8, 1, HX8));
+            renderShapePS(out, t);
+            break;
+          case PILE:
+            out.println(PostScriptHelper.clip(PILE_X_PS, PILE_Y_PS));
+            renderShapePS(out, t);
+            break;
+          case SALTIRE:
+            final double m = midHeightPS();
+            out.println(PostScriptHelper.clip(SALTIRE_X, new double[] {HEIGHT_SCALING_FACTOR, HEIGHT_SCALING_FACTOR - 0.875 * m, HEIGHT_SCALING_FACTOR, HEIGHT_SCALING_FACTOR, HEIGHT_SCALING_FACTOR - m, HEIGHT_SCALING_FACTOR - 2 * m, HEIGHT_SCALING_FACTOR - 2 * m, HEIGHT_SCALING_FACTOR - 1.125 * m, HEIGHT_SCALING_FACTOR - 2 * m, HEIGHT_SCALING_FACTOR - 2 * m, HEIGHT_SCALING_FACTOR - m, HEIGHT_SCALING_FACTOR}));
+            renderShapePS(out, t);
+            break;
+          case PARTY_PER_SALTIRE:
+            renderPartyPerSaltirePS(out, t);
+            break;
+          default:
+            break; // too bad, don't know how to draw it
         }
         out.println("grestore");
       }
@@ -720,7 +723,6 @@ public abstract class Shape {
    * Render this shape into the given graphics at specified size.
    * If the graphics is null or the width is too small then the
    * request is ignored.
-   *
    * @param g where to draw
    * @param w width to draw
    * @param dx x offset
@@ -737,7 +739,6 @@ public abstract class Shape {
   /**
    * Render this shape in PostScript.  Assumes rendering is to
    * occur with a unit width at indicated start position.
-   *
    * @param out output stream
    */
   public void renderPostScript(final PrintStream out) {

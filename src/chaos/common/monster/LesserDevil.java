@@ -9,7 +9,6 @@ import chaos.common.NoDeadImage;
 
 /**
  * Lesser devil.
- *
  * @author Sean A. Irvine
  * @author Ingo Holewczuk
  */
@@ -23,14 +22,17 @@ public class LesserDevil extends DemonicMonster implements Humanoid, Bonus, NoDe
     setDefault(Attribute.AGILITY, 54);
     setDefault(Attribute.MOVEMENT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0x3CFFFFFFFFFE7E18L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Zombie.class;
   }
+
   @Override
   public int getBonus() {
     return 3;

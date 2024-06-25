@@ -19,7 +19,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Invert.
- *
  * @author Sean A. Irvine
  */
 public class Invert extends Castable implements TargetFilter {
@@ -28,10 +27,12 @@ public class Invert extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_LOS | CAST_GROWTH | CAST_INANIMATE;
   }
+
   @Override
   public int getCastRange() {
     return 4;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (world != null && cell != null) {
@@ -77,7 +78,7 @@ public class Invert extends Castable implements TargetFilter {
     // many other creatures.
     final int co = caster.getOwner();
     int count = 0;
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a == null || a.getOwner() != co) {
         it.remove();

@@ -9,7 +9,6 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class GeneratorTest extends AbstractGeneratorTest {

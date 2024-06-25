@@ -13,14 +13,13 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ImageUtilsTest extends TestCase {
 
   /** A test image used for demonstration purposes. */
   private static final String RED_DRAGON_DATA =
-        "  ##            "
+    "  ##            "
       + "    ##          "
       + "     ##   #     "
       + "    ###   ###   "

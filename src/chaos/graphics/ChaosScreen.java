@@ -16,7 +16,6 @@ import chaos.common.Realm;
 
 /**
  * Interface implemented by all Chaos screens.
- *
  * @author Sean A. Irvine
  */
 public interface ChaosScreen {
@@ -42,70 +41,60 @@ public interface ChaosScreen {
 
   /**
    * Get the x-offset to the main drawing area.
-   *
    * @return x-offset
    */
   int getXOffset();
 
   /**
    * Get the y-offset to the main drawing area.
-   *
    * @return y-offset
    */
   int getYOffset();
 
   /**
    * Get the width of the main playing area in pixels.
-   *
    * @return width of main playing area
    */
   int getMainWidth();
 
   /**
    * Get the height of the main playing area in pixels.
-   *
    * @return height of main playing area
    */
   int getMainHeight();
 
   /**
    * Get the x-offset to free space at the right of the screen.
-   *
    * @return x-offset
    */
   int getXRight();
 
   /**
    * Get the y-offset to free space at the right of the screen.
-   *
    * @return y-offset
    */
   int getYRight();
 
   /**
    * Get the width of the right area in pixels.
-   *
    * @return width of right area
    */
   int getRightWidth();
 
   /**
    * Get the height of the right area in pixels.
-   *
    * @return height of right area
    */
   int getRightHeight();
 
   /**
    * Get the horizontal offset of the region where power-ups can be displayed.
-   *
    * @return horizontal offset of power-ups
    */
   int getPowerUpXOffset();
 
   /**
    * Get the vertical offset of the region where power-ups can be displayed.
-   *
    * @return vertical offset of power-ups
    */
   int getPowerUpYOffset();
@@ -113,7 +102,6 @@ public interface ChaosScreen {
   /**
    * Sets the state of the continue gadget.  Note this does not activate
    * any listener for the gadget.  It is initially false.
-   *
    * @param state true to activate continue
    */
   void setContinueGadget(boolean state);
@@ -121,7 +109,6 @@ public interface ChaosScreen {
   /**
    * Returns true if the coordinates specify a screen position that overlaps
    * with the continue gadget.
-   *
    * @param x x-coordinate
    * @param y y-coordinate
    * @return true if over continue
@@ -130,7 +117,6 @@ public interface ChaosScreen {
 
   /**
    * Write a message into the primary text area.
-   *
    * @param message message to write
    */
   void writeMessage(String message);
@@ -138,7 +124,6 @@ public interface ChaosScreen {
   /**
    * Write spell information into the primary text area. If <code>castable</code>
    * is null, then no action is taken.
-   *
    * @param caster caster (may be null)
    * @param castable castable
    * @param tm tile manager
@@ -151,7 +136,6 @@ public interface ChaosScreen {
    * This is intended to display short strings only, long string may silently
    * be discarded. If the supplied image is not null, then it is also drawn
    * in the phase part of the display.
-   *
    * @param phase phase string
    * @param player player name
    * @param image image to draw
@@ -163,7 +147,6 @@ public interface ChaosScreen {
    * is.  If either string is null then nothing is displayed for that field.
    * This is intended to display short strings only, long string may silently
    * be discarded.
-   *
    * @param phase phase string
    * @param player player name
    */
@@ -171,7 +154,6 @@ public interface ChaosScreen {
 
   /**
    * Fill the main play area in the specified color.
-   *
    * @param color color to fill with
    */
   void fillMain(Color color);
@@ -179,7 +161,6 @@ public interface ChaosScreen {
   /**
    * Draw the given image into the specified cell of the main playing area.
    * Should handle the case of a null image.
-   *
    * @param image image to draw
    * @param x cell x-coordinate
    * @param y cell y-coordinate
@@ -189,7 +170,6 @@ public interface ChaosScreen {
   /**
    * Highlight a specified rectangle.  The highlighting can only be removed
    * by redrawing the affected area.
-   *
    * @param x x-coordinate in pixels
    * @param y y-coordinate in pixels
    * @param w width in pixels
@@ -200,7 +180,6 @@ public interface ChaosScreen {
   /**
    * Highlight a specified square.  The highlighting can only be removed
    * by redrawing the affected area.
-   *
    * @param x x-coordinate in pixels
    * @param y y-coordinate in pixels
    * @param w width in pixels (also used for the height)
@@ -211,7 +190,6 @@ public interface ChaosScreen {
    * Highlight a specified realm.  Not all clients need support this as it
    * is for purely aesthetic reasons.  If the supplied realm is null then
    * all currently highlighted realms are unhighlighted.
-   *
    * @param realm realm to highlight.
    */
   void highlight(Realm realm);
@@ -222,7 +200,6 @@ public interface ChaosScreen {
    * of zero length then all currently highlighted realms are unhighlighted.
    * The highlighting of the first element is deemed to be more important
    * than the highlighting of the second, and so on.
-   *
    * @param realms realms to highlight.
    */
   void highlight(Realm[] realms);
@@ -230,7 +207,6 @@ public interface ChaosScreen {
   /**
    * Lightly highlight a specified square.  The highlighting can
    * only be removed by redrawing the affected area.
-   *
    * @param x x-coordinate in pixels
    * @param y y-coordinate in pixels
    * @param w width in pixels (also used for the height)
@@ -239,63 +215,54 @@ public interface ChaosScreen {
 
   /**
    * Highlight status of the continue gadget.
-   *
    * @param state whether or not the continue gadget is highlighted
    */
   void highlightContinue(boolean state);
 
   /**
    * Set the cursor for the screen.
-   *
    * @param name name of cursor
    */
   void setCursor(CursorName name);
 
   /**
    * Get the drawing surface for this screen.
-   *
    * @return graphics
    */
   Graphics getGraphics();
 
   /**
    * Add the specified mouse listener.
-   *
    * @param mouseListener mouse listener to add
    */
   void addMouseListener(MouseListener mouseListener);
 
   /**
    * Add the specified mouse motion listener.
-   *
    * @param mouseMotionListener mouse motion listener to add
    */
   void addMouseMotionListener(MouseMotionListener mouseMotionListener);
 
   /**
    * Add the specified key listener.
-   *
    * @param keyListener key listener to add
    */
   void addKeyListener(KeyListener keyListener);
 
   /**
    * Remove the specified mouse listener.
-   *
    * @param mouseListener mouse listener to remove
    */
   void removeMouseListener(MouseListener mouseListener);
 
   /**
    * Remove the specified mouse motion listener.
-   *
    * @param mouseMotionListener mouse motion listener to remove
    */
   void removeMouseMotionListener(MouseMotionListener mouseMotionListener);
 
   /**
    * Remove the specified key listener.
-   *
    * @param keyListener key listener to remove
    */
   void removeKeyListener(KeyListener keyListener);
@@ -303,7 +270,6 @@ public interface ChaosScreen {
   /**
    * Return an object that can be synchronized against to lock access to this
    * screen.
-   *
    * @return lock object
    */
   Object lock();
@@ -316,28 +282,24 @@ public interface ChaosScreen {
 
   /**
    * Get a font suitable for rendering titles on this screen.
-   *
    * @return title font
    */
   Font getTitleFont();
 
   /**
    * Get a font suitable for rendering text on this screen.
-   *
    * @return text font
    */
   Font getTextFont();
 
   /**
    * Get a font suitable for rendering monospace text on this screen.
-   *
    * @return monospace text font
    */
   Font getMonospaceFont();
 
   /**
    * Get a font suitable for rendering phase information on this screen.
-   *
    * @return phase font
    */
   Font getPhaseFont();

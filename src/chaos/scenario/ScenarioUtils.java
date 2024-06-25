@@ -16,12 +16,12 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Utility functions associated with scenarios.
- *
  * @author Sean A. Irvine
  */
 public final class ScenarioUtils {
 
-  private ScenarioUtils() { }
+  private ScenarioUtils() {
+  }
 
   private static boolean copy(final World world, final int x, final int y) {
     final ArrayList<Actor> stack = new ArrayList<>();
@@ -69,7 +69,6 @@ public final class ScenarioUtils {
 
   /**
    * If a scenario is set, then perform a single step of the scenario update.
-   *
    * @param world the world
    * @param scenario the scenario
    * @return true if update was successful

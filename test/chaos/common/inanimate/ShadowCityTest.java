@@ -7,7 +7,6 @@ import chaos.common.Realm;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class ShadowCityTest extends AbstractActorTest {

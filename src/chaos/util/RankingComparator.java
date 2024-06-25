@@ -7,7 +7,6 @@ import chaos.common.Castable;
 
 /**
  * Comparator for ranking castables.
- *
  * @author Sean A. Irvine
  */
 public final class RankingComparator implements Comparator<Castable>, Serializable {

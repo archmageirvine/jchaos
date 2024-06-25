@@ -8,7 +8,6 @@ import chaos.common.dragon.RedDragon;
 
 /**
  * Tests this monster.
- *
  * @author Sean A. Irvine
  */
 public class HiddenHorrorTest extends AbstractMonsterTest {

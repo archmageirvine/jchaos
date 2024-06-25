@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Ogre assassin.
- *
  * @author Sean A. Irvine
  */
 public class OgreAssassin extends MaterialMonster implements Humanoid {
@@ -20,10 +19,12 @@ public class OgreAssassin extends MaterialMonster implements Humanoid {
     setDefault(Attribute.MOVEMENT, 3);
     setDefault(Attribute.COMBAT, 12);
   }
+
   @Override
   public long getLosMask() {
     return 0x001E3E7C5C3C3E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return OgreMage.class;

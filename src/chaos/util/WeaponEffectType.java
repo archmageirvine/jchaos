@@ -2,7 +2,6 @@ package chaos.util;
 
 /**
  * Enumeration of possible weapon effects.
- *
  * @author Sean A. Irvine
  */
 public enum WeaponEffectType {

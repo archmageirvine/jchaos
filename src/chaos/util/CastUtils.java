@@ -25,12 +25,12 @@ import irvine.math.IntegerUtils;
 
 /**
  * Casting utility functions.
- *
  * @author Sean A. Irvine
  */
 public final class CastUtils {
 
-  private CastUtils() { }
+  private CastUtils() {
+  }
 
   /**
    * Test if the content of the given cell could be mutated.
@@ -94,7 +94,6 @@ public final class CastUtils {
 
   /**
    * Provides an implementation of the common part of meditation casting.
-   *
    * @param what what is being cast
    * @param caster who is casting
    * @param where where we are casting
@@ -106,7 +105,6 @@ public final class CastUtils {
 
   /**
    * Provides an implementation of the common part of tree casting.
-   *
    * @param what what is being cast
    * @param caster who is casting
    * @param where where we are casting
@@ -120,7 +118,6 @@ public final class CastUtils {
    * Provides an implementation of the common part of wall casting.  Does the
    * generating of events, handles casting onto growths, and should be safe
    * to null parameters.
-   *
    * @param what what is being cast
    * @param caster who is casting
    * @param where where we are casting
@@ -135,7 +132,6 @@ public final class CastUtils {
    * life, so that the value makes sense for dead and injured creatures.  This
    * function can be used by the AI to evaluate the threat level and/or
    * usefulness of a cell.  Null actors have a score of 0.
-   *
    * @param a actor to get score for
    * @return actor score
    */
@@ -159,7 +155,6 @@ public final class CastUtils {
    * life, so that the value makes sense for dead and injured creatures.  This
    * function can be used by the AI to evaluate the threat level and/or
    * usefulness of a cell.  Empty cells have a score of 0.
-   *
    * @param c cell to get score for
    * @return cell score
    */
@@ -171,14 +166,13 @@ public final class CastUtils {
    * A cell filter which given a set of targets delete all those entries
    * which are not members of the indicated team.  Dead and empty cells
    * are also removed.
-   *
    * @param targets cells to filter
    * @param t the team to retain
    * @param teams the teams
    * @return friends
    */
   public static Set<Cell> keepFriends(final Set<Cell> targets, final int t, final Team teams) {
-    for (final Iterator<Cell> i = targets.iterator(); i.hasNext();) {
+    for (final Iterator<Cell> i = targets.iterator(); i.hasNext(); ) {
       final Actor a = i.next().peek();
       if (a == null || teams.getTeam(a) != t || a.getState() == State.DEAD) {
         i.remove();
@@ -191,14 +185,13 @@ public final class CastUtils {
    * A cell filter which given a set of targets delete all those entries
    * which are members of the indicated team.  Dead and empty cells are
    * also removed.
-   *
    * @param targets cells to filter
    * @param t the team to remove
    * @param teams the teams
    * @return friends
    */
   public static Set<Cell> keepEnemies(final Set<Cell> targets, final int t, final Team teams) {
-    for (final Iterator<Cell> i = targets.iterator(); i.hasNext();) {
+    for (final Iterator<Cell> i = targets.iterator(); i.hasNext(); ) {
       final Actor a = i.next().peek();
       if (a == null || teams.getTeam(a) == t || a.getState() == State.DEAD) {
         i.remove();
@@ -213,7 +206,7 @@ public final class CastUtils {
    * @return friends
    */
   public static Set<Cell> dropWizards(final Set<Cell> targets) {
-    for (final Iterator<Cell> i = targets.iterator(); i.hasNext();) {
+    for (final Iterator<Cell> i = targets.iterator(); i.hasNext(); ) {
       final Actor a = i.next().peek();
       if (a instanceof Wizard) {
         i.remove();
@@ -229,7 +222,7 @@ public final class CastUtils {
    * @return remaining targets
    */
   public static Set<Cell> dropPowerUp(final Set<Cell> targets, final PowerUps pu) {
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a != null && a.is(pu)) {
         it.remove();
@@ -245,7 +238,7 @@ public final class CastUtils {
    */
   public static Set<Cell> dropWizardsOrConveyedWizards(final Set<Cell> targets) {
     dropWizards(targets);
-    for (final Iterator<Cell> i = targets.iterator(); i.hasNext();) {
+    for (final Iterator<Cell> i = targets.iterator(); i.hasNext(); ) {
       final Actor a = i.next().peek();
       if (a instanceof Conveyance && ((Conveyance) a).getMount() instanceof Wizard) {
         i.remove();
@@ -258,7 +251,6 @@ public final class CastUtils {
    * Retain the highest scoring targets from the specified set. Only
    * the best equal targets are retained, with best scored by the
    * <code>CastUtils.score</code> function.
-   *
    * @param targets targets to filter
    * @return selected targets
    */
@@ -272,7 +264,7 @@ public final class CastUtils {
       }
     }
     // Eliminate everything with a lower score
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       if (score(it.next()) < sc) {
         it.remove();
       }
@@ -282,12 +274,11 @@ public final class CastUtils {
 
   /**
    * Retain only awake actors.
-   *
    * @param targets targets to filter
    * @return selected targets
    */
   public static Set<Cell> keepAwake(final Set<Cell> targets) {
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a == null || a.getState() != State.ACTIVE) {
         it.remove();
@@ -298,7 +289,6 @@ public final class CastUtils {
 
   /**
    * Retain the fastest targets from the specified set.
-   *
    * @param targets targets to filter
    * @return selected targets
    */
@@ -314,7 +304,7 @@ public final class CastUtils {
       }
     }
     // Eliminate everything with a lower score
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (!(a instanceof Monster) || a.get(Attribute.MOVEMENT) < sc) {
         it.remove();
@@ -326,7 +316,6 @@ public final class CastUtils {
   /**
    * If some targets are animate, then keep only the animates, otherwise
    * keep all the current targets.
-   *
    * @param targets targets to filter
    * @return selected targets
    */
@@ -340,7 +329,7 @@ public final class CastUtils {
       }
     }
     if (foundAnimate) {
-      for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+      for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
         final Actor a = it.next().peek();
         if (a == null || a instanceof Growth || a instanceof Inanimate) {
           it.remove();
@@ -365,7 +354,7 @@ public final class CastUtils {
       }
     }
     if (foundInanimate) {
-      for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+      for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
         final Actor a = it.next().peek();
         if (!(a instanceof Growth) && !(a instanceof Inanimate)) {
           it.remove();
@@ -378,7 +367,6 @@ public final class CastUtils {
   /**
    * If some targets are awake, then keep only the awake, otherwise
    * keep all the current targets.
-   *
    * @param targets targets to filter
    * @return selected targets
    */
@@ -392,7 +380,7 @@ public final class CastUtils {
       }
     }
     if (foundAwake) {
-      for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+      for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
         final Actor a = it.next().peek();
         if (a.getState() == State.ASLEEP) {
           it.remove();
@@ -404,7 +392,6 @@ public final class CastUtils {
 
   /**
    * Retain the closest targets to the specified origin.
-   *
    * @param targets targets to filter
    * @param caster the caster
    * @param world world containing cells
@@ -425,7 +412,7 @@ public final class CastUtils {
       }
     }
     // Eliminate everything with a bigger distance
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final int d = world.getSquaredDistance(it.next().getCellNumber(), o);
       if (d > sc) {
         it.remove();
@@ -436,7 +423,6 @@ public final class CastUtils {
 
   /**
    * Update the score and bonus information including event generation.
-   *
    * @param caster the caster (or cause)
    * @param a the actor that was killed
    * @param casterCell the location of the cause
@@ -466,7 +452,6 @@ public final class CastUtils {
    * Low intelligence creatures are easier targets.
    * Undeads, dragons, etc., have a slight preference, all else being equal.
    * Some quantization and random factors to increase randomness.
-   *
    * @param a actor to get score for
    * @return actor score
    */
@@ -509,7 +494,6 @@ public final class CastUtils {
    * Low intelligence creatures are easier targets.
    * Undeads, dragons, etc., have a slight preference, all else being equal.
    * Some quantization and random factors to increase randomness.
-   *
    * @param c cell to get score for
    * @return cell score
    */
@@ -521,7 +505,6 @@ public final class CastUtils {
    * Retain the highest scoring targets from the specified set. Only
    * the best equal targets are retained, with best scored by the
    * <code>CastUtils.score</code> function.
-   *
    * @param targets targets to filter
    * @return selected targets
    */
@@ -551,7 +534,7 @@ public final class CastUtils {
    * @return retained targets
    */
   public static Set<Cell> dropRealm(final Set<Cell> targets, final Realm realm) {
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a == null || a.getRealm() == realm) {
         it.remove();
@@ -563,7 +546,6 @@ public final class CastUtils {
   /**
    * Retain the sickest targets from the specified set.  That is, the
    * targets with the biggest deviation from it default life.
-   *
    * @param targets targets to filter
    * @return selected targets
    */
@@ -579,7 +561,7 @@ public final class CastUtils {
       }
     }
     // Eliminate everything with a lower score
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a == null || a.getDefault(Attribute.LIFE) - a.get(Attribute.LIFE) < sc) {
         it.remove();
@@ -592,7 +574,6 @@ public final class CastUtils {
    * Retain the targets corresponding to the owners in the candidate set with
    * the greatest number of putative targets.  This is used by spells like
    * MassMorph where the number of targets is an important consideration.
-   *
    * @param targets targets to filter
    * @param world the world
    * @param ignoredTeam targets in this team are ignored
@@ -634,7 +615,7 @@ public final class CastUtils {
     final int bestCount = IntegerUtils.max(countByOwners);
 
     // Remove everything else.
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a == null || countByOwners[a.getOwner() - minOwner] != bestCount) {
         it.remove();

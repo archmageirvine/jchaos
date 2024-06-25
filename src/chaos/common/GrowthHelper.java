@@ -11,15 +11,15 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Helper functions for growths.
- *
  * @author Sean A. Irvine
  */
 public final class GrowthHelper {
 
-  private GrowthHelper() { }
+  private GrowthHelper() {
+  }
+
   /**
    * Given a set of possible places to put a growth, select the best.
-   *
    * @param targets the possible targets
    * @param caster the caster
    * @param world the world

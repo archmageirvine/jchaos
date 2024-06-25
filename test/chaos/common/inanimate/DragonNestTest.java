@@ -18,7 +18,6 @@ import chaos.common.monster.Pseudodragon;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class DragonNestTest extends AbstractGeneratorTest {

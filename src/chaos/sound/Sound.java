@@ -42,7 +42,6 @@ import irvine.util.string.StringUtils;
  * In the end I have opted to use dead reckoning to decide when a sound
  * should have finished and take the first mixer I find that supports
  * up to <code>MINIMUM_CLIP_LINES</code> lines.
- *
  * @author Sean A. Irvine
  */
 public final class Sound {
@@ -74,12 +73,12 @@ public final class Sound {
   private static SourceDataLine getLine(final Mixer mixer) {
     final AudioFormat format =
       new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,
-                      I_SAMPLE_RATE, // samples / sec
-                      16,            // sample size in bits
-                      2,             // stereo
-                      4,             // frame size in bytes
-                      I_SAMPLE_RATE, // frames / sec
-                      false);        // little endian
+        I_SAMPLE_RATE, // samples / sec
+        16,            // sample size in bits
+        2,             // stereo
+        4,             // frame size in bytes
+        I_SAMPLE_RATE, // frames / sec
+        false);        // little endian
     final DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
     if (!mixer.isLineSupported(info)) {
       if (DEBUG) {
@@ -165,7 +164,6 @@ public final class Sound {
 
   /**
    * Provides the only way to get a handle to the sound engine.
-   *
    * @return the sound engine
    */
   public static synchronized Sound getSoundEngine() {
@@ -177,7 +175,6 @@ public final class Sound {
 
   /**
    * Determine whether or not sound is available.
-   *
    * @return true if sound is available
    */
   public boolean isSoundAvailable() {
@@ -187,9 +184,8 @@ public final class Sound {
   /**
    * Set the sound level.  One of <code>SOUND_NONE</code>,
    * <code>SOUND_INTELLIGENT</code>, <code>SOUND_ALL</code>.
-   *
    * @param level sound level
-   * @exception IllegalArgumentException if the given level is invalid.
+   * @throws IllegalArgumentException if the given level is invalid.
    */
   public void setSoundLevel(final int level) {
     if (level != SOUND_NONE && level != SOUND_INTELLIGENT && level != SOUND_ALL) {
@@ -201,7 +197,6 @@ public final class Sound {
   /**
    * Return the current level of sound effects.  One of <code>SOUND_NONE</code>,
    * <code>SOUND_INTELLIGENT</code>, <code>SOUND_ALL</code>.
-   *
    * @return sound level
    */
   public int getSoundLevel() {
@@ -218,7 +213,6 @@ public final class Sound {
    * will result in an exception.
    * If the line does not support volume modification then no
    * action is taken.
-   *
    * @param line line to set volume for
    * @param volume volume to set
    */
@@ -239,7 +233,6 @@ public final class Sound {
 
   /**
    * Set the sound position, see play().
-   *
    * @param line line to set pan position for
    * @param pan pan value in [-1,1]
    */
@@ -284,7 +277,6 @@ public final class Sound {
    * positioning of the sound in the sound field, a value of -1 is
    * the extreme left and +1 the extreme right. Behaviour for pan
    * values below -1 or above +1 is undefined.
-   *
    * @param name the clip to play
    * @param level the priority level of the sound
    * @param volume volume to play at 0 &lt;= volume &lt;= 1
@@ -365,7 +357,6 @@ public final class Sound {
    * Asynchronously launch a sound clip, playing it at the specified
    * volume.  If sound is not available, or there is some other
    * sound related problem null is returned.
-   *
    * @param name the clip to play
    * @param level priority level of the sound
    * @param volume volume to play at 0 &lt;= volume &lt;= 1
@@ -379,7 +370,6 @@ public final class Sound {
    * Asynchronously launch a sound clip, playing it at its native
    * volume.  If sound is not available, or there is some other
    * sound related problem null is returned.
-   *
    * @param name the clip to play
    * @param level priority level of the sound
    * @return object to check status of the play
@@ -391,7 +381,6 @@ public final class Sound {
   /**
    * Convenience method to wait on a sound to finish.  It is generally easier
    * to use this method because it copes with the possibility of null input.
-   *
    * @param status the sound status to wait on
    * @param msTimeout maximum time to wait in milliseconds
    */
@@ -408,7 +397,6 @@ public final class Sound {
   /**
    * Convenience method to wait on a sound to finish.  It is generally easier
    * to use this method because it copes with the possibility of null input.
-   *
    * @param status the sound status to wait on
    */
   public void wait(final BooleanLock status) {
@@ -418,7 +406,6 @@ public final class Sound {
   /**
    * Convenience play method, which plays and waits for the sound
    * to finish before returning.
-   *
    * @param name the clip to play
    * @param level priority level of sound
    */
@@ -431,7 +418,6 @@ public final class Sound {
 
   /**
    * Play a note of the given frequency.
-   *
    * @param freq frequency to play
    * @param volume volume
    * @param duration length of note
@@ -462,7 +448,7 @@ public final class Sound {
       }
       // write it
       for (int k = 0; k < duration; ++k) {
-        for (int i = 0; i < j;) {
+        for (int i = 0; i < j; ) {
           i += mLine.write(mBuffer, i, j - i);
         }
       }
@@ -490,7 +476,6 @@ public final class Sound {
 
   /**
    * Noddy main.
-   *
    * @param args see usage message
    */
   public static void main(final String[] args) {

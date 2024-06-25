@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Anger.
- *
  * @author Sean A. Irvine
  */
 public class Anger extends AbstractIncrement {

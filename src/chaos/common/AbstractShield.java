@@ -12,21 +12,18 @@ import chaos.util.ShieldGrantedEvent;
 
 /**
  * Abstract superclass for all the attribute increment spells.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractShield extends Castable implements TargetFilter {
 
   /**
    * The increment to be applied.
-   *
    * @return increment
    */
   public abstract int increment();
 
   /**
    * The attribute to be incremented.
-   *
    * @return attribute
    */
   public abstract Attribute attribute();

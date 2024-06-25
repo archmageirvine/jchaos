@@ -5,7 +5,6 @@ import chaos.common.Castable;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class HeptagramTest extends AbstractMonsterTest {

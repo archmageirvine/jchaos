@@ -12,7 +12,6 @@ import irvine.TestUtils;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class AbductionTest extends AbstractFreeCastableTest {

@@ -10,7 +10,8 @@ import javax.swing.SwingUtilities;
  */
 final class Waiter {
 
-  private Waiter() { }
+  private Waiter() {
+  }
 
   private static class MyRunnable implements Runnable {
     @Override

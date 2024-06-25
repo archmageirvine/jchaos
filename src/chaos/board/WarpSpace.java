@@ -13,7 +13,6 @@ import chaos.util.Random;
 
 /**
  * Maintains warped actors.
- *
  * @author Sean A. Irvine
  */
 public class WarpSpace implements Serializable {
@@ -29,6 +28,7 @@ public class WarpSpace implements Serializable {
     Actor mActor;
     /** Time remaining. */
     int mTime = WARP_TIME;
+
     Warpee(final Actor actor) {
       mActor = actor;
     }
@@ -67,7 +67,6 @@ public class WarpSpace implements Serializable {
 
   /**
    * Test if warp space contains the specified actor.
-   *
    * @param actor actor to test for
    * @return true if the actor is in warp space
    */
@@ -88,12 +87,11 @@ public class WarpSpace implements Serializable {
    * space are returned to normal space.  If there is no empty space in
    * ordinary space, then another actor is warped out to make space.  Those
    * not yet ready to be warped have their times reduced.
-   *
    * @param world world to warp into
    */
   public void warpIn(final World world) {
     if (world != null) {
-      for (final Iterator<Warpee> i = mWarpee.iterator(); i.hasNext();) {
+      for (final Iterator<Warpee> i = mWarpee.iterator(); i.hasNext(); ) {
         final Warpee w = i.next();
         if (--w.mTime <= 0) {
           // Time to warp back into ordinary space

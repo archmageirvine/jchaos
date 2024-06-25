@@ -11,7 +11,6 @@ import chaos.common.Promotion;
 
 /**
  * Fire demon.
- *
  * @author Sean A. Irvine
  * @author Ingo Holewczuk
  */
@@ -27,14 +26,17 @@ public class FireDemon extends DemonicMonster implements Humanoid, Bonus, NoDead
     setDefault(Attribute.AGILITY, 54);
     setDefault(Attribute.MOVEMENT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0xFEFFFFFFFFFFFFBFL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return HigherDevil.class;
   }
+
   @Override
   public int getBonus() {
     return 4;

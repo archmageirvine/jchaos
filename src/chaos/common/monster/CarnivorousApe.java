@@ -9,7 +9,6 @@ import chaos.common.free.Rampage;
 
 /**
  * Carnivorous ape.
- *
  * @author Sean A. Irvine
  */
 public class CarnivorousApe extends Unicaster implements Humanoid {

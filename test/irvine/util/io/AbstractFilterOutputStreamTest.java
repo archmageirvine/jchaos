@@ -9,7 +9,6 @@ import junit.framework.TestCase;
 
 /**
  * Provides some tests which every FilterOutputStream should pass.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractFilterOutputStreamTest extends TestCase {
@@ -22,7 +21,7 @@ public abstract class AbstractFilterOutputStreamTest extends TestCase {
   public abstract byte[] getTestStream();
 
 
-  /** Test it is indeed a FilterOutputStream.  */
+  /** Test it is indeed a FilterOutputStream. */
   public void testInstanceOf() {
     try {
       assertTrue(getOutputStream(null) instanceof FilterOutputStream);
@@ -32,7 +31,7 @@ public abstract class AbstractFilterOutputStreamTest extends TestCase {
   }
 
 
-  /** Tests the <code>equals()</code> method.  */
+  /** Tests the <code>equals()</code> method. */
   public void testEquals() {
     try {
       final OutputStream s = getOutputStream(null);
@@ -53,7 +52,7 @@ public abstract class AbstractFilterOutputStreamTest extends TestCase {
   }
 
 
-  /** Tests the <code>hashCode()</code> method.  */
+  /** Tests the <code>hashCode()</code> method. */
   public void testHashcode() {
     try {
       final OutputStream s = getOutputStream(null);
@@ -71,7 +70,7 @@ public abstract class AbstractFilterOutputStreamTest extends TestCase {
   }
 
 
-  /** Tests <code>close()</code> functionality.  */
+  /** Tests <code>close()</code> functionality. */
   public void testWritePastClose() {
     try {
       final OutputStream s = getOutputStream(new ByteArrayOutputStream());
@@ -88,7 +87,7 @@ public abstract class AbstractFilterOutputStreamTest extends TestCase {
   }
 
 
-  /** Tests multiple closes.  */
+  /** Tests multiple closes. */
   public void testMultipleClose() {
     try {
       final OutputStream s = getOutputStream(new ByteArrayOutputStream());
@@ -101,7 +100,7 @@ public abstract class AbstractFilterOutputStreamTest extends TestCase {
   }
 
 
-  /** Test write functionality.  */
+  /** Test write functionality. */
   public void testWriteConsistency() {
     try {
       final byte[] testData = getTestStream();

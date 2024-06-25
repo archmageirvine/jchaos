@@ -39,7 +39,6 @@ import irvine.util.graphics.Stipple;
 
 /**
  * Selector that works directly on generic screen.
- *
  * @author Sean A. Irvine
  */
 public class GenericScreenSelector implements Selector, MouseMotionListener, MouseListener, KeyListener {
@@ -93,7 +92,7 @@ public class GenericScreenSelector implements Selector, MouseMotionListener, Mou
    * @param tileManager tile manager
    * @param world the world
    * @param castMaster casting rules
-   * @exception NullPointerException if parameter is null
+   * @throws NullPointerException if parameter is null
    */
   public GenericScreenSelector(final Wizard wizard, final Configuration config, final TileManager tileManager, final World world, final CastMaster castMaster) {
     mConfig = config;
@@ -188,24 +187,36 @@ public class GenericScreenSelector implements Selector, MouseMotionListener, Mou
   }
 
   @Override
-  public void mousePressed(final MouseEvent e) { }
+  public void mousePressed(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseReleased(final MouseEvent e) { }
+  public void mouseReleased(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseEntered(final MouseEvent e) { }
+  public void mouseEntered(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseExited(final MouseEvent e) { }
+  public void mouseExited(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseDragged(final MouseEvent e) { }
+  public void mouseDragged(final MouseEvent e) {
+  }
+
   @Override
-  public void keyTyped(final KeyEvent e) { }
+  public void keyTyped(final KeyEvent e) {
+  }
+
   @Override
-  public void keyPressed(final KeyEvent e) { }
+  public void keyPressed(final KeyEvent e) {
+  }
 
   /**
    * Return the castable index corresponding to the mouse position or NONE
    * if there is not corresponding castable.
-   *
    * @param e a mouse event
    * @return castable
    */
@@ -374,9 +385,9 @@ public class GenericScreenSelector implements Selector, MouseMotionListener, Mou
       mScreen.removeMouseMotionListener(this);
       // bells & whistles
       SOUND.playwait(RANDOM.nextInt(70) == 0
-                     ? "chaos/resources/sound/misc/Yeah"
-                     : "chaos/resources/sound/misc/Beep",
-                     Sound.SOUND_INTELLIGENT);
+          ? "chaos/resources/sound/misc/Yeah"
+          : "chaos/resources/sound/misc/Beep",
+        Sound.SOUND_INTELLIGENT);
       return mSelected == NONE || mSelected >= mCastables.length ? null : mCastables[mSelected];
     }
     return null;

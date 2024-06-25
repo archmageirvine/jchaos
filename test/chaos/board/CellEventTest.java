@@ -4,7 +4,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the CellEvent class.
- *
  * @author Sean A. Irvine
  */
 public class CellEventTest extends TestCase {

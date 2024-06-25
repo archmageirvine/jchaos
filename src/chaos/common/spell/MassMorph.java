@@ -20,7 +20,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Mass morph.
- *
  * @author Sean A. Irvine
  * @author William S. Irvine
  */
@@ -52,11 +51,11 @@ public class MassMorph extends Castable implements TargetFilter {
           final Cell c = world.getCell(i);
           final Actor a = c.peek();
           if (a != null
-              && !(a instanceof Wizard)
-              && !(a instanceof AbstractGenerator)
-              && a.getState() == State.ACTIVE
-              && c.getMount() == null
-              && c.peek().getOwner() == player) {
+            && !(a instanceof Wizard)
+            && !(a instanceof AbstractGenerator)
+            && a.getState() == State.ACTIVE
+            && c.getMount() == null
+            && c.peek().getOwner() == player) {
             affected.add(c);
           }
         }

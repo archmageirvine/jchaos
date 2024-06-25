@@ -2,7 +2,6 @@ package chaos.common;
 
 /**
  * Convenience class to implement a standard core creature.
- *
  * @author Sean A. Irvine
  */
 public abstract class CoreMonster extends Monster {

@@ -19,7 +19,6 @@ import junit.framework.Assert;
 
 /**
  * Abstract superclass for testing increment spells.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractIncrementTest extends AbstractFreeCastableTest {
@@ -30,11 +29,14 @@ public abstract class AbstractIncrementTest extends AbstractFreeCastableTest {
 
   private static class MyListener implements EventListener {
     final Cell mZero, mCC;
+
     MyListener(final Cell zero, final Cell cc) {
       mZero = zero;
       mCC = cc;
     }
+
     final MyBool mState = new MyBool();
+
     @Override
     public void update(final Event e) {
       if (e instanceof PolyshieldEvent && ((PolyshieldEvent) e).getEventType() == CellEffectType.SHIELD_GRANTED) {
@@ -46,6 +48,7 @@ public abstract class AbstractIncrementTest extends AbstractFreeCastableTest {
         mState.mCast = true;
       }
     }
+
     MyBool getState() {
       return mState;
     }

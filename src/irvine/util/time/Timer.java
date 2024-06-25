@@ -11,7 +11,6 @@ import java.util.TreeSet;
  * Utility class for performing timing tests to millisecond accuracy.
  * Timers are assigned names so that multiple timers can be accessed
  * via a central registry.
- *
  * @author <a href="mailto:len@reeltwo.com">Len Trigg</a>
  */
 public class Timer implements Serializable {
@@ -22,7 +21,6 @@ public class Timer implements Serializable {
 
   /**
    * Returns true if the named timer exists.
-   *
    * @param name the name of the Timer.
    * @return true if the named timer exists.
    */
@@ -33,7 +31,6 @@ public class Timer implements Serializable {
 
   /**
    * Gets a named Timer, creating if necessary.
-   *
    * @param name the name of the Timer.
    * @return the Timer.
    */
@@ -47,7 +44,6 @@ public class Timer implements Serializable {
 
   /**
    * Removes a named timer
-   *
    * @param name the name of the Timer.
    */
   public static void removeTimer(final String name) {
@@ -110,7 +106,6 @@ public class Timer implements Serializable {
 
   /**
    * Displays the status of all registered Timers.
-   *
    * @return a String containing timer status for all registered
    * Timers.
    */
@@ -122,7 +117,6 @@ public class Timer implements Serializable {
   /**
    * Displays the status of all registered Timers exceeding the time
    * threshold.
-   *
    * @param threshold number of milliseconds which Timers must exceed
    * to appear in summary.
    * @return a String containing timer status for all registered
@@ -192,7 +186,6 @@ public class Timer implements Serializable {
   /**
    * Creates a Timer. Create via Manager if you want access from
    * multiple locations.
-   *
    * @param name the name to assign to the Timer.
    * @param startNow if true, the timer will start immediately.
    */
@@ -207,7 +200,6 @@ public class Timer implements Serializable {
   /**
    * Creates a Timer. Create via Manager if you want access from
    * multiple locations.
-   *
    * @param name the name to assign to the Timer.
    */
   public Timer(final String name) {
@@ -241,7 +233,6 @@ public class Timer implements Serializable {
 
   /**
    * Gets the elapsed time in milliseconds.
-   *
    * @return the number of elapsed milliseconds.
    */
   public long getElapsed() {
@@ -255,7 +246,6 @@ public class Timer implements Serializable {
 
   /**
    * Gets the elapsed time in seconds.
-   *
    * @return the number of elapsed Seconds.
    */
   public double getElapsedSeconds() {
@@ -265,7 +255,6 @@ public class Timer implements Serializable {
 
   /**
    * Gets the elapsed number of events per second
-   *
    * @param countOfEvents the number of events that occurred in the
    * elapsed time
    * @return the average number of events per second.
@@ -277,7 +266,6 @@ public class Timer implements Serializable {
 
   /**
    * gets a nicely formatted string of the system in units of megabytes
-   *
    * @return a String
    */
   public static String getMemoryStatus() {
@@ -311,7 +299,6 @@ public class Timer implements Serializable {
 
   /**
    * Indicates whether the Timer is currently started.
-   *
    * @return true if the Timer is currently started.
    */
   public boolean isRunning() {
@@ -321,7 +308,6 @@ public class Timer implements Serializable {
 
   /**
    * Displays the status of the Time.
-   *
    * @return a String containing timer status.
    */
   public String toString() {

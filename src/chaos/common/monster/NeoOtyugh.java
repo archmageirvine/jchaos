@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Neo-otyugh.
- *
  * @author Sean A. Irvine
  */
 public class NeoOtyugh extends MaterialMonster {
@@ -21,10 +20,12 @@ public class NeoOtyugh extends MaterialMonster {
     setDefault(Attribute.AGILITY, 20);
     setDefault(Attribute.MOVEMENT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0x087FCF7FFEFEBE2AL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GiantBeetle.class;

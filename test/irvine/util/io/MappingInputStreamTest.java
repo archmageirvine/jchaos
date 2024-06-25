@@ -8,7 +8,6 @@ import java.util.Arrays;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class MappingInputStreamTest extends AbstractFilterInputStreamTest {
@@ -47,7 +46,7 @@ public class MappingInputStreamTest extends AbstractFilterInputStreamTest {
 
   public void testSpaceComp() throws IOException {
     try (final ByteArrayInputStream bis = new ByteArrayInputStream("hi ',.,./[]{}+_-=~`!  \t \n\n&$^%@#$%#  the remate".getBytes());
-        final MappingInputStream mis = new MappingInputStream(bis, MappingInputStream.reducedEnglishMap(), true)) {
+         final MappingInputStream mis = new MappingInputStream(bis, MappingInputStream.reducedEnglishMap(), true)) {
       assertEquals('h', mis.read());
       assertEquals('i', mis.read());
       assertEquals(' ', mis.read());
@@ -66,7 +65,7 @@ public class MappingInputStreamTest extends AbstractFilterInputStreamTest {
 
   public void testReadBlock() throws IOException {
     try (final ByteArrayInputStream bis = new ByteArrayInputStream("hi  the remate".getBytes());
-        final MappingInputStream mis = new MappingInputStream(bis, MappingInputStream.reducedEnglishMap(), true)) {
+         final MappingInputStream mis = new MappingInputStream(bis, MappingInputStream.reducedEnglishMap(), true)) {
       final byte[] z = new byte[10];
       Arrays.fill(z, (byte) 1);
       assertEquals(3, mis.read(z, 3, 3));

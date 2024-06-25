@@ -8,7 +8,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Drelb.
- *
  * @author Sean A. Irvine
  */
 public class Drelb extends UndeadMonster implements NoDeadImage {
@@ -22,6 +21,7 @@ public class Drelb extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.MOVEMENT, 2);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Ghost.class;

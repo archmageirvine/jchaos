@@ -13,7 +13,6 @@ import chaos.util.Sleep;
 /**
  * Explosion using an image list.  Starting from a set of specified cells, the
  * explosion moves outwards to all immediately adjacent cells.
- *
  * @author Sean A. Irvine
  */
 public class ImageListExplodeEffect extends AbstractEffect {

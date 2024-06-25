@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Bat.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -20,10 +19,12 @@ public class Bat extends MaterialMonster {
     setDefault(Attribute.MOVEMENT, 5);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000007C7C000000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Halfling.class;

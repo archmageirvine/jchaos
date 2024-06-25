@@ -26,7 +26,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Tempest.
- *
  * @author Sean A. Irvine
  * @author Nicole More
  */
@@ -37,7 +36,6 @@ public class Tempest extends Actor implements Inanimate, Bonus, NoFlyOver {
 
   /**
    * Actually move a tempest in the world.
-   *
    * @param world world containing tempest
    * @param c cell containing tempest
    * @param moves moves remaining
@@ -124,26 +122,32 @@ public class Tempest extends Actor implements Inanimate, Bonus, NoFlyOver {
     setDefault(Attribute.MAGICAL_RESISTANCE, 44);
     setRealm(Realm.MATERIAL);
   }
+
   @Override
   public int getCastRange() {
     return 7;
   }
+
   @Override
   public long getLosMask() {
     return 0x18FFFFFFFF7F7E38L;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_DEAD | CAST_EMPTY | CAST_LOS;
   }
+
   @Override
   public int getBonus() {
     return 2;
   }
+
   @Override
   public int getDefaultWeight() {
     return 0;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     if (caster != null && c != null) {

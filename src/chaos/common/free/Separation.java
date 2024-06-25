@@ -9,7 +9,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Separation.
- *
  * @author Sean A. Irvine
  * @author Jonathan Levell
  */

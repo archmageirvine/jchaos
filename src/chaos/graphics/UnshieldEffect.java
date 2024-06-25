@@ -16,12 +16,12 @@ import chaos.util.Sleep;
 
 /**
  * Effect for removal of shields.
- *
  * @author Sean A. Irvine
  */
 public class UnshieldEffect extends AbstractEffect {
 
   static final HashMap<Attribute, String> UNSHIELD_SOUND = new HashMap<>();
+
   static {
     UNSHIELD_SOUND.put(Attribute.AGILITY, "chaos/resources/sound/casting/Clumsy");
     UNSHIELD_SOUND.put(Attribute.AGILITY_RECOVERY, "chaos/resources/sound/casting/Clumsy");

@@ -15,15 +15,16 @@ import irvine.util.io.IOUtils;
 
 /**
  * Compute the reincarnation tree for the documentation.
- *
  * @author Sean A. Irvine
  */
 public final class ReincarnationTree {
 
-  private ReincarnationTree() { }
+  private ReincarnationTree() {
+  }
 
   /** The set of castables. */
   public static final Set<Class<? extends Castable>> CASTABLES;
+
   static {
     final HashSet<Class<? extends Castable>> castables = new HashSet<>();
     try {
@@ -97,9 +98,8 @@ public final class ReincarnationTree {
 
   /**
    * Construct the reincarnation trees.
-   *
    * @param args root of tree
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String[] args) throws Exception {
 

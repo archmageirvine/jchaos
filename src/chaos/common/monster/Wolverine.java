@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Wolverine.
- *
  * @author Sean A. Irvine
  */
 public class Wolverine extends MaterialMonster {
@@ -19,10 +18,12 @@ public class Wolverine extends MaterialMonster {
     setDefault(Attribute.AGILITY, 40);
     setDefault(Attribute.MOVEMENT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000E27E7E7E0000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return DireWolf.class;

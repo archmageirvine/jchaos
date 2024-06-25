@@ -7,7 +7,6 @@ import irvine.TestUtils;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class FlatWorldTest extends AbstractWorldTest {
@@ -138,13 +137,13 @@ public class FlatWorldTest extends AbstractWorldTest {
   }
 
   private static final boolean[] MY2_MAP = {
-    false, false, true,  false, false, true,  false, true,  false, false, true,
-    true,  false, false, true,  false, false, true,  false, true,  false, false,
-    false, true,  false, false, true,  false, false, false, false, true,  false,
-    false, false, true,  false, false, true,  false, true,  false, false, true,
-    false, false, true,  false, false, true,  false, true,  false, false, true,
-    true,  false, false, true,  false, false, true,  false, true,  false, false,
-    false, true,  false, false, true,  false, false, false, false, true,  false,
+    false, false, true, false, false, true, false, true, false, false, true,
+    true, false, false, true, false, false, true, false, true, false, false,
+    false, true, false, false, true, false, false, false, false, true, false,
+    false, false, true, false, false, true, false, true, false, false, true,
+    false, false, true, false, false, true, false, true, false, false, true,
+    true, false, false, true, false, false, true, false, true, false, false,
+    false, true, false, false, true, false, false, false, false, true, false,
   };
 
   static final CellFilter<Integer> MY2_FILTER = x -> x == null || MY2_MAP[x];

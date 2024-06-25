@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Nullify.
- *
  * @author Sean A. Irvine
  */
 public class Nullify extends AbstractDecrement {

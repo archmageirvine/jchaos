@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Orange.
- *
  * @author Sean A. Irvine
  */
 public class Orange extends MythosMonster {
@@ -22,10 +21,12 @@ public class Orange extends MythosMonster {
     setDefault(Attribute.SPECIAL_COMBAT, 10);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x3C7EFFFFFFFF7E3CL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;

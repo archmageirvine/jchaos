@@ -8,7 +8,6 @@ import chaos.util.ChaosProperties;
 
 /**
  * Enumeration of actor attributes.
- *
  * @author Sean A. Irvine
  */
 public enum Attribute {
@@ -53,8 +52,11 @@ public enum Attribute {
 
   // This contortion needed because can't reference a simple static constant during enum init
   private static final class CombatLimit {
-    private CombatLimit() { }
+    private CombatLimit() {
+    }
+
     private static final int MAX_COMBAT;
+
     static {
       final StringWriter sw = new StringWriter();
       new Throwable().printStackTrace(new PrintWriter(sw));
@@ -81,7 +83,6 @@ public enum Attribute {
   /**
    * Return the color associated with this attribute.  If the attribute has no defined color
    * then null is returned.
-   *
    * @return attribute color
    */
   public Color getColor() {
@@ -91,7 +92,6 @@ public enum Attribute {
   /**
    * Return the recovery attribute for this attribute.  If this attribute does not have
    * a recovery attribute, then null is returned.
-   *
    * @return recovery attribute
    */
   public Attribute recovery() {

@@ -4,12 +4,12 @@ import java.text.NumberFormat;
 
 /**
  * Utility functions for doubles.
- *
  * @author Sean A. Irvine
  */
 public final class DoubleUtils {
 
-  private DoubleUtils() { }
+  private DoubleUtils() {
+  }
 
   /** Printing with one decimal places. */
   public static final NumberFormat NF1 = NumberFormat.getNumberInstance();
@@ -23,6 +23,7 @@ public final class DoubleUtils {
   public static final NumberFormat NF5 = NumberFormat.getNumberInstance();
   /** Printing with eight decimal places. */
   public static final NumberFormat NF8 = NumberFormat.getNumberInstance();
+
   static {
     NF1.setMinimumFractionDigits(1);
     NF1.setMaximumFractionDigits(1);
@@ -47,7 +48,6 @@ public final class DoubleUtils {
   /**
    * Return the sign of a double. Zero is input is 0 or NaN.
    * +1 is x is positive and -1 if x is negative.
-   *
    * @param x parameter
    * @return sgn(x)
    */
@@ -59,7 +59,6 @@ public final class DoubleUtils {
   /**
    * Convert a degrees, minutes, seconds angle into a radians angle.
    * Does not check that 0&lt;=d&lt;360, 0&lt;=m&lt;60, or 0&lt;=s&lt;60.
-   *
    * @param d degrees value
    * @param m minutes value
    * @param s seconds value
@@ -107,7 +106,6 @@ public final class DoubleUtils {
 
   /**
    * Sum an array of doubles.
-   *
    * @param a array
    * @return sum
    */

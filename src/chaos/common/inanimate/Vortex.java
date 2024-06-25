@@ -25,7 +25,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Vortex.
- *
  * @author Sean A. Irvine
  */
 public class Vortex extends MaterialMonster implements Inanimate, Animateable, NoFlyOver {
@@ -34,7 +33,6 @@ public class Vortex extends MaterialMonster implements Inanimate, Animateable, N
 
   /**
    * Actually move a vortex in the world.
-   *
    * @param world world containing vortex
    * @param c cell containing vortex
    * @param moves moves remaining
@@ -85,32 +83,39 @@ public class Vortex extends MaterialMonster implements Inanimate, Animateable, N
     setRealm(Realm.MATERIAL);
     setSpecialCombatApply(Attribute.MOVEMENT);
   }
+
   @Override
   public int getCastRange() {
     return 7;
   }
+
   @Override
   public long getLosMask() {
     return 0x0038383838181810L;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_DEAD | CAST_EMPTY | CAST_LOS;
   }
+
   @Override
   public int getDefaultWeight() {
     return 0;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new AirElemental();
     a.setOwner(getOwner());
     return a;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     if (caster != null && c != null) {
@@ -123,6 +128,7 @@ public class Vortex extends MaterialMonster implements Inanimate, Animateable, N
       c.notify(new CellEffectEvent(c, CellEffectType.REDRAW_CELL, this));
     }
   }
+
   @Override
   public boolean update(final World world, final Cell cell) {
     // When this is called for the first time the vortex is already marked

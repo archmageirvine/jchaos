@@ -14,7 +14,6 @@ import chaos.util.CastUtils;
 
 /**
  * Willy.
- *
  * @author Sean A. Irvine
  */
 public class Willy extends Actor implements Inanimate, Animateable, Blocker {
@@ -25,22 +24,27 @@ public class Willy extends Actor implements Inanimate, Animateable, Blocker {
     setDefault(Attribute.MAGICAL_RESISTANCE_RECOVERY, 7);
     setRealm(Realm.MATERIAL);
   }
+
   @Override
   public int getCastRange() {
     return 7;
   }
+
   @Override
   public long getLosMask() {
     return 0x383838387C7E3E36L;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_GROWTH | CAST_EMPTY | CAST_LOS | CAST_DEAD;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     CastUtils.castStone(this, caster, c, casterCell);
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new Faun();

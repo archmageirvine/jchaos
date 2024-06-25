@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Camel.
- *
  * @author Sean A. Irvine
  */
 public class Camel extends MaterialMonsterMount {
@@ -21,10 +20,12 @@ public class Camel extends MaterialMonsterMount {
     setDefault(Attribute.RANGE, 2);
     setDefault(Attribute.RANGED_COMBAT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00607C3E3E3E2600L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Horse.class;

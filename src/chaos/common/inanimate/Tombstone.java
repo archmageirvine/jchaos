@@ -32,6 +32,7 @@ import chaos.util.Random;
 public class Tombstone extends AbstractGenerator implements Bonus {
 
   private static final ArrayList<Class<? extends Actor>> GENERATEES = new ArrayList<>();
+
   static {
     GENERATEES.add(Skeleton.class);
     GENERATEES.add(SkeletonWarrior.class);

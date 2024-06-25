@@ -14,7 +14,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Bow breaker.
- *
  * @author Sean A. Irvine
  */
 public class BowBreaker extends AbstractDecrement {
@@ -23,10 +22,12 @@ public class BowBreaker extends AbstractDecrement {
   public int getCastFlags() {
     return CAST_LIVING | CAST_LOS;
   }
+
   @Override
   public int getCastRange() {
     return 9;
   }
+
   @Override
   public int decrement() {
     return Attribute.RANGE.max();

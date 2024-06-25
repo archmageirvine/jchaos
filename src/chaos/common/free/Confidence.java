@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Confidence.
- *
  * @author Sean A. Irvine
  */
 public class Confidence extends FreePowerUp {
@@ -12,6 +11,7 @@ public class Confidence extends FreePowerUp {
   protected int getPowerUpCount() {
     return 3;
   }
+
   @Override
   public PowerUps getPowerUpType() {
     return PowerUps.CONFIDENCE;

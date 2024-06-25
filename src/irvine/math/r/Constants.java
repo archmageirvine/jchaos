@@ -4,12 +4,12 @@ import static java.lang.Double.longBitsToDouble;
 
 /**
  * Various double precision mathematical constants.
- *
  * @author Sean A. Irvine
  */
 public final class Constants {
 
-  private Constants() { }
+  private Constants() {
+  }
 
   /** The natural logarithm of 2. */
   public static final double LN2 = longBitsToDouble(0x3FE62E42FEFA39EFL);

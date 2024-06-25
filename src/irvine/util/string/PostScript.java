@@ -11,7 +11,8 @@ import irvine.math.r.DoubleUtils;
  */
 public final class PostScript {
 
-  private PostScript() { }
+  private PostScript() {
+  }
 
   /**
    * Print centered text.

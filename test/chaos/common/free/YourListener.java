@@ -13,7 +13,6 @@ import junit.framework.Assert;
 
 /**
  * Used for testing events.
- *
  * @author Sean A. Irvine
  */
 class YourListener implements EventListener {

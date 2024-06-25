@@ -7,7 +7,6 @@ import chaos.common.FreeCastable;
 
 /**
  * Hide.
- *
  * @author Sean A. Irvine
  */
 public class Hide extends FreeCastable {

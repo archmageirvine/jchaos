@@ -16,6 +16,7 @@ public class ListCasterTest extends TestCase {
       public Class<? extends Monster> reincarnation() {
         return null;
       }
+
       @Override
       public long getLosMask() {
         return 0;

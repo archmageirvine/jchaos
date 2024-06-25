@@ -49,6 +49,7 @@ public class CastUtilsTest extends TestCase {
 
   private static class MyListener implements EventListener {
     final MyBool mState = new MyBool();
+
     @Override
     public void update(final Event e) {
       if (e instanceof WeaponEffectEvent) {
@@ -67,6 +68,7 @@ public class CastUtilsTest extends TestCase {
         }
       }
     }
+
     MyBool getState() {
       return mState;
     }
@@ -361,6 +363,7 @@ public class CastUtilsTest extends TestCase {
 
   private static class MyListener2 implements EventListener {
     final MyBool mState = new MyBool();
+
     @Override
     public void update(final Event e) {
       if (e instanceof CellEffectEvent) {
@@ -373,6 +376,7 @@ public class CastUtilsTest extends TestCase {
         Assert.fail();
       }
     }
+
     MyBool getState() {
       return mState;
     }

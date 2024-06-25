@@ -14,7 +14,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Destroy wall.
- *
  * @author Sean A. Irvine
  */
 public class DestroyWall extends FreeCastable {

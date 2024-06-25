@@ -19,7 +19,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Free.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */
@@ -28,10 +27,12 @@ public class Free extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_GROWTH | CAST_INANIMATE | CAST_NOWIZARDCELL;
   }
+
   @Override
   public int getCastRange() {
     return 14;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {

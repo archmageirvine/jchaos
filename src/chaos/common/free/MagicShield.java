@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Magic shield.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

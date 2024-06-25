@@ -9,7 +9,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Tests free attribute increment spells.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractFreeIncrementTest extends AbstractFreeCastableTest {

@@ -12,7 +12,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Acquisition.
- *
  * @author Sean A. Irvine
  */
 public class Acquisition extends FreeCastable {

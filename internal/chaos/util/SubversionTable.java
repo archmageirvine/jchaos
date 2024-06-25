@@ -13,12 +13,12 @@ import irvine.world.FlatWorld;
 
 /**
  * Table of subversion scores used by the AI.
- *
  * @author Sean A. Irvine
  */
 public final class SubversionTable {
 
-  private SubversionTable() { }
+  private SubversionTable() {
+  }
 
   private static double prob(final int v) {
     return (120 - v) / 120.0;

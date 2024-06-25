@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Horse.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -19,10 +18,12 @@ public class Horse extends MaterialMonsterMount {
     setDefault(Attribute.AGILITY, 60);
     setDefault(Attribute.MOVEMENT, 4);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000E0FF7E7E2400L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Spider.class;

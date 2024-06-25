@@ -5,7 +5,6 @@ import chaos.common.PowerUps;
 
 /**
  * Flood shield.
- *
  * @author Sean A. Irvine
  */
 public class FloodShield extends AbstractPowerUp implements Multiplicity {

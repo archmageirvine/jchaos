@@ -36,6 +36,7 @@ public class CasterTest extends TestCase {
       setCast();
       return true;
     }
+
     @Override
     public void moveAll(final Wizard w) {
     }
@@ -46,10 +47,12 @@ public class CasterTest extends TestCase {
     public Castable getCastable() {
       return new Lion();
     }
+
     @Override
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;
@@ -73,10 +76,12 @@ public class CasterTest extends TestCase {
     public Castable getCastable() {
       return null;
     }
+
     @Override
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;

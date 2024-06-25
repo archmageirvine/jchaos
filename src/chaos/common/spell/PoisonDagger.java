@@ -17,7 +17,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Poison dagger.
- *
  * @author Sean A. Irvine
  */
 public class PoisonDagger extends Castable implements TargetFilter {
@@ -25,10 +24,12 @@ public class PoisonDagger extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING;
   }
+
   @Override
   public int getCastRange() {
     return 11;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {

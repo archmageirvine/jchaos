@@ -19,14 +19,17 @@ public class DiamondSword extends MythosMonster implements Humanoid {
     setDefault(Attribute.MOVEMENT, 2);
     setDefault(Attribute.COMBAT, 8);
   }
+
   @Override
   public long getLosMask() {
     return 0xC3E77E7E7E7EFFC3L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return SwissKnife.class;
   }
+
   @Override
   public int getCastRange() {
     return 20;

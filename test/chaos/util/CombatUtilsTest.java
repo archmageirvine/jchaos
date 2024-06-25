@@ -46,7 +46,6 @@ import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class CombatUtilsTest extends TestCase {
@@ -211,6 +210,7 @@ public class CombatUtilsTest extends TestCase {
   private static class MagicGlassListener implements EventListener {
     boolean mSeen = false;
     boolean mSawRedraw = false;
+
     @Override
     public void update(final Event event) {
       if (event instanceof PolycellAttackEvent) {

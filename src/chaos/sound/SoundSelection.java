@@ -54,7 +54,6 @@ public final class SoundSelection {
    * to selected sounds for a limited number of other magical attacks.
    * If no appropriate sound is available then null is returned.  If there
    * is more than one possible sound, then one is selected at random.
-   *
    * @param c castable to get sound for
    * @return sound resource or null
    */
@@ -83,7 +82,6 @@ public final class SoundSelection {
    *
    * If no appropriate sound is available then null is returned.  If there
    * is more than one possible sound, then one is selected at random.
-   *
    * @param c castable to get sound for
    * @return sound resource or null
    */
@@ -112,7 +110,6 @@ public final class SoundSelection {
    *
    * If no appropriate sound is available then null is returned.  If there
    * is more than one possible sound, then one is selected at random.
-   *
    * @param c castable to get sound for
    * @return sound resource or null
    */
@@ -146,7 +143,6 @@ public final class SoundSelection {
 
   /**
    * Initialize the sounds for a specific list.
-   *
    * @param list list to initialize
    * @param subdir subdirectory of sounds
    */
@@ -198,7 +194,6 @@ public final class SoundSelection {
 
   /**
    * Select a value at random from the specified list.
-   *
    * @param list map to examine
    * @return randomized value
    */
@@ -222,7 +217,6 @@ public final class SoundSelection {
    *
    * Any individual entry in the result may be null. Such entries should
    * simply be skipped, but should still incur a volume reduction.
-   *
    * @param offence the attacker
    * @param defence the defender
    * @param rawDamage the strength of the attack

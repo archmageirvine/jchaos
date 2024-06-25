@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Vulture.
- *
  * @author Sean A. Irvine
  */
 public class Vulture extends MaterialMonster {
@@ -21,14 +20,17 @@ public class Vulture extends MaterialMonster {
     setDefault(Attribute.MOVEMENT, 6);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public int getCastRange() {
     return 2;
   }
+
   @Override
   public long getLosMask() {
     return 0x0000007C7C000000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Bat.class;

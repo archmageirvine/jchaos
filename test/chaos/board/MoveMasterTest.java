@@ -79,6 +79,7 @@ public class MoveMasterTest extends TestCase {
     lion.setState(State.ASLEEP);
     assertFalse(mm.isMovable(p, 12));
   }
+
   public void testIsEngaged() {
     final World w = new World(5, 5);
     final Wizard p = new Wizard1();

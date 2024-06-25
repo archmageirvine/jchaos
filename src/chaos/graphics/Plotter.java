@@ -10,7 +10,6 @@ interface Plotter {
    * Draw something at suggested coordinates.  May draw complex
    * shapes, but it is the plotter's responsibility to keep
    * track of them for later deletion.
-   *
    * @param x x-coordinate
    * @param y y-coordinate
    */

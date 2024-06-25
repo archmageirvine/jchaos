@@ -4,7 +4,6 @@ import junit.framework.TestCase;
 
 /**
  * Unit Test for class CustomURLStreamHandlerFactory
- *
  * @author Len Trigg
  */
 public class CustomURLStreamHandlerFactoryTest extends TestCase {

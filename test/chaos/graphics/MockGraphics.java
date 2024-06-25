@@ -27,7 +27,6 @@ import java.util.Map;
 
 /**
  * Graphics for testing.
- *
  * @author Sean A. Irvine
  */
 public class MockGraphics extends Graphics2D {
@@ -35,7 +34,8 @@ public class MockGraphics extends Graphics2D {
   protected final StringBuilder mHistory = new StringBuilder();
 
   @Override
-  public void dispose() { }
+  public void dispose() {
+  }
 
   @Override
   public void clearRect(final int x, final int y, final int width, final int height) {
@@ -540,7 +540,7 @@ public class MockGraphics extends Graphics2D {
       .append(height)
       .append(")#");
   }
-  
+
   @Override
   public void setClip(final Shape shape) {
     if (shape == null) {

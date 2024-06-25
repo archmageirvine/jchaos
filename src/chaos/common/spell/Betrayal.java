@@ -21,7 +21,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Betrayal.
- *
  * @author Sean A. Irvine
  */
 public class Betrayal extends Castable implements TargetFilter {

@@ -101,7 +101,6 @@ public final class Configure extends JFrame implements ActionListener {
 
   /**
    * Noddy, can be used to set configuration without actually starting a game.
-   *
    * @param args ignored
    */
   public static void main(final String[] args) {

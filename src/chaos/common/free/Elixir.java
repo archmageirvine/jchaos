@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Elixir.
- *
  * @author Sean A. Irvine
  * @author Jonathan Levell
  */

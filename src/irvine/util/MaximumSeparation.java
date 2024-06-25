@@ -9,13 +9,13 @@ import java.util.Random;
  * optimal, but it should be within a tiny fraction of an optimal solution
  * most of the time.  The time required to find a solution increases as the
  * number of points increases.
- *
  * @author Sean A. Irvine
  */
 public final class MaximumSeparation {
 
   /** Prevent instantiation. */
-  private MaximumSeparation() { }
+  private MaximumSeparation() {
+  }
 
   /** Delta arrays for considering adjacent points. */
   private static final int[] DX = {-1, 1, 0, 0, -1, 1, -1, 1};
@@ -27,7 +27,6 @@ public final class MaximumSeparation {
    * in the result are sorted into ascending order and consist of the
    * squared-distance between every pair of points. <code>x[i]</code> and
    * <code>y[i]</code> are the coordinates of point <i>i</i>.
-   *
    * @param x x-coordinates
    * @param y y-coordinates
    * @return ascending deltas
@@ -51,7 +50,6 @@ public final class MaximumSeparation {
    * to better spaced arrangement of points.  The result is +1 is the first
    * arrangement is better than the second, -1 if the second arrangement is
    * better than the first, and 0 if they are equally well spaced.
-   *
    * @param da sorted deltas for first arrangement
    * @param db sorted deltas for second arrangement
    * @return comparison value
@@ -81,14 +79,12 @@ public final class MaximumSeparation {
    * p</code> and consist of the resulting coordinates for the points.  The third
    * array contains the squared-distances between every pair of points sorted into
    * ascending order.
-   *
-   *
    * @param w width of region
    * @param h height of region
    * @param n number of points
    * @param iterations effort
    * @return point positions and deltas arrays
-   * @exception IllegalArgumentException if a dimension or the number of iterations
+   * @throws IllegalArgumentException if a dimension or the number of iterations
    * is less than 1 or the number of points is negative.
    */
   public static int[][] separate(final int w, final int h, final int n, final int iterations) {
@@ -186,15 +182,15 @@ public final class MaximumSeparation {
           System.out.print('&');
         }
         switch (z[i][j]) {
-        case 0:
-          System.out.print("\\pp");
-          break;
-        case 1:
-          System.out.print("$\\bullet$");
-          break;
-        default:
-          System.out.print(z[i][j]);
-          break;
+          case 0:
+            System.out.print("\\pp");
+            break;
+          case 1:
+            System.out.print("$\\bullet$");
+            break;
+          default:
+            System.out.print(z[i][j]);
+            break;
         }
       }
       System.out.println("\\\\\\hline");
@@ -259,7 +255,6 @@ public final class MaximumSeparation {
    * number of iterations. If the first argument is "-t" the result is dumped
    * as a LaTeX table. If the first argument is "-p" a PBM image is dumped.
    * Otherwise the dump is ASCII.
-   *
    * @param args arguments
    */
   public static void main(final String... args) {

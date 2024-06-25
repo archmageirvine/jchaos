@@ -10,7 +10,6 @@ import irvine.StandardIoTestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class TextScoreDisplayTest extends StandardIoTestCase {

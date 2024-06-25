@@ -13,7 +13,6 @@ import chaos.common.Realm;
 
 /**
  * The exit.
- *
  * @author Sean A. Irvine
  */
 public class Exit extends Actor implements Inanimate, Mountable, Named {
@@ -54,17 +53,21 @@ public class Exit extends Actor implements Inanimate, Mountable, Named {
   public int getCastFlags() {
     return 0;
   }
+
   @Override
   public int getCastRange() {
     return 1; // this just a dummy, can't ever get this to cast
   }
+
   @Override
   public long getLosMask() {
     return ~0L;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
   }
+
   @Override
   public int getDefaultWeight() {
     return 5;

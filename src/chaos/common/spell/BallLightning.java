@@ -21,7 +21,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Ball lightning.
- *
  * @author Sean A. Irvine
  */
 public class BallLightning extends Castable implements TargetFilter {

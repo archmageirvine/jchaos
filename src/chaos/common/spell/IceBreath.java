@@ -21,7 +21,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Ice breath.
- *
  * @author Sean A. Irvine
  */
 public class IceBreath extends Castable implements TargetFilter {
@@ -87,7 +86,7 @@ public class IceBreath extends Castable implements TargetFilter {
     final Team teams = world.getTeamInformation();
     final int t = teams.getTeam(caster);
     // Don't want to cast this close to own creatures
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       int bad = 0;
       int good = 0;
       for (final Cell c : world.getCells(it.next().getCellNumber(), 0, 1, false)) {

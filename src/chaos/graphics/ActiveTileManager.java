@@ -38,7 +38,6 @@ import irvine.util.io.IOUtils;
 
 /**
  * Provides access to a set of dynamic tile set.
- *
  * @author Sean A. Irvine
  */
 public class ActiveTileManager extends AbstractTileManager {
@@ -95,7 +94,6 @@ public class ActiveTileManager extends AbstractTileManager {
 
   /**
    * Initialize the tile set for a castable.
-   *
    * @param castableName the name to get the TileSet for
    * @return the resulting TileSet.
    */

@@ -16,7 +16,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests for the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class GrowerTest extends TestCase {
@@ -80,6 +79,7 @@ public class GrowerTest extends TestCase {
   public void testFungi() {
     testFillsSpace(new VioletFungi());
   }
+
   public void testEarthquake() {
     testFillsSpace(new Earthquake());
   }
@@ -108,29 +108,36 @@ public class GrowerTest extends TestCase {
 
   static class MyGrowth extends MaterialGrowth {
     private boolean mSeen = false;
+
     @Override
     public int growthRate() {
       return 100;
     }
+
     @Override
     public int getGrowthType() {
       return Growth.GROW_OVER;
     }
+
     @Override
     public void grow(final int a, final World world) {
       mSeen = true;
     }
+
     @Override
     public int getCastRange() {
       return 0;
     }
+
     @Override
     public boolean canGrowOver(final Cell c) {
       return true;
     }
+
     public boolean isSeen() {
       return mSeen;
     }
+
     public void setSeen(final boolean seen) {
       mSeen = seen;
     }
@@ -160,6 +167,7 @@ public class GrowerTest extends TestCase {
     {
       setDefault(Attribute.LIFE, 100); // Fire unlikely to burn
     }
+
     @Override
     public int growthRate() {
       return 0;

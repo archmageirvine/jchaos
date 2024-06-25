@@ -25,8 +25,8 @@ import irvine.math.r.Constants;
  */
 public class HumanMoveHelper implements Serializable {
 
-  private static final int[] DELTA_X = {1, -1,  0,  0,  1,  1, -1, -1};
-  private static final int[] DELTA_Y = {0,  0,  1, -1,  1, -1,  1, -1};
+  private static final int[] DELTA_X = {1, -1, 0, 0, 1, 1, -1, -1};
+  private static final int[] DELTA_Y = {0, 0, 1, -1, 1, -1, 1, -1};
 
   private final World mWorld;
   private final double[] mDistance; // Movement points to reach here, or -1
@@ -82,7 +82,7 @@ public class HumanMoveHelper implements Serializable {
         if (a != null && a.getState() != State.DEAD && !mm.isAttackable(source, c)
           && (!isWizardMoving || !mm.isMountable(wizard, c))
           && (!(a instanceof Gollop) || owner != a.getOwner())) {
-            mDistance[c] = -1;
+          mDistance[c] = -1;
         }
       }
     }

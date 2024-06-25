@@ -6,7 +6,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ConstantsTest extends TestCase {
@@ -16,7 +15,6 @@ public class ConstantsTest extends TestCase {
   /**
    * Roughly speaking, increase a double to the next smallest representable
    * number.
-   *
    * @param v values to bump
    * @return bumped value
    */
@@ -27,7 +25,6 @@ public class ConstantsTest extends TestCase {
   /**
    * Roughly speaking, decrease a double to the next largest representable
    * number.
-   *
    * @param v values to bump
    * @return bumped value
    */

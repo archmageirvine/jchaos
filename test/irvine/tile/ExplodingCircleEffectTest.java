@@ -4,12 +4,9 @@ import java.util.List;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ExplodingCircleEffectTest extends AbstractTileEffectTest {
-
-
 
 
   @Override

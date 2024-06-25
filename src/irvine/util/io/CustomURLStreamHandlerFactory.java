@@ -8,7 +8,6 @@ import java.util.HashMap;
 /**
  * A custom URLStreamHandlerFactory that knows about some of our own
  * protocols -- this class uses the singleton pattern.
- *
  * @author Len Trigg
  */
 public class CustomURLStreamHandlerFactory implements URLStreamHandlerFactory {
@@ -19,7 +18,6 @@ public class CustomURLStreamHandlerFactory implements URLStreamHandlerFactory {
 
   /**
    * Get the CustomURLStreamHandlerFactory singleton.
-   *
    * @return The instance value.
    */
   public static synchronized CustomURLStreamHandlerFactory getInstance() {
@@ -39,7 +37,8 @@ public class CustomURLStreamHandlerFactory implements URLStreamHandlerFactory {
    * It is not private to allow unit testing without mucking up the
    * singleton itself.
    */
-  CustomURLStreamHandlerFactory() { }
+  CustomURLStreamHandlerFactory() {
+  }
 
   @Override
   public URLStreamHandler createURLStreamHandler(final String protocol) {
@@ -57,7 +56,6 @@ public class CustomURLStreamHandlerFactory implements URLStreamHandlerFactory {
 
   /**
    * Register a URLStreamHandler for a given protocol.
-   *
    * @param protocol the protocol name
    * @param handlerClass a Class whos instances are assignable to
    * URLStreamHandler

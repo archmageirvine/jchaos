@@ -131,7 +131,6 @@ public class InfoDisplay {
 
   /**
    * Construct a new information display.
-   *
    * @param screen the screen
    * @param graphics where to draw
    * @param tileManager tile manager
@@ -225,7 +224,6 @@ public class InfoDisplay {
   /**
    * Show the information panel for the specified actor. If the given actor
    * is null then the panel is cleared.
-   *
    * @param actor actor to display
    * @param panel 0 or 1 to select upper or lower panel
    * @throws IllegalArgumentException if panel number is invalid

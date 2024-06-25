@@ -9,7 +9,6 @@ import chaos.util.NameUtils;
 
 /**
  * The named centaur.
- *
  * @author Sean A. Irvine
  */
 public class NamedCentaur extends MaterialMonsterMount implements BowShooter, Named {

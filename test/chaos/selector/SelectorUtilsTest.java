@@ -10,7 +10,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class SelectorUtilsTest extends TestCase {
@@ -45,12 +44,12 @@ public class SelectorUtilsTest extends TestCase {
 
   public void testNoSelection() {
     final Wizard1 wiz = new Wizard1();
-    assertTrue(SelectorUtils.noSelectionPossible(null,  wiz));
-    assertTrue(SelectorUtils.noSelectionPossible(new Castable[0],  wiz));
+    assertTrue(SelectorUtils.noSelectionPossible(null, wiz));
+    assertTrue(SelectorUtils.noSelectionPossible(new Castable[0], wiz));
     final Castable[] c = {new Hide()};
-    assertTrue(SelectorUtils.noSelectionPossible(c,  null));
-    assertTrue(SelectorUtils.noSelectionPossible(c,  wiz));
+    assertTrue(SelectorUtils.noSelectionPossible(c, null));
+    assertTrue(SelectorUtils.noSelectionPossible(c, wiz));
     wiz.setState(State.ACTIVE);
-    assertFalse(SelectorUtils.noSelectionPossible(c,  wiz));
+    assertFalse(SelectorUtils.noSelectionPossible(c, wiz));
   }
 }

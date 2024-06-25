@@ -17,11 +17,11 @@ public final class Walls {
   static final int[] BRICK_COLOURS = {0xFF653626, 0xFF824A31, 0xFF7E3B2B, 0xFF682920, 0xFF854730};
   static final int[] MORTAR_COLOURS = {0xCCA38F6C, 0xCC9D8569, 0xA0A38F6C, 0xA09D8569};
 
-  private Walls() { }
+  private Walls() {
+  }
 
   /**
    * Draw a wall with given number of bricks in vertical direction.
-   *
    * @param g place to draw
    * @param x x-coordinate
    * @param y y-coordinate

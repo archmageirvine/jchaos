@@ -19,7 +19,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Archery.
- *
  * @author Sean A. Irvine
  */
 public class Archery extends Castable implements TargetFilter {
@@ -27,10 +26,12 @@ public class Archery extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_LOS;
   }
+
   @Override
   public int getCastRange() {
     return 12;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {
@@ -48,7 +49,7 @@ public class Archery extends Castable implements TargetFilter {
     final Team teams = world.getTeamInformation();
     final int t = teams.getTeam(caster);
     CastUtils.keepFriends(targets, t, teams);
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (!(a instanceof Monster)) {
         it.remove();

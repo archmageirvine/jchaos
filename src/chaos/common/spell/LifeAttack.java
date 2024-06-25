@@ -6,7 +6,6 @@ import chaos.common.Attribute;
 /**
  * Magic attack.  These words appeared in Spectrum Chaos, but no such spell was
  * actually implemented.
- *
  * @author Sean A. Irvine
  */
 public class LifeAttack extends AbstractDecrement {

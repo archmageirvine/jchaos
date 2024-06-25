@@ -10,7 +10,6 @@ import java.nio.charset.StandardCharsets;
  * Provides a BASE64 decoding input stream as defined in
  * <a href=doc-files/rfc2045.txt>RFC 2045</a>. Does not handle MIME framing.
  * Characters outside the BASE64 alphabet are silently ignored.
- *
  * @author Sean A. Irvine
  */
 public class Base64InputStream extends FilterInputStream {
@@ -27,7 +26,6 @@ public class Base64InputStream extends FilterInputStream {
 
   /**
    * Create an input stream using BASE64.
-   *
    * @param in underlying input stream
    */
   public Base64InputStream(final InputStream in) {
@@ -36,8 +34,7 @@ public class Base64InputStream extends FilterInputStream {
 
   /**
    * Used to check validity of stream before reads etc.
-   *
-   * @exception IOException if stream is actually closed
+   * @throws IOException if stream is actually closed
    */
   private void valid() throws IOException {
     if (in == null) {
@@ -96,9 +93,8 @@ public class Base64InputStream extends FilterInputStream {
   /**
    * Returns 0 if no bytes can be immediately read; otherwise returns 1.
    * After end-of-stream will always return 0.
-   *
    * @return 1 if bytes can be read.
-   * @exception IOException if an I/O error occurs
+   * @throws IOException if an I/O error occurs
    */
   @Override
   public final int available() throws IOException {
@@ -109,7 +105,6 @@ public class Base64InputStream extends FilterInputStream {
 
   /**
    * Marking is not supported.
-   *
    * @return false
    */
   @Override
@@ -129,7 +124,6 @@ public class Base64InputStream extends FilterInputStream {
   /**
    * Convenience method to decode a BASE64 string into bytes.  Not
    * necessarily efficient.
-   *
    * @param base64 data to decode
    * @return decoded data
    */
@@ -158,9 +152,8 @@ public class Base64InputStream extends FilterInputStream {
   /**
    * Decode BASE64 encoded data appearing on standard input, sending the result
    * to standard output.
-   *
    * @param args ignored
-   * @exception IOException if an error occurs
+   * @throws IOException if an error occurs
    */
   public static void main(final String[] args) throws IOException {
     try (final Base64InputStream bis = new Base64InputStream(System.in)) {

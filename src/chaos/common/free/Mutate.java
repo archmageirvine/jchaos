@@ -12,7 +12,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Mutate.
- *
  * @author Sean A. Irvine
  */
 public class Mutate extends FreeCastable {

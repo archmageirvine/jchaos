@@ -4,7 +4,6 @@ import java.awt.Graphics;
 
 /**
  * Very light weight button.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractButton {
@@ -16,12 +15,11 @@ public abstract class AbstractButton {
 
   /**
    * Construct a new button with the specified target area.
-   *
    * @param x screen x-coordinate
    * @param y screen y-coordinate
    * @param w width of button
    * @param h height of button
-   * @exception NullPointerException if <code>image</code> is null.
+   * @throws NullPointerException if <code>image</code> is null.
    */
   public AbstractButton(final int x, final int y, final int w, final int h) {
     mX0 = x;
@@ -32,7 +30,6 @@ public abstract class AbstractButton {
 
   /**
    * Test if this button contains the given point.
-   *
    * @param x x-coordinate
    * @param y y-coordinate
    * @return true if (x,y) is within button
@@ -43,7 +40,6 @@ public abstract class AbstractButton {
 
   /**
    * Draw this button.
-   *
    * @param g place to draw
    */
   public abstract void paint(final Graphics g);

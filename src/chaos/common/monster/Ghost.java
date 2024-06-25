@@ -8,7 +8,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Ghost.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -22,6 +21,7 @@ public class Ghost extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.MOVEMENT, 2);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Wraith.class;

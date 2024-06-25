@@ -11,7 +11,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Solar.
- *
  * @author Sean A. Irvine
  */
 public class Solar extends UndeadMonster implements Humanoid, NoDeadImage {
@@ -24,18 +23,20 @@ public class Solar extends UndeadMonster implements Humanoid, NoDeadImage {
     setDefault(Attribute.AGILITY, 33);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x387C7C7C7C786800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Ghoul.class;
   }
+
   /**
    * Solar has non-standard movement.  It always moves itself, so the
    * update makes sure ordinary players cannot move it.
-   *
    * @param world the world containing the actor, may be null
    * @param cell the cell containing the actor. may be null
    * @return update success
@@ -47,9 +48,9 @@ public class Solar extends UndeadMonster implements Humanoid, NoDeadImage {
     return r;
   }
 
- @Override
+  @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     super.cast(world, caster, cell, casterCell);
     setMoved(true);
   }
- }
+}

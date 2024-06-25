@@ -15,7 +15,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Meddle.
- *
  * @author Sean A. Irvine
  */
 public class Meddle extends FreeCastable {

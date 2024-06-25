@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Fire bat.
- *
  * @author Sean A. Irvine
  */
 public class FireBat extends MaterialMonster {
@@ -20,10 +19,12 @@ public class FireBat extends MaterialMonster {
     setDefault(Attribute.MOVEMENT, 6);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00007C7C7C000000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Bat.class;

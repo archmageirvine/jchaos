@@ -11,7 +11,6 @@ import irvine.tile.TileImage;
 
 /**
  * Routines for a particle based explosion effect.
- *
  * @author Sean A. Irvine
  */
 public final class ParticleExplosion {
@@ -31,14 +30,13 @@ public final class ParticleExplosion {
   /**
    * Creates a new particle based explosion of the given size and decay rate.
    * The hot point is specified by the pair <code>(x,y)</code>.
-   *
    * @param w width
    * @param h height
    * @param decayRate decay rate
    * @param color initial color
    * @param x x-coordinate of hot point
    * @param y y-coordinate of hot point
-   * @exception IllegalArgumentException if a parameter is invalid.
+   * @throws IllegalArgumentException if a parameter is invalid.
    */
   public ParticleExplosion(final int w, final int h, final int decayRate, final int color, final int x, final int y) {
     if (w < 1 || h < 1 || decayRate < 1) {
@@ -53,7 +51,6 @@ public final class ParticleExplosion {
   /**
    * Creates a new particle based explosion of the given size and decay rate.
    * The hot point is near the centre of the image.
-   *
    * @param w width
    * @param h height
    * @param decayRate decay rate
@@ -68,9 +65,8 @@ public final class ParticleExplosion {
    * The default value is 2.  Other small positive integers can be used.
    * Large values will result in a slower effect and not much change in the
    * actual result.
-   *
    * @param factor explosion factor
-   * @exception IllegalArgumentException if <code>factor</code> is less than 1.
+   * @throws IllegalArgumentException if <code>factor</code> is less than 1.
    */
   public void setExplosionFactor(final int factor) {
     if (factor < 1) {
@@ -87,7 +83,6 @@ public final class ParticleExplosion {
    * blue, then green, then red), this is appropriate for fire.  Normally
    * the code should be a permutation of the tuples 01, 10, 11 (but this is
    * not checked).
-   *
    * @param code an <code>int</code> value
    */
   public void setDecayPreferenceCode(final int code) {
@@ -105,35 +100,35 @@ public final class ParticleExplosion {
     while ((bits = decayCode & 3) != 0) {
       decayCode >>>= 2;
       switch (bits) {
-      case 3:
-        if (b != 0) {
-          b -= mRandom.nextInt(d);
-          if (b < MIN_COLOR_COMPONENT) {
-            b = 0;
+        case 3:
+          if (b != 0) {
+            b -= mRandom.nextInt(d);
+            if (b < MIN_COLOR_COMPONENT) {
+              b = 0;
+            }
+            d >>>= 2;
+            ++d;
           }
-          d >>>= 2;
-          ++d;
-        }
-        break;
-      case 2:
-        if (g != 0) {
-          g -= mRandom.nextInt(d);
-          if (g < MIN_COLOR_COMPONENT) {
-            g = 0;
+          break;
+        case 2:
+          if (g != 0) {
+            g -= mRandom.nextInt(d);
+            if (g < MIN_COLOR_COMPONENT) {
+              g = 0;
+            }
+            d >>>= 2;
+            ++d;
           }
-          d >>>= 2;
-          ++d;
-        }
-        break;
-      default:
-        if (r != 0) {
-          r -= mRandom.nextInt(d);
-          if (r < MIN_COLOR_COMPONENT) {
-            r = 0;
+          break;
+        default:
+          if (r != 0) {
+            r -= mRandom.nextInt(d);
+            if (r < MIN_COLOR_COMPONENT) {
+              r = 0;
+            }
+            d >>>= 2;
+            ++d;
           }
-          d >>>= 2;
-          ++d;
-        }
       }
     }
     return (color & ~RGB_MASK) + (r << 16) + (g << 8) + b;
@@ -154,7 +149,6 @@ public final class ParticleExplosion {
   /**
    * Update the current effect.  Return true while non-zero pixels still
    * exist.
-   *
    * @return false if no further image evolution occurs
    */
   public boolean update() {
@@ -195,7 +189,6 @@ public final class ParticleExplosion {
 
   /**
    * Return the current image.
-   *
    * @return the image
    */
   public TileImage image() {

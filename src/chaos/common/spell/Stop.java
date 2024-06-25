@@ -14,7 +14,6 @@ import chaos.common.Multiplicity;
 
 /**
  * Stop.
- *
  * @author Sean A. Irvine
  */
 public class Stop extends AbstractDecrement implements Multiplicity {
@@ -22,14 +21,17 @@ public class Stop extends AbstractDecrement implements Multiplicity {
   public int getCastFlags() {
     return CAST_LIVING;
   }
+
   @Override
   public int getCastRange() {
     return MAX_CAST_RANGE;
   }
+
   @Override
   public int getMultiplicity() {
     return 3;
   }
+
   @Override
   public int decrement() {
     return Attribute.MOVEMENT.max();
@@ -43,7 +45,7 @@ public class Stop extends AbstractDecrement implements Multiplicity {
   @Override
   public void filter(final Set<Cell> targets, final Caster caster, final World world) {
     super.filter(targets, caster, world);
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Cell c = it.next();
       final Actor a = c.peek();
       if (a instanceof Monster && a.get(Attribute.MOVEMENT) == 0) {

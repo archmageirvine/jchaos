@@ -14,7 +14,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class MergeTest extends TestCase {

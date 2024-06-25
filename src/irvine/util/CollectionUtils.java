@@ -9,12 +9,12 @@ import java.util.Map;
 
 /**
  * Utility functions relating to collections.
- *
  * @author Sean A. Irvine
  */
 public final class CollectionUtils {
 
-  private CollectionUtils() { }
+  private CollectionUtils() {
+  }
 
   @SuppressWarnings({"unchecked", "rawtypes"})
   private static void forceSort(final List<?> list) {

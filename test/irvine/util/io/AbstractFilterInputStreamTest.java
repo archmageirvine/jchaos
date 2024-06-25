@@ -11,7 +11,6 @@ import junit.framework.TestCase;
 
 /**
  * Provides some tests which every FilterInputStream should pass.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractFilterInputStreamTest extends TestCase {
@@ -23,7 +22,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
 
   public abstract byte[] getTestStream();
 
-  /** Test it is indeed a FilterInputStream.  */
+  /** Test it is indeed a FilterInputStream. */
   public void testInstanceOf() {
     try {
       assertTrue(getInputStream(new ByteArrayInputStream(new byte[0])) instanceof FilterInputStream);
@@ -32,7 +31,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
     }
   }
 
-  /** Tests the <code>equals()</code> method.  */
+  /** Tests the <code>equals()</code> method. */
   public void testEquals() {
     try {
       final InputStream s = getInputStream(new ByteArrayInputStream(new byte[0]));
@@ -52,7 +51,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
     }
   }
 
-  /** Tests the <code>hashCode()</code> method.  */
+  /** Tests the <code>hashCode()</code> method. */
   public void testHashcode() {
     try {
       final InputStream s = getInputStream(new ByteArrayInputStream(new byte[0]));
@@ -60,16 +59,16 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
       final Object junk = new Object();
       assertTrue("Hashcode", s.hashCode() != junk.hashCode());
       final ByteArrayInputStream t = new ByteArrayInputStream(new byte[1]);
-        assertTrue("Hashcode", s.hashCode() != t.hashCode());
-        final InputStream t2 = getInputStream(t);
-        assertTrue("Hashcode", s.hashCode() != t2.hashCode());
-        t2.close();
+      assertTrue("Hashcode", s.hashCode() != t.hashCode());
+      final InputStream t2 = getInputStream(t);
+      assertTrue("Hashcode", s.hashCode() != t2.hashCode());
+      t2.close();
     } catch (final IOException e) {
       fail("IO: " + e.getMessage());
     }
   }
 
-  /** Tests <code>close()</code> functionality.  */
+  /** Tests <code>close()</code> functionality. */
   public void testReadPastClose() {
     try {
       final byte[] testData = getTestStream();
@@ -87,7 +86,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
   }
 
 
-  /** Tests multiple closes.  */
+  /** Tests multiple closes. */
   public void testMultipleClose() {
     try {
       final byte[] testData = getTestStream();
@@ -101,7 +100,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
   }
 
 
-  /** Test skip() functionality.  */
+  /** Test skip() functionality. */
   public void testStrangeSkip() {
     try {
       final byte[] testData = getTestStream();
@@ -126,7 +125,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
   }
 
 
-  /** Test read functionality.  */
+  /** Test read functionality. */
   public void testReadConsistency() {
     try {
       final byte[] testData = getTestStream();
@@ -236,7 +235,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
   }
 
 
-  /** Try invoking reset() without calling mark()  */
+  /** Try invoking reset() without calling mark() */
   public void testResetWithoutMark() {
     try {
       final byte[] testData = getTestStream();
@@ -256,7 +255,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
   }
 
 
-  /** Test the available() method is positive.  */
+  /** Test the available() method is positive. */
   public void testAvailable() {
     try {
       final byte[] testData = getTestStream();
@@ -278,7 +277,7 @@ public abstract class AbstractFilterInputStreamTest extends TestCase {
   }
 
 
-  /** If marking is supported test the mark() method  */
+  /** If marking is supported test the mark() method */
   public void testMark() {
     try {
       final byte[] testData = getTestStream();

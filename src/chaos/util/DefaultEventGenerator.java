@@ -5,7 +5,6 @@ import java.util.HashSet;
 /**
  * Superclass for all classes capable of generating <code>Event</code>
  * notifications.  The event generation is done in a thread safe manner.
- *
  * @author Sean A. Irvine
  */
 public class DefaultEventGenerator implements EventGenerator {

@@ -24,7 +24,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class DevastationTest extends AbstractFreeCastableTest {
@@ -37,9 +36,11 @@ public class DevastationTest extends AbstractFreeCastableTest {
   private static class MyListener implements EventListener {
     private boolean mC = false;
     private final World mWorld;
+
     MyListener(final World world) {
       mWorld = world;
     }
+
     @Override
     public void update(final Event e) {
       if (e instanceof CellEffectEvent) {

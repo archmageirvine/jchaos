@@ -8,7 +8,6 @@ import chaos.common.Virtuous;
 
 /**
  * Derro.
- *
  * @author Sean A. Irvine
  */
 public class Derro extends MaterialMonster implements Humanoid, Virtuous {
@@ -20,10 +19,12 @@ public class Derro extends MaterialMonster implements Humanoid, Virtuous {
     setDefault(Attribute.AGILITY, 40);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x001E3F7C7C1C1C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Troll.class;

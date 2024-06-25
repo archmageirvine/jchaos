@@ -14,7 +14,6 @@ import chaos.common.Realm;
 
 /**
  * The nuked cell.
- *
  * @author Sean A. Irvine
  */
 public class Nuked extends Actor implements Multiplicity, Inanimate, IgnoreShot, Blocker, Killer {
@@ -23,26 +22,32 @@ public class Nuked extends Actor implements Multiplicity, Inanimate, IgnoreShot,
     setDefault(Attribute.MAGICAL_RESISTANCE, 100);
     setRealm(Realm.MATERIAL);
   }
+
   @Override
   public int getCastRange() {
     return 15;
   }
+
   @Override
   public long getLosMask() {
     return 0x0L;
   }
+
   @Override
   public int getCastFlags() {
     return 0;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     // In theory this does not get cast as a spell, so no casting is needed.
   }
+
   @Override
   public int getMultiplicity() {
     return 8;
   }
+
   @Override
   public int getDefaultWeight() {
     return -7;

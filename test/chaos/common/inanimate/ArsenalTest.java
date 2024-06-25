@@ -14,7 +14,6 @@ import chaos.util.CombatUtils;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class ArsenalTest extends AbstractMonsterTest {

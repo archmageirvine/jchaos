@@ -4,9 +4,8 @@ import java.util.HashMap;
 
 /**
  * A object based multiset.
- *
- * @author Sean A. Irvine
  * @param <T> base type
+ * @author Sean A. Irvine
  */
 public class Multiset<T> extends HashMap<T, Multiset.MutableLong> {
 

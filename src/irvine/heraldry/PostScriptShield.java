@@ -6,12 +6,12 @@ import irvine.util.string.PostScript;
 
 /**
  * Generate a PostScript image of a shield.
- *
  * @author Sean A. Irvine
  */
 public final class PostScriptShield {
 
-  private PostScriptShield() { }
+  private PostScriptShield() {
+  }
 
   static void writeHeader(final PrintStream out) {
     PostScript.header(out, PostScriptShield.class, "image", 320, 430);
@@ -22,7 +22,6 @@ public final class PostScriptShield {
 
   /**
    * Generate specified shield as PostScript.
-   *
    * @param args shield specification
    */
   public static void main(final String[] args) {

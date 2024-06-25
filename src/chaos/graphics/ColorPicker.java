@@ -11,7 +11,8 @@ import java.util.Random;
  */
 public final class ColorPicker {
 
-  private ColorPicker() { }
+  private ColorPicker() {
+  }
 
   /**
    * Choose the specified number of colors

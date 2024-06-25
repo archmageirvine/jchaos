@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Mud man.
- *
  * @author Sean A. Irvine
  */
 public class MudMan extends MaterialMonster implements Humanoid {
@@ -21,10 +20,12 @@ public class MudMan extends MaterialMonster implements Humanoid {
     setDefault(Attribute.RANGE, 4);
     setDefault(Attribute.RANGED_COMBAT, 8);
   }
+
   @Override
   public long getLosMask() {
     return 0x003CFFFFFFFF7E7EL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return OgreMage.class;

@@ -7,7 +7,6 @@ import chaos.common.Actor;
 
 /**
  * A multiple cell effect event for a shield increment spell.
- *
  * @author Sean A. Irvine
  */
 public class PolycellAttackEvent extends PolycellEffectEvent {
@@ -16,12 +15,11 @@ public class PolycellAttackEvent extends PolycellEffectEvent {
 
   /**
    * Construct a new event.
-   *
    * @param cells the cells involved
    * @param cause the castable causing this event (may be null)
    * @param damage the strength of the attack
-   * @exception NullPointerException if cells is null.
-   * @exception IllegalArgumentException if event type is not known.
+   * @throws NullPointerException if cells is null.
+   * @throws IllegalArgumentException if event type is not known.
    */
   public PolycellAttackEvent(final Collection<Cell> cells, final Actor cause, final int damage) {
     super(cells, CellEffectType.ATTACK_EVENT, cause);
@@ -30,7 +28,6 @@ public class PolycellAttackEvent extends PolycellEffectEvent {
 
   /**
    * The damage.
-   *
    * @return the damage.
    */
   public int getDamage() {

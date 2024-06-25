@@ -14,7 +14,6 @@ import chaos.common.growth.VioletFungi;
 
 /**
  * Mullac de Irvine.
- *
  * @author Sean A. Irvine
  */
 public class MullacDeIrvine extends Polycaster implements Humanoid {
@@ -26,10 +25,12 @@ public class MullacDeIrvine extends Polycaster implements Humanoid {
     setDefault(Attribute.INTELLIGENCE, 100);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0098D8FC3C183800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Jann.class;

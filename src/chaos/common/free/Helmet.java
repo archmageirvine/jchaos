@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Helmet.
- *
  * @author Sean A. Irvine
  */
 public class Helmet extends AbstractFreeIncrement {

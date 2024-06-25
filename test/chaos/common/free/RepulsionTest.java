@@ -11,7 +11,6 @@ import chaos.common.wizard.Wizard2;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class RepulsionTest extends AbstractFreeCastableTest {

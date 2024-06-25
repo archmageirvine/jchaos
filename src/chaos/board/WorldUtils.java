@@ -10,19 +10,18 @@ import irvine.util.MaximumSeparation;
 
 /**
  * Various utility functions operating on the whole world.
- *
  * @author Sean A. Irvine
  */
 public final class WorldUtils {
 
-  private WorldUtils() { }
+  private WorldUtils() {
+  }
 
   private static final Random RANDOM = new Random();
 
   /**
    * Insert generators into the world. Will be sensibly limit the request if
    * the world is too small to handle requested number.
-   *
    * @param world the world
    * @param generators the generators
    */
@@ -57,7 +56,6 @@ public final class WorldUtils {
 
   /**
    * Insert all the active wizards from the array into the world.
-   *
    * @param world world
    * @param wiz wizards
    * @param scenario true if this is a scenario

@@ -16,7 +16,6 @@ import irvine.tile.TileImage;
 
 /**
  * Realm change effect.
- *
  * @author Sean A. Irvine
  */
 public class RealmChangeEffect extends AbstractEffect {

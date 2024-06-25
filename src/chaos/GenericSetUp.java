@@ -42,7 +42,6 @@ import irvine.util.graphics.Stipple;
 /**
  * Set up that works directly on a generic screen.  Allows for the initial
  * configuration of wizards and generators.
- *
  * @author Sean A. Irvine
  */
 public class GenericSetUp implements MouseMotionListener, MouseListener, KeyListener {
@@ -107,12 +106,11 @@ public class GenericSetUp implements MouseMotionListener, MouseListener, KeyList
 
   /**
    * Construct a new set up screen for the given screen.
-   *
    * @param config game configuration
    * @param screen the screen
    * @param chaos the world
    * @param isScenario are we starting a scenario
-   * @exception NullPointerException if parameter is null
+   * @throws NullPointerException if parameter is null
    */
   public GenericSetUp(final Configuration config, final ChaosScreen screen, final Chaos chaos, final boolean isScenario) {
     if (screen == null) {
@@ -165,17 +163,28 @@ public class GenericSetUp implements MouseMotionListener, MouseListener, KeyList
   }
 
   @Override
-  public void mousePressed(final MouseEvent e) { }
+  public void mousePressed(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseReleased(final MouseEvent e) { }
+  public void mouseReleased(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseEntered(final MouseEvent e) { }
+  public void mouseEntered(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseExited(final MouseEvent e) { }
+  public void mouseExited(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseDragged(final MouseEvent e) { }
+  public void mouseDragged(final MouseEvent e) {
+  }
+
   @Override
-  public void keyReleased(final KeyEvent e) { }
+  public void keyReleased(final KeyEvent e) {
+  }
 
   private void printString(final Graphics g, final String s, final int y) {
     final FontMetrics fm = g.getFontMetrics();
@@ -366,17 +375,17 @@ public class GenericSetUp implements MouseMotionListener, MouseListener, KeyList
         w.set(PowerUps.LIFE_LEECH, 1);
       }
       switch (getWizardState(j)) {
-      case 1: // Human controlled
-        humanizeWizard(w, mChaos, mScreen, mConfig.getCellBits());
-        break;
-      case 2: // AI
-        w.setSelector(SelectorFactory.randomSelector(w, mWorld, castMaster));
-        w.setPlayerEngine(new AiEngine(mWorld, mChaos.getMoveMaster(), castMaster));
-        w.setState(State.ACTIVE);
-        break;
-      default:
-        w.setState(State.DEAD);
-        break;
+        case 1: // Human controlled
+          humanizeWizard(w, mChaos, mScreen, mConfig.getCellBits());
+          break;
+        case 2: // AI
+          w.setSelector(SelectorFactory.randomSelector(w, mWorld, castMaster));
+          w.setPlayerEngine(new AiEngine(mWorld, mChaos.getMoveMaster(), castMaster));
+          w.setState(State.ACTIVE);
+          break;
+        default:
+          w.setState(State.DEAD);
+          break;
       }
     }
     team.explicitSetTeam(Actor.OWNER_INDEPENDENT, -1);
@@ -428,80 +437,80 @@ public class GenericSetUp implements MouseMotionListener, MouseListener, KeyList
     // These need to be here, because getKeyCode() is undefined in keyTyped()
     if (e != null) {
       switch (e.getKeyCode()) {
-      case KeyEvent.VK_RIGHT:
-        cyclicSpellsIncrement(1);
-        drawSpellState();
-        e.consume();
-        break;
-      case KeyEvent.VK_LEFT:
-        cyclicSpellsIncrement(99);
-        drawSpellState();
-        e.consume();
-        break;
-      case KeyEvent.VK_UP:
-        cyclicSpellsIncrement(10);
-        drawSpellState();
-        e.consume();
-        break;
-      case KeyEvent.VK_DOWN:
-        cyclicSpellsIncrement(90);
-        drawSpellState();
-        e.consume();
-        break;
-      default:
-        break;
+        case KeyEvent.VK_RIGHT:
+          cyclicSpellsIncrement(1);
+          drawSpellState();
+          e.consume();
+          break;
+        case KeyEvent.VK_LEFT:
+          cyclicSpellsIncrement(99);
+          drawSpellState();
+          e.consume();
+          break;
+        case KeyEvent.VK_UP:
+          cyclicSpellsIncrement(10);
+          drawSpellState();
+          e.consume();
+          break;
+        case KeyEvent.VK_DOWN:
+          cyclicSpellsIncrement(90);
+          drawSpellState();
+          e.consume();
+          break;
+        default:
+          break;
       }
     }
   }
 
   private Button createUpButton(final int x, final int y) {
     return new Button(ImageLoader.upArrow(), x, y) {
-        @Override
-        public void act() {
-          cyclicGeneratorsIncrement(1);
-          drawGeneratorState();
-        }
-      };
+      @Override
+      public void act() {
+        cyclicGeneratorsIncrement(1);
+        drawGeneratorState();
+      }
+    };
   }
 
   private Button createDownButton(final int x, final int y) {
     return new Button(ImageLoader.downArrow(), x, y) {
-        @Override
-        public void act() {
-          cyclicGeneratorsIncrement(99);
-          drawGeneratorState();
-        }
-      };
+      @Override
+      public void act() {
+        cyclicGeneratorsIncrement(99);
+        drawGeneratorState();
+      }
+    };
   }
 
   private Button createSpellUpButton(final int x, final int y) {
     return new Button(ImageLoader.upArrow(), x, y) {
-        @Override
-        public void act() {
-          cyclicSpellsIncrement(1);
-          drawSpellState();
-        }
-      };
+      @Override
+      public void act() {
+        cyclicSpellsIncrement(1);
+        drawSpellState();
+      }
+    };
   }
 
   private Button createSpellDownButton(final int x, final int y) {
     return new Button(ImageLoader.downArrow(), x, y) {
-        @Override
-        public void act() {
-          cyclicSpellsIncrement(99);
-          drawSpellState();
-        }
-      };
+      @Override
+      public void act() {
+        cyclicSpellsIncrement(99);
+        drawSpellState();
+      }
+    };
   }
 
   private Button createLoadButton(final int x, final int y) {
     return new Button(Objects.requireNonNull(ImageLoader.getImage("chaos/resources/icons/load.png")), x, y) {
-        @Override
-        public void act() {
-          mLoadRequest = true;
-          mLock.setValue(true);
-        }
-      };
+      @Override
+      public void act() {
+        mLoadRequest = true;
+        mLock.setValue(true);
+      }
+    };
   }
 
   private Button createRavenButton(final int x, final int y) {
@@ -516,7 +525,6 @@ public class GenericSetUp implements MouseMotionListener, MouseListener, KeyList
 
   /**
    * Draw the static parts of the set up screen.
-   *
    * @return true if the set up screen was drawn.
    */
   private boolean drawSetUpScreen() {
@@ -578,7 +586,6 @@ public class GenericSetUp implements MouseMotionListener, MouseListener, KeyList
 
   /**
    * Perform the set up.
-   *
    * @return array of special start up features
    */
   public boolean[] setUp() {

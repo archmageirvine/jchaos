@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Python.
- *
  * @author Sean A. Irvine
  */
 public class Python extends MaterialMonster {
@@ -20,14 +19,17 @@ public class Python extends MaterialMonster {
     setDefault(Attribute.AGILITY_RECOVERY, 19);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public int getCastRange() {
     return 2;
   }
+
   @Override
   public long getLosMask() {
     return 0x00000070303C3C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return KingCobra.class;

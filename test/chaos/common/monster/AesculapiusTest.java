@@ -11,7 +11,6 @@ import chaos.util.CombatUtils;
 
 /**
  * Tests this monster.
- *
  * @author Sean A. Irvine
  */
 public class AesculapiusTest extends AbstractMonsterTest {

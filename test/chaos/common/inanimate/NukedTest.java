@@ -7,7 +7,6 @@ import chaos.util.RankingTable;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class NukedTest extends AbstractActorTest {

@@ -171,7 +171,7 @@ public class TextTable {
       final int columns = mTableContents.get(0).size();
       if (columns > 0) {
         final int[] maxLengths = mColumnWidths;
-        final long totalWidth =  getTotalWidth();
+        final long totalWidth = getTotalWidth();
         for (final ArrayList<String> row : mTableContents) {
           if (row == SEPARATOR) {
             for (long j = 0; j < totalWidth; ++j) {

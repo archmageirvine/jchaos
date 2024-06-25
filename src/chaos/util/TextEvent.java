@@ -2,7 +2,6 @@ package chaos.util;
 
 /**
  * Provides a way of sending simple text events.
- *
  * @author Sean A. Irvine
  */
 public class TextEvent implements Event {
@@ -12,7 +11,6 @@ public class TextEvent implements Event {
 
   /**
    * Construct a new text message with the specified string.
-   *
    * @param message the message
    */
   public TextEvent(final String message) {
@@ -24,7 +22,6 @@ public class TextEvent implements Event {
 
   /**
    * Return the message.
-   *
    * @return the message
    */
   public String toString() {

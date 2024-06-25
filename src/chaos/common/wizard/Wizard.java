@@ -24,7 +24,6 @@ import chaos.util.Random;
 /**
  * This is a special Caster representing a wizard. It contains a lot of
  * extra information specific to wizards.
- *
  * @author Sean A. Irvine
  */
 public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShooter, Named, Rider, Singleton {
@@ -41,10 +40,12 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
     setRangedCombatApply(Attribute.LIFE);
     setSpecialCombatApply(Attribute.LIFE);
   }
+
   @Override
   public int getBonus() {
     return 6;
   }
+
   @Override
   public long getLosMask() {
     return 0x007E7E7E3C3C7E00L;
@@ -55,7 +56,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
 
   /**
    * Return this Wizard's score.
-   *
    * @return score
    */
   public int getScore() {
@@ -64,7 +64,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
 
   /**
    * Add the specified points to this Wizard's score.
-   *
    * @param points number of points to add
    */
   public void addScore(final int points) {
@@ -92,7 +91,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
 
   /**
    * Increase the bonus spell selection statistics for this wizard.
-   *
    * @param select number to select from
    * @param count number to be selected
    */
@@ -107,7 +105,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
   /**
    * Return the number of bonus spells this wizard should receive in the
    * next round.
-   *
    * @return number of bonus spells
    */
   public int getBonusCount() {
@@ -117,7 +114,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
   /**
    * Return the number of bonus spells this wizard has to choose between
    * in the next round.
-   *
    * @return number of bonus spells
    */
   public int getBonusSelect() {
@@ -129,7 +125,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
 
   /**
    * Return the default weight for wizards.
-   *
    * @return weight value
    */
   @Override
@@ -144,7 +139,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
 
   /**
    * Return the list of spells for this wizard.
-   *
    * @return castable list
    */
   public CastableList getCastableList() {
@@ -154,7 +148,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
   /**
    * Set the list of spells of this wizard.  This is normally only done
    * once in the life of the wizard.
-   *
    * @param list list of spells.
    */
   public void setCastableList(final CastableList list) {
@@ -164,7 +157,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
   /**
    * Set the spell selector used by this wizard.  Setting this to null
    * will prevent all casting.
-   *
    * @param selector selector to use
    */
   public void setSelector(final Selector selector) {
@@ -247,7 +239,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
   /**
    * Return the Castable this Wizard wants to cast.  This should
    * have already been decided by a previous call to select.
-   *
    * @return spell to be cast
    */
   @Override
@@ -259,7 +250,6 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
 
   /**
    * Get the name of this wizard.
-   *
    * @return wizard's name
    */
   @Override
@@ -269,9 +259,8 @@ public abstract class Wizard extends Caster implements Bonus, Humanoid, BowShoot
 
   /**
    * Set the name of this wizard.
-   *
    * @param wizardName name of the wizard
-   * @exception IllegalArgumentException if the wizard name is invalid.
+   * @throws IllegalArgumentException if the wizard name is invalid.
    */
   public void setPersonalName(final String wizardName) {
     if (wizardName == null || wizardName.length() > NameUtils.MAX_NAME_LENGTH) {

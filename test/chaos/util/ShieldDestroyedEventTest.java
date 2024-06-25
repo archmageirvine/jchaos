@@ -7,7 +7,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ShieldDestroyedEventTest extends TestCase {

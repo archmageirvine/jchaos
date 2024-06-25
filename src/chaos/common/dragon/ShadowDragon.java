@@ -8,7 +8,6 @@ import chaos.common.PowerUps;
 
 /**
  * Shadow dragon.
- *
  * @author Sean A. Irvine
  */
 public class ShadowDragon extends Dragon implements Bonus {
@@ -23,14 +22,17 @@ public class ShadowDragon extends Dragon implements Bonus {
     setDefault(Attribute.RANGE, 5);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public int getBonus() {
     return 2;
   }
+
   @Override
   public long getLosMask() {
     return 0x062E77FE9FBEF6FCL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return chaos.common.monster.GrayElf.class;

@@ -11,7 +11,6 @@ import chaos.common.Rider;
 
 /**
  * Dread elf.
- *
  * @author Sean A. Irvine
  */
 public class DreadElf extends MaterialMonster implements Bonus, Humanoid, BowShooter, Rider {
@@ -28,14 +27,17 @@ public class DreadElf extends MaterialMonster implements Bonus, Humanoid, BowSho
     setDefault(Attribute.RANGE, 6);
     set(PowerUps.ARCHERY, 1);
   }
+
   @Override
   public int getBonus() {
     return 1;
   }
+
   @Override
   public long getLosMask() {
     return 0x003C3E1C1C181800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return WoodElf.class;

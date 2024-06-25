@@ -28,12 +28,12 @@ import irvine.util.io.java.Handler;
 
 /**
  * Various convenience methods related to I/O.
- *
  * @author Sean A. Irvine
  */
 public final class IOUtils {
 
-  private IOUtils() { }
+  private IOUtils() {
+  }
 
   /** Length of buffer to use during reading */
   private static final int BUFFER_LENGTH = 16384;
@@ -42,11 +42,10 @@ public final class IOUtils {
 
   /**
    * Reads all the data from the supplied URL into a byte array.
-   *
    * @param url the URL
    * @return a byte array containing the stream data.
-   * @exception IOException if an error occurs during I/O.
-   * @exception NullPointerException if <code>url</code> is null.
+   * @throws IOException if an error occurs during I/O.
+   * @throws NullPointerException if <code>url</code> is null.
    */
   public static byte[] readData(final URL url) throws IOException {
     try (final InputStream input = url.openStream()) {
@@ -57,11 +56,10 @@ public final class IOUtils {
 
   /**
    * Reads all the data from the supplied file into a byte array.
-   *
    * @param file the file
    * @return a byte array containing the stream data.
-   * @exception IOException if an error occurs during I/O.
-   * @exception NullPointerException if <code>file</code> is null.
+   * @throws IOException if an error occurs during I/O.
+   * @throws NullPointerException if <code>file</code> is null.
    */
   public static byte[] readData(final File file) throws IOException {
     try (final BufferedInputStream is = new BufferedInputStream(new FileInputStream(file))) {
@@ -72,11 +70,10 @@ public final class IOUtils {
 
   /**
    * Reads all the data from the supplied InputStream into a byte array.
-   *
    * @param input the InputStream
    * @return a byte array containing the stream data.
-   * @exception IOException if an error occurs during I/O.
-   * @exception NullPointerException if <code>input</code> is null.
+   * @throws IOException if an error occurs during I/O.
+   * @throws NullPointerException if <code>input</code> is null.
    */
   public static byte[] readData(final InputStream input) throws IOException {
     final byte[] inputBuffer = new byte[BUFFER_LENGTH];
@@ -92,11 +89,10 @@ public final class IOUtils {
 
   /**
    * Read all of a URL into a String.
-   *
    * @param url the URL to read.
    * @return a String containing the contents of the URL
-   * @exception IOException If there is a problem during reading.
-   * @exception NullPointerException if <code>url</code> is null.
+   * @throws IOException If there is a problem during reading.
+   * @throws NullPointerException if <code>url</code> is null.
    */
   public static String readAll(final URL url) throws IOException {
     try (final InputStream input = url.openStream()) {
@@ -106,11 +102,10 @@ public final class IOUtils {
 
   /**
    * Read all of a file into a String.
-   *
    * @param file the file to read.
    * @return a String containing the contents of the URL
-   * @exception IOException If there is a problem during reading.
-   * @exception NullPointerException if <code>url</code> is null.
+   * @throws IOException If there is a problem during reading.
+   * @throws NullPointerException if <code>url</code> is null.
    */
   public static String readAll(final File file) throws IOException {
     try (final FileInputStream input = new FileInputStream(file)) {
@@ -120,11 +115,10 @@ public final class IOUtils {
 
   /**
    * Read all of an input stream into a String.
-   *
    * @param input input stream being read.
    * @return a String containing the contents of the input stream.
-   * @exception IOException If there is a problem during reading.
-   * @exception NullPointerException if <code>input</code> is null.
+   * @throws IOException If there is a problem during reading.
+   * @throws NullPointerException if <code>input</code> is null.
    */
   public static String readAll(final InputStream input) throws IOException {
     return readAll(new InputStreamReader(input));
@@ -132,11 +126,10 @@ public final class IOUtils {
 
   /**
    * Read all of a Reader into a String.
-   *
    * @param input Reader being read.
    * @return a String containing the contents of the input stream.
-   * @exception IOException If there is a problem during reading.
-   * @exception NullPointerException if <code>input</code> is null.
+   * @throws IOException If there is a problem during reading.
+   * @throws NullPointerException if <code>input</code> is null.
    */
   public static String readAll(final Reader input) throws IOException {
     final char[] b = new char[BUFFER_LENGTH];
@@ -181,7 +174,6 @@ public final class IOUtils {
   /**
    * Performs URL decoding. Do this if your URL contains plenty of
    * percent characters :-).
-   *
    * @param url the string to decode.
    * @return the decoded string.
    */
@@ -198,7 +190,6 @@ public final class IOUtils {
    * Performs URL encoding. Do this if your URL contains illegal
    * characters that need to be escaped. This method uses UTF-8
    * encoding.
-   *
    * @param url the string to encode.
    * @return the encoded string.
    */
@@ -213,10 +204,9 @@ public final class IOUtils {
 
   /**
    * Creates a URL using our customized URL protocol handlers.
-   *
    * @param file a <code>File</code>.
    * @return the <code>URL</code>.
-   * @exception MalformedURLException if a URL could not be constructed.
+   * @throws MalformedURLException if a URL could not be constructed.
    */
   public static URL getURL(final File file) throws MalformedURLException {
     return getURL(file.toURI());
@@ -227,11 +217,10 @@ public final class IOUtils {
    * Creates a URL from a String argument that could be either a URL
    * specification or a simple filename. Usually this method is just
    * used from <code>main()</code> for argument handling.
-   *
    * @param spec a <code>String</code> specifying either a
    * <code>URL</code> or a filename.
    * @return the <code>URL</code>.
-   * @exception MalformedURLException if a URL could not be constructed.
+   * @throws MalformedURLException if a URL could not be constructed.
    */
   public static URL getURLFromAny(final String spec) throws MalformedURLException {
     final File maybeFile = new File(spec);
@@ -241,11 +230,10 @@ public final class IOUtils {
 
   /**
    * Creates a URL using our customized URL protocol handlers.
-   *
    * @param spec a <code>String</code> specifying the
    * <code>URL</code>.
    * @return the <code>URL</code>.
-   * @exception MalformedURLException if a URL could not be constructed.
+   * @throws MalformedURLException if a URL could not be constructed.
    */
   public static URL getURL(final String spec) throws MalformedURLException {
     return getURL(null, spec);
@@ -254,13 +242,12 @@ public final class IOUtils {
 
   /**
    * Creates a URL using our customized URL protocol handlers.
-   *
    * @param context a <code>URL</code> used as a context to resolve
    * relative <code>URL</code>s.
    * @param spec a <code>String</code> specifying the
    * <code>URL</code>.
    * @return the <code>URL</code>.
-   * @exception MalformedURLException if a URL could not be constructed.
+   * @throws MalformedURLException if a URL could not be constructed.
    */
   public static URL getURL(final URL context, final String spec) throws MalformedURLException {
     try {
@@ -273,10 +260,9 @@ public final class IOUtils {
 
   /**
    * Creates a URL using our customized URL protocol handlers.
-   *
    * @param uri a <code>URI</code> specifying the <code>URL</code>.
    * @return the <code>URL</code>.
-   * @exception MalformedURLException if a URL could not be constructed.
+   * @throws MalformedURLException if a URL could not be constructed.
    */
   public static URL getURL(final URI uri) throws MalformedURLException {
     return getURL(null, uri);
@@ -285,12 +271,11 @@ public final class IOUtils {
 
   /**
    * Creates a URL using our customized URL protocol handlers.
-   *
    * @param context a <code>URL</code> used as a context to resolve
    * relative <code>URL</code>s.
    * @param uri a <code>URI</code> specifying the <code>URL</code>.
    * @return the <code>URL</code>.
-   * @exception MalformedURLException if a URL could not be constructed.
+   * @throws MalformedURLException if a URL could not be constructed.
    */
   public static URL getURL(final URL context, final URI uri) throws MalformedURLException {
     final String scheme = uri.getScheme();
@@ -336,7 +321,6 @@ public final class IOUtils {
 
   /**
    * Registers a URL handler class for a URL protocol.
-   *
    * @param handlerClassName the name of a URLStreamHandler class. The
    * final package name must be the name of the protocol that the
    * handler will be registered for.
@@ -355,7 +339,6 @@ public final class IOUtils {
 
   /**
    * Registers a URL handler class for a URL protocol.
-   *
    * @param handlerClass a URLStreamHandler class. The final package
    * name must be the name of the protocol that the handler will be
    * registered for.
@@ -401,7 +384,6 @@ public final class IOUtils {
    * Registers a package as containing URL protocol handlers as
    * subpackages. This method works by editing a system property:
    * java.protocol.handler.pkgs.
-   *
    * @param packageName the package name to register.
    */
   private static void registerViaProperty(final String packageName) {
@@ -420,7 +402,6 @@ public final class IOUtils {
   /**
    * Registers a URL protocol handler by adding it to our custom URL
    * stream handler factory.
-   *
    * @param protocol the name of the protocol to register.
    * @param handlerClass the handler class to handle the protocol.
    */
@@ -432,7 +413,6 @@ public final class IOUtils {
    * A method which writes a diagnostic on standard error if a delete
    * operation fails.  This should only be used when the delete is not
    * critical to correct operation.
-   *
    * @param d file to delete
    */
   public static void delete(final File d) {
@@ -446,7 +426,7 @@ public final class IOUtils {
    * and uncompressed files.
    * @param file file name
    * @return decompressed file stream
-   * @exception IOException if an I/O error occurs
+   * @throws IOException if an I/O error occurs
    */
   @SuppressWarnings("resource")
   public static InputStream decompressedStream(final File file) throws IOException {
@@ -522,7 +502,7 @@ public final class IOUtils {
    * Write an integer in little-endian order (opposite of <code>DataOutputStream</code>).
    * @param out stream
    * @param value value to write
-   * @exception java.io.IOException if an I/O error occurs
+   * @throws java.io.IOException if an I/O error occurs
    */
   public static void writeInt(final OutputStream out, final int value) throws IOException {
     out.write(value & 0xFF);
@@ -535,7 +515,7 @@ public final class IOUtils {
    * Write a long in little-endian order (opposite of <code>DataOutputStream</code>).
    * @param out stream
    * @param value value to write
-   * @exception java.io.IOException if an I/O error occurs
+   * @throws java.io.IOException if an I/O error occurs
    */
   public static void writeLong(final OutputStream out, final long value) throws IOException {
     writeInt(out, (int) value);

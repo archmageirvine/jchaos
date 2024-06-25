@@ -12,7 +12,6 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class MagicGlassTest extends AbstractMonsterTest {

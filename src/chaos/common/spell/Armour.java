@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Armour.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

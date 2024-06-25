@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Cheetah.
- *
  * @author Sean A. Irvine
  */
 public class Cheetah extends MaterialMonster implements Cat {
@@ -20,10 +19,12 @@ public class Cheetah extends MaterialMonster implements Cat {
     setDefault(Attribute.AGILITY, 80);
     setDefault(Attribute.MOVEMENT, 7);
   }
+
   @Override
   public long getLosMask() {
     return 0x00000006FEFE6600L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Jaguar.class;

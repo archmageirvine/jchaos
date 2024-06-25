@@ -6,7 +6,6 @@ import chaos.common.spell.Armour;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class CastableTest extends AbstractCastableTest {
@@ -22,10 +21,12 @@ public class CastableTest extends AbstractCastableTest {
     public int getCastFlags() {
       return 0;
     }
+
     @Override
     public int getCastRange() {
       return 0;
     }
+
     @Override
     public void cast(final World w, final Caster c, final Cell cc, final Cell ccc) {
     }

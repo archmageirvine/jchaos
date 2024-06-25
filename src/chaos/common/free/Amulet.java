@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Amulet.
- *
  * @author Sean A. Irvine
  */
 public class Amulet extends AbstractFreeIncrement {

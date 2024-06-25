@@ -8,7 +8,6 @@ import chaos.util.Random;
 
 /**
  * Maintains team information.
- *
  * @author Sean A. Irvine
  */
 public class Team implements Serializable {
@@ -41,7 +40,6 @@ public class Team implements Serializable {
 
   /**
    * Get the team number to which the specified player belongs.
-   *
    * @param player player to get team number for
    * @return team player belongs to
    */
@@ -51,7 +49,6 @@ public class Team implements Serializable {
 
   /**
    * Get the team number to which the specified actor belongs.
-   *
    * @param actor actor to get team for
    * @return team player belongs to
    */
@@ -65,7 +62,6 @@ public class Team implements Serializable {
    * <code>player2</code> and will also become allies of <code>player1</code>.
    * Former allies of <code>player1</code> are lost, unless they also happen
    * to already be allies of <code>player2</code>.
-   *
    * @param player1 player to set team aspect of
    * @param player2 player to set team aspect to
    */
@@ -75,7 +71,6 @@ public class Team implements Serializable {
 
   /**
    * Method that should only be used for initial team assignments.
-   *
    * @param player player to assign
    * @param team team number for player
    */
@@ -85,7 +80,6 @@ public class Team implements Serializable {
 
   /**
    * Ensure the given player is not allied with any other player.
-   *
    * @param player player to separate
    */
   public void separate(final int player) {
@@ -94,7 +88,6 @@ public class Team implements Serializable {
 
   /**
    * Get a random value representing this team.
-   *
    * @param team team to get team shield for
    * @return shield code
    */

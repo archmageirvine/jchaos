@@ -18,7 +18,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Herbicide.
- *
  * @author Sean A. Irvine
  */
 public class Herbicide extends Castable implements TargetFilter {
@@ -26,10 +25,12 @@ public class Herbicide extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_GROWTH;
   }
+
   @Override
   public int getCastRange() {
     return 20;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null && caster != null) {
@@ -46,7 +47,7 @@ public class Herbicide extends Castable implements TargetFilter {
   public void filter(final Set<Cell> targets, final Caster caster, final World world) {
     final Team teams = world.getTeamInformation();
     final int t = teams.getTeam(caster);
-    for (final Iterator<Cell> i = targets.iterator(); i.hasNext();) {
+    for (final Iterator<Cell> i = targets.iterator(); i.hasNext(); ) {
       final Actor a = i.next().peek();
       if (a == null || !(a instanceof Growth)) {
         i.remove();

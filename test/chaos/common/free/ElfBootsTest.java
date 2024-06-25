@@ -15,7 +15,6 @@ import chaos.selector.OrdinarySelector;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class ElfBootsTest extends AbstractFreeIncrementTest {

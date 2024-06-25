@@ -5,7 +5,6 @@ import junit.framework.TestSuite;
 
 /**
  * Test class for all tests in this directory.
- *
  * @author Len Trigg
  */
 public class AllTests extends TestSuite {

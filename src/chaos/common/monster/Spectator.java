@@ -7,7 +7,6 @@ import chaos.common.Realm;
 
 /**
  * Spectator.
- *
  * @author Sean A. Irvine
  */
 public class Spectator extends Monster {
@@ -25,14 +24,17 @@ public class Spectator extends Monster {
     setSpecialCombatApply(Attribute.LIFE);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public int getCastRange() {
     return 3;
   }
+
   @Override
   public long getLosMask() {
     return 0x3C7EFFFFFFFF7E3CL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return FloatingEye.class;

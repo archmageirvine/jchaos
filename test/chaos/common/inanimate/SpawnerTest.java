@@ -8,7 +8,6 @@ import chaos.common.Castable;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class SpawnerTest extends AbstractGeneratorTest {

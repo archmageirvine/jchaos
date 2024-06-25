@@ -5,7 +5,6 @@ import chaos.common.PowerUps;
 
 /**
  * Earthquake shield.
- *
  * @author Sean A. Irvine
  */
 public class EarthquakeShield extends AbstractPowerUp implements Multiplicity {

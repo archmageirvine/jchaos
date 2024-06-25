@@ -9,12 +9,9 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class LightningTest extends TestCase {
-
-
 
 
   public void testBad() {
@@ -274,9 +271,11 @@ public class LightningTest extends TestCase {
 
   private static class MyThread extends Thread {
     private final Graphics mG;
+
     MyThread(final Graphics g) {
       mG = g;
     }
+
     @Override
     public void run() {
       Lightning.draw(mG, 1, 1, 1, 1, 1000);

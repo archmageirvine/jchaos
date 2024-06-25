@@ -16,7 +16,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Len Trigg
  * @author Sean A. Irvine
  */
@@ -61,6 +60,7 @@ public class IOUtilsTest extends TestCase {
     MyStream(final InputStream is) {
       super(is);
     }
+
     @Override
     public int read(final char[] c) {
       return 0;

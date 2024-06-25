@@ -8,7 +8,6 @@ import chaos.common.WakeOnFire;
 
 /**
  * The achiyalabopa.
- *
  * @author Sean A. Irvine
  */
 public class Phoenix extends MaterialMonster implements WakeOnFire {
@@ -22,10 +21,12 @@ public class Phoenix extends MaterialMonster implements WakeOnFire {
     setDefault(Attribute.MOVEMENT, 6);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public int getCastRange() {
     return 3;
   }
+
   @Override
   public long getLosMask() {
     return 0x0000EEFFFFE70200L;

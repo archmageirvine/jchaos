@@ -36,7 +36,6 @@ public enum Realm {
 
   /**
    * Construct the realm with the specified color.
-   *
    * @param color color
    */
   Realm(final Color color) {
@@ -55,14 +54,14 @@ public enum Realm {
   @Override
   public String toString() {
     switch (this) {
-    case ETHERIC:
-      return "undead";
-    case DRACONIC:
-      return "dragon";
-    case DEMONIC:
-      return "demon";
-    default:
-      return super.toString().toLowerCase(Locale.getDefault());
+      case ETHERIC:
+        return "undead";
+      case DRACONIC:
+        return "dragon";
+      case DEMONIC:
+        return "demon";
+      default:
+        return super.toString().toLowerCase(Locale.getDefault());
     }
   }
 
@@ -85,11 +84,10 @@ public enum Realm {
   /**
    * Test if creature from realm <code>source</code> can legally attack
    * a creature from realm <code>target</code>.
-   *
    * @param source source realm
    * @param target target realm
    * @return true if attack is possible
-   * @exception NullPointerException if either argument is null.
+   * @throws NullPointerException if either argument is null.
    */
   public static boolean realmCheck(final Realm source, final Realm target) {
     return REALM_TABLE[source.ordinal()][target.ordinal()];
@@ -100,7 +98,7 @@ public enum Realm {
    * @param source source actor
    * @param target target actor
    * @return true if attack is possible
-   * @exception NullPointerException if either argument is null.
+   * @throws NullPointerException if either argument is null.
    */
   public static boolean realmCheck(final Actor source, final Actor target) {
     return source.is(PowerUps.ATTACK_ANY_REALM) || realmCheck(source.getRealm(), target.getRealm());

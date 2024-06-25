@@ -10,9 +10,8 @@ import java.util.ArrayList;
  * must be used.  Dynamic arrays can be truncated to release memory.
  * Offers O(1) get() and length(), amortized O(1) set().  Memory use
  * is O(n) and comparatively tight.
- *
- * @author Sean A. Irvine
  * @param <T> type of array
+ * @author Sean A. Irvine
  */
 public class DynamicArray<T> implements Serializable {
 
@@ -37,7 +36,6 @@ public class DynamicArray<T> implements Serializable {
    * Return the length of the array.  This is one more than the
    * highest location which has been assigned a value or zero
    * in the case of an empty array.
-   *
    * @return length of the array
    */
   public int length() {
@@ -47,10 +45,9 @@ public class DynamicArray<T> implements Serializable {
   /**
    * Get the object at the specified array index.  May be null
    * if no object was previously assigned to the specified index.
-   *
    * @param index array index
    * @return value at specified index
-   * @exception ArrayIndexOutOfBoundsException if the index is negative.
+   * @throws ArrayIndexOutOfBoundsException if the index is negative.
    */
   public T get(final int index) {
     if (index >= mLength) {
@@ -81,10 +78,9 @@ public class DynamicArray<T> implements Serializable {
    * Set the entry at specified index to the given value.
    * ClassCastExceptions will happen if the type is
    * otherwise incorrect.
-   *
    * @param index array index
    * @param value value to set at the index
-   * @exception ArrayIndexOutOfBoundsException if the index is negative.
+   * @throws ArrayIndexOutOfBoundsException if the index is negative.
    */
   public void set(final int index, final T value) {
     getChunk(index)[index & CHUNK_MASK] = value;
@@ -96,9 +92,8 @@ public class DynamicArray<T> implements Serializable {
    * Calling <code>truncate(0);</code> empties the entire array.
    * If the array is already the specified length or is shorter
    * then no action is taken.
-   *
    * @param length position to truncate at
-   * @exception ArrayIndexOutOfBoundsException if length is negative.
+   * @throws ArrayIndexOutOfBoundsException if length is negative.
    */
   public void truncate(int length) {
     if (length < mLength) {

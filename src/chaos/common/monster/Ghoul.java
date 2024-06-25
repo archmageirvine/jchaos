@@ -7,7 +7,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Ghoul.
- *
  * @author Sean A. Irvine
  */
 public class Ghoul extends UndeadMonster implements NoDeadImage {
@@ -18,10 +17,12 @@ public class Ghoul extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.AGILITY, 60);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x24BE3E3C3C183800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Ghast.class;

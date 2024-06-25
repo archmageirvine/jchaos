@@ -11,7 +11,6 @@ import chaos.util.Random;
 
 /**
  * Spriggan.
- *
  * @author Sean A. Irvine
  */
 public class Spriggan extends MaterialMonster implements Humanoid {
@@ -23,6 +22,7 @@ public class Spriggan extends MaterialMonster implements Humanoid {
     setDefault(Attribute.MOVEMENT, 1);
     setDefault(Attribute.COMBAT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0x061F3F7F7C3C3C00L;
@@ -42,7 +42,6 @@ public class Spriggan extends MaterialMonster implements Humanoid {
   /**
    * Differs from the standard update, in that it handles the spriggan going
    * to sleep.
-   *
    * @param world the world
    * @param cell cell containing this actor
    * @return as defined in superclass

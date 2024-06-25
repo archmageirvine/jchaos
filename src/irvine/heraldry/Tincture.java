@@ -4,7 +4,6 @@ import java.awt.Color;
 
 /**
  * Tinctures.
- *
  * @author Sean A. Irvine
  */
 public enum Tincture {

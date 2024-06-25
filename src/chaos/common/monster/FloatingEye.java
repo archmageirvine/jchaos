@@ -8,7 +8,6 @@ import chaos.common.Virtuous;
 
 /**
  * Floating eye.
- *
  * @author Sean A. Irvine
  */
 public class FloatingEye extends MaterialMonster implements Virtuous {
@@ -21,14 +20,17 @@ public class FloatingEye extends MaterialMonster implements Virtuous {
     setDefault(Attribute.MOVEMENT, 12);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public int getCastRange() {
     return 3;
   }
+
   @Override
   public long getLosMask() {
     return 0x3C7EFFFFFFFF7E18L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return MindFlayer.class;

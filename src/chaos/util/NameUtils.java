@@ -13,16 +13,15 @@ import irvine.util.io.IOUtils;
 
 /**
  * Name utility functions.
- *
  * @author Sean A. Irvine
  */
 public final class NameUtils {
 
-  private NameUtils() { }
+  private NameUtils() {
+  }
 
   /**
    * Get the display name of this castable.
-   *
    * @param c castable
    * @return display name
    */
@@ -45,7 +44,6 @@ public final class NameUtils {
   /**
    * Get the short name of this castable. This is based on the class name,
    * but excludes the prefix <code>Named</code> where present.
-   *
    * @param c castable
    * @return short name
    */
@@ -55,7 +53,6 @@ public final class NameUtils {
 
   /**
    * Get the resource name for the backdrop of this castable.
-   *
    * @param c castable
    * @return display name
    */
@@ -104,7 +101,6 @@ public final class NameUtils {
   /**
    * Attempt to get a new personal name for a castable of given type. An effort
    * is made to ensure the name has not previously been used in the current game.
-   *
    * @param clazz type of castable to get name for
    * @return name to use
    */

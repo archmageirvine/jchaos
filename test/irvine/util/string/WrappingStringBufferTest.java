@@ -5,12 +5,9 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class WrappingStringBufferTest extends TestCase {
-
-
 
 
   private static final String LS = System.lineSeparator();

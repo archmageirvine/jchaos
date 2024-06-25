@@ -8,12 +8,12 @@ import chaos.util.Sleep;
 
 /**
  * Convenience for rendering images.
- *
  * @author Sean A. Irvine
  */
 public final class Render {
 
-  private Render() { }
+  private Render() {
+  }
 
   /**
    * Try to render an image for up to two seconds.  If the image or graphics is
@@ -51,7 +51,6 @@ public final class Render {
 
   /**
    * Render horizontal radio buttons at origin.
-   *
    * @param g where to render
    * @param r button radius
    * @param sep separation between buttons

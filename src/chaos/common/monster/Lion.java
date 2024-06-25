@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Lion.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -21,10 +20,12 @@ public class Lion extends MaterialMonster implements Cat {
     setDefault(Attribute.AGILITY, 50);
     setDefault(Attribute.MOVEMENT, 4);
   }
+
   @Override
   public long getLosMask() {
     return 0x0060F0FE7E7E3200L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return ShapeChanger.class;

@@ -8,7 +8,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Juju zombie.
- *
  * @author Sean A. Irvine
  */
 public class JujuZombie extends UndeadMonster implements Humanoid, NoDeadImage {
@@ -21,10 +20,12 @@ public class JujuZombie extends UndeadMonster implements Humanoid, NoDeadImage {
     setDefault(Attribute.MOVEMENT, 1);
     setCombatApply(Attribute.MAGICAL_RESISTANCE);
   }
+
   @Override
   public long getLosMask() {
     return 0x00181E181C3C3C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Zombie.class;

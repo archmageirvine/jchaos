@@ -20,18 +20,18 @@ import irvine.util.string.PostScript;
  */
 public final class ImageUtils {
 
-  private ImageUtils() { }
+  private ImageUtils() {
+  }
 
   /**
    * Write an Encapsulated PostScript (EPS) version of the given image to the
    * output stream.  The image is expanded and optionally gridded.  The purpose is for
    * the display of small icon or tile like images, so that the individual
    * pixel detail can be seen.
-   *
    * @param image image to write
    * @param out stream to write to
    * @param grid whether or not to write a grid on top of the image
-   * @exception NullPointerException if <code>image</code> or <code>out</code> is null
+   * @throws NullPointerException if <code>image</code> or <code>out</code> is null
    */
   public static void writeEPS(final TileImage image, final PrintStream out, final boolean grid) {
     final int w = image.getWidth();
@@ -79,11 +79,10 @@ public final class ImageUtils {
   /**
    * Write the given image to the specified stream as a portable pixmap image
    * (ppm).  Alpha channel information is not retained.
-   *
    * @param image image to write
    * @param os stream to write to
-   * @exception IOException if an I/O error occurs
-   * @exception NullPointerException if either parameter is null
+   * @throws IOException if an I/O error occurs
+   * @throws NullPointerException if either parameter is null
    */
   public static void writePPM(final TileImage image, final OutputStream os) throws IOException {
     os.write('P');
@@ -112,11 +111,10 @@ public final class ImageUtils {
 
   /**
    * Read a PPM file into the Image format.
-   *
    * @param is stream to read from
    * @return image
-   * @exception IOException if an I/O error occurs
-   * @exception NullPointerException if either parameter is null
+   * @throws IOException if an I/O error occurs
+   * @throws NullPointerException if either parameter is null
    */
   public static TileImage readPPM(final InputStream is) throws IOException {
     if (is.read() != 'P' || is.read() != '6') {
@@ -211,11 +209,10 @@ public final class ImageUtils {
    *
    * Can get glyphs for all characters of point-size 8 and above and digits
    * for point-size 6 and above.
-   *
    * @param c character to draw
    * @param size height of image in pixels
    * @return black and white image of character
-   * @exception IllegalArgumentException if no glyph is available for the
+   * @throws IllegalArgumentException if no glyph is available for the
    * given character at the given point size.
    */
   public static TileImage getCharImage(final char c, final int size) {
@@ -250,10 +247,9 @@ public final class ImageUtils {
   /**
    * Get a black and white image for the given character from the ZX Spectrum
    * character set.  The resulting image will by 8 by 8.
-   *
    * @param c character to get image for
    * @return black and white image of character
-   * @exception IllegalArgumentException if no glyph is available for the
+   * @throws IllegalArgumentException if no glyph is available for the
    * given character.
    */
   public static TileImage getZXImage(final char c) {

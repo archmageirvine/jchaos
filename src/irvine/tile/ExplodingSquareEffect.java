@@ -3,7 +3,6 @@ package irvine.tile;
 /**
  * A graphical effect in which a square expands from the centre to fill
  * the tile, then disappears from the centre outwards.
- *
  * @author Sean A. Irvine
  */
 public class ExplodingSquareEffect extends AbstractTileEffect {
@@ -23,14 +22,13 @@ public class ExplodingSquareEffect extends AbstractTileEffect {
    * the expansion phase.  They are all eventually replaced with the
    * background color.  A square of a single color can be produced by
    * passing a single color in the <code>fore</code> array.
-   *
    * @param width width of tile
    * @param back background color
    * @param fore foreground colors
-   * @exception IllegalArgumentException if <code>width</code> is less than 2
+   * @throws IllegalArgumentException if <code>width</code> is less than 2
    * or odd.
    * or <code>fore</code> has length 0.
-   * @exception NullPointerException if <code>fore</code> is null.
+   * @throws NullPointerException if <code>fore</code> is null.
    */
   public ExplodingSquareEffect(final int width, final int back, final int[] fore) {
     if ((width & 0x80000001) != 0 || width == 0) {

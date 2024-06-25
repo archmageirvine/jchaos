@@ -2,7 +2,6 @@ package chaos.util;
 
 /**
  * Enumeration of cell effect types.
- *
  * @author Sean A. Irvine
  */
 public enum CellEffectType {

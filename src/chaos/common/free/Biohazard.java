@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Biohazard.
- *
  * @author Sean A. Irvine
  */
 public class Biohazard extends AbstractFreeDecrement {

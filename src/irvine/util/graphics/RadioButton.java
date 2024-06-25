@@ -5,7 +5,6 @@ import java.awt.Graphics;
 
 /**
  * Very light weight radio button.
- *
  * @author Sean A. Irvine
  */
 public class RadioButton extends AbstractButton {
@@ -16,13 +15,12 @@ public class RadioButton extends AbstractButton {
 
   /**
    * Construct a new button with the specified image and position.
-   *
    * @param x screen x-coordinate
    * @param y screen y-coordinate
    * @param radius width of button
    * @param state initial state
    * @param siblings sibling buttons (i.e. only one of these siblings should be set at a time)
-   * @exception NullPointerException if <code>image</code> is null.
+   * @throws NullPointerException if <code>image</code> is null.
    */
   public RadioButton(final int x, final int y, final int radius, final boolean state, final RadioButton[] siblings) {
     super(x, y, 2 * radius, 2 * radius);

@@ -8,12 +8,12 @@ import java.util.Arrays;
 /**
  * Provides an input stream with arbitrary byte remapping and optional
  * space compression.
- *
  * @author Sean A. Irvine
  */
 public class MappingInputStream extends FilterInputStream {
 
   private static final byte[] REDUCED_ENGLISH;
+
   static {
     REDUCED_ENGLISH = new byte[256];
     Arrays.fill(REDUCED_ENGLISH, (byte) 0x20);
@@ -31,7 +31,6 @@ public class MappingInputStream extends FilterInputStream {
   /**
    * Return a map that maps to lowercase and retains only numbers and letters;
    * converting all other characters to spaces.
-   *
    * @return a map
    */
   public static byte[] reducedEnglishMap() {
@@ -53,13 +52,12 @@ public class MappingInputStream extends FilterInputStream {
    * be transformed.  If <code>compressSpace</code> is true, then
    * multiple consecutive space is compressed to a single space.  This
    * compression is applied after the mapping.
-   *
    * @param in underlying input stream
    * @param map byte mapping
    * @param compressSpace true if multiple space symbols should
    * be compressed.
-   * @exception IllegalArgumentException if the length of the map is not 256.
-   * @exception NullPointerException if <code>map</code> is null.
+   * @throws IllegalArgumentException if the length of the map is not 256.
+   * @throws NullPointerException if <code>map</code> is null.
    */
   public MappingInputStream(final InputStream in, final byte[] map, final boolean compressSpace) {
     super(in);
@@ -73,8 +71,7 @@ public class MappingInputStream extends FilterInputStream {
 
   /**
    * Used to check validity of stream before reads etc.
-   *
-   * @exception IOException if stream is actually closed
+   * @throws IOException if stream is actually closed
    */
   private void valid() throws IOException {
     if (in == null) {
@@ -127,9 +124,8 @@ public class MappingInputStream extends FilterInputStream {
    * Return an estimate of the number of bytes that can be read without
    * blocking.  The actual number may be less than this if space
    * compression is turned on.
-   *
    * @return available bytes estimate
-   * @exception IOException if an I/O error occurs
+   * @throws IOException if an I/O error occurs
    */
   @Override
   public final int available() throws IOException {
@@ -139,7 +135,6 @@ public class MappingInputStream extends FilterInputStream {
 
   /**
    * Marking is not supported.
-   *
    * @return false
    */
   @Override
@@ -158,9 +153,8 @@ public class MappingInputStream extends FilterInputStream {
 
   /**
    * Convert to reduced English with space compression.
-   *
    * @param args ignored
-   * @exception IOException if an error occurs
+   * @throws IOException if an error occurs
    */
   public static void main(final String[] args) throws IOException {
     try (final MappingInputStream bis = new MappingInputStream(System.in, reducedEnglishMap(), true)) {

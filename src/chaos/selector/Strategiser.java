@@ -20,7 +20,6 @@ public class Strategiser extends OrdinarySelector {
 
   /**
    * Construct a selector for the specified wizard and world.
-   *
    * @param wizard the wizard
    * @param world the world
    * @param castMaster casting rules

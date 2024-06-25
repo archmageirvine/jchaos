@@ -12,12 +12,12 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Encapsulates the rules for ranged combat.
- *
  * @author Sean A. Irvine
  */
 final class ShootingRules {
 
-  private ShootingRules() { }
+  private ShootingRules() {
+  }
 
   static boolean isShootable(final Wizard player, final Actor a) {
     return a instanceof Monster

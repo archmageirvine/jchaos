@@ -2,7 +2,6 @@ package irvine.heraldry;
 
 /**
  * Ordinaries.
- *
  * @author Sean A. Irvine
  */
 public enum Ordinary {

@@ -18,7 +18,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Rampage.
- *
  * @author Sean A. Irvine
  */
 public class Rampage extends FreeCastable {

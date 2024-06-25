@@ -8,7 +8,6 @@ import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class LongDynamicIntArrayTest extends TestCase {
@@ -122,8 +121,7 @@ public class LongDynamicIntArrayTest extends TestCase {
     assertEquals(1, m.get((1 << 21) - 1));
     final Object obj = TestUtils.getField("mChunks", m);
     assertTrue(obj instanceof ArrayList);
-    @SuppressWarnings("unchecked")
-    final ArrayList<Object> x = (ArrayList<Object>) obj;
+    @SuppressWarnings("unchecked") final ArrayList<Object> x = (ArrayList<Object>) obj;
     assertEquals(2, x.size());
     assertEquals(1 << 20, ((int[]) x.get(0)).length);
     assertEquals(1 << 20, ((int[]) x.get(1)).length);
@@ -138,8 +136,7 @@ public class LongDynamicIntArrayTest extends TestCase {
     m.set(1, 1);
     final Object obj = TestUtils.getField("mChunks", m);
     assertTrue(obj instanceof ArrayList);
-    @SuppressWarnings("unchecked")
-    final ArrayList<Object> x = (ArrayList<Object>) obj;
+    @SuppressWarnings("unchecked") final ArrayList<Object> x = (ArrayList<Object>) obj;
     assertEquals(1, x.size());
     assertEquals(1 << 20, ((int[]) x.get(0)).length);
   }

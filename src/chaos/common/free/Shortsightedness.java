@@ -17,7 +17,6 @@ import chaos.util.PolyshieldDestroyEvent;
 
 /**
  * Shortsightedness.
- *
  * @author Sean A. Irvine
  */
 public class Shortsightedness extends AbstractFreeDecrement {

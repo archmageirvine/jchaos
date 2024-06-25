@@ -21,7 +21,6 @@ import irvine.world.FlatWorld;
 /**
  * Represents a rectangular array of Cells. Provides constant time access
  * to individual cells in the world.<p>
- *
  * @author Sean A. Irvine
  */
 public class World extends FlatWorld<Cell> implements EventGenerator {
@@ -35,11 +34,10 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
 
   /**
    * Construct a new world of specified width and height.
-   *
    * @param width number of cells across the board
    * @param height number of cells down the board
    * @param team the Team object for this world
-   * @exception NullPointerException if <code>team</code> is null
+   * @throws NullPointerException if <code>team</code> is null
    */
   public World(final int width, final int height, final Team team) {
     super(width, height);
@@ -57,10 +55,9 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
 
   /**
    * Construct a new world of specified width and height and new team information.
-   *
    * @param width number of cells across the board
    * @param height number of cells down the board
-   * @exception NullPointerException if <code>team</code> is null
+   * @throws NullPointerException if <code>team</code> is null
    */
   public World(final int width, final int height) {
     this(width, height, new Team());
@@ -73,7 +70,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
 
   /**
    * Get the team information.
-   *
    * @return team information
    */
   public Team getTeamInformation() {
@@ -82,7 +78,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
 
   /**
    * Get the wizard manager.
-   *
    * @return wizard manager
    */
   public WizardManager getWizardManager() {
@@ -95,7 +90,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
    * used to locate wizards.  If the specified actor is not found
    * then null is returned.  Note the actor will be in the returned
    * cell, but may not be the top object.
-   *
    * @param actor what to search for
    * @return the cell containing it
    */
@@ -111,7 +105,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
   /**
    * Get the actor at the specified position. Returns null if there
    * is no actor at the specified position.
-   *
    * @param x x-coordinate
    * @param y y-coordinate
    * @return actor at (x,y)
@@ -124,7 +117,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
   /**
    * Get the actor at the specified position. Returns null if there
    * is no actor at the specified position.
-   *
    * @param cell cell index
    * @return actor at given index
    */
@@ -140,7 +132,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
    * Test if the specified cell is engaged. Returns true if the cell is
    * engaged and false otherwise. The more enemy creatures surrounding a
    * cell the more likely it is to be engaged.
-   *
    * @param cell number of cell to test.
    * @param compulsory force engagement if at all possible
    * @return true if cell is engaged
@@ -224,13 +215,12 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
    * </pre><p>
    *
    * to select all cells within distance 5 of cell 0 including cell 0 itself.
-   *
    * @param centre cell number for the origin (assumed to be a valid cell)
    * @param minRadius minimum distance
    * @param maxRadius maximum distance
    * @param los true if line-of-sight is required
    * @return set of cells meeting requirements
-   * @exception IllegalArgumentException if the minimum radius is negative
+   * @throws IllegalArgumentException if the minimum radius is negative
    * or the maximum radius is less than the minimum radius.
    */
   public Set<Cell> getCells(final int centre, final int minRadius, final int maxRadius, final boolean los) {
@@ -239,6 +229,7 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
     }
     final CellFilter<Cell> cf = new CellFilter<Cell>() {
       final LineOfSight mLOS = new LineOfSight(World.this);
+
       @Override
       public boolean accept(final Cell c) {
         return c != null && mLOS.isLOS(centre, c.getCellNumber());
@@ -251,7 +242,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
    * Convenience method to return all the active cells containing actors
    * belonging to the specified player.  If no cells match then an empty
    * set is returned.
-   *
    * @param player player number to get cells for
    * @return set of matching cells
    */
@@ -294,9 +284,8 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
   /**
    * Register the specified listener with every cell in the world,
    * and the world itself.
-   *
    * @param el listener to register
-   * @exception NullPointerException if listener is null
+   * @throws NullPointerException if listener is null
    */
   @Override
   public void register(final EventListener el) {
@@ -314,7 +303,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
   /**
    * Deregister the specified listener from every cell in the world,
    * and the world itself.
-   *
    * @param el listener to deregister
    */
   @Override
@@ -338,7 +326,6 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
 
   /**
    * Return the warp space of this world.
-   *
    * @return warp space
    */
   public WarpSpace getWarpSpace() {

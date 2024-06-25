@@ -18,7 +18,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Pentagram.
- *
  * @author Sean A. Irvine
  */
 public class Pentagram extends CoreMonster implements Inanimate, NoDeadImage, Animateable {
@@ -29,24 +28,29 @@ public class Pentagram extends CoreMonster implements Inanimate, NoDeadImage, An
     setDefault(Attribute.SPECIAL_COMBAT, -1);
     setSpecialCombatApply(Attribute.SPECIAL_COMBAT);
   }
+
   @Override
   public long getLosMask() {
     return 0x0L;
   }
+
   @Override
   public int getCastRange() {
     return 3;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_EMPTY | CAST_LOS;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new Crocodile();
     a.setOwner(getOwner());
     return a;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     if (c != null) {
@@ -61,10 +65,12 @@ public class Pentagram extends CoreMonster implements Inanimate, NoDeadImage, An
       c.notify(new CellEffectEvent(c, CellEffectType.REDRAW_CELL, this));
     }
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;
   }
+
   @Override
   public int getDefaultWeight() {
     return 60;

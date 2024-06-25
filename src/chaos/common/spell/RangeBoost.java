@@ -24,7 +24,6 @@ import chaos.util.ShieldGrantedEvent;
 
 /**
  * Range boost.
- *
  * @author Sean A. Irvine
  */
 public class RangeBoost extends Castable implements TargetFilter {
@@ -35,6 +34,7 @@ public class RangeBoost extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING;
   }
+
   @Override
   public int getCastRange() {
     return MAX_CAST_RANGE;
@@ -74,7 +74,7 @@ public class RangeBoost extends Castable implements TargetFilter {
     // Want friendly creatures that already have some shooting ability
     final Team teams = world.getTeamInformation();
     final int t = teams.getTeam(caster);
-    for (final Iterator<Cell> it = CastUtils.preferAnimates(CastUtils.keepFriends(targets, t, teams)).iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = CastUtils.preferAnimates(CastUtils.keepFriends(targets, t, teams)).iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (!(a instanceof Monster) || a.get(Attribute.RANGE) == 0) {
         it.remove();

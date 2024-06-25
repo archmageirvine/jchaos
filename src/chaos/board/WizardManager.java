@@ -24,7 +24,6 @@ import irvine.math.Shuffle;
 
 /**
  * Maintain global wizard objects for real wizards and independents.
- *
  * @author Sean A. Irvine
  */
 public class WizardManager implements Serializable {
@@ -69,7 +68,6 @@ public class WizardManager implements Serializable {
   /**
    * Return the wizard for player <code>i</code>. If this player has
    * no wizard object then <code>null</code> is returned.
-   *
    * @param i id of the wizard
    * @return the wizard
    */
@@ -86,7 +84,6 @@ public class WizardManager implements Serializable {
 
   /**
    * Get the array of all wizards.
-   *
    * @return wizards
    */
   public Wizard[] getWizards() {
@@ -101,7 +98,6 @@ public class WizardManager implements Serializable {
 
   /**
    * If possible, get the wizard owning the specified actor.
-   *
    * @param a an actor
    * @return a wizard or null
    */

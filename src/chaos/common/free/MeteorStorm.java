@@ -37,7 +37,7 @@ public class MeteorStorm extends FreeCastable {
           continue;
         }
         cell.notify(new CellEffectEvent(cell,
-            CellEffectType.WHITE_CIRCLE_EXPLODE));
+          CellEffectType.WHITE_CIRCLE_EXPLODE));
         if (a == null || a.getState() == State.DEAD || DAMAGE >= a.get(Attribute.LIFE)) {
           // Current cell is replaceable or killed as a result of impact.
           if (cell.reinstate()) {

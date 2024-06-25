@@ -2,18 +2,17 @@ package irvine.tile;
 
 /**
  * Convert a PPM image to Encapsulated PostScript for documentation.
- *
  * @author Sean A. Irvine
  */
 public final class PPMtoGridlessEPS {
 
-  private PPMtoGridlessEPS() { }
+  private PPMtoGridlessEPS() {
+  }
 
   /**
    * Convert a PPM image to an Encapsulated PostScript.
-   *
    * @param args files to convert
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String[] args) throws Exception {
     for (final String arg : args) {

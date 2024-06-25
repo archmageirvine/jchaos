@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Shocker.
- *
  * @author Sean A. Irvine
  */
 public class Shocker extends AbstractShield {

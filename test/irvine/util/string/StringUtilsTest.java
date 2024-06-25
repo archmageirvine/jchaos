@@ -27,7 +27,7 @@ public class StringUtilsTest extends TestCase {
     assertFalse(StringUtils.isHexadecimal("xA"));
     assertFalse(StringUtils.isHexadecimal("A23L"));
   }
-  
+
   public void testMessage() {
     final PrintStream out = System.out;
     try {

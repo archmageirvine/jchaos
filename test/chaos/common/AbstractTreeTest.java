@@ -14,7 +14,6 @@ import junit.framework.Assert;
 
 /**
  * Tests basic functionality that all trees should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractTreeTest extends AbstractActorTest {
@@ -40,6 +39,7 @@ public abstract class AbstractTreeTest extends AbstractActorTest {
 
   private static class MyListener implements EventListener {
     final MyBool mState = new MyBool();
+
     @Override
     public void update(final Event e) {
       if (e instanceof WeaponEffectEvent) {
@@ -58,6 +58,7 @@ public abstract class AbstractTreeTest extends AbstractActorTest {
         }
       }
     }
+
     MyBool getState() {
       return mState;
     }

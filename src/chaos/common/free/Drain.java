@@ -17,7 +17,6 @@ import chaos.util.PolyshieldDestroyEvent;
 
 /**
  * Drain.
- *
  * @author Sean A. Irvine
  */
 public class Drain extends AbstractFreeDecrement {

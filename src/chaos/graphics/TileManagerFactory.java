@@ -7,7 +7,8 @@ package chaos.graphics;
 public final class TileManagerFactory {
 
   /** Prevent instantiation of this class. */
-  private TileManagerFactory() { }
+  private TileManagerFactory() {
+  }
 
   /** 32 by 32 animated tiles. */
   public static final String ACTIVE32 = "chaos.graphics.active32.Active32TileManager";

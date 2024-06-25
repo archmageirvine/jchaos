@@ -3,13 +3,13 @@ package chaos.util;
 /**
  * Sleeps down to millisecond accuracy.  Circumvents limitations with
  * Thread.sleep().
- *
  * @author Sean A. Irvine
  */
 public final class Sleep {
 
   /** Prevent instantiation of this class. */
-  private Sleep() { }
+  private Sleep() {
+  }
 
   private static final boolean VERBOSE = false;
   private static final int CALIBRATION_LOOPS = 10;
@@ -67,7 +67,6 @@ public final class Sleep {
    * Try hard to sleep for the specified amount of time.  This method
    * should be more accurate than calling Thread.sleep() in the case
    * of short delays.
-   *
    * @param ms time delay in milliseconds.
    */
   public static void sleep(final int ms) {

@@ -7,7 +7,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Wight.
- *
  * @author Sean A. Irvine
  */
 public class Wight extends UndeadMonster implements NoDeadImage {
@@ -19,10 +18,12 @@ public class Wight extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.AGILITY, 7);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x3EFFFFFFFF7F7F7FL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Skeleton.class;

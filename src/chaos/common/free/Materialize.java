@@ -13,7 +13,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Materialize.
- *
  * @author Sean A. Irvine
  */
 public class Materialize extends FreeCastable {

@@ -7,7 +7,6 @@ package chaos.common;
  * to humanoid bipeds, marginal cases like the robot should
  * probably not implement this.  It should also be used reluctantly
  * on the undead.
- *
  * @author Sean A. Irvine
  */
 public interface Humanoid {

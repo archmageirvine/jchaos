@@ -8,12 +8,12 @@ import irvine.util.string.PostScript;
 /**
  * Various utility functions for manipulating images of the class
  * <code>java.awt.image.BufferedImage</code>.
- *
  * @author Sean A. Irvine
  */
 public final class BufferedImageUtils {
 
-  private BufferedImageUtils() { }
+  private BufferedImageUtils() {
+  }
 
   /**
    * Make a copy of an image.
@@ -36,7 +36,7 @@ public final class BufferedImageUtils {
    * @param image image to write
    * @param out stream to write to
    * @param grid whether or not to write a grid on top of the image
-   * @exception NullPointerException if either argument is null
+   * @throws NullPointerException if either argument is null
    */
   public static void writeEps(final BufferedImage image, final PrintStream out, final boolean grid) {
     final int w = image.getWidth();
@@ -105,7 +105,7 @@ public final class BufferedImageUtils {
    * @param image image to redden
    * @param scale scaling (bigger than 1)
    * @return redden image
-   * @exception IllegalArgumentException if scale is less than 1.
+   * @throws IllegalArgumentException if scale is less than 1.
    */
   public static BufferedImage redden(final BufferedImage image, final double scale) {
     if (scale < 1) {
@@ -137,7 +137,7 @@ public final class BufferedImageUtils {
    * @param image image to make bluer
    * @param scale scaling (bigger than 1)
    * @return bluer image
-   * @exception IllegalArgumentException if scale is less than 1.
+   * @throws IllegalArgumentException if scale is less than 1.
    */
   public static BufferedImage bluen(final BufferedImage image, final double scale) {
     if (scale < 1) {

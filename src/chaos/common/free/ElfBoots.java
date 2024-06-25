@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Elf boots.
- *
  * @author Sean A. Irvine
  */
 public class ElfBoots extends AbstractFreeIncrement {

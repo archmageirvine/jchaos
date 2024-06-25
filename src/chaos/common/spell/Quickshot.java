@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Quickshot.
- *
  * @author Sean A. Irvine
  */
 public class Quickshot extends AbstractShield {

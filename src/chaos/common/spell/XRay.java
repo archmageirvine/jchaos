@@ -18,7 +18,6 @@ import chaos.util.CellEffectType;
 
 /**
  * X-ray.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

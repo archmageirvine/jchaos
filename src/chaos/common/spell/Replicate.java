@@ -21,7 +21,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Replicate.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */
@@ -31,10 +30,12 @@ public class Replicate extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_INANIMATE | CAST_LOS | CAST_GROWTH | CAST_NOWIZARDCELL;
   }
+
   @Override
   public int getCastRange() {
     return 8;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {

@@ -128,7 +128,6 @@ public enum PowerUps {
   /**
    * Return the castable associated with this power-up.  If there is no
    * associated castable then null is returned.
-   *
    * @return associated castable
    */
   public Castable getCastable() {
@@ -137,7 +136,6 @@ public enum PowerUps {
 
   /**
    * Return resource (if any) that can be used for sound when casting this effect.
-   *
    * @return sound effect
    */
   public String castingSound() {

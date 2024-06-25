@@ -7,7 +7,6 @@ import chaos.common.monster.Lion;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class SimulacrumTest extends ReplicateTest {

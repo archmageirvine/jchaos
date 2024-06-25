@@ -62,7 +62,6 @@ import irvine.util.CliFlags.Validator;
 
 /**
  * Chaos main program.
- *
  * @author Sean A. Irvine
  */
 public final class Chaos implements Serializable {
@@ -299,7 +298,6 @@ public final class Chaos implements Serializable {
 
   /**
    * Get an instance. Hopefully can remove this function one day.
-   *
    * @return instance
    */
   public static synchronized Chaos getChaos() {

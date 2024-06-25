@@ -18,7 +18,6 @@ import irvine.tile.TileImage;
 
 /**
  * Meditation collapse effect.
- *
  * @author Sean A. Irvine
  */
 public class CollapseEffect extends AbstractEffect {

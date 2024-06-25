@@ -2,7 +2,6 @@ package chaos.engine;
 
 /**
  * Weighted combination of two fields.
- *
  * @author Sean A. Irvine
  */
 public class CombinedField implements ScalarField {

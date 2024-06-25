@@ -43,13 +43,11 @@ abstract class AbstractWorld<C> implements World<C>, Iterable<C> {
 
   /**
    * Construct a world of given width and height.
-   *
    * @param width width of world in cells
    * @param height height of world in cells
-   * @exception IllegalArgumentException if <code>width</code> or <code>height
+   * @throws IllegalArgumentException if <code>width</code> or <code>height
    * </code> is less than 1. Also if <code>width</code> or <code>height</code>
    * exceeds 65535.
-   *
    */
   @SuppressWarnings("unchecked")
   AbstractWorld(final int width, final int height) {
@@ -277,8 +275,8 @@ abstract class AbstractWorld<C> implements World<C>, Iterable<C> {
   private final TreeSet<Tuple> mPriority = new TreeSet<>(new TupleComparator());
 
   /** Offsets to adjacent cells for extending the cache. */
-  private static final int[] DELTAX = {1, -1,  0,  0,  1,  1, -1, -1};
-  private static final int[] DELTAY = {0,  0,  1, -1,  1, -1,  1, -1};
+  private static final int[] DELTAX = {1, -1, 0, 0, 1, 1, -1, -1};
+  private static final int[] DELTAY = {0, 0, 1, -1, 1, -1, 1, -1};
 
   /** Unit in 14-bit fixed point arithmetic. */
   private static final int FP_ONE = 1 << 14;
@@ -290,7 +288,6 @@ abstract class AbstractWorld<C> implements World<C>, Iterable<C> {
    * the given target.  Because caching is used, it is possible the result is
    * already known.  Otherwise, it is necessary to extend (a possibly empty)
    * previously computed result.
-   *
    * @param target target cell
    */
   private void extendCache(final int target) {
@@ -353,7 +350,6 @@ abstract class AbstractWorld<C> implements World<C>, Iterable<C> {
 
   /**
    * Retrieve the actual path by tracing backwards from the cache.
-   *
    * @param target target cell
    * @return path or null if there is no path
    */
@@ -459,6 +455,7 @@ abstract class AbstractWorld<C> implements World<C>, Iterable<C> {
       private int mCell = 0;
 
       private final int[] mPermutation = new int[size()];
+
       {
         // identity
         for (int k = 0; k < mPermutation.length; ++k) {

@@ -9,7 +9,6 @@ import chaos.common.Promotion;
 
 /**
  * Green dragon.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -26,22 +25,27 @@ public class GreenDragon extends Dragon implements Bonus, Promotion {
     setDefault(Attribute.RANGE, 8);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public int getBonus() {
     return 2;
   }
+
   @Override
   public long getLosMask() {
     return 0xF87C3EFFFE7F676AL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return ShadowDragon.class;
   }
+
   @Override
   public Class<? extends Monster> promotion() {
     return EmeraldDragon.class;
   }
+
   @Override
   public int promotionCount() {
     return 7;

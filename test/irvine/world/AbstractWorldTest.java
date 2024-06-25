@@ -9,7 +9,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests basic functionality that all worlds should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractWorldTest extends TestCase {
@@ -20,7 +19,6 @@ public abstract class AbstractWorldTest extends TestCase {
 
   /**
    * Get the world to test. It should have dimensions 11 by 7.
-   *
    * @return the world
    */
   public abstract World<Integer> getWorld();
@@ -573,13 +571,13 @@ public abstract class AbstractWorldTest extends TestCase {
    * +-----------+
    */
   private static final boolean[] MY_MAP = {
-    true,  true,  true,  true,  false, true,  true,  true,  true,  true,  true,
-    true,  false, false, true,  false, true,  false, false, false, false, true,
-    true,  true,  true,  true,  true,  true,  false, true,  true,  false, true,
-    false, false, false, false, false, true,  false, true,  true,  false, true,
-    false, false, false, true,  false, true,  false, false, false, false, true,
-    false, false, false, true,  false, true,  true,  true,  true,  true,  true,
-    false, false, false, true,  false, false, false, true, false, false, false,
+    true, true, true, true, false, true, true, true, true, true, true,
+    true, false, false, true, false, true, false, false, false, false, true,
+    true, true, true, true, true, true, false, true, true, false, true,
+    false, false, false, false, false, true, false, true, true, false, true,
+    false, false, false, true, false, true, false, false, false, false, true,
+    false, false, false, true, false, true, true, true, true, true, true,
+    false, false, false, true, false, false, false, true, false, false, false,
   };
 
   static final CellFilter<Integer> MY_FILTER = x -> x == null || MY_MAP[x];

@@ -4,7 +4,6 @@ import java.util.Set;
 
 /**
  * An event indicating cells should be highlighted.
- *
  * @author Sean A. Irvine
  */
 public class HighlightEvent implements Event {
@@ -14,7 +13,6 @@ public class HighlightEvent implements Event {
 
   /**
    * Highlight event for the specified cells.
-   *
    * @param cells the cells involved, may be null.
    */
   public HighlightEvent(final Set<Integer> cells) {
@@ -23,7 +21,6 @@ public class HighlightEvent implements Event {
 
   /**
    * Get the cells.
-   *
    * @return set of cells
    */
   public Set<Integer> getCells() {

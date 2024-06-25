@@ -22,7 +22,6 @@ import chaos.util.Random;
 
 /**
  * Volcano.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

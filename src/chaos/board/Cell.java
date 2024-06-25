@@ -30,7 +30,6 @@ import chaos.util.NameUtils;
 /**
  * Represents a single cell of the world. From this object it is possible
  * to extract the content of the cell at various levels.
- *
  * @author Sean A. Irvine
  */
 public class Cell extends DefaultEventGenerator implements Serializable {
@@ -45,7 +44,6 @@ public class Cell extends DefaultEventGenerator implements Serializable {
 
   /**
    * Construct a new cell with the specified cell number.
-   *
    * @param cellNumber cell number
    */
   public Cell(final int cellNumber) {
@@ -54,7 +52,6 @@ public class Cell extends DefaultEventGenerator implements Serializable {
 
   /**
    * Return the cell number associated with this cell.
-   *
    * @return cell number
    */
   public int getCellNumber() {
@@ -65,7 +62,6 @@ public class Cell extends DefaultEventGenerator implements Serializable {
    * Return a reference to the currently visible actor in this
    * cell. If no actors are present then null is returned. The
    * actor is not affected by this probe.
-   *
    * @return the top actor
    */
   public Actor peek() {
@@ -74,7 +70,6 @@ public class Cell extends DefaultEventGenerator implements Serializable {
 
   /**
    * Return a short string describing the contents of a cell.
-   *
    * @return description of cell
    */
   public String describe() {
@@ -101,10 +96,9 @@ public class Cell extends DefaultEventGenerator implements Serializable {
    * Test if this cell contains the specified actor.  Will look
    * deeply into the cell include buried actors and mounted actors.
    * Returns true if the actor does occur in this cell.
-   *
    * @param actor actor to search for
    * @return true if the actor is in the cell
-   * @exception NullPointerException if <code>actor</code> is null.
+   * @throws NullPointerException if <code>actor</code> is null.
    */
   public boolean contains(final Actor actor) {
     if (actor == null) {
@@ -128,10 +122,9 @@ public class Cell extends DefaultEventGenerator implements Serializable {
    * Test if this cell contains the specified type. Will look
    * deeply into the cell include buried actors and mounted actors.
    * Returns true if the actor does occur in this cell.
-   *
    * @param clazz type to search for
    * @return true if the type is in the cell
-   * @exception NullPointerException if <code>clazz</code> is null.
+   * @throws NullPointerException if <code>clazz</code> is null.
    */
   public boolean contains(final Class<? extends Actor> clazz) {
     if (clazz == null) {
@@ -153,9 +146,8 @@ public class Cell extends DefaultEventGenerator implements Serializable {
 
   /**
    * Push an actor into the top position of this Cell.
-   *
    * @param actor actor to put in top position
-   * @exception NullPointerException if <code>actor</code> is null.
+   * @throws NullPointerException if <code>actor</code> is null.
    */
   public void push(final Actor actor) {
     if (actor == null) {
@@ -172,7 +164,6 @@ public class Cell extends DefaultEventGenerator implements Serializable {
    * cell and remove it from the top position to reveal any
    * actor below. If there are no Actors present then null is
    * returned.
-   *
    * @return the top actor
    */
   public Actor pop() {
@@ -190,7 +181,6 @@ public class Cell extends DefaultEventGenerator implements Serializable {
 
   /**
    * Test if the cell is essentially vacant.
-   *
    * @return true if something can move onto the cell
    */
   private boolean blocking() {
@@ -290,7 +280,6 @@ public class Cell extends DefaultEventGenerator implements Serializable {
    * may expose previously buried actors. Elemental creatures die to produce
    * another actor. Reincarnation is performed as required. Handles the hidden
    * horror and the goblin bomb.
-   *
    * @return true if cell is now vacant.
    */
   public boolean reinstate() {
@@ -433,7 +422,6 @@ public class Cell extends DefaultEventGenerator implements Serializable {
   /**
    * Return the mount or meditator in this cell.  If there is no
    * mount of meditator then null is returned.
-   *
    * @return the mount
    */
   public Actor getMount() {

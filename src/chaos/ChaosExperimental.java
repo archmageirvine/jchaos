@@ -26,7 +26,8 @@ import irvine.util.MaximumSeparation;
  */
 public final class ChaosExperimental implements Serializable {
 
-  private ChaosExperimental() { }
+  private ChaosExperimental() {
+  }
 
   static void runExperimentalMode(final Chaos chaos, final String engineDescription, final String selectorDescription, final int turnLimit, final boolean verbose) throws IOException {
     // Note this test method does obey -W and -H parameters

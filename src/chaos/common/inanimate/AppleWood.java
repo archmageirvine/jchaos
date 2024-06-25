@@ -17,7 +17,6 @@ import chaos.util.CastUtils;
 
 /**
  * Apple wood.
- *
  * @author Sean A. Irvine
  */
 public class AppleWood extends MaterialMonster implements Multiplicity, Tree, NoDeadImage, Animateable, Conveyance {
@@ -29,36 +28,44 @@ public class AppleWood extends MaterialMonster implements Multiplicity, Tree, No
     setDefault(Attribute.SPECIAL_COMBAT, -7);
     setSpecialCombatApply(Attribute.MAGICAL_RESISTANCE);
   }
+
   @Override
   public long getLosMask() {
     return 0x3EFFFFFFFF3E183CL;
   }
+
   @Override
   public int getCastRange() {
     return 7;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_GROWTH | CAST_EMPTY | CAST_LOS;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new GrayElf();
     a.setOwner(getOwner());
     return a;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     CastUtils.castTree(this, caster, c, casterCell);
   }
+
   @Override
   public int getMultiplicity() {
     return 2;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;
   }
+
   @Override
   public int getDefaultWeight() {
     return 1;

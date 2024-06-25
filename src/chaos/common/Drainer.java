@@ -107,7 +107,7 @@ public abstract class Drainer extends Castable implements TargetFilter {
     }
     if (best != -1) {
       // Okay found at least one killable target
-      for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+      for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
         final Cell c = it.next();
         if (CastUtils.score(c) != best) {
           it.remove();

@@ -11,9 +11,8 @@ import java.util.ArrayList;
  * in that indices are longs.  The maximum usable
  * index is 2^(31+CHUNK_BITS)=2^51 (ought to be large enough for
  * most applications).
- *
- * @author Sean A. Irvine
  * @param <T> type of array
+ * @author Sean A. Irvine
  */
 public class LongDynamicArray<T> implements Serializable {
 
@@ -38,7 +37,6 @@ public class LongDynamicArray<T> implements Serializable {
    * Return the length of the array.  This is one more than the
    * highest location which has been assigned a value or zero
    * in the case of an empty array.
-   *
    * @return length of the array
    */
   public long length() {
@@ -48,12 +46,11 @@ public class LongDynamicArray<T> implements Serializable {
   /**
    * Get the object at the specified array index.  May be null
    * if no object was previously assigned to the specified index.
-   *
    * @param index array index
    * @return value at specified index
-   * @exception UnsupportedOperationException if the underlying
+   * @throws UnsupportedOperationException if the underlying
    * array is a primitive type.
-   * @exception ArrayIndexOutOfBoundsException if the index is
+   * @throws ArrayIndexOutOfBoundsException if the index is
    * negative.
    */
   public T get(final long index) {
@@ -85,11 +82,10 @@ public class LongDynamicArray<T> implements Serializable {
    * Set the entry at specified index to the given value.
    * ClassCastExceptions will happen if the type is
    * otherwise incorrect.
-   *
    * @param index array index
    * @param value value to set at the index
-   * @exception ArrayIndexOutOfBoundsException if the index is negative.
-   * @exception ArrayStoreException if value is not of a class compatible
+   * @throws ArrayIndexOutOfBoundsException if the index is negative.
+   * @throws ArrayStoreException if value is not of a class compatible
    * with the underlying array.
    */
   public void set(final long index, final T value) {
@@ -102,9 +98,8 @@ public class LongDynamicArray<T> implements Serializable {
    * Calling <code>truncate(0);</code> empties the entire array.
    * If the array is already the specified length or is shorter
    * then no action is taken.
-   *
    * @param length position to truncate at
-   * @exception ArrayIndexOutOfBoundsException if length is negative.
+   * @throws ArrayIndexOutOfBoundsException if length is negative.
    */
   public void truncate(long length) {
     if (length < mLength) {

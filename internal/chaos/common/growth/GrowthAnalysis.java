@@ -12,7 +12,8 @@ import irvine.math.r.DoubleUtils;
  */
 public final class GrowthAnalysis {
 
-  private GrowthAnalysis() { }
+  private GrowthAnalysis() {
+  }
 
   private static int countGrowthCells(final World w) {
     int c = 0;
@@ -126,7 +127,6 @@ public final class GrowthAnalysis {
 
   /**
    * Run the growth analysis. See usage information.
-   *
    * @param args parameters
    */
   public static void main(final String[] args) {

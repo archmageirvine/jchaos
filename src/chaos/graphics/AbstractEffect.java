@@ -8,7 +8,6 @@ import chaos.board.Cell;
 
 /**
  * Superclass for effects.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractEffect {
@@ -16,7 +15,6 @@ public abstract class AbstractEffect {
   /**
    * Perform an effect on the specified cells. If either parameter is null
    * then no action is taken.
-   *
    * @param screen screen
    * @param graphics where to draw
    * @param cells cells to effect
@@ -27,7 +25,6 @@ public abstract class AbstractEffect {
   /**
    * Perform an effect on the indicated cell.  If the given cell is
    * null then no action is taken.
-   *
    * @param screen screen
    * @param graphics where to draw
    * @param cell cell to effect

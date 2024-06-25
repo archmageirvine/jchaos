@@ -14,7 +14,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Virtue.
- *
  * @author Sean A. Irvine
  */
 public class Virtue extends FreeCastable {

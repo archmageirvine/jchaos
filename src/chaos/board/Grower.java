@@ -19,7 +19,7 @@ public class Grower {
   /**
    * Construct a new grower for the specified world.
    * @param world the world
-   * @exception NullPointerException if <code>world</code> is null.
+   * @throws NullPointerException if <code>world</code> is null.
    */
   public Grower(final World world) {
     if (world == null) {

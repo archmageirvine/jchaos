@@ -19,7 +19,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Nuke.
- *
  * @author Sean A. Irvine
  */
 public class Nuke extends Castable implements TargetFilter {
@@ -30,10 +29,12 @@ public class Nuke extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_GROWTH | CAST_INANIMATE | CAST_NOEXPOSEDWIZARD;
   }
+
   @Override
   public int getCastRange() {
     return MAX_CAST_RANGE;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null && caster != null) {

@@ -3,7 +3,6 @@ package chaos.selector;
 
 /**
  * Tests this selector.
- *
  * @author Sean A. Irvine
  */
 public class RandomAiSelectorTest extends AbstractSelectorTest {

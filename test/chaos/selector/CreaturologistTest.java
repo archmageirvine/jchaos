@@ -9,7 +9,6 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests this selector.
- *
  * @author Sean A. Irvine
  */
 public class CreaturologistTest extends AbstractSelectorTest {

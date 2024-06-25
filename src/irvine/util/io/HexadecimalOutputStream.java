@@ -9,7 +9,6 @@ import java.nio.charset.StandardCharsets;
 /**
  * Stream for writing bytes in hexadecimal.  Lowercase `a' through `f'
  * are used.
- *
  * @author Sean A. Irvine
  */
 public class HexadecimalOutputStream extends FilterOutputStream {
@@ -31,10 +30,9 @@ public class HexadecimalOutputStream extends FilterOutputStream {
   /**
    * Create a hexadecimal output stream with a given
    * number of characters per line.
-   *
    * @param out underlying output stream
    * @param cols number of columns to use
-   * @exception IllegalArgumentException if <code>cols &lt; 1</code>
+   * @throws IllegalArgumentException if <code>cols &lt; 1</code>
    */
   public HexadecimalOutputStream(final OutputStream out, final int cols) {
     super(out);
@@ -46,7 +44,6 @@ public class HexadecimalOutputStream extends FilterOutputStream {
 
   /**
    * Create a hexadecimal output stream.
-   *
    * @param out underlying output stream
    */
   public HexadecimalOutputStream(final OutputStream out) {
@@ -55,8 +52,7 @@ public class HexadecimalOutputStream extends FilterOutputStream {
 
   /**
    * Used to check validity of stream before writes etc.
-   *
-   * @exception IOException if stream is actually closed
+   * @throws IOException if stream is actually closed
    */
   private void valid() throws IOException {
     if (out == null) {
@@ -99,7 +95,6 @@ public class HexadecimalOutputStream extends FilterOutputStream {
 
   /**
    * Convenience method to hexadecimal encode raw bytes as a string.
-   *
    * @param raw data to encode
    * @param cols number of columns
    * @return hexadecimal string
@@ -112,7 +107,7 @@ public class HexadecimalOutputStream extends FilterOutputStream {
           bos.write(raw);
         }
       } finally {
-          os.close();
+        os.close();
       }
       return os.toString();
     } catch (final IOException e) {
@@ -124,9 +119,8 @@ public class HexadecimalOutputStream extends FilterOutputStream {
   /**
    * Encode data from standard input using hexadecimal, sending the result to
    * standard output.
-   *
    * @param args ignored
-   * @exception IOException if an error occurs
+   * @throws IOException if an error occurs
    */
   public static void main(final String[] args) throws IOException {
     try (final HexadecimalOutputStream bos = new HexadecimalOutputStream(System.out)) {

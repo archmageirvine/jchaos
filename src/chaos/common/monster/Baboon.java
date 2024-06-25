@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * The baboon.
- *
  * @author Sean A. Irvine
  */
 public class Baboon extends MaterialMonster implements Humanoid {
@@ -20,10 +19,12 @@ public class Baboon extends MaterialMonster implements Humanoid {
     setDefault(Attribute.AGILITY, 53);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x003C3C3C3C3C7E66L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Halfling.class;

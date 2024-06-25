@@ -10,7 +10,6 @@ import chaos.common.FreeCastable;
 
 /**
  * Repulsion.
- *
  * @author Sean A. Irvine
  */
 public class Repulsion extends FreeCastable {
@@ -24,7 +23,6 @@ public class Repulsion extends FreeCastable {
    * Perform a repulsion with the given delta values.  At least one of <code>dx</code>
    * <code>dy</code> should be nonzero and both of them should have absolute value at
    * most 1.
-   *
    * @param world the world
    * @param c origin
    * @param dx x delta

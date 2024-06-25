@@ -8,7 +8,6 @@ import chaos.common.monster.Lion;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class RoperTest extends AbstractMonsterTest {

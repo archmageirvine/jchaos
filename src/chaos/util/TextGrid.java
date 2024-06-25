@@ -2,12 +2,12 @@ package chaos.util;
 
 /**
  * Generate a simple text grid.
- *
  * @author Sean A. Irvine
  */
 public final class TextGrid {
 
-  private TextGrid() { }
+  private TextGrid() {
+  }
 
   /**
    * Draw a text grid.

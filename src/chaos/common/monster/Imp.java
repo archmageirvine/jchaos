@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Imp.
- *
  * @author Sean A. Irvine
  */
 public class Imp extends MaterialMonster implements AttacksUndead {
@@ -20,10 +19,12 @@ public class Imp extends MaterialMonster implements AttacksUndead {
     setDefault(Attribute.AGILITY, 53);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000103C382E2E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;

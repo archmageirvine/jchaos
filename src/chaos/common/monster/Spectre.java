@@ -7,7 +7,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Spectre.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -21,6 +20,7 @@ public class Spectre extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.AGILITY, 53);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Ghast.class;

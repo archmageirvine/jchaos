@@ -23,14 +23,17 @@ public class Horace extends MythosMonster implements Humanoid, NoDeadImage {
     setDefault(Attribute.COMBAT, 1);
     set(PowerUps.HORROR, 2);
   }
+
   @Override
   public long getLosMask() {
     return 0x7EFFFFFF7E7E7EFFL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GiantSpider.class;
   }
+
   @Override
   public int getCastRange() {
     return 1;

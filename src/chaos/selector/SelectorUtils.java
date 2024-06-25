@@ -10,12 +10,12 @@ import chaos.util.RankingTable;
 
 /**
  * Utility functions to assist during spell selection.
- *
  * @author Sean A. Irvine
  */
 final class SelectorUtils {
 
-  private SelectorUtils() { }
+  private SelectorUtils() {
+  }
 
   static final Castable[] NO_SELECTION = new Castable[2];
 

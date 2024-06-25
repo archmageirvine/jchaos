@@ -11,7 +11,6 @@ import chaos.common.inanimate.Web;
 
 /**
  * Giant spider.
- *
  * @author Sean A. Irvine
  */
 public class GiantSpider extends MaterialMonster {
@@ -22,14 +21,17 @@ public class GiantSpider extends MaterialMonster {
     setDefault(Attribute.AGILITY, 93);
     setDefault(Attribute.MOVEMENT, 2);
   }
+
   @Override
   public long getLosMask() {
     return 0x00007E7E7E7E0000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Spider.class;
   }
+
   @Override
   public boolean update(final World world, final Cell cell) {
     if (super.update(world, cell)) {

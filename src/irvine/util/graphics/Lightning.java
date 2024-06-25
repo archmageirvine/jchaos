@@ -6,12 +6,12 @@ import java.util.Random;
 
 /**
  * Draw a simple lightning effect.
- *
  * @author Sean A. Irvine
  */
 public final class Lightning {
 
-  private Lightning() { }
+  private Lightning() {
+  }
 
   /** Used for color selection. */
   private static final Random RANDOM = new Random();
@@ -20,14 +20,13 @@ public final class Lightning {
    * Render a lightning effect into the specified graphics.  Partially unrenders
    * itself at the end of the effect, but the caller should best take effort to
    * repaint the screen afterwards.
-   *
    * @param g place to render
    * @param sx start x-coordinate
    * @param sy start y-coordinate
    * @param tx target x-coordinate
    * @param ty target y-coordinate
    * @param time total time in milliseconds to maintain lightning
-   * @exception NullPointerException if <code>g</code> is null.
+   * @throws NullPointerException if <code>g</code> is null.
    */
   public static void draw(final Graphics g, final int sx, final int sy, final int tx, final int ty, final int time) {
     final int dx = tx - sx;

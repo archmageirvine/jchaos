@@ -8,7 +8,6 @@ import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class WizardManagerTest extends TestCase {

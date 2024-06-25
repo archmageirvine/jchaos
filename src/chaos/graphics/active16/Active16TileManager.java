@@ -4,7 +4,6 @@ import chaos.graphics.ActiveTileManager;
 
 /**
  * Provides access to a set of dynamic 16 by 16 tiles.
- *
  * @author Sean A. Irvine
  */
 public class Active16TileManager extends ActiveTileManager {

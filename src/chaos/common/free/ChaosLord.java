@@ -13,7 +13,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Chaos Lord.
- *
  * @author Sean A. Irvine
  */
 public class ChaosLord extends FreeCastable {

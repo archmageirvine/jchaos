@@ -4,7 +4,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the AttentionDetail class.
- *
  * @author Sean A. Irvine
  */
 public class AttentionDetailTest extends TestCase {

@@ -3,7 +3,6 @@ package irvine.tile;
 /**
  * A rotating four-armed twirl that decays with the arm thickness being
  * an eighth of the image width.
- *
  * @author Sean A. Irvine
  */
 public class TwirlEffect extends AbstractTileEffect {
@@ -34,13 +33,12 @@ public class TwirlEffect extends AbstractTileEffect {
   /**
    * Construct a new twirl of given size and colors.  Produces images until the
    * result would be an empty image, at which point null is returned.
-   *
    * @param width with of image, must be a power of 2
    * @param back background color
    * @param fore foreground color
    * @param shrink number of steps to make before shrinking arms by one unit
    * @param angle angle to rotate by at each step
-   * @exception IllegalArgumentException if <code>shrink</code> is less than 1 or
+   * @throws IllegalArgumentException if <code>shrink</code> is less than 1 or
    * <code>width</code> is not a positive power of 2.
    */
   public TwirlEffect(final int width, final int back, final int fore,

@@ -4,7 +4,6 @@ import irvine.StandardIoTestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class DumpCreatureTest extends StandardIoTestCase {
@@ -12,7 +11,7 @@ public class DumpCreatureTest extends StandardIoTestCase {
   private static final String LS = System.lineSeparator();
 
   public void test() throws Exception {
-    DumpCreature.main(new String[]{"chaos.common.monster.Orc"});
+    DumpCreature.main(new String[] {"chaos.common.monster.Orc"});
     assertEquals("Orc" + LS
       + "The orc is typical of many exceedingly common species in having limited abilities. However, sometimes when an orc is cast he will con a few friends into joining your side. Up to eight orcs in total may be obtained. A group of orcs can be useful in the early stages of the game." + LS
       + "Frequency:          80" + LS

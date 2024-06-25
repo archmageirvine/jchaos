@@ -16,7 +16,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class CombatTest extends AbstractCastableTest {
@@ -33,6 +32,7 @@ public class CombatTest extends AbstractCastableTest {
 
   private static class MyListener implements EventListener {
     final MyBool mState = new MyBool();
+
     @Override
     public void update(final Event e) {
       if (e instanceof CellEffectEvent) {
@@ -46,6 +46,7 @@ public class CombatTest extends AbstractCastableTest {
         }
       }
     }
+
     MyBool getState() {
       return mState;
     }

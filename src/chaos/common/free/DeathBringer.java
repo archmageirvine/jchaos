@@ -14,7 +14,6 @@ import chaos.util.Random;
 
 /**
  * Death bringer.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

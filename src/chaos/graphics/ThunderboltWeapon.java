@@ -15,7 +15,8 @@ import irvine.util.graphics.Thunderbolt;
  */
 public final class ThunderboltWeapon {
 
-  private ThunderboltWeapon() { }
+  private ThunderboltWeapon() {
+  }
 
   static void render(final World world, final ChaosScreen screen, final Graphics2D graphics, final WeaponEffectEvent e, final int width, final int widthBits) {
     final int source = e.getSource();

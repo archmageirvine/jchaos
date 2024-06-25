@@ -18,7 +18,6 @@ import chaos.util.Restore;
 
 /**
  * Life giver.
- *
  * @author Sean A. Irvine
  * @author Gregory B. Irvine
  */

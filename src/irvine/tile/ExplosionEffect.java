@@ -5,7 +5,6 @@ import java.util.HashMap;
 /**
  * An effect that explodes a square image sending pixels outwards and eventually
  * outside of the tile.
- *
  * @author Sean A. Irvine
  */
 public class ExplosionEffect extends AbstractTileEffect {
@@ -28,7 +27,6 @@ public class ExplosionEffect extends AbstractTileEffect {
    * that they disappear off the image.  The main part of the calculation is
    * done for one octant, and the result reflected by symmetry to the other
    * octants.
-   *
    * @param width image size
    * @return vector field
    */
@@ -68,12 +66,11 @@ public class ExplosionEffect extends AbstractTileEffect {
    * be moved at all.  If <code>dust</code> is false, then all pixels always
    * move according to the vector field, otherwise they move only if the
    * destination pixel in the current image is the background color.
-   *
    * @param baseImage image to be exploded
    * @param bg background color
    * @param dust controls when a pixel can move
-   * @exception NullPointerException if <code>baseImage</code> is null.
-   * @exception IllegalArgumentException if either dimension of
+   * @throws NullPointerException if <code>baseImage</code> is null.
+   * @throws IllegalArgumentException if either dimension of
    * <code>baseImage</code> exceeds 32767 or if either dimension has
    * an odd size.
    */

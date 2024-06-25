@@ -7,7 +7,6 @@ import java.io.Serializable;
 
 /**
  * Looks at the display device and determines the overall game shape.
- *
  * @author Sean A. Irvine
  */
 public class Configuration implements Serializable {
@@ -131,7 +130,6 @@ public class Configuration implements Serializable {
 
   /**
    * Dump default configuration.
-   *
    * @param args ignored
    */
   public static void main(final String[] args) {

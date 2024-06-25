@@ -15,7 +15,6 @@ import chaos.common.wizard.Wizard;
  * Field for a wizard. This reflects the desirability of a cell from a
  * wizard point of view. It considers only the content of the cell and
  * not the surroundings.
- *
  * @author Sean A. Irvine
  */
 public class WizardField implements ScalarField {
@@ -38,9 +37,9 @@ public class WizardField implements ScalarField {
 
   private double simpleWeight(final Actor a) {
     final double w = (a.get(Attribute.LIFE)
-                      + (a.get(Attribute.COMBAT)
-                         + a.get(Attribute.RANGED_COMBAT)
-                         + a.get(Attribute.SPECIAL_COMBAT)) * COMBAT_SCALE) * 0.25 * SCALE;
+      + (a.get(Attribute.COMBAT)
+      + a.get(Attribute.RANGED_COMBAT)
+      + a.get(Attribute.SPECIAL_COMBAT)) * COMBAT_SCALE) * 0.25 * SCALE;
     if (a instanceof Conveyance) {
       final Actor m = ((Conveyance) a).getMount();
       if (m != null) {

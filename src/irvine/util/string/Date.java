@@ -6,17 +6,16 @@ import java.util.Locale;
 
 /**
  * Date related string functions.
- *
  * @author Sean A. Irvine
  */
 public final class Date {
 
-  private Date() { }
+  private Date() {
+  }
 
   /**
    * Get the current date and time as a string of the form
    * <code>YYYY-MM-DD hh:mm:ss</code>.
-   *
    * @return date string
    */
   public static String now() {
@@ -74,7 +73,6 @@ public final class Date {
 
   /**
    * Get the current date in the form <code>YYYY-MM-DD </code>.
-   *
    * @return current date
    */
   public static String getDate() {

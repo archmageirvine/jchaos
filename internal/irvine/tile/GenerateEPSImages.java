@@ -7,16 +7,16 @@ import java.io.PrintStream;
 
 /**
  * Generate all the imagery needed by the documentation.
- *
  * @author Sean A. Irvine
  */
 public final class GenerateEPSImages {
 
-  private GenerateEPSImages() { }
+  private GenerateEPSImages() {
+  }
 
   /** A test image used for demonstration purposes. */
   private static final String RED_DRAGON_DATA =
-        "  ##            "
+    "  ##            "
       + "    ##          "
       + "     ##   #     "
       + "    ###   ###   "
@@ -237,9 +237,8 @@ public final class GenerateEPSImages {
 
   /**
    * Generate some images used in documentation.
-   *
    * @param args ignored
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String[] args) throws Exception {
     writeNumerals();
@@ -256,7 +255,7 @@ public final class GenerateEPSImages {
     ppmToEPS("../circlea45.ppm", "pnmrotatea45.eps");
     ppmToEPS("../circlea60.ppm", "pnmrotatea60.eps");
     writeSeries("explodingcircle", new ExplodingCircleEffect(16, 0xFFFFFF, 0x000000));
-    writeSeries("explodingsquare", new ExplodingSquareEffect(16, 0xFFFFFF, new int[]{0x000000, 0x3F3F3F, 0x7F7F7F}));
+    writeSeries("explodingsquare", new ExplodingSquareEffect(16, 0xFFFFFF, new int[] {0x000000, 0x3F3F3F, 0x7F7F7F}));
     writeSeries("twirl", new TwirlEffect(16, 0xFFFFFF, 0x000000, 2, 30.0));
     writeImage("rotatecircle0.eps", getCircle(0, ~0, 15));
     writeSeries("rotatecircle", new RotationEffect(getCircle(0, ~0, 15), 15, 4, ~0, false), 1);

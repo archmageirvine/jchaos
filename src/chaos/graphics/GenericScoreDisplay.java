@@ -36,7 +36,6 @@ import irvine.util.graphics.Stipple;
 
 /**
  * Draw the current scores.
- *
  * @author Sean A. Irvine
  */
 public class GenericScoreDisplay implements ScoreDisplay, MouseListener, KeyListener {
@@ -65,7 +64,6 @@ public class GenericScoreDisplay implements ScoreDisplay, MouseListener, KeyList
 
   /**
    * Construct a new score display.
-   *
    * @param config game configuration
    * @param w the world
    * @param screen the screen
@@ -272,17 +270,28 @@ public class GenericScoreDisplay implements ScoreDisplay, MouseListener, KeyList
   }
 
   @Override
-  public void mousePressed(final MouseEvent e) { }
+  public void mousePressed(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseReleased(final MouseEvent e) { }
+  public void mouseReleased(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseEntered(final MouseEvent e) { }
+  public void mouseEntered(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseExited(final MouseEvent e) { }
+  public void mouseExited(final MouseEvent e) {
+  }
+
   @Override
-  public void keyPressed(final KeyEvent e) { }
+  public void keyPressed(final KeyEvent e) {
+  }
+
   @Override
-  public void keyTyped(final KeyEvent e) { }
+  public void keyTyped(final KeyEvent e) {
+  }
 
   @Override
   public void keyReleased(final KeyEvent e) {

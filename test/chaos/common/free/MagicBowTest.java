@@ -8,7 +8,6 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class MagicBowTest extends AbstractFreeIncrementTest {

@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * The abath.
- *
  * @author Sean A. Irvine
  */
 public class Abath extends MaterialMonsterMount {
@@ -19,10 +18,12 @@ public class Abath extends MaterialMonsterMount {
     setDefault(Attribute.AGILITY, 27);
     setDefault(Attribute.MOVEMENT, 4);
   }
+
   @Override
   public long getLosMask() {
     return 0x80C0F1FF3F773600L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Camel.class;

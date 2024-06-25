@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Vitality.
- *
  * @author Sean A. Irvine
  */
 public class Vitality extends AbstractIncrement {

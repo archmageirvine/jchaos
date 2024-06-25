@@ -9,18 +9,17 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Merge another creature with a given creature.
- *
  * @author Sean A. Irvine
  */
 public final class Merge {
 
-  private Merge() { }
+  private Merge() {
+  }
 
   /**
    * Merge the contents of the given cell with the specified monster. In general
    * quantities are additive, but things such as the owner and state of the base
    * creature are not modified.
-   *
    * @param base recipient
    * @param mergeCell cell to be merged
    */

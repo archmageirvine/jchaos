@@ -6,7 +6,6 @@ import chaos.common.PowerUps;
 
 /**
  * A cell effect event.
- *
  * @author Sean A. Irvine
  */
 public class PowerUpEvent extends CellEffectEvent {
@@ -16,7 +15,6 @@ public class PowerUpEvent extends CellEffectEvent {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cell the cell effected
    * @param actor the actor this event is for
    * @param attr attribute this event is for
@@ -28,7 +26,6 @@ public class PowerUpEvent extends CellEffectEvent {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cell the cell effected
    * @param actor the actor this event is for
    * @param attr attribute this event is for
@@ -39,7 +36,6 @@ public class PowerUpEvent extends CellEffectEvent {
 
   /**
    * The attribute this event is for. May be null.
-   *
    * @return the attribute
    */
   public PowerUps getPowerUp() {

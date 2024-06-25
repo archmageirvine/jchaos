@@ -4,12 +4,9 @@ import java.util.Random;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ExplosionEffectTest extends AbstractTileEffectTest {
-
-
 
 
   @Override

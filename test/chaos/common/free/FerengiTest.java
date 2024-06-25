@@ -10,7 +10,6 @@ import chaos.util.RankingTable;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class FerengiTest extends AbstractFreeCastableTest {

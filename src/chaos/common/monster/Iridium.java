@@ -8,7 +8,6 @@ import chaos.common.Monster;
 
 /**
  * Iridium.
- *
  * @author Sean A. Irvine
  */
 public class Iridium extends MaterialMonsterMount implements Bonus, AttacksUndead {
@@ -29,18 +28,22 @@ public class Iridium extends MaterialMonsterMount implements Bonus, AttacksUndea
     setDefault(Attribute.SPECIAL_COMBAT, 2);
     setRangedCombatApply(Attribute.INTELLIGENCE);
   }
+
   @Override
   public int getBonus() {
     return 6;
   }
+
   @Override
   public int getCastRange() {
     return 5;
   }
+
   @Override
   public long getLosMask() {
     return 0x0000E0FF7E7E2400L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Thundermare.class;

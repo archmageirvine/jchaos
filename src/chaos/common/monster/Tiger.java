@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Tiger.
- *
  * @author Sean A. Irvine
  */
 public class Tiger extends MaterialMonster implements Cat {
@@ -20,10 +19,12 @@ public class Tiger extends MaterialMonster implements Cat {
     setDefault(Attribute.AGILITY, 53);
     setDefault(Attribute.MOVEMENT, 4);
   }
+
   @Override
   public long getLosMask() {
     return 0x00000006FEFE6600L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Lion.class;

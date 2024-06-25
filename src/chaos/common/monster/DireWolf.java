@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Dire wolf.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -19,10 +18,12 @@ public class DireWolf extends MaterialMonster {
     setDefault(Attribute.AGILITY, 33);
     setDefault(Attribute.MOVEMENT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000E27E7E7E0000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GiantRat.class;

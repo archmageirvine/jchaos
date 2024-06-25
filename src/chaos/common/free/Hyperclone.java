@@ -20,7 +20,6 @@ import irvine.util.Pair;
 
 /**
  * Hyperclone.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

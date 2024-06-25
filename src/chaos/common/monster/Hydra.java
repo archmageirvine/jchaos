@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Hydra.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -20,10 +19,12 @@ public class Hydra extends MaterialMonster {
     setDefault(Attribute.AGILITY, 0);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x787CFEFC7E7E7E3EL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Crocodile.class;

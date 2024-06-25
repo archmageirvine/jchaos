@@ -20,7 +20,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Fireball.
- *
  * @author Sean A. Irvine
  */
 public class Fireball extends Castable implements TargetFilter {

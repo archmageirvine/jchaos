@@ -3,7 +3,6 @@ package irvine.tile;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class HorizontalRollEffectTest extends AbstractTileEffectTest {

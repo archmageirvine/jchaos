@@ -12,12 +12,12 @@ import java.util.List;
 
 /**
  * Various string utility functions.
- *
  * @author Sean A. Irvine
  */
 public final class StringUtils {
 
-  private StringUtils() { }
+  private StringUtils() {
+  }
 
   /**
    * A string comprising of the same character repeated a number of times.
@@ -69,7 +69,7 @@ public final class StringUtils {
     }
     return sb.toString();
   }
-  
+
   private static final String VALID_HEX = "0123456789ABCDEFabcdef";
 
   /**
@@ -120,7 +120,6 @@ public final class StringUtils {
 
   /**
    * Read strings from given input stream.
-   *
    * @param is input stream
    * @param casing what casing should be applied
    * @return the strings
@@ -139,7 +138,6 @@ public final class StringUtils {
 
   /**
    * Read strings from given input stream.
-   *
    * @param file file containing strings
    * @param casing what casing should be applied
    * @return the strings
@@ -153,7 +151,6 @@ public final class StringUtils {
 
   /**
    * Read strings from given input stream.
-   *
    * @param file file containing strings
    * @param casing what casing should be applied
    * @return the strings

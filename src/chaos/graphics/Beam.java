@@ -9,7 +9,6 @@ import chaos.util.Sleep;
 
 /**
  * Routines to draw various beam weapons.
- *
  * @author Sean A. Irvine
  */
 public class Beam {
@@ -28,7 +27,6 @@ public class Beam {
   /**
    * Construct a new beam drawing object for the given world.  Any
    * synchronization required must occur before calling this class.
-   *
    * @param world the world
    * @param screen the screen
    * @param graphics graphics object
@@ -116,7 +114,6 @@ public class Beam {
 
   /**
    * Draw the standard casting beam in the specified color.
-   *
    * @param source source cell
    * @param target target cell
    * @param color beam color
@@ -226,7 +223,6 @@ public class Beam {
   /**
    * Draw the dragon breath style weapon from source to target in the
    * specified color.
-   *
    * @param source source cell
    * @param target target cell
    * @param color color to draw with
@@ -237,7 +233,6 @@ public class Beam {
 
   /**
    * Draw fireball style effect
-   *
    * @param source source cell
    * @param target target cell
    */
@@ -248,7 +243,6 @@ public class Beam {
 
   /**
    * Draw spinner style effect
-   *
    * @param source source cell
    * @param target target cell
    */
@@ -320,7 +314,6 @@ public class Beam {
   /**
    * Draw the magic bolt weapon effect.  Also can be used for ranged
    * combat (e.g. pyrohydra).
-   *
    * @param source source cell
    * @param target target cell
    * @param color color to draw with
@@ -331,7 +324,6 @@ public class Beam {
 
   /**
    * Draw the bird shit weapon effect.
-   *
    * @param source source cell
    * @param target target cell
    * @param color color to draw with

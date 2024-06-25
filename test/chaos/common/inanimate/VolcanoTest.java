@@ -13,7 +13,6 @@ import irvine.TestUtils;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class VolcanoTest extends AbstractMonsterTest {

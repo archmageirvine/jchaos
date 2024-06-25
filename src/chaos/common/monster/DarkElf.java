@@ -11,7 +11,6 @@ import chaos.common.inanimate.DarkWood;
 
 /**
  * Dark elf.
- *
  * @author Sean A. Irvine
  */
 public class DarkElf extends Unicaster implements Humanoid, BowShooter, Rider {
@@ -35,10 +34,12 @@ public class DarkElf extends Unicaster implements Humanoid, BowShooter, Rider {
     setRangedCombatApply(Attribute.LIFE);
     setSpecialCombatApply(Attribute.LIFE);
   }
+
   @Override
   public long getLosMask() {
     return 0x00387C3838181800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GrayElf.class;

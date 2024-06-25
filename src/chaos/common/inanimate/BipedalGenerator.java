@@ -26,13 +26,13 @@ import chaos.util.Random;
 
 /**
  * Bipedal generator.
- *
  * @author Sean A. Irvine
  */
 public class BipedalGenerator extends AbstractGenerator implements Bonus {
 
   /** List of classes this generator can produce. */
   private static final ArrayList<Class<? extends Actor>> GENERATEES = new ArrayList<>();
+
   static {
     GENERATEES.add(Faun.class);
     GENERATEES.add(Goblin.class);
@@ -55,14 +55,17 @@ public class BipedalGenerator extends AbstractGenerator implements Bonus {
     setDefault(Attribute.LIFE_RECOVERY, 7);
     setDefault(Attribute.MAGICAL_RESISTANCE_RECOVERY, 1);
   }
+
   @Override
   public int getCastRange() {
     return 12;
   }
+
   @Override
   public int getBonus() {
     return 3;
   }
+
   @Override
   public Actor chooseWhatToGenerate() {
     // Every call, attempt to select one creature from the list specified above,

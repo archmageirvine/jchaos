@@ -13,9 +13,7 @@ import java.util.Set;
  *
  * Actual instances of classes implementing this interface can be obtained
  * using the <code>WorldFactory</code> class.
- *
  * @param <C> fundamental cell type of the world.
- *
  * @author Sean A. Irvine
  */
 public interface World<C> extends Serializable {
@@ -23,7 +21,6 @@ public interface World<C> extends Serializable {
   /**
    * Get the width of the world.  Returns the maximum number of cells
    * in any grid row.
-   *
    * @return the width of the world.
    */
   int width();
@@ -31,14 +28,12 @@ public interface World<C> extends Serializable {
   /**
    * Get the height of the world.  Returns the maximum number of cells
    * in any grid column.
-   *
    * @return the height of the world.
    */
   int height();
 
   /**
    * Get the total number of cells in the world.
-   *
    * @return world size.
    */
   int size();
@@ -46,7 +41,6 @@ public interface World<C> extends Serializable {
   /**
    * Test if a cell exists.  Tests if the given <code>cellNumber</code>
    * corresponds to an actual cell.
-   *
    * @param cellNumber cell number to test
    * @return true if the cell exists
    */
@@ -55,7 +49,6 @@ public interface World<C> extends Serializable {
   /**
    * Test if a cell is an edge cell.  Tests if the given <code>cellNumber</code>
    * is an edge cell of the world.
-   *
    * @param cellNumber cell number to test
    * @return true if the cell is an edge
    */
@@ -63,10 +56,9 @@ public interface World<C> extends Serializable {
 
   /**
    * Set the content of a cell.
-   *
    * @param cellNumber cell number to set
    * @param cell content to set
-   * @exception IllegalArgumentException if the <code>cellNumber</code> does not
+   * @throws IllegalArgumentException if the <code>cellNumber</code> does not
    * correspond to an actual cell.
    */
   void setCell(final int cellNumber, final C cell);
@@ -74,7 +66,6 @@ public interface World<C> extends Serializable {
   /**
    * Get the content of a cell.  If the specified cell does not exist then
    * <code>null</code> is returned.
-   *
    * @param cellNumber cell number to get cell for.
    * @return the cell
    */
@@ -83,7 +74,6 @@ public interface World<C> extends Serializable {
   /**
    * Get the content of a cell.  If the specified cell does not exist then
    * <code>null</code> is returned.
-   *
    * @param x cell x-coordinate
    * @param y cell y-coordinate
    * @return the cell
@@ -94,7 +84,6 @@ public interface World<C> extends Serializable {
    * Get the cell number for a given cell.  Returns the lowest cell number
    * have the specified cell as it content.  If the given cell does not exist
    * in the world then -1 is returned.
-   *
    * @param cell cell to get cell number for
    * @return cell number or -1.
    */
@@ -104,7 +93,6 @@ public interface World<C> extends Serializable {
    * Convert from cell coordinates to cell number.  Given the coordinate pair
    * <code>(x,y)</code>, retrieve the corresponding cell number.  If the
    * coordinates do not denote a real cell then -1 is returned.
-   *
    * @param x x-ordinate
    * @param y y-ordinate
    * @return cell number or -1.
@@ -117,12 +105,11 @@ public interface World<C> extends Serializable {
    * y-coordinate in <code>xy[1]</code>.  Other elements of <code>xy</code>
    * are not affected.  If the cell is a real cell then true is returned
    * otherwise false is returned.
-   *
    * @param cellNumber cell number to get coordinates for
    * @param xy array in which to place result
    * @return true if <code>cellNumber</code> is a real cell.
-   * @exception NullPointerException if <code>xy</code> is <code>null</code>.
-   * @exception ArrayIndexOutOfBoundsException if <code>xy</code> does not
+   * @throws NullPointerException if <code>xy</code> is <code>null</code>.
+   * @throws ArrayIndexOutOfBoundsException if <code>xy</code> does not
    * have length at least 2.
    */
   boolean getCellCoordinates(final int cellNumber, final int[] xy);
@@ -130,7 +117,6 @@ public interface World<C> extends Serializable {
   /**
    * Compute the squared distance between the cells with the given cell numbers.
    * If either cell number is invalid then -1 is returned.
-   *
    * @param a first cell number
    * @param b second cell number
    * @return shortest squared distance between <code>a</code> and <code>b</code>
@@ -144,13 +130,12 @@ public interface World<C> extends Serializable {
    * then the resulting set will be empty.  Any cell in the given radius is
    * then tested with <code>filter</code> for acceptance.  If <code>filter
    * </code> is <code>null</code> then no filtering is performed.
-   *
    * @param origin cell number of origin
    * @param minRadius minimum radius
    * @param maxRadius maximum radius
    * @param filter filter to apply
    * @return list of cells meeting criteria in distance order
-   * @exception IllegalArgumentException if either radius is negative; or
+   * @throws IllegalArgumentException if either radius is negative; or
    * <code>maxRadius</code> is less than <code>minRadius</code>; or if the
    * <code>origin</code> is not a valid cell number.
    */
@@ -178,12 +163,11 @@ public interface World<C> extends Serializable {
    * <p>Implementations may cache results, including previous invocations of
    * the <code>filter</code>.  To force a recomputation it is possible to pass
    * -1 as the <code>origin</code>: <code>shortestPath(-1, 0, null)</code>.
-   *
    * @param origin start cell
    * @param target target cell
    * @param filter filter for cells
    * @return shortest path or null
-   * @exception IllegalArgumentException if the <code>origin</code> is not
+   * @throws IllegalArgumentException if the <code>origin</code> is not
    * a valid cell or -1 or <code>target</code> is not a valid cell number.
    */
   List<C> shortestPath(final int origin, final int target, final CellFilter<C> filter);

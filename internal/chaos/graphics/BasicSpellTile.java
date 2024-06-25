@@ -6,7 +6,6 @@ import java.awt.image.BufferedImage;
 
 /**
  * An empty tile with consistent borders.
- *
  * @author Sean A. Irvine
  */
 class BasicSpellTile {

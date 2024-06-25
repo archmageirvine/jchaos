@@ -12,7 +12,6 @@ import chaos.common.Inanimate;
 
 /**
  * Stupidity.
- *
  * @author Sean A. Irvine
  */
 public class Stupidity extends AbstractFreeDecrement {
@@ -29,7 +28,7 @@ public class Stupidity extends AbstractFreeDecrement {
   @Override
   protected Set<Cell> filter(final Set<Cell> affected) {
     // Eliminate inanimates and growths
-    for (final Iterator<Cell> it = affected.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = affected.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a instanceof Inanimate || a instanceof Growth) {
         it.remove();

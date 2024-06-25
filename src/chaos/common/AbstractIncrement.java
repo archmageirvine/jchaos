@@ -12,21 +12,18 @@ import chaos.util.PolyshieldEvent;
 /**
  * Abstract superclass for spells that increment an attribute of all creations
  * with the same team as the caster.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractIncrement extends FreeCastable {
 
   /**
    * The increment to be applied.
-   *
    * @return increment
    */
   public abstract int increment();
 
   /**
    * The attribute to be incremented.
-   *
    * @return attribute
    */
   public abstract Attribute attribute();

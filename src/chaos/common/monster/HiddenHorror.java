@@ -10,7 +10,6 @@ import chaos.common.dragon.RedDragon;
 
 /**
  * Hidden horror.
- *
  * @author Sean A. Irvine
  */
 public class HiddenHorror extends MaterialMonster implements Humanoid, Elemental {
@@ -24,14 +23,17 @@ public class HiddenHorror extends MaterialMonster implements Humanoid, Elemental
     setDefault(Attribute.AGILITY, 40);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00387E7E3E183800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return MightyOrc.class;
   }
+
   @Override
   public Actor getElementalReplacement() {
     final RedDragon t = new RedDragon();

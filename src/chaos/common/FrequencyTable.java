@@ -93,7 +93,6 @@ public final class FrequencyTable {
   /**
    * Return a set of all classes corresponding to castables with nonzero
    * probability.
-   *
    * @return set of classes
    */
   public Set<Class<? extends Castable>> getCastableClasses() {
@@ -104,7 +103,7 @@ public final class FrequencyTable {
    * Instantiate a castable from its name.  Assumes the supplied class is valid.
    * @param clazz class to instantiate
    * @return instance of the spell
-   * @exception RuntimeException if an instantiation problem occurs.
+   * @throws RuntimeException if an instantiation problem occurs.
    */
   public static Castable instantiate(final Class<? extends Castable> clazz) {
     try {
@@ -116,7 +115,6 @@ public final class FrequencyTable {
 
   /**
    * Return the total number of known spells.
-   *
    * @return number of spells
    */
   public int getNumberOfSpells() {
@@ -127,7 +125,6 @@ public final class FrequencyTable {
    * Return the frequency count for a given spell.  If the spell is not
    * known then 0 is returned.  The result is in the range [-100,100]
    * and is negative for bonus spells.
-   *
    * @param clazz spell to get frequency of
    * @return the frequency
    */
@@ -138,7 +135,6 @@ public final class FrequencyTable {
 
   /**
    * Return the frequency as a probability across all ordinary spells.
-   *
    * @param clazz spell to get probability of
    * @return the probability
    */
@@ -149,7 +145,6 @@ public final class FrequencyTable {
 
   /**
    * Return the frequency as a probability across all spells.
-   *
    * @param clazz spell to get probability of
    * @return the probability
    */
@@ -161,7 +156,6 @@ public final class FrequencyTable {
   /**
    * Select a random spell from the standard set of spell according to
    * the spell frequency table.  That is, bonus spells are excluded.
-   *
    * @return the selected castable
    */
   public Class<? extends Castable> getRandom() {
@@ -182,7 +176,6 @@ public final class FrequencyTable {
   /**
    * Select a random spell from the set of all spells according to
    * the spell frequency table.  That is, bonus spells are included.
-   *
    * @return the selected castable
    */
   public Class<? extends Castable> getBonusRandom() {
@@ -206,11 +199,10 @@ public final class FrequencyTable {
    * entries selected according to the bonus probability distribution for a wizard
    * of the specified level.  If the level is negative then the array will have null
    * entries.
-   *
    * @param count number of spells
    * @param level wizard level
    * @return array of spells
-   * @exception NegativeArraySizeException if <code>count</code> is negative.
+   * @throws NegativeArraySizeException if <code>count</code> is negative.
    */
   public Castable[] getBonusChoice(final int count, final int level) {
     final Castable[] res = new Castable[count];
@@ -231,7 +223,6 @@ public final class FrequencyTable {
   /**
    * Select a random spell from the set of all spells according to
    * the uniform distribution.  This is used to implement the joker.
-   *
    * @return the selected castable
    */
   public Class<? extends Castable> getUniformRandom() {
@@ -248,7 +239,6 @@ public final class FrequencyTable {
 
   /**
    * Construct a new actor according to a uniform random distribution.
-   *
    * @return the created actor
    */
   public Actor getUniformRandomActor() {
@@ -270,7 +260,6 @@ public final class FrequencyTable {
 
   /**
    * Construct a new actor according to a uniform random distribution.
-   *
    * @return the created actor
    */
   public Monster getUniformRandomMonster() {
@@ -289,7 +278,6 @@ public final class FrequencyTable {
   /**
    * Select a random monster from the set of all spells according to
    * the frequency table.  That is, bonus spells are included.
-   *
    * @return the selected monster class
    */
   public Monster getRandomMonster() {

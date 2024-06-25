@@ -54,12 +54,14 @@ public class AiEngineTest extends TestCase {
 
   private static class MyListener implements EventListener {
     private final StringBuilder mBuf = new StringBuilder();
+
     @Override
     public void update(final Event e) {
       if (e instanceof TextEvent) {
         mBuf.append(e);
       }
     }
+
     String message() {
       return mBuf.toString();
     }

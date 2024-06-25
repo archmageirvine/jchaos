@@ -18,7 +18,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Free all.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

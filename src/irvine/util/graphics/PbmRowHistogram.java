@@ -11,7 +11,8 @@ import java.io.InputStream;
  */
 public final class PbmRowHistogram {
 
-  private PbmRowHistogram() { }
+  private PbmRowHistogram() {
+  }
 
   /**
    * Construct a row histogram from a PBM stream.

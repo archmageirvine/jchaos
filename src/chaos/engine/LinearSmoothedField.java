@@ -5,7 +5,6 @@ import chaos.board.World;
 /**
  * Field where the weight at a cell is a weight sum of all cells in the
  * specified underlying field.  Weight drops off linearly with distance.
- *
  * @author Sean A. Irvine
  */
 public class LinearSmoothedField implements ScalarField {

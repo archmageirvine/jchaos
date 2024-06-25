@@ -14,7 +14,6 @@ import chaos.util.PolyshieldEvent;
 
 /**
  * Sharpshooting.
- *
  * @author Sean A. Irvine
  */
 public class Sharpshooting extends FreeCastable {

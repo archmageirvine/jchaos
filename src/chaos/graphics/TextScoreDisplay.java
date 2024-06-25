@@ -12,7 +12,6 @@ import irvine.util.string.TextTable;
 
 /**
  * Text version of current scores.
- *
  * @author Sean A. Irvine
  */
 public class TextScoreDisplay implements ScoreDisplay {
@@ -24,7 +23,6 @@ public class TextScoreDisplay implements ScoreDisplay {
 
   /**
    * Construct a new score display.
-   *
    * @param w the world
    * @param wizards the array of wizards
    * @param indp wizards representing independents

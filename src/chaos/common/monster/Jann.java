@@ -12,7 +12,6 @@ import chaos.common.growth.OrangeJelly;
 
 /**
  * Jann.
- *
  * @author Sean A. Irvine
  */
 public class Jann extends Polycaster implements Humanoid {
@@ -24,10 +23,12 @@ public class Jann extends Polycaster implements Humanoid {
     setDefault(Attribute.INTELLIGENCE, 60);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00081E7E7E3C7C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Agathion.class;
@@ -35,7 +36,7 @@ public class Jann extends Polycaster implements Humanoid {
 
   /** Jann. */
   @SuppressWarnings("unchecked")
-  public Jann()  {
+  public Jann() {
     super(3, Quench.class,
       Boil.class,
       OrangeJelly.class,

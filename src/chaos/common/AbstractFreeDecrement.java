@@ -13,21 +13,18 @@ import chaos.util.PolyshieldDestroyEvent;
 
 /**
  * Superclass for the free decrement spells.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractFreeDecrement extends FreeCastable {
 
   /**
    * The decrement to be applied.
-   *
    * @return decrement
    */
   public abstract int decrement();
 
   /**
    * The attribute to be decremented.
-   *
    * @return attribute
    */
   public abstract Attribute attribute();
@@ -36,7 +33,6 @@ public abstract class AbstractFreeDecrement extends FreeCastable {
    * Given the set of potential cells affected by this spell, return
    * only those cells that are affected.  The default implementation
    * simply returns the full set.
-   *
    * @param affected affected set
    * @return filtered affected set
    */

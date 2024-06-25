@@ -107,7 +107,7 @@ public class Spiky extends MythosMonster implements UndyingGrowth {
   public Class<? extends Actor> sproutClass() {
     return Random.nextInt(8) == 0 ? DarkMatter.class : Spiky.class;
   }
-  
+
   @Override
   public boolean update(final World world, final Cell cell) {
     if (cell != null && Random.nextInt(DEATH_EXPECTED) == 0) {

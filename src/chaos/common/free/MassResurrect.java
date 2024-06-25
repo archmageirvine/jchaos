@@ -16,7 +16,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Mass resurrect.
- *
  * @author Sean A. Irvine
  */
 public class MassResurrect extends FreeCastable {

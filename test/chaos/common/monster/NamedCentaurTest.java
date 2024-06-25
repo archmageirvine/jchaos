@@ -11,7 +11,6 @@ import chaos.engine.AiEngine;
 
 /**
  * Tests this monster.
- *
  * @author Sean A. Irvine
  */
 public class NamedCentaurTest extends AbstractMonsterTest {

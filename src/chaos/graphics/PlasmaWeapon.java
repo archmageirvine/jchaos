@@ -11,12 +11,12 @@ import irvine.util.graphics.Plasma;
 
 /**
  * Plasma weapon effect.
- *
  * @author Sean A. Irvine
  */
 public final class PlasmaWeapon {
 
-  private PlasmaWeapon() { }
+  private PlasmaWeapon() {
+  }
 
   private static final int TOTAL_TIME = ChaosProperties.properties().getIntProperty("chaos.plasma.time", 4000);
 

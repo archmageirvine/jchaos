@@ -6,7 +6,6 @@ import chaos.common.Multiplicity;
 
 /**
  * Speed.
- *
  * @author Sean A. Irvine
  */
 public class Speed extends AbstractShield implements Multiplicity {

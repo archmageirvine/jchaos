@@ -5,7 +5,6 @@ import chaos.common.Actor;
 
 /**
  * A cell effect event.
- *
  * @author Sean A. Irvine
  */
 public class CellEffectEvent implements Event {
@@ -19,7 +18,6 @@ public class CellEffectEvent implements Event {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cell the cell effected
    * @param eventType the type of cell event
    * @param actor the actor this event is for
@@ -35,7 +33,6 @@ public class CellEffectEvent implements Event {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cell the cell effected
    * @param eventType the type of cell event
    * @param actor the actor this event is for
@@ -46,7 +43,6 @@ public class CellEffectEvent implements Event {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cell the cell effected
    * @param eventType the type of cell event
    */
@@ -56,7 +52,6 @@ public class CellEffectEvent implements Event {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cell the cell effected
    * @param eventType the type of cell event
    */
@@ -66,7 +61,6 @@ public class CellEffectEvent implements Event {
 
   /**
    * Return the type of this cell event.
-   *
    * @return cell event type
    */
   public CellEffectType getEventType() {
@@ -75,7 +69,6 @@ public class CellEffectEvent implements Event {
 
   /**
    * Get the number of the cell.
-   *
    * @return a cell number
    */
   public int getCellNumber() {
@@ -84,7 +77,6 @@ public class CellEffectEvent implements Event {
 
   /**
    * Get the actor being cast.
-   *
    * @return a actor
    */
   public Actor getActor() {

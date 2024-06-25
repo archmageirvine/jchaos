@@ -9,7 +9,6 @@ import chaos.common.PowerUps;
 
 /**
  * Talisman.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

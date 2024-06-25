@@ -14,7 +14,6 @@ import irvine.util.graphics.Walls;
 
 /**
  * Algorithmically generate some imagery.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractGenerateGraphics {
@@ -114,30 +113,30 @@ public abstract class AbstractGenerateGraphics {
     g.setColor(Color.RED);
     final int x0, y0, x1, y1;
     switch (quadrant) {
-    case 0:
-      x0 = m - d;
-      y0 = m - d;
-      x1 = m + d + 1;
-      y1 = m - d;
-      break;
-    case 1:
-      x0 = m - d;
-      y0 = m + d + 1;
-      x1 = m - d;
-      y1 = m - d;
-      break;
-    case 2:
-      x0 = m + d + 1;
-      y0 = m + d + 1;
-      x1 = m - d;
-      y1 = m + d + 1;
-      break;
-    default:
-      x0 = m + d + 1;
-      y0 = m - d;
-      x1 = m + d + 1;
-      y1 = m + d + 1;
-      break;
+      case 0:
+        x0 = m - d;
+        y0 = m - d;
+        x1 = m + d + 1;
+        y1 = m - d;
+        break;
+      case 1:
+        x0 = m - d;
+        y0 = m + d + 1;
+        x1 = m - d;
+        y1 = m - d;
+        break;
+      case 2:
+        x0 = m + d + 1;
+        y0 = m + d + 1;
+        x1 = m - d;
+        y1 = m + d + 1;
+        break;
+      default:
+        x0 = m + d + 1;
+        y0 = m - d;
+        x1 = m + d + 1;
+        y1 = m + d + 1;
+        break;
     }
     final int[] x = {m, x0, x1};
     final int[] y = {m, y0, y1};
@@ -162,7 +161,7 @@ public abstract class AbstractGenerateGraphics {
   }
 
   private void makeTextTile(final int tilePosition, final String code, final String text) throws IOException {
-    makeTextTile(tilePosition, code, text,  0xFF636363);
+    makeTextTile(tilePosition, code, text, 0xFF636363);
   }
 
   private void makePlainTile(final int tilePosition, final int color) throws IOException {

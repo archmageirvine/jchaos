@@ -8,17 +8,16 @@ import javax.imageio.ImageIO;
 
 /**
  * Load an image from a resource.
- *
  * @author Sean A. Irvine
  */
 public final class ImageLoader {
 
-  private ImageLoader() { }
+  private ImageLoader() {
+  }
 
   /**
    * Load an image from a resource. It is assumed this will work,
    * and I/O error is converted into a <code>RuntimeException</code>.
-   *
    * @param resource resource to load from
    * @return resulting image
    */

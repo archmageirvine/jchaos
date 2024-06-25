@@ -11,14 +11,15 @@ import irvine.util.io.IOUtils;
 
 /**
  * Compute a rating for each actor.
- *
  * @author Sean A. Irvine
  */
 public final class Lethality {
 
-  private Lethality() { }
+  private Lethality() {
+  }
 
   private static final HashSet<Class<? extends Castable>> CASTABLES = new HashSet<>();
+
   static {
     try {
       try (final BufferedReader is = IOUtils.reader("chaos/resources/frequency.txt")) {

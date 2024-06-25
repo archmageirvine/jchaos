@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Crystal ball.
- *
  * @author Sean A. Irvine
  */
 public class CrystalBall extends FreePowerUp {

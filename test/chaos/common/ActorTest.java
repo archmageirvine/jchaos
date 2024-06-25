@@ -7,7 +7,6 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ActorTest extends AbstractActorTest {

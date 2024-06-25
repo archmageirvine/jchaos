@@ -22,12 +22,12 @@ import irvine.tile.TileImage;
 
 /**
  * Shield effect.
- *
  * @author Sean A. Irvine
  */
 public class ShieldEffect extends AbstractEffect {
 
   static final HashMap<Attribute, String> SHIELD_SOUND = new HashMap<>();
+
   static {
     SHIELD_SOUND.put(Attribute.AGILITY, "chaos/resources/sound/casting/Smash");
     SHIELD_SOUND.put(Attribute.AGILITY_RECOVERY, "chaos/resources/sound/casting/Smash");

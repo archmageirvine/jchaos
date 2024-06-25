@@ -14,7 +14,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Alliance.
- *
  * @author Sean A. Irvine
  * @author Jonathan Levell
  */

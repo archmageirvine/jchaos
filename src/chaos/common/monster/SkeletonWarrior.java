@@ -10,7 +10,6 @@ import chaos.common.Virtuous;
 
 /**
  * Skeleton warrior.
- *
  * @author Sean A. Irvine
  */
 public class SkeletonWarrior extends UndeadMonster implements Humanoid, Promotion, Virtuous {

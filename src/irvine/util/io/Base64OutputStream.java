@@ -12,7 +12,6 @@ import java.nio.charset.StandardCharsets;
  * By default 76 BASE64 characters are output per line, but this can be
  * modified by using the appropriate constructor.  Uses local line breaking
  * conventions.
- *
  * @author Sean A. Irvine
  */
 public class Base64OutputStream extends FilterOutputStream {
@@ -43,10 +42,9 @@ public class Base64OutputStream extends FilterOutputStream {
    * Create an output stream using BASE64 encoding with a given
    * number of characters per line. RFC 2045 suggests that the
    * number of columns should not exceed 76.
-   *
    * @param out underlying output stream
    * @param cols number of columns to use
-   * @exception IllegalArgumentException if <code>cols &lt; 1</code>
+   * @throws IllegalArgumentException if <code>cols &lt; 1</code>
    */
   public Base64OutputStream(final OutputStream out, final int cols) {
     super(out);
@@ -58,7 +56,6 @@ public class Base64OutputStream extends FilterOutputStream {
 
   /**
    * Create an output stream using BASE64 encoding.
-   *
    * @param out underlying output stream
    */
   public Base64OutputStream(final OutputStream out) {
@@ -67,8 +64,7 @@ public class Base64OutputStream extends FilterOutputStream {
 
   /**
    * Used to check validity of stream before writes etc.
-   *
-   * @exception IOException if stream is actually closed
+   * @throws IOException if stream is actually closed
    */
   private void valid() throws IOException {
     if (out == null) {
@@ -88,27 +84,27 @@ public class Base64OutputStream extends FilterOutputStream {
   /** Write up to four BASE64 characters. */
   private void writeBuffer() throws IOException {
     switch (mUsed) {
-    case 0:
-      return;
-    case 1:
-      doWrite(BASE64[(mBuffer >>> 2) & LOW_SIX]);
-      doWrite(BASE64[(mBuffer << 4) & LOW_SIX]);
-      doWrite('=');
-      doWrite('=');
-      break;
-    case 2:
-      doWrite(BASE64[(mBuffer >>> 10) & LOW_SIX]);
-      doWrite(BASE64[(mBuffer >>> 4) & LOW_SIX]);
-      doWrite(BASE64[(mBuffer << 2) & LOW_SIX]);
-      doWrite('=');
-      break;
-    default:
-      assert mUsed == 3;
-      doWrite(BASE64[(mBuffer >>> 18) & LOW_SIX]);
-      doWrite(BASE64[(mBuffer >>> 12) & LOW_SIX]);
-      doWrite(BASE64[(mBuffer >>> 6) & LOW_SIX]);
-      doWrite(BASE64[mBuffer & LOW_SIX]);
-      break;
+      case 0:
+        return;
+      case 1:
+        doWrite(BASE64[(mBuffer >>> 2) & LOW_SIX]);
+        doWrite(BASE64[(mBuffer << 4) & LOW_SIX]);
+        doWrite('=');
+        doWrite('=');
+        break;
+      case 2:
+        doWrite(BASE64[(mBuffer >>> 10) & LOW_SIX]);
+        doWrite(BASE64[(mBuffer >>> 4) & LOW_SIX]);
+        doWrite(BASE64[(mBuffer << 2) & LOW_SIX]);
+        doWrite('=');
+        break;
+      default:
+        assert mUsed == 3;
+        doWrite(BASE64[(mBuffer >>> 18) & LOW_SIX]);
+        doWrite(BASE64[(mBuffer >>> 12) & LOW_SIX]);
+        doWrite(BASE64[(mBuffer >>> 6) & LOW_SIX]);
+        doWrite(BASE64[mBuffer & LOW_SIX]);
+        break;
     }
     mUsed = 0;
   }
@@ -143,7 +139,6 @@ public class Base64OutputStream extends FilterOutputStream {
 
   /**
    * Convenience method to BASE64 encode raw bytes as a string.
-   *
    * @param raw data to encode
    * @param cols number of columns
    * @return BASE64 encoded version of raw bytes
@@ -153,7 +148,7 @@ public class Base64OutputStream extends FilterOutputStream {
       final ByteArrayOutputStream os = new ByteArrayOutputStream();
       try {
         try (final Base64OutputStream bos = new Base64OutputStream(os, cols)) {
-        bos.write(raw);
+          bos.write(raw);
         }
       } finally {
         os.close();
@@ -168,9 +163,8 @@ public class Base64OutputStream extends FilterOutputStream {
   /**
    * Encode data from standard input using BASE64, sending the result to
    * standard output.
-   *
    * @param args ignored
-   * @exception IOException if an error occurs
+   * @throws IOException if an error occurs
    */
   public static void main(final String[] args) throws IOException {
     try (final Base64OutputStream bos = new Base64OutputStream(System.out)) {

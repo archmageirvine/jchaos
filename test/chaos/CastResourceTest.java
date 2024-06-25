@@ -14,7 +14,6 @@ import junit.framework.TestCase;
 /**
  * Tests the cast resources to make sure all entries correspond to existent
  * spells and checks the spelling and length of the entries.
- *
  * @author Sean A. Irvine
  */
 public class CastResourceTest extends TestCase {
@@ -24,8 +23,7 @@ public class CastResourceTest extends TestCase {
    * is tricky because it is not trivial to get a list of all classes implementing
    * Castable in the classpath.  Therefore we resort to a nasty retrieval from
    * the frequency resource as well.
-   *
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public void testExistence() throws Exception {
     final StringBuilder sb = new StringBuilder();

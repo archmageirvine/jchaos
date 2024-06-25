@@ -654,52 +654,52 @@ public class Animator implements EventListener {
 
   private Thread init() {
     final Thread animator = new Thread() {
-        @Override
-        public synchronized void run() {
-          while (!Thread.currentThread().isInterrupted()) {
-            if (mHighlightedCells != null) {
-              for (int c = 0; c < mWorld.size(); ++c) {
-                synchronized (mScreen.lock()) {
-                  drawCell(c);
-                  if (c == mHighlightedCell) {
-                    highlight(c);
-                  } else if (mHighlightedCells != null && mHighlightedCells.contains(c)) {
-                    // Check for null above is essential, because our lock
-                    // is not high enough to guarantee that mHighlightedCells
-                    // has not changed between the initial test and the position in the loop.
-                    lightHighlight(c);
-                  }
-                  if (c == mWingsCell) {
-                    wings(c);
-                  } else if (c == mShootCell) {
-                    shoot(c);
-                  }
+      @Override
+      public synchronized void run() {
+        while (!Thread.currentThread().isInterrupted()) {
+          if (mHighlightedCells != null) {
+            for (int c = 0; c < mWorld.size(); ++c) {
+              synchronized (mScreen.lock()) {
+                drawCell(c);
+                if (c == mHighlightedCell) {
+                  highlight(c);
+                } else if (mHighlightedCells != null && mHighlightedCells.contains(c)) {
+                  // Check for null above is essential, because our lock
+                  // is not high enough to guarantee that mHighlightedCells
+                  // has not changed between the initial test and the position in the loop.
+                  lightHighlight(c);
                 }
-              }
-            } else {
-              for (int c = 0; c < mWorld.size(); ++c) {
-                synchronized (mScreen.lock()) {
-                  drawCell(c);
-                  if (c == mHighlightedCell) {
-                    highlight(c);
-                  }
-                  if (c == mWingsCell) {
-                    wings(c);
-                  } else if (c == mShootCell) {
-                    shoot(c);
-                  }
+                if (c == mWingsCell) {
+                  wings(c);
+                } else if (c == mShootCell) {
+                  shoot(c);
                 }
               }
             }
-            // pause until next frame
-            try {
-              this.wait(APAUSE);
-            } catch (final InterruptedException e) {
-              return;
+          } else {
+            for (int c = 0; c < mWorld.size(); ++c) {
+              synchronized (mScreen.lock()) {
+                drawCell(c);
+                if (c == mHighlightedCell) {
+                  highlight(c);
+                }
+                if (c == mWingsCell) {
+                  wings(c);
+                } else if (c == mShootCell) {
+                  shoot(c);
+                }
+              }
             }
           }
+          // pause until next frame
+          try {
+            this.wait(APAUSE);
+          } catch (final InterruptedException e) {
+            return;
+          }
         }
-      };
+      }
+    };
     if (PRIORITY != 1) {
       animator.setPriority(Math.max(1, animator.getPriority() / PRIORITY));
     }

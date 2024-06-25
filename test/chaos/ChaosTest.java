@@ -38,7 +38,6 @@ import irvine.TestUtils;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ChaosTest extends StandardIoTestCase {

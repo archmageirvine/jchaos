@@ -14,7 +14,6 @@ import chaos.util.Sleep;
 
 /**
  * Wizard explosion effect.
- *
  * @author Sean A. Irvine
  */
 public class WizardExplodeEffect extends AbstractEffect {

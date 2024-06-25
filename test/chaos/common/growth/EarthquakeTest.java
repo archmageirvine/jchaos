@@ -12,7 +12,6 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests this growth.
- *
  * @author Sean A. Irvine
  */
 public class EarthquakeTest extends AbstractActorTest {

@@ -6,7 +6,6 @@ import chaos.common.Realm;
 
 /**
  * The basilisk.
- *
  * @author Sean A. Irvine
  */
 public class Basilisk extends Monster {
@@ -23,14 +22,17 @@ public class Basilisk extends Monster {
     setRangedCombatApply(Attribute.MOVEMENT);
     setSpecialCombatApply(Attribute.LIFE);
   }
+
   @Override
   public int getCastRange() {
     return 2;
   }
+
   @Override
   public long getLosMask() {
     return 0x000000C0FF7F4E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Crocodile.class;

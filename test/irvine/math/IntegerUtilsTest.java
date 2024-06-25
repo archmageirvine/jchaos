@@ -8,7 +8,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class IntegerUtilsTest extends TestCase {
@@ -626,7 +625,7 @@ public class IntegerUtilsTest extends TestCase {
     assertEquals(5, IntegerUtils.incrementConstantPopCount(3));
     assertEquals(6, IntegerUtils.incrementConstantPopCount(5));
   }
-  
+
   public void testSum() {
     assertEquals(42, IntegerUtils.sum(42));
     assertEquals(42, IntegerUtils.sum(new int[] {20, 22}));

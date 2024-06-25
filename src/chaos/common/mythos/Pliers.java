@@ -7,7 +7,6 @@ import chaos.common.MythosMonster;
 
 /**
  * Pliers.
- *
  * @author Sean A. Irvine
  */
 public class Pliers extends MythosMonster implements Humanoid {
@@ -19,10 +18,12 @@ public class Pliers extends MythosMonster implements Humanoid {
     setDefault(Attribute.MOVEMENT, 2);
     setDefault(Attribute.COMBAT, 14);
   }
+
   @Override
   public long getLosMask() {
     return 0x3C3C3C7E7EFFDBDBL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Orange.class;

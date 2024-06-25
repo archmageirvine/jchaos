@@ -10,12 +10,12 @@ import irvine.util.graphics.Lightning;
 
 /**
  * Lightning weapon effect.
- *
  * @author Sean A. Irvine
  */
 public final class LightningWeapon {
 
-  private LightningWeapon() { }
+  private LightningWeapon() {
+  }
 
   static void render(final World world, final ChaosScreen screen, final Graphics g, final WeaponEffectEvent e, final int width, final int widthBits, final int milliseconds) {
     final int source = e.getSource();

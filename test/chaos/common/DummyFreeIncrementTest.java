@@ -5,7 +5,6 @@ import chaos.common.free.Helmet;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class DummyFreeIncrementTest extends AbstractFreeIncrementTest {

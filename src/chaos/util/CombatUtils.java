@@ -38,7 +38,6 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Combat utility functions.
- *
  * @author Sean A. Irvine
  */
 public class CombatUtils extends DefaultEventGenerator {
@@ -95,7 +94,6 @@ public class CombatUtils extends DefaultEventGenerator {
   /**
    * Promote the given actor to an actor of the specified class.  For most
    * attributes this retains the best option.
-   *
    * @param a actor to promote
    * @param c cell to promote
    * @param promoClass promotion
@@ -137,7 +135,6 @@ public class CombatUtils extends DefaultEventGenerator {
 
   /**
    * Examine adjacent cells for possible places to dump the horror.
-   *
    * @param m monster that is a horror
    * @param target current c
    */
@@ -186,7 +183,6 @@ public class CombatUtils extends DefaultEventGenerator {
    *
    * Some stats (e.g. the recovery stats) can go negative.  Negative
    * values are effectively poisoning.
-   *
    * @param world the world
    * @param player who is making this move
    * @param attacker what is the attacker
@@ -227,20 +223,20 @@ public class CombatUtils extends DefaultEventGenerator {
     int combat;
     final Attribute attributeToAttack;
     switch (type) {
-    case NORMAL:
-      combat = attacker.get(Attribute.COMBAT);
-      attributeToAttack = attacker.getCombatApply();
-      break;
-    case RANGED:
-      combat = attacker.get(Attribute.RANGED_COMBAT);
-      attributeToAttack = attacker.getRangedCombatApply();
-      break;
-    case SPECIAL:
-      combat = attacker.get(Attribute.SPECIAL_COMBAT);
-      attributeToAttack = attacker.getSpecialCombatApply();
-      break;
-    default:
-      throw new IllegalArgumentException();
+      case NORMAL:
+        combat = attacker.get(Attribute.COMBAT);
+        attributeToAttack = attacker.getCombatApply();
+        break;
+      case RANGED:
+        combat = attacker.get(Attribute.RANGED_COMBAT);
+        attributeToAttack = attacker.getRangedCombatApply();
+        break;
+      case SPECIAL:
+        combat = attacker.get(Attribute.SPECIAL_COMBAT);
+        attributeToAttack = attacker.getSpecialCombatApply();
+        break;
+      default:
+        throw new IllegalArgumentException();
     }
     // modify combat according to power-ups
     final Monster tm = ta instanceof Monster ? (Monster) ta : null;
@@ -444,7 +440,7 @@ public class CombatUtils extends DefaultEventGenerator {
   public static void performSpecialCombat(final World world, final MoveMaster mm) {
     // Cells are considered in a random order, to prevent any specific player
     // getting an advantage by being at the top-left of the screen
-    for (final Iterator<Cell> i = world.randomIterator(); i.hasNext();) {
+    for (final Iterator<Cell> i = world.randomIterator(); i.hasNext(); ) {
       final Cell c = i.next();
       final int cn = c.getCellNumber();
       final Actor a = c.peek();

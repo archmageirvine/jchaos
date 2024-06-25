@@ -8,7 +8,6 @@ import chaos.common.State;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class SpikyTest extends AbstractMonsterTest {

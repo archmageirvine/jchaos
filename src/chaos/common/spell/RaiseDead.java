@@ -17,7 +17,6 @@ import chaos.util.Restore;
 
 /**
  * Raise dead.
- *
  * @author Sean A. Irvine
  */
 public class RaiseDead extends Castable implements TargetFilter {
@@ -25,10 +24,12 @@ public class RaiseDead extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_DEAD | CAST_LOS;
   }
+
   @Override
   public int getCastRange() {
     return 8;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {

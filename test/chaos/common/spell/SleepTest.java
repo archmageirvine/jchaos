@@ -12,7 +12,6 @@ import chaos.util.EventListener;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class SleepTest extends AbstractCastableTest {

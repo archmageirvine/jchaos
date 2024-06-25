@@ -8,13 +8,13 @@ import java.util.Random;
  */
 public final class Shuffle {
 
-  private Shuffle() { }
+  private Shuffle() {
+  }
 
   private static final Random RANDOM = new Random();
 
   /**
    * Produce a random shuffle on the integers from 0 to <code>n-1</code>.
-   *
    * @param n size of array
    * @return shuffle
    */
@@ -102,7 +102,6 @@ public final class Shuffle {
 
   /**
    * Print a shuffle of specified number of elements.
-   *
    * @param args number of items
    */
   public static void main(final String[] args) {

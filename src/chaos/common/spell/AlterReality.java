@@ -17,7 +17,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Alter reality.
- *
  * @author Sean A. Irvine
  */
 public class AlterReality extends Castable implements TargetFilter {
@@ -72,7 +71,7 @@ public class AlterReality extends Castable implements TargetFilter {
       }
     }
     // Eliminate everything else
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       if (it.next() != best) {
         it.remove();
       }

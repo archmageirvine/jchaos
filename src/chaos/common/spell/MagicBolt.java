@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Magic bolt.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -20,10 +19,12 @@ public class MagicBolt extends AbstractDecrement {
   public int getCastRange() {
     return 8;
   }
+
   @Override
   public int decrement() {
     return 30;
   }
+
   @Override
   public Attribute attribute() {
     return Attribute.MAGICAL_RESISTANCE;

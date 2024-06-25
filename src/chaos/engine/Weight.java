@@ -17,26 +17,26 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Threat assessment used by the AI.
- *
  * @author Sean A. Irvine
  */
 public final class Weight {
 
-  private Weight() { }
+  private Weight() {
+  }
 
   private static double statRating(final Attribute a) {
     switch (a) {
-    case AGILITY:
-      return 0.1;
-    case INTELLIGENCE:
-    case MAGICAL_RESISTANCE:
-      return 0.3;
-    case MOVEMENT:
-      return 0.5;
-    case SPECIAL_COMBAT:
-      return 1.2;
-    default:
-      return 1;
+      case AGILITY:
+        return 0.1;
+      case INTELLIGENCE:
+      case MAGICAL_RESISTANCE:
+        return 0.3;
+      case MOVEMENT:
+        return 0.5;
+      case SPECIAL_COMBAT:
+        return 1.2;
+      default:
+        return 1;
     }
   }
 
@@ -50,7 +50,6 @@ public final class Weight {
    * Return a number representing how lethal the given actor is.  The higher
    * the number the more lethal the actor it represents.  This is a raw
    * rating that does not take into account the position of the actor.
-   *
    * @param a an <code>Actor</code> value
    * @return weight
    */
@@ -120,18 +119,18 @@ public final class Weight {
       x *= 0.4;
     }
     switch (a.getRealm()) {
-    case ETHERIC:
-    case MYTHOS:
-      x *= 1.5;
-      break;
-    case DRACONIC:
-      x *= 1.1;
-      break;
-    case DEMONIC:
-      x *= 1.7;
-      break;
-    default:
-      break;
+      case ETHERIC:
+      case MYTHOS:
+        x *= 1.5;
+        break;
+      case DRACONIC:
+        x *= 1.1;
+        break;
+      case DEMONIC:
+        x *= 1.7;
+        break;
+      default:
+        break;
     }
     return x;
   }

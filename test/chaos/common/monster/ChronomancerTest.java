@@ -5,7 +5,6 @@ import chaos.common.Castable;
 
 /**
  * Tests this monster.
- *
  * @author Sean A. Irvine
  */
 public class ChronomancerTest extends AbstractUnicasterTest {

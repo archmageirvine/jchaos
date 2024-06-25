@@ -7,7 +7,6 @@ import chaos.common.State;
 
 /**
  * Tests this monster.
- *
  * @author Sean A. Irvine
  */
 public class SprigganTest extends AbstractMonsterTest {

@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * Provides a default implementation of the <code>list()</code> method.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractTileEffect implements TileEffect {

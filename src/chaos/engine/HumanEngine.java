@@ -95,7 +95,7 @@ public class HumanEngine extends DefaultEventGenerator implements PlayerEngine, 
    * Set the screen this human engine should use.
    * @param screen the screen
    * @param tileManager tile manager
-   * @exception NullPointerException if <code>screen</code> is null
+   * @throws NullPointerException if <code>screen</code> is null
    */
   public void setScreen(final ChaosScreen screen, final TileManager tileManager) {
     if (screen == null) {
@@ -159,54 +159,65 @@ public class HumanEngine extends DefaultEventGenerator implements PlayerEngine, 
   }
 
   @Override
-  public void mousePressed(final MouseEvent e) { }
+  public void mousePressed(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseReleased(final MouseEvent e) { }
+  public void mouseReleased(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseEntered(final MouseEvent e) { }
+  public void mouseEntered(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseExited(final MouseEvent e) { }
+  public void mouseExited(final MouseEvent e) {
+  }
+
   @Override
-  public void mouseDragged(final MouseEvent e) { }
+  public void mouseDragged(final MouseEvent e) {
+  }
+
   @Override
-  public void keyTyped(final KeyEvent e) { }
+  public void keyTyped(final KeyEvent e) {
+  }
 
   private void handleButton3() {
     cleanUp();
     switch (mState) {
-    case SHOOTING:
-      notify(new CellEffectEvent(NOTHING_SELECTED, CellEffectType.HIGHLIGHT_EVENT));
-      notify(new TextEvent("Ranged combat aborted"));
-      mountedShooting();
-      break;
-    case MOUNTED_SHOOTING:
-      mState = HumanEngineState.AWAITING_SELECT;
-      mScreen.setCursor(CursorName.CROSS);
-      mActive = NOTHING_SELECTED;
-      notify(new CellEffectEvent(NOTHING_SELECTED, CellEffectType.HIGHLIGHT_EVENT));
-      notify(new TextEvent("Ranged combat aborted"));
-      break;
-    case MOVE_IN_PROGRESS:
-      notify(new TextEvent("Move aborted"));
-      shooting();
-      break;
-    case DISMOUNTING:
-      mState = HumanEngineState.AWAITING_SELECT;
-      mScreen.setCursor(CursorName.CROSS);
-      mActive = NOTHING_SELECTED;
-      notify(new CellEffectEvent(NOTHING_SELECTED, CellEffectType.HIGHLIGHT_EVENT));
-      notify(new TextEvent("Dismount aborted"));
-      break;
-    case CAST_CLICK:
-      mState = HumanEngineState.IDLE;
-      mScreen.setCursor(CursorName.BLANK);
-      notify(new CellEffectEvent(NOTHING_SELECTED, CellEffectType.HIGHLIGHT_EVENT));
-      notify(new TextEvent("Cast aborted"));
-      mCastAborted = true;
-      mDone.setValue(true); // last to prevent race condition
-      break;
-    default:
-      break;
+      case SHOOTING:
+        notify(new CellEffectEvent(NOTHING_SELECTED, CellEffectType.HIGHLIGHT_EVENT));
+        notify(new TextEvent("Ranged combat aborted"));
+        mountedShooting();
+        break;
+      case MOUNTED_SHOOTING:
+        mState = HumanEngineState.AWAITING_SELECT;
+        mScreen.setCursor(CursorName.CROSS);
+        mActive = NOTHING_SELECTED;
+        notify(new CellEffectEvent(NOTHING_SELECTED, CellEffectType.HIGHLIGHT_EVENT));
+        notify(new TextEvent("Ranged combat aborted"));
+        break;
+      case MOVE_IN_PROGRESS:
+        notify(new TextEvent("Move aborted"));
+        shooting();
+        break;
+      case DISMOUNTING:
+        mState = HumanEngineState.AWAITING_SELECT;
+        mScreen.setCursor(CursorName.CROSS);
+        mActive = NOTHING_SELECTED;
+        notify(new CellEffectEvent(NOTHING_SELECTED, CellEffectType.HIGHLIGHT_EVENT));
+        notify(new TextEvent("Dismount aborted"));
+        break;
+      case CAST_CLICK:
+        mState = HumanEngineState.IDLE;
+        mScreen.setCursor(CursorName.BLANK);
+        notify(new CellEffectEvent(NOTHING_SELECTED, CellEffectType.HIGHLIGHT_EVENT));
+        notify(new TextEvent("Cast aborted"));
+        mCastAborted = true;
+        mDone.setValue(true); // last to prevent race condition
+        break;
+      default:
+        break;
     }
   }
 
@@ -324,21 +335,21 @@ public class HumanEngine extends DefaultEventGenerator implements PlayerEngine, 
 
   private void performDismount(final int cell) {
     switch (mMoveMaster.dismount(mWizard, mActive, cell)) {
-    case MoveMaster.ILLEGAL:
-      notify(new TextEvent("Cannot dismount to that cell"));
-      break;
-    case MoveMaster.OK:
-      Sound.beep();
-      mActive = cell; // so that shooting will work
-      shooting();
-      break;
-    case MoveMaster.COMBAT_FAILED:
-    case MoveMaster.INVULNERABLE:
-      Sound.beep();
-      shooting();
-      break;
-    default:
-      break;
+      case MoveMaster.ILLEGAL:
+        notify(new TextEvent("Cannot dismount to that cell"));
+        break;
+      case MoveMaster.OK:
+        Sound.beep();
+        mActive = cell; // so that shooting will work
+        shooting();
+        break;
+      case MoveMaster.COMBAT_FAILED:
+      case MoveMaster.INVULNERABLE:
+        Sound.beep();
+        shooting();
+        break;
+      default:
+        break;
     }
   }
 
@@ -362,55 +373,55 @@ public class HumanEngine extends DefaultEventGenerator implements PlayerEngine, 
     final int moveState = cell >= 0 && mMoveHelper.distance(cell) >= 0 ? smartWalkingMove(mActive, cell) : mMoveMaster.move(mWizard, mActive, cell);
     mScreen.setCursor(CursorName.CROSS);
     switch (moveState) {
-    case MoveMaster.ILLEGAL:
-      notify(new TextEvent("Cannot move to that cell"));
-      return false;
-    case MoveMaster.PARTIAL:
-      notify(new HighlightEvent(null));
-      Sound.beep();
-      mActive = cell;
-      notify(new CellEffectEvent(cell, CellEffectType.HIGHLIGHT_EVENT));
-      describeMove(cell);
-      return false;
-    case MoveMaster.OK:
-      updateInfoDisplay(mWorld.actor(cell), 1);
-      Sound.beep();
-      // Usually the mover will now be in cell, but this might not be the case
-      // if the mover and no movement or the target cell was an elemental. Cf. Bug#353
-      // Handling of promotion here also dubious
-      if (source.equals(mWorld.actor(cell))) {
+      case MoveMaster.ILLEGAL:
+        notify(new TextEvent("Cannot move to that cell"));
+        return false;
+      case MoveMaster.PARTIAL:
+        notify(new HighlightEvent(null));
+        Sound.beep();
         mActive = cell;
-      } else {
-        final Actor d = mWorld.actor(cell);
-        if (d instanceof Conveyance && source.equals(((Conveyance) d).getMount())) {
-          // Looks like a successful mount happened, cascade down to shooting from the mount
+        notify(new CellEffectEvent(cell, CellEffectType.HIGHLIGHT_EVENT));
+        describeMove(cell);
+        return false;
+      case MoveMaster.OK:
+        updateInfoDisplay(mWorld.actor(cell), 1);
+        Sound.beep();
+        // Usually the mover will now be in cell, but this might not be the case
+        // if the mover and no movement or the target cell was an elemental. Cf. Bug#353
+        // Handling of promotion here also dubious
+        if (source.equals(mWorld.actor(cell))) {
           mActive = cell;
-          mountedShooting();
-        }
-        // Heuristic checking for situation where a move resulted in promotion
-        if (source instanceof Promotion) {
-          final Actor now = mWorld.actor(cell);
-          if (now != null && now.getOwner() == source.getOwner() && ((Promotion) source).promotion().equals(now.getClass())) {
+        } else {
+          final Actor d = mWorld.actor(cell);
+          if (d instanceof Conveyance && source.equals(((Conveyance) d).getMount())) {
+            // Looks like a successful mount happened, cascade down to shooting from the mount
             mActive = cell;
+            mountedShooting();
+          }
+          // Heuristic checking for situation where a move resulted in promotion
+          if (source instanceof Promotion) {
+            final Actor now = mWorld.actor(cell);
+            if (now != null && now.getOwner() == source.getOwner() && ((Promotion) source).promotion().equals(now.getClass())) {
+              mActive = cell;
+            }
           }
         }
-      }
-      break;
-    case MoveMaster.COMBAT_FAILED:
-    case MoveMaster.INVULNERABLE:
-      if (!source.equals(mWorld.actor(mActive))) {
-        // Although the combat etc. might have failed, the creature might have moved.
-        final Cell newLocation = mWorld.getCell(source);
-        if (newLocation != null) {
-          mActive = newLocation.getCellNumber();
+        break;
+      case MoveMaster.COMBAT_FAILED:
+      case MoveMaster.INVULNERABLE:
+        if (!source.equals(mWorld.actor(mActive))) {
+          // Although the combat etc. might have failed, the creature might have moved.
+          final Cell newLocation = mWorld.getCell(source);
+          if (newLocation != null) {
+            mActive = newLocation.getCellNumber();
+          }
         }
-      }
-      updateInfoDisplay(mWorld.actor(cell), 1);
-      Sound.beep();
-      shooting();
-      break;
-    default:
-      break;
+        updateInfoDisplay(mWorld.actor(cell), 1);
+        Sound.beep();
+        shooting();
+        break;
+      default:
+        break;
     }
     if (!shooting()) {
       updateAutoSelection();
@@ -531,33 +542,33 @@ public class HumanEngine extends DefaultEventGenerator implements PlayerEngine, 
       final int cell = pixelToCell(e);
       if (cell >= 0) {
         switch (mState) {
-        case AWAITING_SELECT:
-          // Order of conditions in next inequality is critcal
-          if (!updateSelection(cell) && !checkForDismount(cell)) {
-            notify(new TextEvent("Cannot move that object"));
-          }
-          break;
-        case SHOOTING:
-          performShot(cell);
-          break;
-        case MOUNTED_SHOOTING:
-          performMountedShot(cell);
-          updateAutoSelection();
-          break;
-        case MOVE_IN_PROGRESS:
-          if (cell != mActive || !checkForDismount(cell)) {
-            performMoveInProgress(cell);
-          }
-          break;
-        case DISMOUNTING:
-          cleanUp();
-          performDismount(cell);
-          break;
-        case CAST_CLICK:
-          performCast(cell);
-          break;
-        default:
-          break;
+          case AWAITING_SELECT:
+            // Order of conditions in next inequality is critcal
+            if (!updateSelection(cell) && !checkForDismount(cell)) {
+              notify(new TextEvent("Cannot move that object"));
+            }
+            break;
+          case SHOOTING:
+            performShot(cell);
+            break;
+          case MOUNTED_SHOOTING:
+            performMountedShot(cell);
+            updateAutoSelection();
+            break;
+          case MOVE_IN_PROGRESS:
+            if (cell != mActive || !checkForDismount(cell)) {
+              performMoveInProgress(cell);
+            }
+            break;
+          case DISMOUNTING:
+            cleanUp();
+            performDismount(cell);
+            break;
+          case CAST_CLICK:
+            performCast(cell);
+            break;
+          default:
+            break;
         }
         e.consume();
       }
@@ -587,10 +598,10 @@ public class HumanEngine extends DefaultEventGenerator implements PlayerEngine, 
       }
     } else {
       if (c != mOldCell) {
-   //     new Thread(() -> {
-          updateInfoDisplay(mWorld.actor(c), 1);
-          mOldCell = c;
-     //   }).start();
+        //     new Thread(() -> {
+        updateInfoDisplay(mWorld.actor(c), 1);
+        mOldCell = c;
+        //   }).start();
       }
       if (mState != HumanEngineState.MOVE_IN_PROGRESS && mState != HumanEngineState.SHOOTING && mState != HumanEngineState.MOUNTED_SHOOTING) {
         mScreen.highlightContinue(false); // unhighlight continue

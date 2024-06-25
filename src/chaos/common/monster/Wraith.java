@@ -7,7 +7,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Wraith.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -21,6 +20,7 @@ public class Wraith extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.AGILITY, 7);
     setDefault(Attribute.MOVEMENT, 2);
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Wight.class;

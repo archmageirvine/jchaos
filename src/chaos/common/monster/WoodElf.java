@@ -11,7 +11,6 @@ import chaos.common.Rider;
 
 /**
  * Wood elf.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -29,18 +28,22 @@ public class WoodElf extends MaterialMonster implements Promotion, Humanoid, Bow
     setDefault(Attribute.RANGE, 4);
     set(PowerUps.ARCHERY, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00387C3838181800L;
   }
+
   @Override
   public Class<? extends Monster> promotion() {
     return DreadElf.class;
   }
+
   @Override
   public int promotionCount() {
     return 5;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return StoneGolem.class;

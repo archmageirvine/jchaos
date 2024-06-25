@@ -2,7 +2,6 @@ package chaos.common;
 
 /**
  * Tests variables defined for a Unicaster.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractUnicasterTest extends AbstractMonsterTest {

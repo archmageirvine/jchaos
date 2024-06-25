@@ -10,7 +10,6 @@ import chaos.common.spell.MagicBolt;
 
 /**
  * Druid.
- *
  * @author Sean A. Irvine
  */
 public class Druid extends Polycaster implements Humanoid {
@@ -22,10 +21,12 @@ public class Druid extends Polycaster implements Humanoid {
     setDefault(Attribute.INTELLIGENCE, 100);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00189CFE7E3C3E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Bandit.class;

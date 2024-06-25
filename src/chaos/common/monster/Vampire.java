@@ -10,7 +10,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Vampire.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

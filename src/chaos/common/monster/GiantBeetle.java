@@ -7,7 +7,6 @@ import chaos.common.Promotion;
 
 /**
  * Giant beetle.
- *
  * @author Sean A. Irvine
  */
 public class GiantBeetle extends MaterialMonster implements Promotion {
@@ -20,10 +19,12 @@ public class GiantBeetle extends MaterialMonster implements Promotion {
     setDefault(Attribute.AGILITY_RECOVERY, 5);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00263E3E3C3E1C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;

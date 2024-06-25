@@ -4,7 +4,6 @@ import java.util.Random;
 
 /**
  * A twinkling star effect.
- *
  * @author Sean A. Irvine
  */
 public class TwinkleEffect extends AbstractTileEffect {
@@ -32,14 +31,13 @@ public class TwinkleEffect extends AbstractTileEffect {
    * Construct a new twinkle of given size and colors.  Produces images until the
    * result would be an empty image, at which point null is returned. For further
    * documentation on how the effect is produced see tile.tex.
-   *
    * @param width with of image, must be a power of 2
    * @param bg background color
    * @param fg primary foreground color
    * @param steps number of steps to make
    * @param random random number generator
-   * @exception IllegalArgumentException if <code>width</code> is less than 1.
-   * @exception NullPointerException if <code>random</code> is null
+   * @throws IllegalArgumentException if <code>width</code> is less than 1.
+   * @throws NullPointerException if <code>random</code> is null
    */
   public TwinkleEffect(final int width, final int bg, final int fg, final int steps, final Random random) {
     if (random == null) {
@@ -66,12 +64,11 @@ public class TwinkleEffect extends AbstractTileEffect {
    * Construct a new twinkle of given size and colors.  Produces images until the
    * result would be an empty image, at which point null is returned. For further
    * documentation on how the effect is produced see tile.tex.
-   *
    * @param width with of image, must be a power of 2
    * @param bg background color
    * @param fg primary foreground color
    * @param steps number of steps to make
-   * @exception IllegalArgumentException if <code>width</code> is less than 1.
+   * @throws IllegalArgumentException if <code>width</code> is less than 1.
    */
   public TwinkleEffect(final int width, final int bg, final int fg, final int steps) {
     this(width, bg, fg, steps, new Random());
@@ -91,97 +88,97 @@ public class TwinkleEffect extends AbstractTileEffect {
       final int w = mImage.getWidth();
       for (int j = 0; j < mS.length; ++j) {
         switch (mS[j]) {
-        case 0:
-          if (mRandom.nextInt(3) == 0) {
-            mX[j] = mRandom.nextInt(w);
-            mY[j] = mRandom.nextInt(w);
-            mS[j] = 1;
-            set(mImage, mX[j], mY[j], w, mFg);
-          }
-          break;
-        case 1:
-          switch (mRandom.nextInt(6)) {
           case 0:
-            set(mImage, mX[j], mY[j], w, mBg);
-            mS[j] = 0;
-            break;
-          case 2:
-          case 3:
-            set(mImage, mX[j] - 1, mY[j], w, mFg);
-            set(mImage, mX[j] + 1, mY[j], w, mFg);
-            set(mImage, mX[j], mY[j] - 1, w, mFg);
-            set(mImage, mX[j], mY[j] + 1, w, mFg);
-            mS[j] = 2;
-            break;
-          default:
-            break;
-          }
-          break;
-        case 2:
-          switch (mRandom.nextInt(7)) {
-          case 0:
-            set(mImage, mX[j] - 1, mY[j], w, mBg);
-            set(mImage, mX[j] + 1, mY[j], w, mBg);
-            set(mImage, mX[j], mY[j] - 1, w, mBg);
-            set(mImage, mX[j], mY[j] + 1, w, mBg);
-            mS[j] = 1;
+            if (mRandom.nextInt(3) == 0) {
+              mX[j] = mRandom.nextInt(w);
+              mY[j] = mRandom.nextInt(w);
+              mS[j] = 1;
+              set(mImage, mX[j], mY[j], w, mFg);
+            }
             break;
           case 1:
-          case 2:
-            set(mImage, mX[j], mY[j], w, mDim);
+            switch (mRandom.nextInt(6)) {
+              case 0:
+                set(mImage, mX[j], mY[j], w, mBg);
+                mS[j] = 0;
+                break;
+              case 2:
+              case 3:
+                set(mImage, mX[j] - 1, mY[j], w, mFg);
+                set(mImage, mX[j] + 1, mY[j], w, mFg);
+                set(mImage, mX[j], mY[j] - 1, w, mFg);
+                set(mImage, mX[j], mY[j] + 1, w, mFg);
+                mS[j] = 2;
+                break;
+              default:
+                break;
+            }
             break;
-          case 3:
+          case 2:
+            switch (mRandom.nextInt(7)) {
+              case 0:
+                set(mImage, mX[j] - 1, mY[j], w, mBg);
+                set(mImage, mX[j] + 1, mY[j], w, mBg);
+                set(mImage, mX[j], mY[j] - 1, w, mBg);
+                set(mImage, mX[j], mY[j] + 1, w, mBg);
+                mS[j] = 1;
+                break;
+              case 1:
+              case 2:
+                set(mImage, mX[j], mY[j], w, mDim);
+                break;
+              case 3:
+              case 4:
+                set(mImage, mX[j] - 2, mY[j], w, mFg);
+                set(mImage, mX[j] + 2, mY[j], w, mFg);
+                set(mImage, mX[j], mY[j] - 2, w, mFg);
+                set(mImage, mX[j], mY[j] + 2, w, mFg);
+                set(mImage, mX[j] - 1, mY[j] + 1, w, mHalfMagFg);
+                set(mImage, mX[j] + 1, mY[j] + 1, w, mHalfMagFg);
+                set(mImage, mX[j] - 1, mY[j] - 1, w, mHalfMagFg);
+                set(mImage, mX[j] + 1, mY[j] - 1, w, mHalfMagFg);
+                mS[j] = 4;
+                break;
+              case 5:
+                set(mImage, mX[j], mY[j] - 2, w, mFg);
+                mS[j] = 5;
+                break;
+              default:
+                break;
+            }
+            break;
           case 4:
-            set(mImage, mX[j] - 2, mY[j], w, mFg);
-            set(mImage, mX[j] + 2, mY[j], w, mFg);
-            set(mImage, mX[j], mY[j] - 2, w, mFg);
-            set(mImage, mX[j], mY[j] + 2, w, mFg);
-            set(mImage, mX[j] - 1, mY[j] + 1, w, mHalfMagFg);
-            set(mImage, mX[j] + 1, mY[j] + 1, w, mHalfMagFg);
-            set(mImage, mX[j] - 1, mY[j] - 1, w, mHalfMagFg);
-            set(mImage, mX[j] + 1, mY[j] - 1, w, mHalfMagFg);
-            mS[j] = 4;
+            switch (mRandom.nextInt(4)) {
+              case 0:
+                set(mImage, mX[j] - 2, mY[j], w, mBg);
+                set(mImage, mX[j] + 2, mY[j], w, mBg);
+                set(mImage, mX[j], mY[j] - 2, w, mBg);
+                set(mImage, mX[j], mY[j] - 2, w, mBg);
+                set(mImage, mX[j] - 1, mY[j] + 1, w, mBg);
+                set(mImage, mX[j] + 1, mY[j] + 1, w, mBg);
+                set(mImage, mX[j] - 1, mY[j] - 1, w, mBg);
+                set(mImage, mX[j] + 1, mY[j] - 1, w, mBg);
+                mS[j] = 2;
+                break;
+              case 1:
+                set(mImage, mX[j] - 1, mY[j], w, mDim);
+                set(mImage, mX[j] + 1, mY[j], w, mDim);
+                set(mImage, mX[j], mY[j] - 1, w, mDim);
+                set(mImage, mX[j], mY[j] + 1, w, mDim);
+                set(mImage, mX[j], mY[j], w, ~mBg);
+                break;
+              default:
+                break;
+            }
             break;
           case 5:
-            set(mImage, mX[j], mY[j] - 2, w, mFg);
-            mS[j] = 5;
+            if (mRandom.nextBoolean()) {
+              set(mImage, mX[j], mY[j] - 2, w, mBg);
+              mS[j] = 2;
+            }
             break;
           default:
             break;
-          }
-          break;
-        case 4:
-          switch (mRandom.nextInt(4)) {
-          case 0:
-            set(mImage, mX[j] - 2, mY[j], w, mBg);
-            set(mImage, mX[j] + 2, mY[j], w, mBg);
-            set(mImage, mX[j], mY[j] - 2, w, mBg);
-            set(mImage, mX[j], mY[j] - 2, w, mBg);
-            set(mImage, mX[j] - 1, mY[j] + 1, w, mBg);
-            set(mImage, mX[j] + 1, mY[j] + 1, w, mBg);
-            set(mImage, mX[j] - 1, mY[j] - 1, w, mBg);
-            set(mImage, mX[j] + 1, mY[j] - 1, w, mBg);
-            mS[j] = 2;
-            break;
-          case 1:
-            set(mImage, mX[j] - 1, mY[j], w, mDim);
-            set(mImage, mX[j] + 1, mY[j], w, mDim);
-            set(mImage, mX[j], mY[j] - 1, w, mDim);
-            set(mImage, mX[j], mY[j] + 1, w, mDim);
-            set(mImage, mX[j], mY[j], w, ~mBg);
-            break;
-          default:
-            break;
-          }
-          break;
-        case 5:
-          if (mRandom.nextBoolean()) {
-            set(mImage, mX[j], mY[j] - 2, w, mBg);
-            mS[j] = 2;
-          }
-          break;
-        default:
-          break;
         }
       }
       // copy to make sure no one can monkey with our internal image

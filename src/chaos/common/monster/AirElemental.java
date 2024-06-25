@@ -11,7 +11,6 @@ import chaos.common.inanimate.Tempest;
 
 /**
  * Air elemental.
- *
  * @author Sean A. Irvine
  */
 public class AirElemental extends MaterialMonster implements Elemental, Bonus, Virtuous {
@@ -23,18 +22,22 @@ public class AirElemental extends MaterialMonster implements Elemental, Bonus, V
     setDefault(Attribute.AGILITY, 20);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x7C7E7E7F7F7F7F7CL;
   }
+
   @Override
   public int getBonus() {
     return 4;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;
   }
+
   @Override
   public Actor getElementalReplacement() {
     final Tempest t = new Tempest();

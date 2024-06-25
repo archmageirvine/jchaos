@@ -12,7 +12,6 @@ import chaos.util.PowerUpEvent;
 
 /**
  * Level.
- *
  * @author Sean A. Irvine
  */
 public class Level extends FreeCastable {

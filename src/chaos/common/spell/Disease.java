@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Disease.
- *
  * @author Sean A. Irvine
  */
 public class Disease extends AbstractDecrement {

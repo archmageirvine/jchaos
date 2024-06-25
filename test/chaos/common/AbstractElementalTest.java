@@ -2,7 +2,6 @@ package chaos.common;
 
 /**
  * Tests functionality that elementals should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractElementalTest extends AbstractMonsterTest {

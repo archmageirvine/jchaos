@@ -36,7 +36,6 @@ import chaos.util.Random;
  * This class provides the fundamental statistics for life force and
  * magical resistance together with the corresponding recovery rates.
  * The <code>update</code> method applies the recoveries.
- *
  * @author Sean A. Irvine
  */
 public abstract class Actor extends Castable {
@@ -62,7 +61,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Get the currently specified realm for this Actor.
-   *
    * @return the realm
    */
   public Realm getRealm() {
@@ -73,9 +71,8 @@ public abstract class Actor extends Castable {
    * Set the realm for this Actor. This may be called when a creature
    * changes realm as the result of magic. For example, raising the
    * dead causes the Actor to become <code>ETHERIC</code>.
-   *
    * @param realm new realm
-   * @exception NullPointerException if <code>realm</code> is null
+   * @throws NullPointerException if <code>realm</code> is null
    */
   public void setRealm(final Realm realm) {
     if (realm == null) {
@@ -88,7 +85,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Return the current state for this Actor.
-   *
    * @return current state
    */
   public State getState() {
@@ -98,22 +94,21 @@ public abstract class Actor extends Castable {
   /**
    * Set the state of this Actor. An <code>IllegalArgumentException</code>
    * is thrown if the specified state is not valid.
-   *
    * @param state new state
    */
   public void setState(final State state) {
     mState = state;
     // update weight based on state
     switch (state) {
-    case DEAD:
-      mWeight = 0;
-      break;
-    case ASLEEP:
-      mWeight = 1;
-      break;
-    default:
-      mWeight = getDefaultWeight();
-      break;
+      case DEAD:
+        mWeight = 0;
+        break;
+      case ASLEEP:
+        mWeight = 1;
+        break;
+      default:
+        mWeight = getDefaultWeight();
+        break;
     }
   }
 
@@ -122,7 +117,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Return the current owner of this Actor.
-   *
    * @return the current owner
    */
   public int getOwner() {
@@ -131,7 +125,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Set the current owner of this Actor.
-   *
    * @param owner new owner
    */
   public void setOwner(final int owner) {
@@ -140,7 +133,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Test if this Actor is currently marked as having moved.
-   *
    * @return true if Actor has moved.
    */
   public boolean isMoved() {
@@ -149,7 +141,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Set the movement status for this Actor.
-   *
    * @param moved true if to set moved flag, false to clear it.
    */
   public void setMoved(final boolean moved) {
@@ -158,7 +149,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Test if this Actor is currently marked as having engaged.
-   *
    * @return true if Actor has engaged.
    */
   public boolean isEngaged() {
@@ -167,7 +157,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Set the movement status for this Actor.
-   *
    * @param engaged true if to set engaged flag, false to clear it.
    */
   public void setEngaged(final boolean engaged) {
@@ -199,7 +188,6 @@ public abstract class Actor extends Castable {
    * the recovery rates to the relevant statistics.  The actor is
    * marked as unmoved.  If the result is true then the actor has
    * "died" as a result of the update.
-   *
    * @param world the world containing the actor, may be null
    * @param cell the cell containing the actor. may be null
    * @return true if actor dies as a result of the update
@@ -209,7 +197,7 @@ public abstract class Actor extends Castable {
     boolean dead = false;
     if (state == State.ASLEEP || state == State.ACTIVE) {
       dead = recover(Attribute.LIFE) || recover(Attribute.MAGICAL_RESISTANCE)
-          || (state == State.ASLEEP && Random.nextInt(Math.max(1, get(Attribute.LIFE))) <= 2);
+        || (state == State.ASLEEP && Random.nextInt(Math.max(1, get(Attribute.LIFE))) <= 2);
 
       setMoved(false);
       setEngaged(false);
@@ -221,7 +209,6 @@ public abstract class Actor extends Castable {
    * Return the default weight value for this Actor.  For most Monsters this is
    * the same as the default life value.  When different behaviour is required
    * then this method must be overridden.
-   *
    * @return weight value
    */
   public int getDefaultWeight() {
@@ -233,7 +220,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Compute the weight value for this Actor.
-   *
    * @return weight value
    */
   public int getWeight() {
@@ -247,7 +233,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Return the number of confirmed kills of this actor.
-   *
    * @return kill count
    */
   public int getKillCount() {
@@ -257,7 +242,6 @@ public abstract class Actor extends Castable {
   /**
    * Increase the number of confirmed kills by this actor by 1;
    * and return the new value.
-   *
    * @return kill count after increment
    */
   public int incrementKillCount() {
@@ -278,7 +262,6 @@ public abstract class Actor extends Castable {
    * a 1 bit indicating line of sight is blocked.  Thus, a value of
    * 0L means this actor never blocks line of sight and a value of
    * ~0L means this actor always blocks line of sight.
-   *
    * @return masking value
    */
   public abstract long getLosMask();
@@ -287,7 +270,6 @@ public abstract class Actor extends Castable {
    * Increment the given attribute by the specified value.  If the attribute
    * is not relevant to this actor, then no action is taken. This function
    * is only guaranteed to work properly for positive values of <code>inc</code>.
-   *
    * @param attr attribute
    * @param inc increment
    */
@@ -303,7 +285,6 @@ public abstract class Actor extends Castable {
    * should die as a result, then true is returned.  The final value may
    * not always correspond to a straightforward subtraction. This function
    * is only guaranteed to work properly for positive values of <code>dec</code>.
-   *
    * @param attr attribute
    * @param dec decrement
    * @return true if actor should die as a result
@@ -312,20 +293,20 @@ public abstract class Actor extends Castable {
     if (attr != null) {
       final int v = get(attr);
       switch (attr) {
-      case LIFE:
-        final int life = v - dec;
-        set(attr, life);
-        return life <= 0;
-      case MAGICAL_RESISTANCE:
-        final int magicalResistance = v - dec;
-        set(attr, magicalResistance);
-        return magicalResistance < 0;
-      case LIFE_RECOVERY:
-      case MAGICAL_RESISTANCE_RECOVERY:
-        set(attr, v - dec);
-        return false;
-      default:
-        return false;
+        case LIFE:
+          final int life = v - dec;
+          set(attr, life);
+          return life <= 0;
+        case MAGICAL_RESISTANCE:
+          final int magicalResistance = v - dec;
+          set(attr, magicalResistance);
+          return magicalResistance < 0;
+        case LIFE_RECOVERY:
+        case MAGICAL_RESISTANCE_RECOVERY:
+          set(attr, v - dec);
+          return false;
+        default:
+          return false;
       }
     }
     return false;
@@ -334,7 +315,6 @@ public abstract class Actor extends Castable {
   /**
    * Get the value for a given attribute.  If this actor does not have the given
    * attribute then 0 is returned.
-   *
    * @param attr attribute
    * @return value of the attribute
    */
@@ -366,7 +346,6 @@ public abstract class Actor extends Castable {
   /**
    * Get the default value for a given attribute.  If this actor does not have the given
    * attribute then 0 is returned.
-   *
    * @param attr attribute
    * @return value of the attribute
    */
@@ -382,7 +361,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Retrieve a given power-up statistic of this actor.
-   *
    * @param statistic statistic to get
    * @return value of statistic
    */
@@ -402,7 +380,6 @@ public abstract class Actor extends Castable {
 
   /**
    * Set the given power-up statistic to the specified value.
-   *
    * @param statistic statistic to set
    * @param value value to set it to
    */
@@ -413,7 +390,6 @@ public abstract class Actor extends Castable {
   /**
    * Decrement a power up count by 1 provided it is positive.  This is
    * provided as a convenience to a get/set pair.
-   *
    * @param statistic statistic to decrement
    */
   public void decrement(final PowerUps statistic) {

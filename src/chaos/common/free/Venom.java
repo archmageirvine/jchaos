@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Venom.
- *
  * @author Sean A. Irvine
  */
 public class Venom extends AbstractIncrement {

@@ -15,12 +15,12 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Routines to assist in the intelligent casting of walls and pits.
- *
  * @author Sean A. Irvine
  */
 public final class IntelligentWall {
 
-  private IntelligentWall() { }
+  private IntelligentWall() {
+  }
 
   private enum TargetType {
     WIZARD_AND_BLOCKER, WIZARD, BLOCKER_FOUR, BLOCKER_EIGHT, ENEMY_HI, ENEMY_LOW, DISTANT, NONE
@@ -71,7 +71,6 @@ public final class IntelligentWall {
    * follows: adjacent to an enemy wizard and another blocker, adjacent to an
    * enemy wizard, 4-way adjacent to a blocker, 8-way adjacent to a blocker,
    * adjacent to enemies, not close to caster's wizard, anything else.
-   *
    * @param targets targets to filter
    * @param caster the caster
    * @param world the world
@@ -97,7 +96,7 @@ public final class IntelligentWall {
     }
 
     // Eliminate all things not of the best type
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       if (targetMap.get(it.next()) != best) {
         it.remove();
       }

@@ -7,7 +7,6 @@ import java.net.URLStreamHandler;
 /**
  * Allows reading of java system resources within the standard URL
  * framework.
- *
  * @author Len Trigg
  */
 public class Handler extends URLStreamHandler {

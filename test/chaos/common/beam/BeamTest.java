@@ -13,7 +13,6 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class BeamTest extends AbstractCastableTest {
@@ -49,10 +48,12 @@ public class BeamTest extends AbstractCastableTest {
 
   private static class MyBeam extends Beam {
     int mCount = 0;
+
     @Override
     protected Attribute getAttribute() {
       return Attribute.LIFE;
     }
+
     @Override
     public void beamEffect(final Cell cell, final Caster caster, final Cell casterCell) {
       ++mCount;

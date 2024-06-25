@@ -16,13 +16,15 @@ import chaos.common.monster.NamedDeity;
  */
 public final class DumpDeityImages {
 
-  private DumpDeityImages() { }
+  private DumpDeityImages() {
+  }
 
   // Example: for name in $(cat src/chaos/resources/names/deity | grep '^[A-Z]' | tr ' ' '_'); do java chaos.graphics.DumpDeityImages "${name/_/ }"; done
+
   /**
    * Extract explicit tiles for a named deity.
    * @param args name of deity
-   * @exception IOException if an I/O error occurs
+   * @throws IOException if an I/O error occurs
    */
   public static void main(final String[] args) throws IOException {
     final String name = args[0];

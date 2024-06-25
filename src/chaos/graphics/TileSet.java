@@ -9,7 +9,6 @@ import irvine.tile.TileSetReader;
 /**
  * Represents a set of images to be used in animating an Actor
  * or for some other tile based animation effect.
- *
  * @author Sean A. Irvine
  */
 public class TileSet {
@@ -34,10 +33,9 @@ public class TileSet {
 
   /**
    * Construct the chaos tile set from a spec.
-   *
    * @param ts generating tile set
    * @param spec spec for tiles
-   * @exception IOException if an I/O problem occurs
+   * @throws IOException if an I/O problem occurs
    */
   public TileSet(final TileSetReader ts, final String spec) throws IOException {
     final String[] parts = spec.split("\\s+");
@@ -81,7 +79,6 @@ public class TileSet {
   /**
    * Test if the frames of this image should ping-pong rather
    * than cycle.
-   *
    * @return true if frames should ping-pong
    */
   public boolean isPingPong() {
@@ -91,7 +88,6 @@ public class TileSet {
   /**
    * True if the tile to be displayed should be randomly selected among the
    * available tiles.  For example, spider web.
-   *
    * @return true for random selection
    */
   public boolean isRandomSelect() {
@@ -111,7 +107,6 @@ public class TileSet {
    * taking into account cycling or ping-pong effects. It will
    * try to be sensible even if the <code>currentFrameIndex</code>
    * is invalid.
-   *
    * @param currentFrameIndex current frame index
    * @return next frame index
    */
@@ -144,7 +139,6 @@ public class TileSet {
   /**
    * Return the specified image of the set. This takes into account
    * special numbering for ping-pong frames.
-   *
    * @param index which image to get
    * @return the image
    */
@@ -156,7 +150,6 @@ public class TileSet {
   /**
    * If this TileSet contains an image of a corpse then return that
    * image, otherwise return null;
-   *
    * @return the corpse image or null
    */
   public BufferedImage getDeadImage() {
@@ -165,7 +158,6 @@ public class TileSet {
 
   /**
    * Return an image suitable for use in a spell table.
-   *
    * @return the spell image
    */
   public BufferedImage getSpellImage() {
@@ -174,7 +166,6 @@ public class TileSet {
 
   /**
    * Return the total number of images in this set.
-   *
    * @return number of images
    */
   public int getNumberOfImages() {

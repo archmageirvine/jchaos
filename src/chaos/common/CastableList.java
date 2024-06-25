@@ -14,7 +14,6 @@ import chaos.common.monster.FireDemon;
  * safety guards are built in to detect incorrect use.  This implementation
  * should be fine for spell lists up to a few hundred, beyond that a
  * more sophisticated implementation would be desirable.
- *
  * @author Sean A. Irvine
  */
 public class CastableList implements Serializable {
@@ -29,7 +28,6 @@ public class CastableList implements Serializable {
    * castables of which at most <code>maxVisible</code> will be available at
    * any one time.  The list will be initialized to contain <code>initialCount</code>
    * castables drawn according to usual spell distribution.
-   *
    * @param maxInList maximum capacity of the list
    * @param initialCount number of spells to place in list at outset
    * @param maxVisible maximum visible number
@@ -55,7 +53,6 @@ public class CastableList implements Serializable {
 
   /**
    * Return the maximum number of visible castables for this list.
-   *
    * @return maximum visible count
    */
   public int getMaximumVisible() {
@@ -65,7 +62,6 @@ public class CastableList implements Serializable {
   /**
    * Return an array containing the names of all currently visible
    * castables.
-   *
    * @return array of castables.
    */
   public Castable[] getVisible() {
@@ -81,7 +77,6 @@ public class CastableList implements Serializable {
   /**
    * Return the total number of castables in this list.  This includes
    * those which may not be visible.
-   *
    * @return remaining castables.
    */
   public int getCount() {
@@ -99,7 +94,6 @@ public class CastableList implements Serializable {
    * such a castable available.  If the use is invalid then a
    * RuntimeException is throw.  This must be the exact castable,
    * it is not sufficient to pass another castable of the same class.
-   *
    * @param castable castable to use
    */
   public void use(final Castable castable) {
@@ -125,7 +119,6 @@ public class CastableList implements Serializable {
    * Add the specified castable to the list.  It is added in the first
    * available empty slot.  If no empty slots are available then the
    * addition is silently discarded.
-   *
    * @param castable the castable to add
    */
   public void add(final Castable castable) {
@@ -145,7 +138,6 @@ public class CastableList implements Serializable {
    * the boolean flag either the whole list or only the visible portion
    * is searched.  Note, this checks only that the list contains an
    * object with the same class as the supplied castable.
-   *
    * @param castable what to search for
    * @param visibleOnly the visible portion (true) or whole list (false)
    * @return true if list contains specified castable
@@ -169,7 +161,6 @@ public class CastableList implements Serializable {
    * Replace each castable in this list with a new one selected
    * according to a uniform distribution.  This effectively implements
    * the joker spell.
-   *
    */
   public void joker() {
     for (int i = 0; i < mList.length; ++i) {

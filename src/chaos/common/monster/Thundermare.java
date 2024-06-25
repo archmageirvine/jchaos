@@ -8,7 +8,6 @@ import chaos.common.Promotion;
 
 /**
  * Thundermare.
- *
  * @author Sean A. Irvine
  */
 public class Thundermare extends MaterialMonsterMount implements Bonus, Promotion {
@@ -23,26 +22,32 @@ public class Thundermare extends MaterialMonsterMount implements Bonus, Promotio
     setDefault(Attribute.AGILITY, 53);
     setDefault(Attribute.MOVEMENT, 4);
   }
+
   @Override
   public int getBonus() {
     return 2;
   }
+
   @Override
   public int getCastRange() {
     return 3;
   }
+
   @Override
   public long getLosMask() {
     return 0x0000E0FF7E7E2400L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Horse.class;
   }
+
   @Override
   public Class<? extends Monster> promotion() {
     return Iridium.class;
   }
+
   @Override
   public int promotionCount() {
     return 8;

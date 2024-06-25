@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Assurance.
- *
  * @author Sean A. Irvine
  */
 public class Assurance extends AbstractIncrement {

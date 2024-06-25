@@ -4,12 +4,12 @@ import java.awt.image.BufferedImage;
 
 /**
  * A five-by-five pixel font.
- *
  * @author Sean A. Irvine
  */
 final class PixelFont {
 
-  private PixelFont() { }
+  private PixelFont() {
+  }
 
   private static final int SPACE_BETWEEN_GLYPHS = 1;
   private static final int SPACE_WIDTH = 3;

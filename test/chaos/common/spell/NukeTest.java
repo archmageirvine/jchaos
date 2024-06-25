@@ -16,7 +16,6 @@ import chaos.util.EventListener;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class NukeTest extends AbstractCastableTest {

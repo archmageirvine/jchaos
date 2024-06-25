@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Command.
- *
  * @author Sean A. Irvine
  */
 public class Command extends AbstractIncrement {

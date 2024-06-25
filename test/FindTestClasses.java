@@ -11,7 +11,8 @@ import com.reeltwo.jumble.annotations.TestClass;
  * @author Kurt Gaastra
  */
 public final class FindTestClasses {
-  private FindTestClasses() { }
+  private FindTestClasses() {
+  }
 
   /**
    * Returns a comma separated list of test classes that correspond to
@@ -39,11 +40,11 @@ public final class FindTestClasses {
       if (enclosing != null) {
         return annotatedTestClasses(enclosing);
       }
-      } else {
-        for (TestClass testClass : annotationsByType) {
-          Collections.addAll(testClasses, testClass.value());
-        }
+    } else {
+      for (TestClass testClass : annotationsByType) {
+        Collections.addAll(testClasses, testClass.value());
       }
+    }
     return testClasses;
   }
 

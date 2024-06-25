@@ -18,7 +18,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Restoration.
- *
  * @author Sean A. Irvine
  */
 public class Restoration extends Castable implements TargetFilter {
@@ -26,10 +25,12 @@ public class Restoration extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_INANIMATE | CAST_NOWIZARDCELL;
   }
+
   @Override
   public int getCastRange() {
     return MAX_CAST_RANGE;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {

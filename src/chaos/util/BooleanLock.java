@@ -5,7 +5,6 @@ import java.io.Serializable;
 /**
  * <code>BooleanLock</code> handles simple inter-thread locking and
  * synchronization.
- *
  * @author Len Trigg
  * @author Sean A. Irvine
  */
@@ -26,7 +25,6 @@ public class BooleanLock implements Serializable {
 
   /**
    * Creates a new <code>BooleanLock</code>.
-   *
    * @param initialValue a <code>boolean</code> giving the initial
    * state.
    */
@@ -36,7 +34,6 @@ public class BooleanLock implements Serializable {
 
   /**
    * Test if the lock is currently true.
-   *
    * @return true if lock is true
    */
   public boolean isTrue() {
@@ -47,7 +44,6 @@ public class BooleanLock implements Serializable {
 
   /**
    * Test if the lock is currently false.
-   *
    * @return true if lock is false
    */
   public boolean isFalse() {
@@ -58,7 +54,6 @@ public class BooleanLock implements Serializable {
 
   /**
    * Set the value of the lock to the specified value.
-   *
    * @param newValue new lock value
    */
   public void setValue(final boolean newValue) {
@@ -72,10 +67,9 @@ public class BooleanLock implements Serializable {
 
   /**
    * Wait on the lock to become false then set it to true.
-   *
    * @param msTimeout timeout in milliseconds
    * @return true if waiting was successful
-   * @exception InterruptedException if wait was interrupted
+   * @throws InterruptedException if wait was interrupted
    */
   public boolean waitToSetTrue(final long msTimeout) throws InterruptedException {
     synchronized (mLock) {
@@ -89,10 +83,9 @@ public class BooleanLock implements Serializable {
 
   /**
    * Wait on the lock to become true then set it to false.
-   *
    * @param msTimeout timeout in milliseconds
    * @return true if waiting was successful
-   * @exception InterruptedException if wait was interrupted
+   * @throws InterruptedException if wait was interrupted
    */
   public boolean waitToSetFalse(final long msTimeout) throws InterruptedException {
     synchronized (mLock) {
@@ -106,10 +99,9 @@ public class BooleanLock implements Serializable {
 
   /**
    * Wait until the lock becomes true.
-   *
    * @param msTimeout timeout in milliseconds
    * @return true if wait was successful
-   * @exception InterruptedException if the wait is interrupted
+   * @throws InterruptedException if the wait is interrupted
    */
   public boolean waitUntilTrue(final long msTimeout) throws InterruptedException {
     return waitUntilStateIs(true, msTimeout);
@@ -117,10 +109,9 @@ public class BooleanLock implements Serializable {
 
   /**
    * Wait until the lock becomes false.
-   *
    * @param msTimeout timeout in milliseconds
    * @return true if wait was successful
-   * @exception InterruptedException if the wait is interrupted
+   * @throws InterruptedException if the wait is interrupted
    */
   public boolean waitUntilFalse(final long msTimeout) throws InterruptedException {
     return waitUntilStateIs(false, msTimeout);
@@ -128,11 +119,10 @@ public class BooleanLock implements Serializable {
 
   /**
    * Wait until the lock enters the specified state.
-   *
    * @param state desired lock state
    * @param msTimeout timeout in milliseconds
    * @return true if wait was successful
-   * @exception InterruptedException if the wait is interrupted
+   * @throws InterruptedException if the wait is interrupted
    */
   public boolean waitUntilStateIs(final boolean state, long msTimeout) throws InterruptedException {
     synchronized (mLock) {

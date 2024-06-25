@@ -16,7 +16,6 @@ import chaos.util.Random;
 
 /**
  * Abduction.
- *
  * @author Sean A. Irvine
  */
 public class Abduction extends FreeCastable {

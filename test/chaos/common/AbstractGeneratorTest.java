@@ -4,7 +4,6 @@ import chaos.board.World;
 
 /**
  * Tests basic functionality that all Generators should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractGeneratorTest extends AbstractActorTest {

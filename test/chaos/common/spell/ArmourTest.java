@@ -6,7 +6,6 @@ import chaos.common.Castable;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class ArmourTest extends AbstractShieldTest {

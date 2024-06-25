@@ -15,7 +15,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class ThunderboltTest extends AbstractCastableTest {
@@ -59,7 +58,7 @@ public class ThunderboltTest extends AbstractCastableTest {
 
   public void testFlags() {
     final Castable x = getCastable();
-    assertEquals(Castable.CAST_LIVING  | Castable.CAST_INANIMATE | Castable.CAST_GROWTH, x.getCastFlags());
+    assertEquals(Castable.CAST_LIVING | Castable.CAST_INANIMATE | Castable.CAST_GROWTH, x.getCastFlags());
     assertEquals(12, x.getCastRange());
   }
 

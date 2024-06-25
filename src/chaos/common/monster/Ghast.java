@@ -7,7 +7,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Ghast.
- *
  * @author Sean A. Irvine
  */
 public class Ghast extends UndeadMonster implements NoDeadImage {
@@ -19,10 +18,12 @@ public class Ghast extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.AGILITY, 53);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000183C3C1C1C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Skeleton.class;

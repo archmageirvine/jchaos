@@ -9,7 +9,6 @@ import chaos.util.Random;
 
 /**
  * Spawner
- *
  * @author Sean A. Irvine
  */
 public class Spawner extends AbstractGenerator {

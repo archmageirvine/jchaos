@@ -18,7 +18,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class DrainerTest extends TestCase {
@@ -49,10 +48,12 @@ public class DrainerTest extends TestCase {
     public int getCastFlags() {
       return 0;
     }
+
     @Override
     public int getCastRange() {
       return 0;
     }
+
     @Override
     public Set<Cell> getAffectedCells(final World world, final Cell cell) {
       final HashSet<Cell> hs = new HashSet<>();
@@ -64,10 +65,12 @@ public class DrainerTest extends TestCase {
       hs.add(world.getCell(5));
       return hs;
     }
+
     @Override
     public CellEffectType getEffectType() {
       return CellEffectType.SPUNGER;
     }
+
     @Override
     public int getDamage() {
       return 85;

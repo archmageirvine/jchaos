@@ -7,7 +7,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author <a href="mailto:jon@reeltwo.com">Jonathan Purvis</a>
  * @author Sean A. Irvine
  */

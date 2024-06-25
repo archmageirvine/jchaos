@@ -21,10 +21,12 @@ public class Megabeetle extends MaterialMonster {
     setDefault(Attribute.MOVEMENT, 1);
     set(PowerUps.INVULNERABLE, 7);
   }
+
   @Override
   public long getLosMask() {
     return 0x007E7E7E3E7E7E3CL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GiantBeetle.class;

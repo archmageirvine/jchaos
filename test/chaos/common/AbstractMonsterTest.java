@@ -13,7 +13,6 @@ import junit.framework.Assert;
 
 /**
  * Tests basic functionality that all Monsters should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractMonsterTest extends AbstractActorTest {

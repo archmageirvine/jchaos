@@ -8,7 +8,6 @@ import chaos.common.Virtuous;
 
 /**
  * Pegasus.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -23,10 +22,12 @@ public class Pegasus extends MaterialMonsterMount implements Virtuous {
     setDefault(Attribute.MOVEMENT, 5);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0E1EFEFF7EFE2400L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Manticore.class;

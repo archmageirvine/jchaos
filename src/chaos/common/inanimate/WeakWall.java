@@ -9,7 +9,6 @@ import chaos.common.monster.MudMan;
 
 /**
  * Weak wall.
- *
  * @author Sean A. Irvine
  */
 public class WeakWall extends AbstractWall implements Bonus, Multiplicity {
@@ -22,20 +21,24 @@ public class WeakWall extends AbstractWall implements Bonus, Multiplicity {
   public int getCastFlags() {
     return CAST_GROWTH | CAST_EMPTY;
   }
+
   @Override
   public int getCastRange() {
     return MAX_CAST_RANGE;
   }
+
   @Override
   public int getBonus() {
     return 1;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new MudMan();
     a.setOwner(getOwner());
     return a;
   }
+
   @Override
   public int getMultiplicity() {
     return 6;

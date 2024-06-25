@@ -3,12 +3,9 @@ package irvine.tile;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class VerticalRollEffectTest extends AbstractTileEffectTest {
-
-
 
 
   @Override

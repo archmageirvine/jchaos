@@ -21,7 +21,6 @@ import irvine.util.io.IOUtils;
  * use.  It will attempt to limit memory usage to a value
  * near the value given at construction time.  It does not directly
  * support any kind of sound play.
- *
  * @author Sean A. Irvine
  */
 public class SoundClipCache {
@@ -36,7 +35,6 @@ public class SoundClipCache {
   /**
    * Construct a new sound clip cache with the specified target
    * maximum memory usage.
-   *
    * @param memoryLimit target maximum memory use
    */
   public SoundClipCache(final int memoryLimit) {
@@ -48,11 +46,10 @@ public class SoundClipCache {
 
   /**
    * Return a stream for the specified sound resource.
-   *
    * @param name sound to be obtained
    * @return stream for the sound
-   * @exception IOException if an I/O error occurs.
-   * @exception UnsupportedAudioFileException if the audio file is not in an acceptable
+   * @throws IOException if an I/O error occurs.
+   * @throws UnsupportedAudioFileException if the audio file is not in an acceptable
    * format.
    */
   public AudioInputStream getClip(final String name) throws IOException, UnsupportedAudioFileException {
@@ -75,7 +72,7 @@ public class SoundClipCache {
       mCurrentUsage += noise.length;
       if (mCurrentUsage > mMemoryLimit) {
         // using too much memory, throw away the oldest entries
-        for (final Iterator<byte[]> i = mSounds.values().iterator(); mCurrentUsage > mMemoryLimit && i.hasNext();) {
+        for (final Iterator<byte[]> i = mSounds.values().iterator(); mCurrentUsage > mMemoryLimit && i.hasNext(); ) {
           mCurrentUsage -= i.next().length;
           i.remove();
         }
@@ -95,7 +92,6 @@ public class SoundClipCache {
 
   /**
    * Return the current memory usage of this cache in bytes.
-   *
    * @return memory usage
    */
   protected int getMemoryUsage() {

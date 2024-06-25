@@ -13,7 +13,6 @@ import irvine.TestUtils;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class PyrotechnicsTest extends AbstractFreeCastableTest {

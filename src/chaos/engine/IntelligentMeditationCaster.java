@@ -26,7 +26,8 @@ import irvine.util.array.Sort;
  */
 final class IntelligentMeditationCaster {
 
-  private IntelligentMeditationCaster() { }
+  private IntelligentMeditationCaster() {
+  }
 
   private static long[] getTargetRankings(final World world, final List<Integer> wizardCellNumber, final List<Integer> wizardWeighting, final Cell[] targets) {
     // Rank the potential targets, actually numerical value of the ranking is not particularly relevant, its just an ordering

@@ -23,7 +23,6 @@ import chaos.common.monster.WoodElf;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class BipedalGeneratorTest extends AbstractGeneratorTest {

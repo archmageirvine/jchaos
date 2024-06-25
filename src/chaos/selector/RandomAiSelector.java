@@ -5,7 +5,6 @@ import chaos.util.Random;
 
 /**
  * This selector just makes a random selection.
- *
  * @author Sean A. Irvine
  */
 public class RandomAiSelector implements Selector {

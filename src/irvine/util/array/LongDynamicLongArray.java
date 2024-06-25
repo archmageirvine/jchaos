@@ -6,7 +6,6 @@ import java.util.ArrayList;
 /**
  * A long dynamic array of longs. See <code>LongDynamicArray</code> for a
  * longer description of what is supported.
- *
  * @author Sean A. Irvine
  */
 public class LongDynamicLongArray implements Serializable {
@@ -32,7 +31,6 @@ public class LongDynamicLongArray implements Serializable {
    * Return the length of the array.  This is one more than the
    * highest location which has been assigned a value or zero
    * in the case of an empty array.
-   *
    * @return length of the array
    */
   public long length() {
@@ -41,10 +39,9 @@ public class LongDynamicLongArray implements Serializable {
 
   /**
    * Get the long at the specified array index.
-   *
    * @param index array index
    * @return value at specified index
-   * @exception ArrayIndexOutOfBoundsException if the index is negative.
+   * @throws ArrayIndexOutOfBoundsException if the index is negative.
    */
   public long get(final long index) {
     if (index >= mLength) {
@@ -72,12 +69,11 @@ public class LongDynamicLongArray implements Serializable {
 
   /**
    * Set the entry at specified index to the given value.
-   *
    * @param index array index
    * @param value value to set at the index
-   * @exception UnsupportedOperationException if the underling array
+   * @throws UnsupportedOperationException if the underling array
    * is not long.
-   * @exception ArrayIndexOutOfBoundsException if the index is negative.
+   * @throws ArrayIndexOutOfBoundsException if the index is negative.
    */
   public void set(final long index, final long value) {
     getChunk(index)[(int) index & CHUNK_MASK] = value;
@@ -89,9 +85,8 @@ public class LongDynamicLongArray implements Serializable {
    * Calling <code>truncate(0);</code> empties the entire array.
    * If the array is already the specified length or is shorter
    * then no action is taken.
-   *
    * @param length position to truncate at
-   * @exception ArrayIndexOutOfBoundsException if length is negative.
+   * @throws ArrayIndexOutOfBoundsException if length is negative.
    */
   public void truncate(long length) {
     if (length < mLength) {

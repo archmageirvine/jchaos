@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Move it.
- *
  * @author Sean A. Irvine
  */
 public class MoveIt extends FreePowerUp {

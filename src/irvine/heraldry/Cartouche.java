@@ -7,7 +7,6 @@ import irvine.util.string.PostScript;
 
 /**
  * Cartouche.
- *
  * @author Sean A. Irvine
  */
 class Cartouche extends Shape {

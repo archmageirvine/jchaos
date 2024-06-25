@@ -18,7 +18,6 @@ import irvine.tile.TileImage;
 
 /**
  * Change of owner effect.
- *
  * @author Sean A. Irvine
  */
 public class OwnerChangeEffect extends AbstractEffect {

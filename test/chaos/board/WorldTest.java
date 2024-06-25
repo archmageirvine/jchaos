@@ -15,7 +15,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class WorldTest extends TestCase {
@@ -364,7 +363,7 @@ public class WorldTest extends TestCase {
     s = w.getCells(24, 1, 1, false);
     for (int i = 0; i < 49; ++i) {
       if (i == 16 || i == 17 || i == 18 || i == 23
-          || i == 25 || i == 30 || i == 31 || i == 32) {
+        || i == 25 || i == 30 || i == 31 || i == 32) {
         assertTrue(s.contains(w.getCell(i)));
       } else {
         assertTrue(String.valueOf(i), !s.contains(w.getCell(i)));

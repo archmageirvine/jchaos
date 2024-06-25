@@ -16,7 +16,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this wizard.
- *
  * @author Sean A. Irvine
  */
 public class WizardTest extends AbstractWizardTest {
@@ -93,14 +92,17 @@ public class WizardTest extends AbstractWizardTest {
 
   private static class MyEngine implements PlayerEngine {
     private final int[] mCount;
+
     MyEngine(final int[] count) {
       mCount = count;
     }
+
     @Override
     public boolean cast(final Caster caster, final Castable c, final Cell cell) {
       mCount[0]++;
       return true;
     }
+
     @Override
     public void moveAll(final Wizard w) {
     }
@@ -157,6 +159,7 @@ public class WizardTest extends AbstractWizardTest {
     public Castable[] select(final Castable[] castables, final boolean texas) {
       return new Castable[] {castables.length > 0 ? castables[0] : null, null};
     }
+
     @Override
     public Castable[] selectBonus(final Castable[] spells, final int count) {
       return new Castable[0];
@@ -187,6 +190,7 @@ public class WizardTest extends AbstractWizardTest {
       Assert.assertTrue(castables.length <= 1);
       return new Castable[] {castables.length > 0 ? castables[0] : null, null};
     }
+
     @Override
     public Castable[] selectBonus(final Castable[] spells, final int count) {
       Assert.assertEquals(2, count);
@@ -226,6 +230,7 @@ public class WizardTest extends AbstractWizardTest {
       Assert.assertEquals(0, castables.length);
       return new Castable[] {null, null};
     }
+
     @Override
     public Castable[] selectBonus(final Castable[] spells, final int count) {
       return new Castable[0];
@@ -237,6 +242,7 @@ public class WizardTest extends AbstractWizardTest {
     public Castable[] select(final Castable[] castables, final boolean texas) {
       return new Castable[] {null, null};
     }
+
     @Override
     public Castable[] selectBonus(final Castable[] spells, final int count) {
       return new Castable[0];

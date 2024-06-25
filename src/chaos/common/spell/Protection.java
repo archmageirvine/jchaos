@@ -6,7 +6,6 @@ import chaos.common.Multiplicity;
 
 /**
  * Protection.
- *
  * @author Sean A. Irvine
  */
 public class Protection extends AbstractShield implements Multiplicity {

@@ -6,7 +6,6 @@ import chaos.util.Event;
  * An event indicating a cell content or state change. The
  * recipient should take appropriate action to repaint the
  * cell.
- *
  * @author Sean A. Irvine
  */
 public class CellEvent implements Event {
@@ -16,7 +15,6 @@ public class CellEvent implements Event {
 
   /**
    * Construct an event for a cell redraw.
-   *
    * @param cell the cell to be redrawn
    */
   public CellEvent(final int cell) {
@@ -25,7 +23,6 @@ public class CellEvent implements Event {
 
   /**
    * Get the number of the cell to be redrawn.
-   *
    * @return a cell number
    */
   public int getCellNumber() {

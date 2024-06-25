@@ -2,7 +2,6 @@ package chaos.common;
 
 /**
  * Convenience class to implement a standard undead creature.
- *
  * @author Sean A. Irvine
  */
 public abstract class UndeadMonster extends Monster {

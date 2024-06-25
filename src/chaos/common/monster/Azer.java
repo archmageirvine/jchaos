@@ -8,7 +8,6 @@ import chaos.common.free.Quench;
 
 /**
  * The azer.
- *
  * @author Sean A. Irvine
  */
 public class Azer extends Unicaster implements Humanoid {
@@ -24,10 +23,12 @@ public class Azer extends Unicaster implements Humanoid {
     setDefault(Attribute.COMBAT, 1);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x003C7CFE7E183800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Bandit.class;

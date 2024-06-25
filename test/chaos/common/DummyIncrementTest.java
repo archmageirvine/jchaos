@@ -5,7 +5,6 @@ import chaos.common.free.Bless;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class DummyIncrementTest extends AbstractIncrementTest {

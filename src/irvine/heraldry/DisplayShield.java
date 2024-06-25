@@ -11,16 +11,15 @@ import chaos.util.Sleep;
 
 /**
  * Generate a Display image of a shield.
- *
  * @author Sean A. Irvine
  */
 public final class DisplayShield {
 
-  private DisplayShield() { }
+  private DisplayShield() {
+  }
 
   /**
    * Generate specified shield.
-   *
    * @param args shield specification
    */
   public static void main(final String[] args) {

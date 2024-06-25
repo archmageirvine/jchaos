@@ -2,7 +2,6 @@ package chaos.common;
 
 /**
  * A creature worthy of a name. Such creatures usually also gain experience.
- *
  * @author Sean A. Irvine
  */
 public interface Named {

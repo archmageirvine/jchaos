@@ -11,12 +11,12 @@ import chaos.graphics.ChaosScreen;
 
 /**
  * Draw a thunderbolt effect.
- *
  * @author Sean A. Irvine
  */
 public final class Thunderbolt {
 
-  private Thunderbolt() { }
+  private Thunderbolt() {
+  }
 
   /** Used for color selection. */
   private static final Random RANDOM = new Random();
@@ -27,7 +27,6 @@ public final class Thunderbolt {
    * Render a lightning effect into the specified graphics.  Partially unrenders
    * itself at the end of the effect, but the caller should best take effort to
    * repaint the screen afterwards.
-   *
    * @param screen chaos screen
    * @param graphics place to render
    * @param sx start x-coordinate

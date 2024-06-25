@@ -9,7 +9,6 @@ import irvine.util.io.AbstractURLConnectionTest;
 
 /**
  * Unit Test for class JavaURLConnection
- *
  * @author Len Trigg
  */
 public class JavaURLConnectionTest extends AbstractURLConnectionTest {

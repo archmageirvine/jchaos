@@ -17,7 +17,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Convert.
- *
  * @author Sean A. Irvine
  */
 public class Convert extends Castable implements Multiplicity, TargetFilter {
@@ -25,14 +24,17 @@ public class Convert extends Castable implements Multiplicity, TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_INANIMATE | CAST_GROWTH | CAST_LOS;
   }
+
   @Override
   public int getCastRange() {
     return 16;
   }
+
   @Override
   public int getMultiplicity() {
     return 2;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {

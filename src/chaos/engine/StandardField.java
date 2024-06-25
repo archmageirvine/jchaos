@@ -10,7 +10,6 @@ import chaos.common.wizard.Wizard;
 /**
  * Desirability of a cell from an ordinary movement point of view. This
  * is not suitable for use with wizards.
- *
  * @author Sean A. Irvine
  */
 public class StandardField implements ScalarField {

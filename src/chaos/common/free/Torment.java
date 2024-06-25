@@ -13,7 +13,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Torment.
- *
  * @author Sean A. Irvine
  */
 public class Torment extends FreeCastable {

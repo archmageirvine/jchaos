@@ -4,7 +4,6 @@ import chaos.board.World;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class CollapseEffectTest extends OwnerChangeEffectTest {

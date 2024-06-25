@@ -7,7 +7,6 @@ import java.util.Arrays;
  * value is known in advance and the same number never appears
  * more than once in the queue.  Uses an array based
  * implementation for speed.
- *
  * @author Sean A. Irvine
  */
 public class IntegerQueue {
@@ -22,9 +21,8 @@ public class IntegerQueue {
   /**
    * Make a queue capable of storing the numbers from 0
    * to size-1.
-   *
    * @param size size bound
-   * @exception IllegalArgumentException if size &lt; 0.
+   * @throws IllegalArgumentException if size &lt; 0.
    */
   public IntegerQueue(final int size) {
     if (size < 0) {
@@ -36,9 +34,8 @@ public class IntegerQueue {
 
   /**
    * Adds n to the end of the queue.
-   *
    * @param n number to add
-   * @exception IllegalArgumentException if n is out of range or
+   * @throws IllegalArgumentException if n is out of range or
    * n is already in the queue.
    */
   public void enqueue(final int n) {
@@ -60,7 +57,6 @@ public class IntegerQueue {
   /**
    * Remove and return the first item in the queue.  If there is
    * nothing presently in the queue then -1 is returned.
-   *
    * @return queue <code>mHead</code> or -1
    */
   public int dequeue() {

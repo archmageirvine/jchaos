@@ -5,7 +5,6 @@ import junit.framework.TestSuite;
 
 /**
  * Links all the tests in this package.
- *
  * @author Sean A. Irvine
  */
 public class AllTests extends TestSuite {
@@ -23,6 +22,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(WhiteDragonTest.class);
     return suite;
   }
+
   public static void main(final String[] args) {
     junit.textui.TestRunner.run(suite());
   }

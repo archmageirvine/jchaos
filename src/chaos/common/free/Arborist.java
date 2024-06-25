@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Arborist.
- *
  * @author Sean A. Irvine
  */
 public class Arborist extends FreePowerUp {

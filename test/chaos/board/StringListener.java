@@ -6,15 +6,16 @@ import chaos.util.TextEvent;
 
 /**
  * Testing class to look for a particular message.
- *
  * @author Sean A. Irvine
  */
 class StringListener implements EventListener {
   private final String mExpected;
   private boolean mSeen = false;
+
   StringListener(final String expected) {
     mExpected = expected;
   }
+
   @Override
   public void update(final Event event) {
     //      System.err.println(event.toString());
@@ -22,6 +23,7 @@ class StringListener implements EventListener {
       mSeen = true;
     }
   }
+
   boolean seen() {
     return mSeen;
   }

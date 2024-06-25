@@ -12,7 +12,6 @@ import chaos.engine.PlayerEngine;
  * This extension of Monster is made for those monsters capable of casting
  * spells. This includes those limited to casting the occasional effect,
  * such as the Azer casting quench through to full-blown wizards.
- *
  * @author Sean A. Irvine
  */
 public abstract class Caster extends Monster {
@@ -26,7 +25,6 @@ public abstract class Caster extends Monster {
 
   /**
    * Return the PlayerEngine for performing this Caster's spells.
-   *
    * @return player engine
    */
   public PlayerEngine getPlayerEngine() {
@@ -35,7 +33,6 @@ public abstract class Caster extends Monster {
 
   /**
    * Set the PlayerEngine for this Caster.
-   *
    * @param engine caster's player engine
    */
   public void setPlayerEngine(final PlayerEngine engine) {
@@ -44,14 +41,12 @@ public abstract class Caster extends Monster {
 
   /**
    * Get the next Castable or null if nothing is to be cast.
-   *
    * @return Castable to be cast
    */
   public abstract Castable getCastable();
 
   /**
    * Perform any required casting taking careful account of multiplicity.
-   *
    * @param cell the cell containing the caster.
    */
   public void doCasting(final Cell cell) {

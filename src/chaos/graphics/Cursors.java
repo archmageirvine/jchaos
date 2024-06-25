@@ -9,7 +9,6 @@ import java.awt.image.BufferedImage;
 
 /**
  * Manage the game cursors.
- *
  * @author Sean A. Irvine
  */
 public final class Cursors {
@@ -36,7 +35,6 @@ public final class Cursors {
 
   /**
    * Set the blank cursor.
-   *
    * @param component component to set cursor on
    */
   public static void setBlankCursor(final Component component) {
@@ -52,7 +50,6 @@ public final class Cursors {
 
   /**
    * Set the shooting cursor.
-   *
    * @param component component to set cursor on
    */
   public static void setShootCursor(final Component component) {
@@ -89,10 +86,10 @@ public final class Cursors {
         image.setRGB(5, i, ~0);
         image.setRGB(i, 5, ~0);
         if (i >= 3 && i <= 7) {
-        image.setRGB(i, 1, ~0);
-        image.setRGB(i, 9, ~0);
-        image.setRGB(1, i, ~0);
-        image.setRGB(9, i, ~0);
+          image.setRGB(i, 1, ~0);
+          image.setRGB(i, 9, ~0);
+          image.setRGB(1, i, ~0);
+          image.setRGB(9, i, ~0);
         }
       }
       image.setRGB(2, 2, ~0);
@@ -106,7 +103,6 @@ public final class Cursors {
 
   /**
    * Set the flying movement cursor.
-   *
    * @param component component to set cursor on
    */
   public static void setWingsCursor(final Component component) {
@@ -187,7 +183,6 @@ public final class Cursors {
 
   /**
    * Set the spell casting cursor.
-   *
    * @param component component to set cursor on
    */
   public static void setCastCursor(final Component component) {
@@ -261,7 +256,6 @@ public final class Cursors {
 
   /**
    * Set the movement and selection cursor.
-   *
    * @param component component to set cursor on
    */
   public static void setCrossCursor(final Component component) {
@@ -380,7 +374,6 @@ public final class Cursors {
 
   /**
    * Set the dismounting cursor.
-   *
    * @param component component to set cursor on
    */
   public static void setDismountCursor(final Component component) {

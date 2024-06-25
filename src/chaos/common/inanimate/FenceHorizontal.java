@@ -7,7 +7,6 @@ import chaos.common.monster.Python;
 
 /**
  * Horizontal fence.
- *
  * @author Sean A. Irvine
  */
 public class FenceHorizontal extends AbstractWall {
@@ -15,10 +14,12 @@ public class FenceHorizontal extends AbstractWall {
     setDefault(Attribute.LIFE, 5);
     setDefault(Attribute.MAGICAL_RESISTANCE, 5);
   }
+
   @Override
   public int getCastRange() {
     return 11;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new Python();

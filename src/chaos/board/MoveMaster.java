@@ -35,7 +35,6 @@ import irvine.math.r.DoubleUtils;
  * This important class is responsible for validating and carrying out
  * all movement requests from the various engines. It is the sole
  * arbitrator of access to the World for the various players.
- *
  * @author Sean A. Irvine
  */
 public class MoveMaster extends DefaultEventGenerator implements Serializable {
@@ -63,7 +62,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
    * See if this actor is the one attention was already focused on.
    * If so return the existing attention detail otherwise construct
    * a new one.
-   *
    * @param p who made the request
    * @param a what did they do it on
    * @return attention details for the actor
@@ -221,7 +219,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
    * attack the cell at target. It does not take into consideration whether
    * it is feasible for the source to actually reach the target. This only
    * deals with real combat not the possibility of weapons fire.
-   *
    * @param source attacker
    * @param target defender
    * @param type type of combat
@@ -236,7 +233,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
    * attack the cell at target. It does not take into consideration whether
    * it is feasible for the source to actually reach the target. This only
    * deals with real combat not the possibility of weapons fire.
-   *
    * @param attacker the attacker
    * @param target defender
    * @param type type of combat
@@ -259,15 +255,15 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
     }
     final int dcv;
     switch (type) {
-    case CombatUtils.NORMAL:
-      dcv = attacker.getDefault(Attribute.COMBAT);
-      break;
-    case CombatUtils.SPECIAL:
-      dcv = attacker.getDefault(Attribute.SPECIAL_COMBAT);
-      break;
-    default:
-      dcv = attacker.getDefault(Attribute.RANGED_COMBAT);
-      break;
+      case CombatUtils.NORMAL:
+        dcv = attacker.getDefault(Attribute.COMBAT);
+        break;
+      case CombatUtils.SPECIAL:
+        dcv = attacker.getDefault(Attribute.SPECIAL_COMBAT);
+        break;
+      default:
+        dcv = attacker.getDefault(Attribute.RANGED_COMBAT);
+        break;
     }
     if (ats != State.ASLEEP) {
       final Team team = mWorld.getTeamInformation();
@@ -370,7 +366,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
    * does not own cell at source, it has already moved this turn, it is
    * engaged, it is not something than can be moved. In carrying out the
    * move it may be necessary to do mounting or combat.
-   *
    * @param player the player performing this move
    * @param source cell to moved
    * @param target where to move to
@@ -452,16 +447,16 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
       // move permitted, this is COMBAT
       final int cs = CombatUtils.performCombat(mWorld, player, m, mWorld.getCell(source), mWorld.getCell(target), CombatUtils.NORMAL);
       switch (cs) {
-      case CombatUtils.INVULNERABLE:
-        return INVULNERABLE;
-      case CombatUtils.COMBAT_FAILED:
-        return COMBAT_FAILED;
-      default:
-        if (cs == CombatUtils.COMBAT_OK) {
-          // cell was not vacated
+        case CombatUtils.INVULNERABLE:
+          return INVULNERABLE;
+        case CombatUtils.COMBAT_FAILED:
           return COMBAT_FAILED;
-        }
-        break;
+        default:
+          if (cs == CombatUtils.COMBAT_OK) {
+            // cell was not vacated
+            return COMBAT_FAILED;
+          }
+          break;
       }
       if (m.get(Attribute.MOVEMENT) > 0) {
         // exclude movement for items with no movement points
@@ -535,7 +530,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
    * Test for shooting. The object at <code>source</code> is attempting
    * to shoot <code>target</code>. This function returns true if the shot
    * is possible.
-   *
    * @param player player moving
    * @param source location of object shooting
    * @param target location of target
@@ -551,7 +545,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
    * Test for shooting. The object mounted at <code>source</code> is attempting
    * to shoot <code>target</code>. This function returns true if the shot
    * is possible.
-   *
    * @param player player moving
    * @param source location of object shooting
    * @param target location of target
@@ -573,7 +566,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
 
   /**
    * Perform ranged combat.
-   *
    * @param player player currently moving
    * @param source actor shooting
    * @param target target of shot
@@ -595,7 +587,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
 
   /**
    * Perform ranged combat from a conveyance.
-   *
    * @param player player currently moving
    * @param source actor containing the mount
    * @param target target of shot
@@ -625,7 +616,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
    * of the cell.  This is done as an interim step in dismounting.
    * This function assumes the mount does indeed exist and that all
    * types are values are already correct.
-   *
    * @param source source cell
    */
   private void dismountLocally(final int source) {
@@ -645,7 +635,6 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
    * dismounted to cell <code>target</code>. The return code indicates if the
    * dismount has been successful.  Note this also performs full combat
    * resolution for mounted combat.
-   *
    * @param player the player performing this move
    * @param source cell containing mount
    * @param target where to move to
@@ -707,15 +696,15 @@ public class MoveMaster extends DefaultEventGenerator implements Serializable {
     if (canAttack) {
       m.setMoved(true);
       switch (CombatUtils.performCombat(mWorld, player, m, mWorld.getCell(source), mWorld.getCell(target), CombatUtils.NORMAL)) {
-      case CombatUtils.INVULNERABLE:
-        return INVULNERABLE;
-      case CombatUtils.COMBAT_FAILED:
-      case CombatUtils.COMBAT_OK: // cell was not vacated as a result
-        return COMBAT_FAILED;
-      default:
-        dismountLocally(source);
-        simpleQuickMove(source, target);
-        return finishSuccessfulMove(player, m);
+        case CombatUtils.INVULNERABLE:
+          return INVULNERABLE;
+        case CombatUtils.COMBAT_FAILED:
+        case CombatUtils.COMBAT_OK: // cell was not vacated as a result
+          return COMBAT_FAILED;
+        default:
+          dismountLocally(source);
+          simpleQuickMove(source, target);
+          return finishSuccessfulMove(player, m);
       }
     }
     // Handle dismounting into a conveyance other than meditation.

@@ -55,10 +55,12 @@ public class CatLord extends Polycaster implements Humanoid, Singleton {
     setDefault(Attribute.INTELLIGENCE, 73);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0CDFFF7E5BBFFFC0L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Lion.class;

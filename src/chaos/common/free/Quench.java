@@ -14,7 +14,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Quench.
- *
  * @author Sean A. Irvine
  */
 public class Quench extends FreeCastable {

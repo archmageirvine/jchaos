@@ -34,7 +34,6 @@ import chaos.util.Sleep;
 
 /**
  * Ranged combat effect.
- *
  * @author Sean A. Irvine
  */
 public class RangedCombatGraphics {
@@ -44,6 +43,7 @@ public class RangedCombatGraphics {
 
   /** Color descriptions for breath weapons. */
   private static final HashMap<Class<? extends Actor>, Color[]> DRAGON_BREATH_COLOR = new HashMap<>();
+
   static {
     DRAGON_BREATH_COLOR.put(ShadowDragon.class, new Color[] {Color.RED, Color.RED.darker()});
     DRAGON_BREATH_COLOR.put(BlackDragon.class, new Color[] {Color.ORANGE, Color.ORANGE.darker()});

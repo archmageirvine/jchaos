@@ -13,7 +13,6 @@ import chaos.util.PowerUpEvent;
 
 /**
  * Necropotence.
- *
  * @author Sean A. Irvine
  */
 public class Necropotence extends FreeCastable {

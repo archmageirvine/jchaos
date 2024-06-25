@@ -63,7 +63,7 @@ public class IntelligentMeditationCasterTest extends TestCase {
       + "....................\n";
 
   private static final String EXPECTED_MWH1 =
-        "....................\n"
+    "....................\n"
       + "....................\n"
       + "....................\n"
       + "....................\n"
@@ -85,7 +85,7 @@ public class IntelligentMeditationCasterTest extends TestCase {
       + "....................\n";
 
   private static final String EXPECTED_MWH2 =
-        "....................\n"
+    "....................\n"
       + "....................\n"
       + "....................\n"
       + "....................\n"
@@ -107,7 +107,7 @@ public class IntelligentMeditationCasterTest extends TestCase {
       + "....................\n";
 
   private static final String EXPECTED_MW_ARBORIST =
-        "....................\n"
+    "....................\n"
       + "....................\n"
       + "....................\n"
       + "....................\n"
@@ -258,7 +258,7 @@ public class IntelligentMeditationCasterTest extends TestCase {
   }
 
   private static final String EXPECTED_MC1_FRIEND =
-        "WM..................\n"
+    "WM..................\n"
       + "....................\n"
       + "....................\n"
       + "....................\n"
@@ -280,7 +280,7 @@ public class IntelligentMeditationCasterTest extends TestCase {
       + "...................W\n";
 
   private static final String EXPECTED_MC2_FRIEND =
-        "W...................\n"
+    "W...................\n"
       + "M...................\n"
       + "....................\n"
       + "....................\n"

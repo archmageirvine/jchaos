@@ -9,7 +9,6 @@ import chaos.common.Realm;
 
 /**
  * Aesculapius.
- *
  * @author Sean A. Irvine
  */
 public class Aesculapius extends Monster implements Bonus, Humanoid {
@@ -39,10 +38,12 @@ public class Aesculapius extends Monster implements Bonus, Humanoid {
   public int getCastRange() {
     return 2;
   }
+
   @Override
   public int getBonus() {
     return 4;
   }
+
   @Override
   public long getLosMask() {
     return 0xFCFC743F3F3F3E3EL;

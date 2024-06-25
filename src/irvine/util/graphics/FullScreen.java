@@ -25,7 +25,6 @@ import irvine.util.time.Delay;
  * volatile image that is only copied to the screen when the <code>paintScreen()
  * </code> method is called.  In my experience this is actually better than
  * using a full page-flipping strategy.
- *
  * @author Sean A. Irvine
  */
 public class FullScreen extends JFrame implements AutoCloseable {
@@ -66,14 +65,13 @@ public class FullScreen extends JFrame implements AutoCloseable {
    * Construct a new exclusive frame.  An attempt is made to get
    * a frame of specified size, but if this is not possible, then a frame in
    * the current default size is returned.
-   *
    * @param name name for the frame, can be null
    * @param width desired width of screen in pixels
    * @param height desired height of screen in pixels
    * @param depth desired color depth
    * @param fullScreen true for full-screen
    * @param screenNumber screen number to use (-1 for default)
-   * @exception UnsupportedOperationException if the underlying operating system
+   * @throws UnsupportedOperationException if the underlying operating system
    * or JVM does not support full-screen exclusive mode.
    */
   public FullScreen(final String name, final int width, final int height, final int depth, final boolean fullScreen, final int screenNumber) {
@@ -159,12 +157,11 @@ public class FullScreen extends JFrame implements AutoCloseable {
    * Construct a new full-screen exclusive frame.  An attempt is made to get
    * a frame of specified size, but if this is not possible, then a frame in
    * the current default size is returned.
-   *
    * @param name name for the frame, can be null
    * @param width desired width of screen in pixels
    * @param height desired height of screen in pixels
    * @param depth desired color depth
-   * @exception UnsupportedOperationException if the underlying operating system
+   * @throws UnsupportedOperationException if the underlying operating system
    * or JVM does not support full-screen exclusive mode.
    */
   public FullScreen(final String name, final int width, final int height, final int depth) {
@@ -176,7 +173,6 @@ public class FullScreen extends JFrame implements AutoCloseable {
 
   /**
    * Get the Graphics objects.
-   *
    * @return the Graphics object
    */
   public Graphics getImageGraphics() {
@@ -212,9 +208,8 @@ public class FullScreen extends JFrame implements AutoCloseable {
    * until the animation is interrupted, thus it is best to call this
    * method from a separate thread.  If the requested frame-rate is too
    * high, the system will still do the best it can.
-   *
    * @param fps desired frame rate
-   * @exception IllegalArgumentException if <code>fps</code> is less than 1.
+   * @throws IllegalArgumentException if <code>fps</code> is less than 1.
    */
   public void animate(final int fps) {
     if (fps < 1) {

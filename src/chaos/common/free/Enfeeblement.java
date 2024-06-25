@@ -11,7 +11,6 @@ import chaos.common.Monster;
 
 /**
  * Enfeeblement.
- *
  * @author Sean A. Irvine
  */
 public class Enfeeblement extends AbstractFreeDecrement {
@@ -28,7 +27,7 @@ public class Enfeeblement extends AbstractFreeDecrement {
   @Override
   protected Set<Cell> filter(final Set<Cell> affected) {
     // Eliminate non-monsters
-    for (final Iterator<Cell> it = affected.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = affected.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (!(a instanceof Monster)) {
         it.remove();

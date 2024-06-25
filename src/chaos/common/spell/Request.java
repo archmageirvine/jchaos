@@ -10,7 +10,6 @@ import chaos.common.Monster;
 
 /**
  * Request.
- *
  * @author Sean A. Irvine
  */
 public class Request extends Castable {
@@ -19,10 +18,12 @@ public class Request extends Castable {
   public int getCastFlags() {
     return CAST_EMPTY | CAST_DEAD;
   }
+
   @Override
   public int getCastRange() {
     return 1;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     // This spell simply proxies the activity to the actual randomly selected

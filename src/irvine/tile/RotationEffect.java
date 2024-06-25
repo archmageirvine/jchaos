@@ -3,7 +3,6 @@ package irvine.tile;
 /**
  * An effect that rotates an image successively through the specified angle
  * for a given number of steps.
- *
  * @author Sean A. Irvine
  */
 public class RotationEffect extends AbstractTileEffect {
@@ -23,13 +22,12 @@ public class RotationEffect extends AbstractTileEffect {
   /**
    * Construct a new effect to rotate a given image.  Positive angles correspond
    * to clockwise rotation.
-   *
    * @param baseImage image to be rotated
    * @param angle angle in degrees to rotate per step
    * @param steps number of steps
    * @param bg background color for revealed pixels
    * @param blending true to use blending, false preserves palette
-   * @exception NullPointerException if <code>baseImage</code> is null.
+   * @throws NullPointerException if <code>baseImage</code> is null.
    */
   public RotationEffect(final TileImage baseImage, final double angle, final int steps,
                         final int bg, final boolean blending) {

@@ -11,7 +11,6 @@ import junit.framework.Assert;
 
 /**
  * Listener that expects to see particular event types.
- *
  * @author Sean A. Irvine
  */
 class TestListener implements EventListener {
@@ -27,7 +26,6 @@ class TestListener implements EventListener {
   /**
    * Construct a listener expecting events with specified minimum and
    * maximum counts.
-   *
    * @param min minimum count for each event
    * @param max maximum count for each event
    * @param total total number of events expected (-1 to disable).

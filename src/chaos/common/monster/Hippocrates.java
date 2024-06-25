@@ -8,7 +8,6 @@ import chaos.common.Monster;
 
 /**
  * Hippocrates.
- *
  * @author Sean A. Irvine
  */
 public class Hippocrates extends MaterialMonster implements Humanoid, AttacksUndead {
@@ -22,10 +21,12 @@ public class Hippocrates extends MaterialMonster implements Humanoid, AttacksUnd
     setDefault(Attribute.AGILITY, 7);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0xFCFC743F3F3F3E3EL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Druid.class;

@@ -9,7 +9,6 @@ import chaos.common.NoDeadImage;
 
 /**
  * Higher devil.
- *
  * @author Sean A. Irvine
  * @author Ingo Holewczuk
  */
@@ -23,14 +22,17 @@ public class HigherDevil extends DemonicMonster implements Humanoid, Bonus, NoDe
     setDefault(Attribute.AGILITY, 54);
     setDefault(Attribute.MOVEMENT, 5);
   }
+
   @Override
   public long getLosMask() {
     return 0xBFDBFFFFFFFF7E18L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Vampire.class;
   }
+
   @Override
   public int getBonus() {
     return 4;

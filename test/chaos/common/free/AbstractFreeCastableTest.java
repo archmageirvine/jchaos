@@ -11,7 +11,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Tests basic functionality that all FreeCastables should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractFreeCastableTest extends AbstractCastableTest {

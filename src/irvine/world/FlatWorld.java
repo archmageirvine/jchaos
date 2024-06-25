@@ -2,7 +2,6 @@ package irvine.world;
 
 /**
  * Provides implementation of a flat 2-dimensional world.
- *
  * @param <C> underlying cell type
  * @author Sean A. Irvine
  */
@@ -15,10 +14,9 @@ public class FlatWorld<C> extends AbstractWorld<C> {
 
   /**
    * Construct a world of given width and height.
-   *
    * @param width width of world in cells
    * @param height height of world in cells
-   * @exception IllegalArgumentException if <code>width</code> or <code>height
+   * @throws IllegalArgumentException if <code>width</code> or <code>height
    * </code> is less than 1.
    */
   public FlatWorld(final int width, final int height) {

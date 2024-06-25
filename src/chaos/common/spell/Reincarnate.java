@@ -20,7 +20,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Reincarnate.
- *
  * @author Sean A. Irvine
  */
 public class Reincarnate extends Castable implements TargetFilter {
@@ -77,7 +76,7 @@ public class Reincarnate extends Castable implements TargetFilter {
       }
     }
     // Remove lower scoring targets
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       if (score(it.next().peek()) < bestScore) {
         it.remove();
       }

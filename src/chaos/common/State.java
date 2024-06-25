@@ -2,7 +2,6 @@ package chaos.common;
 
 /**
  * Possible states for an actor.
- *
  * @author Sean A. Irvine
  */
 public enum State {

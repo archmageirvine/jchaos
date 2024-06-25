@@ -17,7 +17,6 @@ import chaos.util.CastUtils;
 
 /**
  * Elm.
- *
  * @author Sean A. Irvine
  */
 public class Elm extends MaterialMonster implements Tree, Animateable, Multiplicity, Blocker {
@@ -29,36 +28,44 @@ public class Elm extends MaterialMonster implements Tree, Animateable, Multiplic
     setRealm(Realm.MATERIAL);
     setSpecialCombatApply(Attribute.INTELLIGENCE);
   }
+
   @Override
   public int getCastRange() {
     return 7;
   }
+
   @Override
   public long getLosMask() {
     return 0x30FFFEFE7E7E3C7CL;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_GROWTH | CAST_EMPTY | CAST_LOS;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     CastUtils.castTree(this, caster, c, casterCell);
   }
+
   @Override
   public int getDefaultWeight() {
     return 0;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new OgreMage();
     a.setOwner(getOwner());
     return a;
   }
+
   @Override
   public int getMultiplicity() {
     return 4;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;

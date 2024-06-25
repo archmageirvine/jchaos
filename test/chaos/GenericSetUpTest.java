@@ -41,6 +41,6 @@ public class GenericSetUpTest extends TestCase {
       "setColor",
       "I(",
       "gmail.com"
-      );
+    );
   }
 }

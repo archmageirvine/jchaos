@@ -31,7 +31,6 @@ import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class HumanEngineTest extends TestCase {
@@ -127,6 +126,7 @@ public class HumanEngineTest extends TestCase {
   private static class MyGoListener implements EventListener {
 
     private static final ArrayList<Class<? extends Event>> CHAIN = new ArrayList<>();
+
     static {
       CHAIN.add(HighlightEvent.class);
       CHAIN.add(CellEffectEvent.class);

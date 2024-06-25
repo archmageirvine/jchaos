@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Manticore.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -24,10 +23,12 @@ public class Manticore extends MaterialMonsterMount {
     setDefault(Attribute.RANGED_COMBAT, 1);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x383EFF7F7E7E7E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Centaur.class;

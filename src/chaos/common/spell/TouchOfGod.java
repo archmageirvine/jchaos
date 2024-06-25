@@ -18,7 +18,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Touch of God.
- *
  * @author Sean A. Irvine
  */
 public class TouchOfGod extends Castable implements TargetFilter {
@@ -26,10 +25,12 @@ public class TouchOfGod extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_LOS;
   }
+
   @Override
   public int getCastRange() {
     return 4;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {

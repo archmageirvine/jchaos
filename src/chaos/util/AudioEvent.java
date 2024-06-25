@@ -5,7 +5,6 @@ import chaos.common.Actor;
 
 /**
  * An audible cell effect event.
- *
  * @author Sean A. Irvine
  */
 public class AudioEvent extends CellEffectEvent {
@@ -15,7 +14,6 @@ public class AudioEvent extends CellEffectEvent {
 
   /**
    * An audio event for the specified cell.
-   *
    * @param cell the cell affected
    * @param actor the actor this event is for
    * @param name name of the audio event (used for sound selection)
@@ -29,7 +27,6 @@ public class AudioEvent extends CellEffectEvent {
 
   /**
    * An audio event for the specified cell.
-   *
    * @param cell the cell affected
    * @param actor the actor this event is for
    * @param name name of the audio event (used for sound selection)
@@ -40,7 +37,6 @@ public class AudioEvent extends CellEffectEvent {
 
   /**
    * An audio event for the specified cell.
-   *
    * @param cell the cell affected
    * @param actor the actor this event is for
    * @param name name of the audio event (used for sound selection)
@@ -52,7 +48,6 @@ public class AudioEvent extends CellEffectEvent {
 
   /**
    * An audio event for the specified cell.
-   *
    * @param cell the cell affected
    * @param actor the actor this event is for
    * @param name name of the audio event (used for sound selection)
@@ -63,7 +58,6 @@ public class AudioEvent extends CellEffectEvent {
 
   /**
    * A general audio event.
-   *
    * @param name name of the audio event (used for sound selection)
    */
   public AudioEvent(final String name) {

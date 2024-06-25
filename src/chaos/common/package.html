@@ -1,34 +1,66 @@
 <body>
 Defines the hierarchy of spells and their implementations.<p>
 
-    <h1>How to Add a New Spell</h1>
+<h1>How to Add a New Spell</h1>
 
-    There is a document in <code>documents/adding-castables.tex</code> dealing with the addition of a new spell.
+There is a document in <code>documents/adding-castables.tex</code> dealing with the addition of a new spell.
 
 <h1>The Castable Hierarchy</h1>
 
-All the spells of Chaos form a class hierarchy rooted at the <a href="Castable.html">Castable</a> class.  The Castable superclass encompasses all items which can appear on a spell list and defines those methods appropriate to all (or at least most) such spells.  In particular, it provides a way of specifying the casting conditions for the spells, a name, a description, and a way of accessing a graphical representation.<p>
+All the spells of Chaos form a class hierarchy rooted at the <a href="Castable.html">Castable</a> class. The Castable
+superclass encompasses all items which can appear on a spell list and defines those methods appropriate to all (or at
+least most) such spells. In particular, it provides a way of specifying the casting conditions for the spells, a name, a
+description, and a way of accessing a graphical representation.<p>
 
-Below Castable is a hierarchy specifying ever increasing detail for particular kinds of spell.  The picture below summarizes of the more important members of the hierarchy:<p>
+    Below Castable is a hierarchy specifying ever increasing detail for particular kinds of spell. The picture below
+    summarizes of the more important members of the hierarchy:
+<p>
 
 <div align="center">
-<img src="doc-files/Castable.png" alt="Castable hierarchy">
+    <img src="doc-files/Castable.png" alt="Castable hierarchy">
 </div>
 
-The largest subclass of Castable is <a href="Actor.html">Actor</a>, which represents all those castables which have a physical presence on the game board.  It defines both default and current statistics for life, life recovery rate, magical resistance, and magical resistance recovery rate, combat applicability information, ownership information, and various other state information like the actor's realm, whether or not it has moved, and the sleeping status.<p>
+The largest subclass of Castable is <a href="Actor.html">Actor</a>, which represents all those castables which have a
+physical presence on the game board. It defines both default and current statistics for life, life recovery rate,
+magical resistance, and magical resistance recovery rate, combat applicability information, ownership information, and
+various other state information like the actor's realm, whether or not it has moved, and the sleeping status.<p>
 
-The largest subclass of Actors is <a href="Actor.html">Monster</a>, which represents all those actors which are able to move. It provides default and current statistics together with recovery rates for agility; ordinary, ranged, and special combat; intelligence; movement; and scavenge.  It also provides a way of telling if the monster flies is an archer. It also handles reincarnation.  A few unusual creatures, for example the <a href="monster/MindFlayer.html">Mind Flayer</a>, implement this class directly, but most do so via one of the convenience classes <a href="MaterialMonster.html">MaterialMonster</a>, <a href="Dragon.html">Dragon</a>, or <a href="UndeadMonster.html">UndeadMonster</a>.<p>
+    The largest subclass of Actors is <a href="Actor.html">Monster</a>, which represents all those actors which are able
+    to move. It provides default and current statistics together with recovery rates for agility; ordinary, ranged, and
+    special combat; intelligence; movement; and scavenge. It also provides a way of telling if the monster flies is an
+    archer. It also handles reincarnation. A few unusual creatures, for example the <a href="monster/MindFlayer.html">Mind
+    Flayer</a>, implement this class directly, but most do so via one of the convenience classes <a
+        href="MaterialMonster.html">MaterialMonster</a>, <a href="Dragon.html">Dragon</a>, or <a
+        href="UndeadMonster.html">UndeadMonster</a>.
+<p>
 
-A special case of Monster is a <a href="Caster.html">Caster</a>. Caster is the superclass for all those monsters which are capable of casting spells.  This includes all the wizards and certain other creatures like the <a href="monster/Faun.html">Faun</a> (which can cast sleep spells) and the <a href="monster/CatLord.html">Cat Lord</a> (who can summon new cats). Caster provides a way for such casting to occur by providing a link to a PlayerEngine.<p>
+    A special case of Monster is a <a href="Caster.html">Caster</a>. Caster is the superclass for all those monsters
+    which are capable of casting spells. This includes all the wizards and certain other creatures like the <a
+        href="monster/Faun.html">Faun</a> (which can cast sleep spells) and the <a href="monster/CatLord.html">Cat
+    Lord</a> (who can summon new cats). Caster provides a way for such casting to occur by providing a link to a
+    PlayerEngine.
+<p>
 
-Of all Casters the most important kind is the <a href="Wizard.html">Wizard</a>.  The wizard class, in addition to all the statistics of its superclass, maintains the power-up, score and bonus information.<p>
+    Of all Casters the most important kind is the <a href="Wizard.html">Wizard</a>. The wizard class, in addition to all
+    the statistics of its superclass, maintains the power-up, score and bonus information.
+<p>
 
-In addition to the classes discussed so far, there is a number of interfaces, of varying complexity, to capture various other properties a Castable (or more often an Actor) might possess.  In some cases, like <a href="Humanoid.html">Humanoid</a>, <a href="BlocksLineOfSight.html"><code>BlocksLineOfSight</code></a>, and <a href="Oracle.html">Oracle</a>, there is no methods to be implemented.  In others, there are one or two simple methods.  Important interfaces include <a href="Growth.html">Growth</a> which provides the <code>grow()</code> method called by growths.  The <a href="Rideable.html">Rideable</a>, <a href="Mountable.html">Mountable</a>, and <a href="Meditation.html">Meditation</a> interfaces should be self explanatory.<p>
+    In addition to the classes discussed so far, there is a number of interfaces, of varying complexity, to capture
+    various other properties a Castable (or more often an Actor) might possess. In some cases, like <a
+        href="Humanoid.html">Humanoid</a>, <a href="BlocksLineOfSight.html"><code>BlocksLineOfSight</code></a>, and <a
+        href="Oracle.html">Oracle</a>, there is no methods to be implemented. In others, there are one or two simple
+    methods. Important interfaces include <a href="Growth.html">Growth</a> which provides the <code>grow()</code> method
+    called by growths. The <a href="Rideable.html">Rideable</a>, <a href="Mountable.html">Mountable</a>, and <a
+        href="Meditation.html">Meditation</a> interfaces should be self explanatory.
+<p>
 
 <h1>Outstanding Design Issues</h1>
 
 <ul>
-<li><i>Read-only property</i>. It would be desirable to make many properties read-only, so that clients cannot directly manipulate (for example) the life of an Actor.  This could probably be done using the standard modifiers and some adjustment to the class hierarchy.  There may be other better solutions.</li>
+    <li><i>Read-only property</i>. It would be desirable to make many properties read-only, so that clients cannot
+        directly manipulate (for example) the life of an Actor. This could probably be done using the standard modifiers
+        and some adjustment to the class hierarchy. There may be other better solutions.
+    </li>
 </ul>
 
 </body>

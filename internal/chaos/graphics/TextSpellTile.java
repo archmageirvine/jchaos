@@ -13,7 +13,6 @@ import chaos.util.Sleep;
 
 /**
  * Text in a tile.
- *
  * @author Sean A. Irvine
  */
 class TextSpellTile extends BasicSpellTile {
@@ -119,7 +118,6 @@ class TextSpellTile extends BasicSpellTile {
 
   /**
    * Used for testing.
-   *
    * @param args See usage.
    */
   public static void main(final String[] args) {

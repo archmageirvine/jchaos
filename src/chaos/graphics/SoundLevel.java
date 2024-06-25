@@ -13,17 +13,16 @@ import chaos.sound.Sound;
 
 /**
  * Utility functions to determine appropriate sound priority level.
- *
  * @author Sean A. Irvine
  */
 public final class SoundLevel {
 
-  private SoundLevel() { }
+  private SoundLevel() {
+  }
 
   /**
    * Determine the sound priority based on whether or not a human is
    * involved in the action.
-   *
    * @param s source
    * @param t target
    * @return sound level
@@ -60,7 +59,6 @@ public final class SoundLevel {
   /**
    * Determine the sound priority based on whether or not a human is
    * involved in the action.
-   *
    * @param s actor
    * @return sound level
    */
@@ -71,7 +69,6 @@ public final class SoundLevel {
   /**
    * Determine the sound priority based on whether or not a human is
    * involved in the action.
-   *
    * @param s source
    * @param targets target cells
    * @return sound level

@@ -8,7 +8,6 @@ import junit.framework.TestCase;
 
 /**
  * Unit Test for class Handler.
- *
  * @author Richard Allen
  */
 public abstract class AbstractURLConnectionTest extends TestCase {

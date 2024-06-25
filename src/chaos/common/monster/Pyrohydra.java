@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Pyrohydra.
- *
  * @author Sean A. Irvine
  */
 public class Pyrohydra extends MaterialMonster implements Bonus {
@@ -22,18 +21,22 @@ public class Pyrohydra extends MaterialMonster implements Bonus {
     setDefault(Attribute.RANGE, 2);
     setDefault(Attribute.RANGED_COMBAT, 15);
   }
+
   @Override
   public int getCastRange() {
     return 2;
   }
+
   @Override
   public int getBonus() {
     return 3;
   }
+
   @Override
   public long getLosMask() {
     return 0x787CFEFC7E7E7E3EL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Crocodile.class;

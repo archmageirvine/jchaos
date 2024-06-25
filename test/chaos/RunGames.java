@@ -14,12 +14,12 @@ import irvine.math.r.DoubleUtils;
 
 /**
  * Run a series of games recording whether or not spells were useful.
- *
  * @author Sean A. Irvine
  */
 public final class RunGames {
 
-  private RunGames() { }
+  private RunGames() {
+  }
 
   private static final String CAST_LINE = "CastWizard: ";
   private static final int CAST_LINE_LENGTH = CAST_LINE.length();
@@ -76,9 +76,8 @@ public final class RunGames {
    * Run a series of AI games with the aim of computing the best spells.
    * The first agument is total number of games to run.  Second argument
    * is how often to dump complete spell table to a file.
-   *
    * @param args see description above
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String... args) throws Exception {
     final int games = Integer.parseInt(args[0]);

@@ -13,23 +13,28 @@ public class PolycasterTest extends TestCase {
 
   private static final class MyPolycaster extends Polycaster {
     private final Castable mC;
+
     @SuppressWarnings("unchecked")
     MyPolycaster(final Castable c) {
       super(0);
       mC = c;
     }
+
     @Override
     public Castable getCastable() {
       return mC;
     }
+
     @Override
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;
     }
+
     @Override
     public int getOwner() {
       return 1;
@@ -57,10 +62,12 @@ public class PolycasterTest extends TestCase {
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;
     }
+
     private YourPolycaster() {
       super(1, Lion.class);
     }
@@ -78,10 +85,12 @@ public class PolycasterTest extends TestCase {
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;
     }
+
     private HisPolycaster() {
       super(100000000, Lion.class);
     }

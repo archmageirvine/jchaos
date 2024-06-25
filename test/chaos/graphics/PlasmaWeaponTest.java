@@ -11,7 +11,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class PlasmaWeaponTest extends TestCase {
@@ -31,6 +30,7 @@ public class PlasmaWeaponTest extends TestCase {
     public int getXOffset() {
       return 1;
     }
+
     @Override
     public int getYOffset() {
       return 2;

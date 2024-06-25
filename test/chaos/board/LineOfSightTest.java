@@ -18,7 +18,6 @@ import junit.framework.TestCase;
 
 /**
  * Test the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class LineOfSightTest extends TestCase {
@@ -44,7 +43,6 @@ public class LineOfSightTest extends TestCase {
 
   /**
    * Get the line of sight mask for a cell.
-   *
    * @param cell cell to get mask for
    * @return the 8&times;8 packed mask
    */
@@ -56,7 +54,6 @@ public class LineOfSightTest extends TestCase {
   /**
    * A slower but definitely correct implementation, used to check
    * correctness against the optimized version.
-   *
    * @param source source cell
    * @param target target cell
    * @return true if line of sight is possible, false otherwise
@@ -120,7 +117,7 @@ public class LineOfSightTest extends TestCase {
           int xbit = 64 - (sx & CELL_WIDTH_MASK);
           do {
             if ((mask & (1L << (xbit++ - ((sy >>> SPECIAL_MASK_SHIFT) & 0x38)))) != 0L) {
-                return false;
+              return false;
             }
           } while (((csx ^ --sx) | ((csy ^ (sy -= slope)) >>> FIXED_POINTS_BITS)) < CELL_WIDTH);
         }
@@ -288,8 +285,7 @@ public class LineOfSightTest extends TestCase {
 
   /**
    * Compares implementations.
-   *
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public void testRandomCompare() throws Exception {
     final Random r = new Random();
@@ -330,8 +326,7 @@ public class LineOfSightTest extends TestCase {
   /**
    * Tests idempotence, a can see b iff b can see a.
    * This has found a few bugs in the past.
-   *
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public void testRandomIdempotence() throws Exception {
     final Random r = new Random();

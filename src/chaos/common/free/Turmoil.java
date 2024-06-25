@@ -15,7 +15,6 @@ import irvine.math.Shuffle;
  * Turmoil.  This was the only extra spell available by meditation in Spectrum
  * Chaos.  Also, the Spectrum implementation was buggy and would occasionally
  * crash.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

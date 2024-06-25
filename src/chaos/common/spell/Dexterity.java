@@ -6,7 +6,6 @@ import chaos.common.Multiplicity;
 
 /**
  * Dexterity.
- *
  * @author Sean A. Irvine
  */
 public class Dexterity extends AbstractShield implements Multiplicity {

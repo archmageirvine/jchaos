@@ -14,7 +14,6 @@ import irvine.util.graphics.ParticleExplosion;
 
 /**
  * Bomb explosion effect.
- *
  * @author Sean A. Irvine
  */
 public class BombEffect extends AbstractEffect {

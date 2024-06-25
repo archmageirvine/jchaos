@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 /**
  * Remembers details of a move in progress.
- *
  * @author Sean A. Irvine
  */
 class AttentionDetail implements Serializable {

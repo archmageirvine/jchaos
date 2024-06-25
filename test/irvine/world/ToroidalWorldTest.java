@@ -7,7 +7,6 @@ import irvine.TestUtils;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class ToroidalWorldTest extends AbstractWorldTest {

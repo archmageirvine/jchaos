@@ -15,7 +15,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractFreeDecrementTest extends AbstractFreeCastableTest {
@@ -27,6 +26,7 @@ public abstract class AbstractFreeDecrementTest extends AbstractFreeCastableTest
 
   private static class MyListener implements EventListener {
     final MyBool mState = new MyBool();
+
     @Override
     public void update(final Event e) {
       if (e instanceof PolyshieldDestroyEvent) {
@@ -38,6 +38,7 @@ public abstract class AbstractFreeDecrementTest extends AbstractFreeCastableTest
         mState.mCast = true;
       }
     }
+
     MyBool getState() {
       return mState;
     }

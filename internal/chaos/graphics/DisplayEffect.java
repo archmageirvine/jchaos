@@ -17,7 +17,8 @@ import irvine.util.graphics.WavyLine;
  */
 public final class DisplayEffect {
 
-  private DisplayEffect() { }
+  private DisplayEffect() {
+  }
 
   private static final int WIDTH = 400;
   private static final int HEIGHT = 400;

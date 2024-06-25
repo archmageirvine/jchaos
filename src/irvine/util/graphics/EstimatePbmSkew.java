@@ -12,7 +12,8 @@ import java.io.InputStream;
  */
 public final class EstimatePbmSkew {
 
-  private EstimatePbmSkew() { }
+  private EstimatePbmSkew() {
+  }
 
   private static int getBit(final byte[] image, final int w, final int x, final int y) {
     final int cw = (w | 7) >>> 3;

@@ -6,7 +6,6 @@ import irvine.util.graphics.BufferedImageUtils;
  * Starting with a gray scale form of the given image.  Gradually reveal the (color) form of
  * the image by expanding outwards in a column-wise manner from the center.  If the image
  * is width <code>w</code> it will take <code>w/2</code> steps to reveal.
- *
  * @author Sean A. Irvine
  */
 public class PortalOpenEffect extends AbstractTileEffect {
@@ -17,7 +16,7 @@ public class PortalOpenEffect extends AbstractTileEffect {
   /**
    * Construct a portal opening effect.
    * @param image underlying image
-   * @exception NullPointerException if <code>image</code> is <code>null</code>.
+   * @throws NullPointerException if <code>image</code> is <code>null</code>.
    */
   public PortalOpenEffect(final TileImage image) {
     if (image == null) {

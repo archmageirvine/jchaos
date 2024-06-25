@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Snow leopard.
- *
  * @author Sean A. Irvine
  */
 public class SnowLeopard extends MaterialMonster implements Cat {
@@ -20,10 +19,12 @@ public class SnowLeopard extends MaterialMonster implements Cat {
     setDefault(Attribute.AGILITY, 80);
     setDefault(Attribute.MOVEMENT, 5);
   }
+
   @Override
   public long getLosMask() {
     return 0x00000006FFFE6600L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Leopard.class;

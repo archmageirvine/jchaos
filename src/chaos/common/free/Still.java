@@ -14,7 +14,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Still
- *
  * @author Sean A. Irvine
  */
 public class Still extends FreeCastable {

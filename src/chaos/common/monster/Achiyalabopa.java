@@ -8,7 +8,6 @@ import chaos.common.Promotion;
 
 /**
  * The achiyalabopa.
- *
  * @author Sean A. Irvine
  */
 public class Achiyalabopa extends MaterialMonster implements Promotion {
@@ -22,18 +21,22 @@ public class Achiyalabopa extends MaterialMonster implements Promotion {
     setDefault(Attribute.MOVEMENT, 5);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public int getCastRange() {
     return 2;
   }
+
   @Override
   public long getLosMask() {
     return 0x0000EEFFFF670200L;
   }
+
   @Override
   public Class<? extends Monster> promotion() {
     return Phoenix.class;
   }
+
   @Override
   public int promotionCount() {
     return 2;

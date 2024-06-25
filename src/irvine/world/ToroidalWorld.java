@@ -3,7 +3,6 @@ package irvine.world;
 /**
  * Provides implementation of a 2-dimensional world where the grid is
  * wrapped from left to right and top to bottom thereby forming a torus.
- *
  * @param <C> underlying cell type
  * @author Sean A. Irvine
  */
@@ -16,10 +15,9 @@ public class ToroidalWorld<C> extends AbstractWorld<C> {
 
   /**
    * Construct a toroidal world of given width and height.
-   *
    * @param width width of world in cells
    * @param height height of world in cells
-   * @exception IllegalArgumentException if <code>width</code> or <code>height
+   * @throws IllegalArgumentException if <code>width</code> or <code>height
    * </code> is less than 1.
    */
   public ToroidalWorld(final int width, final int height) {

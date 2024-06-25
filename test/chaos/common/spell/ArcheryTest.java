@@ -15,7 +15,6 @@ import chaos.util.EventListener;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class ArcheryTest extends AbstractCastableTest {

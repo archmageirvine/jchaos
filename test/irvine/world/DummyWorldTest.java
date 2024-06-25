@@ -9,7 +9,6 @@ import irvine.math.Shuffle;
 
 /**
  * Tests abstract world functionality.
- *
  * @author Sean A. Irvine
  */
 public class DummyWorldTest extends AbstractWorldTest {
@@ -19,10 +18,12 @@ public class DummyWorldTest extends AbstractWorldTest {
     DummyWorld(final int w, final int h) {
       super(w, h);
     }
+
     @Override
     public int getSquaredDistance(final int a, final int b) {
       return 0;
     }
+
     @Override
     public int getCellNumber(final int x, final int y) {
       if (x < 0 || y < 0 || x >= width() || y >= height()) {
@@ -30,6 +31,7 @@ public class DummyWorldTest extends AbstractWorldTest {
       }
       return y * width() + x;
     }
+
     @Override
     public boolean isEdge(final int a) {
       return false;
@@ -53,9 +55,11 @@ public class DummyWorldTest extends AbstractWorldTest {
 
   private static class MyFilter implements CellFilter<Integer> {
     private final boolean[] mBombs;
+
     MyFilter(final boolean[] bombs) {
       mBombs = bombs;
     }
+
     @Override
     public boolean accept(final Integer a) {
       return a == null || mBombs[a];

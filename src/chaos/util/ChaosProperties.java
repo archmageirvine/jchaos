@@ -11,7 +11,6 @@ import java.util.Properties;
 /**
  * A file backed resource for holding various configuration properties
  * of the game.
- *
  * @author Sean A. Irvine
  */
 public final class ChaosProperties extends Properties {
@@ -77,7 +76,6 @@ public final class ChaosProperties extends Properties {
 
   /**
    * Get a property which is supposed to be a double.
-   *
    * @param property property name
    * @param defaultValue default value
    * @return resulting value
@@ -89,7 +87,6 @@ public final class ChaosProperties extends Properties {
 
   /**
    * Get a property which is supposed to be a integer.
-   *
    * @param property property name
    * @param defaultValue default value
    * @return resulting value
@@ -101,7 +98,6 @@ public final class ChaosProperties extends Properties {
 
   /**
    * Get a property which is supposed to be a boolean.
-   *
    * @param property property name
    * @param defaultValue default value
    * @return resulting value

@@ -6,12 +6,12 @@ import java.util.Set;
 
 /**
  * Generate example cell selections.
- *
  * @author Sean A. Irvine
  */
 public final class GenerateExampleTeX {
 
-  private GenerateExampleTeX() { }
+  private GenerateExampleTeX() {
+  }
 
   private static final String LS = System.lineSeparator();
 
@@ -45,9 +45,8 @@ public final class GenerateExampleTeX {
 
   /**
    * Generate some examples for documentation.
-   *
    * @param args ignored
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String[] args) throws Exception {
     try (final PrintStream ps = new PrintStream(new FileOutputStream("gc1.tex"))) {

@@ -4,7 +4,6 @@ import chaos.common.inanimate.StandardWall;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class DummyWallTest extends AbstractActorTest {

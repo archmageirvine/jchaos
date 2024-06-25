@@ -10,7 +10,6 @@ import junit.framework.Assert;
 
 /**
  * Superclass for testing shield spells.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractShieldTest extends AbstractCastableTest {
@@ -23,6 +22,7 @@ public abstract class AbstractShieldTest extends AbstractCastableTest {
 
   private static class MyListener implements EventListener {
     final MyBool mState = new MyBool();
+
     @Override
     public void update(final Event e) {
       if (e instanceof CellEffectEvent) {
@@ -36,6 +36,7 @@ public abstract class AbstractShieldTest extends AbstractCastableTest {
         }
       }
     }
+
     MyBool getState() {
       return mState;
     }

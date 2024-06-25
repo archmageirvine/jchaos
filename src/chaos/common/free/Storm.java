@@ -19,7 +19,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Storm.
- *
  * @author Sean A. Irvine
  */
 public class Storm extends FreeCastable {

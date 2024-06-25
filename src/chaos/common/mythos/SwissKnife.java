@@ -19,14 +19,17 @@ public class SwissKnife extends MythosMonster implements Humanoid {
     setDefault(Attribute.MOVEMENT, 1);
     setDefault(Attribute.COMBAT, 12);
   }
+
   @Override
   public long getLosMask() {
     return 0x7CFEFFFFFEFEFC7CL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Pliers.class;
   }
+
   @Override
   public int getCastRange() {
     return 8;

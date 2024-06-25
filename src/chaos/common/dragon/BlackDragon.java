@@ -14,7 +14,6 @@ import chaos.common.spell.Lightning;
 
 /**
  * The black dragon.
- *
  * @author Sean A. Irvine
  */
 public class BlackDragon extends Unicaster implements Bonus, Rideable {
@@ -42,10 +41,12 @@ public class BlackDragon extends Unicaster implements Bonus, Rideable {
   public int getBonus() {
     return 6;
   }
+
   @Override
   public long getLosMask() {
     return 0x062E77FE9FBEF6FCL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return BlueDragon.class;

@@ -10,17 +10,16 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Construct spell selectors using reflection.
- *
  * @author Sean A. Irvine
  */
 public final class SelectorFactory {
 
-  private SelectorFactory() { }
+  private SelectorFactory() {
+  }
 
   /**
    * Construct a new selector.  Since different selectors require different parameters,
    * this method looks at the constructors to choose an appropriate one.
-   *
    * @param className selector name
    * @param wiz wizard
    * @param world the world
@@ -46,14 +45,14 @@ public final class SelectorFactory {
   private static final Random RANDOM = new Random();
 
   private static final String[] SELECTORS = {
-      "chaos.selector.Ranker",
-      "chaos.selector.Strategiser",
-      "chaos.selector.OrdinarySelector",
-      "chaos.selector.Creaturologist",
-      "chaos.selector.RandomAiSelector",
-      "chaos.selector.ContraryRanker",
-      "chaos.selector.WeakCreaturologist",
-      "chaos.selector.Ranker", // One extra case just in case we fall off end in search
+    "chaos.selector.Ranker",
+    "chaos.selector.Strategiser",
+    "chaos.selector.OrdinarySelector",
+    "chaos.selector.Creaturologist",
+    "chaos.selector.RandomAiSelector",
+    "chaos.selector.ContraryRanker",
+    "chaos.selector.WeakCreaturologist",
+    "chaos.selector.Ranker", // One extra case just in case we fall off end in search
   };
 
   private static final double[] PROBABILITY = {
@@ -70,7 +69,6 @@ public final class SelectorFactory {
   /**
    * Construct a new selector, choosing at random among the various AI selectors.
    * Some are made more common than others.
-   *
    * @param wiz wizard
    * @param world the world
    * @param castMaster casting rules

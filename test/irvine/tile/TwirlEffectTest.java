@@ -3,18 +3,16 @@ package irvine.tile;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class TwirlEffectTest extends AbstractTileEffectTest {
-
-
 
 
   @Override
   public TileEffect getEffect() {
     return new TwirlEffect(16, 0, ~0, 1, 30);
   }
+
   public void testBadCons() {
     try {
       new TwirlEffect(0, 0, 0, 1, 10);

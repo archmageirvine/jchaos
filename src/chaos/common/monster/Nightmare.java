@@ -10,7 +10,6 @@ import chaos.common.Realm;
 
 /**
  * Nightmare.
- *
  * @author Sean A. Irvine
  */
 public class Nightmare extends MaterialMonsterMount implements NoDeadImage, Promotion {

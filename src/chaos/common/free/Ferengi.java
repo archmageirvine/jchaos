@@ -17,7 +17,6 @@ import chaos.util.RankingComparator;
 
 /**
  * Ferengi.
- *
  * @author Sean A. Irvine
  */
 public class Ferengi extends FreeCastable {

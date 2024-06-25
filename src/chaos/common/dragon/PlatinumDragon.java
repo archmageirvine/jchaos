@@ -8,7 +8,6 @@ import chaos.common.PowerUps;
 
 /**
  * Platinum dragon.
- *
  * @author Sean A. Irvine
  */
 public class PlatinumDragon extends Dragon implements Bonus {

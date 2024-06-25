@@ -11,12 +11,12 @@ import irvine.tile.TileImage;
 
 /**
  * Draw the standard attack graphics.
- *
  * @author Sean A. Irvine
  */
 public final class Attack {
 
-  private Attack() { }
+  private Attack() {
+  }
 
   /** Background color. */
   private static final int BG = 0xFF000000;
@@ -36,7 +36,6 @@ public final class Attack {
 
   /**
    * Get the attack effect for the specified damage.
-   *
    * @param width width of image
    * @param damage damage
    * @return attack effect

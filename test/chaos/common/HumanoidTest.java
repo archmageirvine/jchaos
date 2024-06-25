@@ -12,7 +12,6 @@ import junit.framework.TestCase;
 
 /**
  * Test the bipedal property is used in a few cases.
- *
  * @author Sean A. Irvine
  */
 public class HumanoidTest extends TestCase {

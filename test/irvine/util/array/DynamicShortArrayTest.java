@@ -8,7 +8,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class DynamicShortArrayTest extends TestCase {
@@ -140,8 +139,7 @@ public class DynamicShortArrayTest extends TestCase {
     assertEquals(1, m.get(131071));
     final Object obj = TestUtils.getField("mChunks", m);
     assertTrue(obj instanceof ArrayList);
-    @SuppressWarnings("unchecked")
-    final ArrayList<short[]> x = (ArrayList<short[]>) obj;
+    @SuppressWarnings("unchecked") final ArrayList<short[]> x = (ArrayList<short[]>) obj;
     assertEquals(2, x.size());
     assertEquals(1 << 16, x.get(0).length);
     assertEquals(1 << 16, x.get(1).length);
@@ -156,8 +154,7 @@ public class DynamicShortArrayTest extends TestCase {
     m.set(1, (short) 1);
     final Object obj = TestUtils.getField("mChunks", m);
     assertTrue(obj instanceof ArrayList);
-    @SuppressWarnings("unchecked")
-    final ArrayList<short[]> x = (ArrayList<short[]>) obj;
+    @SuppressWarnings("unchecked") final ArrayList<short[]> x = (ArrayList<short[]>) obj;
     assertEquals(1, x.size());
     assertEquals(1 << 16, x.get(0).length);
   }

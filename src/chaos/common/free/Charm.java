@@ -19,7 +19,6 @@ import chaos.util.Random;
 
 /**
  * Charm.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

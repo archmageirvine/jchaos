@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Eagle.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -22,10 +21,12 @@ public class Eagle extends MaterialMonster {
     setDefault(Attribute.MOVEMENT, 6);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000607EFE060000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Gryphon.class;

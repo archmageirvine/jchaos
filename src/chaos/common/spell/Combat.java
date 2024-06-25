@@ -18,7 +18,6 @@ import chaos.util.ShieldGrantedEvent;
 
 /**
  * Combat.
- *
  * @author Sean A. Irvine
  */
 public class Combat extends Castable implements TargetFilter {
@@ -30,10 +29,12 @@ public class Combat extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_LOS;
   }
+
   @Override
   public int getCastRange() {
     return 9;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {
@@ -49,7 +50,7 @@ public class Combat extends Castable implements TargetFilter {
           // spell a large number of times on the same monster.
           cell.notify(new ShieldGrantedEvent(cell, caster, Attribute.COMBAT_RECOVERY));
           a.increment(Attribute.COMBAT_RECOVERY, 1);
-        } else  {
+        } else {
           cell.notify(new ShieldGrantedEvent(cell, caster, Attribute.COMBAT));
           if (absCombat >= NOMINAL_MAX_COMBAT) {
             a.increment(Attribute.COMBAT, 5);

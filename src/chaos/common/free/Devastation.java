@@ -16,7 +16,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Devastation.
- *
  * @author Sean A. Irvine
  */
 public class Devastation extends FreeCastable {

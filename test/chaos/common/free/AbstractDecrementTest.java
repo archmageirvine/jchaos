@@ -15,7 +15,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractDecrementTest extends AbstractCastableTest {
@@ -28,6 +27,7 @@ public abstract class AbstractDecrementTest extends AbstractCastableTest {
 
   private static class MyListener implements EventListener {
     final MyBool mState = new MyBool();
+
     @Override
     public void update(final Event e) {
       if (e instanceof CellEffectEvent) {
@@ -47,6 +47,7 @@ public abstract class AbstractDecrementTest extends AbstractCastableTest {
         mState.mWeapon = true;
       }
     }
+
     MyBool getState() {
       return mState;
     }
@@ -71,7 +72,7 @@ public abstract class AbstractDecrementTest extends AbstractCastableTest {
         assertFalse(state.mWeapon);
       }
     } finally {
-    world.deregister(listen);
+      world.deregister(listen);
     }
     x.cast(world, w, world.getCell(0), null);
     x.cast(world, w, null, world.getCell(0));

@@ -12,7 +12,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class FreeAllTest extends CharmTest {

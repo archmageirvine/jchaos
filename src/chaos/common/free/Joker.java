@@ -12,7 +12,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Joker.
- *
  * @author Sean A. Irvine
  */
 public class Joker extends FreeCastable {

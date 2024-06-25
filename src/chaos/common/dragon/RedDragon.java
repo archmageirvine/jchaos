@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Red dragon.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -24,10 +23,12 @@ public class RedDragon extends Dragon {
     setDefault(Attribute.RANGE, 6);
     set(PowerUps.FLYING, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x607EFF7FFD7F7F3FL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return ShadowDragon.class;

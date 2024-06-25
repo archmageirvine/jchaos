@@ -18,7 +18,8 @@ import irvine.util.string.PostScript;
  */
 public final class Stars {
 
-  private Stars() { }
+  private Stars() {
+  }
 
   /**
    * Draw a star centered on <code>(x,y)</code> with radius <code>r</code>.
@@ -26,7 +27,6 @@ public final class Stars {
    * at the specified angle (measured clockwise in degrees) from vertical.
    * The <code>skip</code> parameter controls the type of star drawn, it
    * should be between 1 and <code>skip-1</code>.
-   *
    * @param g place to draw
    * @param x x-coordinate
    * @param y y-coordinate
@@ -34,7 +34,7 @@ public final class Stars {
    * @param points number of points on the star
    * @param skip skip value
    * @param theta angle from vertical
-   * @exception IllegalArgumentException if <code>points</code> is less than
+   * @throws IllegalArgumentException if <code>points</code> is less than
    * 2, <code>r</code> is nonpositive, or <code>skip</code> is not between 1
    * and <code>points-1</code>.
    */
@@ -72,14 +72,13 @@ public final class Stars {
    * the top.
    * The <code>skip</code> parameter controls the type of star drawn, it
    * should be between 1 and <code>skip-1</code>.
-   *
    * @param g place to draw
    * @param x x-coordinate
    * @param y y-coordinate
    * @param r radius
    * @param points number of points on the star
    * @param skip skip value
-   * @exception IllegalArgumentException if <code>points</code> is less than
+   * @throws IllegalArgumentException if <code>points</code> is less than
    * 2, <code>r</code> is nonpositive, or <code>skip</code> is not between 1
    * and <code>points-1</code>.
    */
@@ -94,7 +93,6 @@ public final class Stars {
    * The <code>skip</code> parameter controls the type of star drawn, it
    * should be between 1 and <code>skip-1</code>.  This method produces
    * PostScript.
-   *
    * @param ps place to draw
    * @param x x-coordinate
    * @param y y-coordinate
@@ -102,7 +100,7 @@ public final class Stars {
    * @param points number of points on the star
    * @param skip skip value
    * @param theta angle from vertical
-   * @exception IllegalArgumentException if <code>points</code> is less than
+   * @throws IllegalArgumentException if <code>points</code> is less than
    * 2, <code>r</code> is nonpositive, or <code>skip</code> is not between 1
    * and <code>points-1</code>.
    */
@@ -143,14 +141,13 @@ public final class Stars {
    * The <code>skip</code> parameter controls the type of star drawn, it
    * should be between 1 and <code>skip-1</code>.  This method produces
    * PostScript.
-   *
    * @param ps place to draw
    * @param x x-coordinate
    * @param y y-coordinate
    * @param r radius
    * @param points number of points on the star
    * @param skip skip value
-   * @exception IllegalArgumentException if <code>points</code> is less than
+   * @throws IllegalArgumentException if <code>points</code> is less than
    * 2, <code>r</code> is nonpositive, or <code>skip</code> is not between 1
    * and <code>points-1</code>.
    */

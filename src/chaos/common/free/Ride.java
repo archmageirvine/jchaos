@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Ride.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

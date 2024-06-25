@@ -15,7 +15,6 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractActiveTileManagerTest extends AbstractTileManagerTest {
@@ -66,7 +65,8 @@ public abstract class AbstractActiveTileManagerTest extends AbstractTileManagerT
     assertFalse(im.equals(tm.getSpellTile(h)));
   }
 
-  private static class MyArborist extends Arborist { }
+  private static class MyArborist extends Arborist {
+  }
 
   public void testUnknown() {
     final TileManager tm = getTileManager();

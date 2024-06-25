@@ -12,12 +12,12 @@ import chaos.common.wizard.Wizard;
 
 /**
  * Team utility functions.
- *
  * @author Sean A. Irvine
  */
 public final class TeamUtils {
 
-  private TeamUtils() { }
+  private TeamUtils() {
+  }
 
   private static final boolean SMASH_TEAMS = ChaosProperties.properties().getBooleanProperty("chaos.team.smash", true);
 

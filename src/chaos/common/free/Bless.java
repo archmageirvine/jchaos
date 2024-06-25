@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Bless.
- *
  * @author Sean A. Irvine
  */
 public class Bless extends AbstractIncrement {

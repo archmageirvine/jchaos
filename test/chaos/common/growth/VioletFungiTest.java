@@ -10,7 +10,6 @@ import chaos.common.monster.Orc;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class VioletFungiTest extends AbstractMonsterTest {

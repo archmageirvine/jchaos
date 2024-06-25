@@ -2,7 +2,6 @@ package irvine.tile;
 
 /**
  * An effect which rolls a tile one pixel at a time.
- *
  * @author Sean A. Irvine
  */
 public class VerticalRollEffect extends AbstractTileEffect {
@@ -16,10 +15,9 @@ public class VerticalRollEffect extends AbstractTileEffect {
 
   /**
    * Construct a vertical roll effect for the specified direction.
-   *
    * @param image underlying image
    * @param dir true for downwards, false for upwards
-   * @exception NullPointerException if <code>image</code> is <code>null</code>.
+   * @throws NullPointerException if <code>image</code> is <code>null</code>.
    */
   public VerticalRollEffect(final TileImage image, final boolean dir) {
     if (image == null) {

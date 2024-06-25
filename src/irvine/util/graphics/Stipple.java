@@ -8,12 +8,12 @@ import irvine.tile.TileImage;
  * Produce stippled images with particular colours.  The images are deterministic in the
  * sense that asking for an image for the same region will produce the same image, and
  * that subimages of a larger region will match the corresponding larger region.
- *
  * @author Sean A. Irvine
  */
 public final class Stipple {
 
-  private Stipple() { }
+  private Stipple() {
+  }
 
   private static final Random RANDOM = new Random();
   private static final long DEFAULT_SEED = 42;

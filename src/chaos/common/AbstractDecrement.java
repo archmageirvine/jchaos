@@ -14,7 +14,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Abstract superclass for all the attribute decrement spells.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractDecrement extends Castable implements TargetFilter {
@@ -24,14 +23,12 @@ public abstract class AbstractDecrement extends Castable implements TargetFilter
 
   /**
    * The decrement to be applied.
-   *
    * @return decrement
    */
   public abstract int decrement();
 
   /**
    * The attribute to be decremented.
-   *
    * @return attribute
    */
   public abstract Attribute attribute();

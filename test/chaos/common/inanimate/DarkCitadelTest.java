@@ -6,7 +6,6 @@ import chaos.common.Castable;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class DarkCitadelTest extends AbstractActorTest {

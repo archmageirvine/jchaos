@@ -13,7 +13,6 @@ import chaos.util.Random;
 
 /**
  * Haunt.
- *
  * @author Sean A. Irvine
  */
 public class Haunt extends UndeadMonster implements NoDeadImage {
@@ -30,6 +29,7 @@ public class Haunt extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.AGILITY, 40);
     setDefault(Attribute.MOVEMENT, 2);
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Spectre.class;

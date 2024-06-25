@@ -11,7 +11,8 @@ import java.io.InputStream;
  */
 public final class PbmColumnHistogram {
 
-  private PbmColumnHistogram() { }
+  private PbmColumnHistogram() {
+  }
 
   static void checkMagic(final InputStream is) throws IOException {
     if (is.read() != 'P' || is.read() != '4' || is.read() != '\n') {

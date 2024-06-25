@@ -10,7 +10,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this wizard.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractWizardTest extends AbstractMonsterTest {

@@ -8,7 +8,6 @@ import chaos.common.spell.Vanish;
 
 /**
  * Chronomancer.
- *
  * @author Sean A. Irvine
  */
 public class Chronomancer extends Unicaster implements Humanoid {
@@ -25,10 +24,12 @@ public class Chronomancer extends Unicaster implements Humanoid {
     setDefault(Attribute.AGILITY, 7);
     setDefault(Attribute.INTELLIGENCE, 100);
   }
+
   @Override
   public long getLosMask() {
     return 0x7E7E7E3C383C3C3CL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Dao.class;

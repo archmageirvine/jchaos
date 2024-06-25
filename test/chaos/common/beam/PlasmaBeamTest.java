@@ -16,7 +16,6 @@ import chaos.util.EventListener;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class PlasmaBeamTest extends LightningTest {
@@ -66,18 +65,18 @@ public class PlasmaBeamTest extends LightningTest {
       assertEquals(1, t.size());
       final int c = t.iterator().next().getCellNumber();
       switch (c) {
-      case 1:
-        saw1 = true;
-        break;
-      case 5:
-        saw5 = true;
-        break;
-      case 6:
-        saw6 = true;
-        break;
-      default:
-        fail();
-        break;
+        case 1:
+          saw1 = true;
+          break;
+        case 5:
+          saw5 = true;
+          break;
+        case 6:
+          saw6 = true;
+          break;
+        default:
+          fail();
+          break;
       }
     }
     assertTrue(saw1);

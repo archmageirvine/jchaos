@@ -11,7 +11,6 @@ import chaos.util.NameUtils;
 
 /**
  * Information displays about a castable.
- *
  * @author Sean A. Irvine
  */
 public final class InformationPanel {
@@ -41,7 +40,6 @@ public final class InformationPanel {
 
   /**
    * Display information screens about a castable.
-   *
    * @param screen screen to display on
    * @param c castable to display information for
    * @param graphics graphics to draw into

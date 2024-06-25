@@ -17,7 +17,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Paradigm shift.
- *
  * @author Sean A. Irvine
  */
 public class ParadigmShift extends FreeCastable {

@@ -8,7 +8,6 @@ import chaos.common.Promotion;
 
 /**
  * Ogre mage.
- *
  * @author Sean A. Irvine
  */
 public class OgreMage extends MaterialMonster implements Promotion, Humanoid {
@@ -25,18 +24,22 @@ public class OgreMage extends MaterialMonster implements Promotion, Humanoid {
     setDefault(Attribute.RANGE, 11);
     setDefault(Attribute.RANGED_COMBAT, 7);
   }
+
   @Override
   public long getLosMask() {
     return 0x001E3E7C5C3C3E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Ogre.class;
   }
+
   @Override
   public Class<? extends Monster> promotion() {
     return OgreAssassin.class;
   }
+
   @Override
   public int promotionCount() {
     return 7;

@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Countermand.
- *
  * @author Sean A. Irvine
  */
 public class Countermand extends AbstractFreeDecrement {

@@ -6,7 +6,6 @@ import chaos.util.Random;
 
 /**
  * A type of Caster which periodically casts a particular spell.
- *
  * @author Sean A. Irvine
  */
 public abstract class Unicaster extends Caster {

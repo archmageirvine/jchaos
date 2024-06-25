@@ -13,7 +13,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests basic functionality that all Selectors should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractSelectorTest extends TestCase {

@@ -2,12 +2,12 @@ package irvine.util;
 
 /**
  * Utility functions relating to the runtime environment.
- *
  * @author Sean A. Irvine
  */
 public final class RuntimeUtils {
 
-  private RuntimeUtils() { }
+  private RuntimeUtils() {
+  }
 
   /**
    * Test if we are currently in a testing environment.

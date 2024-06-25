@@ -9,14 +9,12 @@ import java.nio.charset.StandardCharsets;
 /**
  * Provides a hexadecimal decoding input stream.  Any whitespace
  * is silently ignored.
- *
  * @author Sean A. Irvine
  */
 public class HexadecimalInputStream extends FilterInputStream {
 
   /**
    * Create an input stream using hexadecimal.
-   *
    * @param in underlying input stream
    */
   public HexadecimalInputStream(final InputStream in) {
@@ -25,8 +23,7 @@ public class HexadecimalInputStream extends FilterInputStream {
 
   /**
    * Used to check validity of stream before reads etc.
-   *
-   * @exception IOException if stream is actually closed
+   * @throws IOException if stream is actually closed
    */
   private void valid() throws IOException {
     if (in == null) {
@@ -37,33 +34,33 @@ public class HexadecimalInputStream extends FilterInputStream {
   /** Decode a hexadecimal character, -1 for an error. */
   private int decode(final int c) {
     switch (c) {
-    case '0':
-    case '1':
-    case '2':
-    case '3':
-    case '4':
-    case '5':
-    case '6':
-    case '7':
-    case '8':
-    case '9':
-      return c - '0';
-    case 'A':
-    case 'B':
-    case 'C':
-    case 'D':
-    case 'E':
-    case 'F':
-      return c - 'A' + 10;
-    case 'a':
-    case 'b':
-    case 'c':
-    case 'd':
-    case 'e':
-    case 'f':
-      return c - 'a' + 10;
-    default:
-      return -1;
+      case '0':
+      case '1':
+      case '2':
+      case '3':
+      case '4':
+      case '5':
+      case '6':
+      case '7':
+      case '8':
+      case '9':
+        return c - '0';
+      case 'A':
+      case 'B':
+      case 'C':
+      case 'D':
+      case 'E':
+      case 'F':
+        return c - 'A' + 10;
+      case 'a':
+      case 'b':
+      case 'c':
+      case 'd':
+      case 'e':
+      case 'f':
+        return c - 'a' + 10;
+      default:
+        return -1;
     }
   }
 
@@ -125,9 +122,8 @@ public class HexadecimalInputStream extends FilterInputStream {
    * Return an estimate of the number of bytes that can be read without
    * blocking.  The actual number may be less than this due to the
    * presence of whitespace in the underlying stream.
-   *
    * @return available bytes estimate
-   * @exception IOException if an I/O error occurs
+   * @throws IOException if an I/O error occurs
    */
   @Override
   public final int available() throws IOException {
@@ -137,7 +133,6 @@ public class HexadecimalInputStream extends FilterInputStream {
 
   /**
    * Marking is not supported.
-   *
    * @return false
    */
   @Override
@@ -157,10 +152,9 @@ public class HexadecimalInputStream extends FilterInputStream {
   /**
    * Convenience method to decode a hexadecimal string into bytes.  Not
    * necessarily efficient.
-   *
    * @param hexadecimal data to decode
    * @return decoded data
-   * @exception IllegalArgumentException if the input has an odd number of
+   * @throws IllegalArgumentException if the input has an odd number of
    * hexadecimal digits.
    */
   public static byte[] decode(final String hexadecimal) {
@@ -187,9 +181,8 @@ public class HexadecimalInputStream extends FilterInputStream {
   /**
    * Decode hexadecimal encoded data appearing on standard input, sending the result
    * to standard output.
-   *
    * @param args ignored
-   * @exception IOException if an error occurs
+   * @throws IOException if an error occurs
    */
   public static void main(final String[] args) throws IOException {
     try (final HexadecimalInputStream bis = new HexadecimalInputStream(System.in)) {

@@ -7,7 +7,6 @@ import chaos.common.Actor;
 /**
  * An <code>EventListener</code> which simply produces a
  * textual version of events received.
- *
  * @author Sean A. Irvine
  */
 public class EventLogger implements EventListener {

@@ -20,7 +20,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Lightning.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

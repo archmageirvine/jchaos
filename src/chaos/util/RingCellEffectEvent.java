@@ -14,7 +14,6 @@ public class RingCellEffectEvent extends CellEffectEvent {
 
   /**
    * Construct a new attack cell effect event.
-   *
    * @param cell the cell this event is for
    * @param radius the radius of the effect in cells
    * @param color color to use

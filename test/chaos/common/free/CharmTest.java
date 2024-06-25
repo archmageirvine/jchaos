@@ -20,7 +20,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class CharmTest extends AbstractFreeCastableTest {

@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Uncertainty.
- *
  * @author Sean A. Irvine
  */
 public class Uncertainty extends FreePowerUp {
@@ -12,10 +11,12 @@ public class Uncertainty extends FreePowerUp {
   protected int getPowerUpCount() {
     return 6;
   }
+
   @Override
   public PowerUps getPowerUpType() {
     return PowerUps.UNCERTAINTY;
   }
+
   @Override
   protected boolean cumulative() {
     return true;

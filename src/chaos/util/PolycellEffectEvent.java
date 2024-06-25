@@ -7,7 +7,6 @@ import chaos.common.Actor;
 
 /**
  * A multiple cell effect event.
- *
  * @author Sean A. Irvine
  */
 public class PolycellEffectEvent implements Event {
@@ -21,12 +20,11 @@ public class PolycellEffectEvent implements Event {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cells the cells involved
    * @param eventType the type of cell event
    * @param cause the castable causing this event (may be null)
-   * @exception NullPointerException if cells is null.
-   * @exception IllegalArgumentException if event type is not known.
+   * @throws NullPointerException if cells is null.
+   * @throws IllegalArgumentException if event type is not known.
    */
   public PolycellEffectEvent(final Collection<Cell> cells, final CellEffectType eventType, final Actor cause) {
     if (cells == null) {
@@ -39,11 +37,10 @@ public class PolycellEffectEvent implements Event {
 
   /**
    * Construct a new cell effect event.
-   *
    * @param cells the cells involved
    * @param eventType the type of cell event
-   * @exception NullPointerException if cells is null.
-   * @exception IllegalArgumentException if event type is not known.
+   * @throws NullPointerException if cells is null.
+   * @throws IllegalArgumentException if event type is not known.
    */
   public PolycellEffectEvent(final Collection<Cell> cells, final CellEffectType eventType) {
     this(cells, eventType, null);
@@ -51,7 +48,6 @@ public class PolycellEffectEvent implements Event {
 
   /**
    * Return the type of this cell event.
-   *
    * @return cell event type
    */
   public CellEffectType getEventType() {
@@ -60,7 +56,6 @@ public class PolycellEffectEvent implements Event {
 
   /**
    * Get the cells.
-   *
    * @return set of cells
    */
   public Collection<Cell> getCells() {
@@ -69,7 +64,6 @@ public class PolycellEffectEvent implements Event {
 
   /**
    * Return the cause of this event if any.
-   *
    * @return cause or null
    */
   public Actor getCause() {

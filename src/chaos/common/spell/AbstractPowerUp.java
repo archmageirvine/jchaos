@@ -17,7 +17,6 @@ import chaos.util.PowerUpEvent;
 
 /**
  * Convenience class for casting a power up spell.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractPowerUp extends Castable implements PowerUp, TargetFilter {

@@ -9,7 +9,8 @@ import java.awt.Graphics;
  */
 final class HighlightUtils {
 
-  private HighlightUtils() { }
+  private HighlightUtils() {
+  }
 
   private static final Color DARK_RED = new Color(0x7F0000);
 

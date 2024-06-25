@@ -14,7 +14,6 @@ import irvine.tile.TileImage;
 
 /**
  * Superclass for effects.
- *
  * @author Sean A. Irvine
  */
 public class SpungerEffect extends AbstractEffect {

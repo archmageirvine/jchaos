@@ -7,7 +7,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Shadow.
- *
  * @author Sean A. Irvine
  */
 public class Shadow extends UndeadMonster implements NoDeadImage {
@@ -19,6 +18,7 @@ public class Shadow extends UndeadMonster implements NoDeadImage {
     setDefault(Attribute.AGILITY, 87);
     setDefault(Attribute.MOVEMENT, 4);
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Ghoul.class;

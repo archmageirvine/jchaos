@@ -18,7 +18,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests this selector.
- *
  * @author Sean A. Irvine
  */
 public class GenericScreenSelectorTest extends TestCase {

@@ -18,7 +18,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Convenience class to implement a standard growth.
- *
  * @author Sean A. Irvine
  */
 public abstract class MaterialGrowth extends Actor implements Growth {
@@ -57,7 +56,6 @@ public abstract class MaterialGrowth extends Actor implements Growth {
   /**
    * Called to make special additional checks as to whether growth
    * can take place.  This is used to implement the fire shield etc.
-   *
    * @param cell cell we are trying to grow into
    * @return true if we can grow
    */
@@ -68,7 +66,6 @@ public abstract class MaterialGrowth extends Actor implements Growth {
    * of growth.  The input cell is assumed to be valid and it
    * is expected that this object is the top actor in the specified
    * cell. Growths do not grow on top of each other.
-   *
    * @param cell the cell to be grown
    * @param world world to grow in
    */

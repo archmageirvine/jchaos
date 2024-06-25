@@ -476,7 +476,7 @@ import chaos.common.inanimate.MagicGlass;
  *        " | | | | | | | " | | | | | | | "
  *        +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
  *                        ^___cell boundary
-
+ *
  *  Here we have indeed ended up at the first pixel in a cell to be tested
  *  but we have inadvertently omitted to check anything in the top left
  *  cell through which the line clearly passes.  We really wanted to step
@@ -687,7 +687,6 @@ import chaos.common.inanimate.MagicGlass;
  *  If you get a C version working, it should be comparatively easy to
  *  convert the core loops to assembler for extra speed.
  * </pre>
- *
  * @author Sean A. Irvine
  */
 public class LineOfSight implements Serializable {
@@ -720,7 +719,6 @@ public class LineOfSight implements Serializable {
 
   /**
    * Construct a new line of sight mechanism for the specified World.
-   *
    * @param world the world in which line of sight determinations should be made
    */
   public LineOfSight(final World world) {
@@ -731,7 +729,6 @@ public class LineOfSight implements Serializable {
   /**
    * Get the line of sight mask for a cell. The second parameter is currently
    * only necessary to handle magic glass.
-   *
    * @param cell cell to get mask for
    * @param sourceOwner the owner of the source
    * @return the 8&times;8 packed mask
@@ -752,7 +749,6 @@ public class LineOfSight implements Serializable {
    * automatic acceptance or rejection once per cell and avoids doing pixel
    * checks on automatically accepted cells.  Assumes source and target cells
    * are real cells.
-   *
    * @param source source cell
    * @param target target cell
    * @return true if line of sight is possible, false otherwise

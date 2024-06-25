@@ -7,17 +7,16 @@ import chaos.common.PowerUps;
 
 /**
  * Clone.
- *
  * @author Sean A. Irvine
  */
 public final class Clone {
 
-  private Clone() { }
+  private Clone() {
+  }
 
   /**
    * Make a clone of a given actor.  All attributes, power ups, and values are copied
    * into a new instance.
-   *
    * @param a actor to clone
    * @return clone
    */

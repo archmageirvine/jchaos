@@ -7,7 +7,6 @@ import java.io.InputStream;
 
 /**
  * Fonts.
- *
  * @author Sean A. Irvine
  */
 public class ChaosFonts {

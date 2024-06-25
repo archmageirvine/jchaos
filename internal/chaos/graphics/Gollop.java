@@ -21,12 +21,12 @@ import chaos.util.Sleep;
 
 /**
  * Draw the graphics for the Gollop object.
- *
  * @author Sean A. Irvine
  */
 public final class Gollop {
 
-  private Gollop() { }
+  private Gollop() {
+  }
 
   private static final class RoundGradientContext implements PaintContext {
     final Point2D mPoint;

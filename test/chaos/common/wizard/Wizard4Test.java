@@ -5,7 +5,6 @@ import chaos.common.State;
 
 /**
  * Tests this wizard.
- *
  * @author Sean A. Irvine
  */
 public class Wizard4Test extends AbstractWizardTest {

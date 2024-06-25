@@ -7,7 +7,6 @@ import chaos.common.PowerUps;
 
 /**
  * Tests this monster.
- *
  * @author Sean A. Irvine
  */
 public class SpectatorTest extends AbstractMonsterTest {

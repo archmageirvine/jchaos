@@ -13,7 +13,8 @@ import chaos.util.Sleep;
  */
 public final class WavyLine {
 
-  private WavyLine() { }
+  private WavyLine() {
+  }
 
   private static final int STEP_SIZE = 3;
 
@@ -21,7 +22,6 @@ public final class WavyLine {
    * Render a lightning effect into the specified graphics.  Partially unrenders
    * itself at the end of the effect, but the caller should best take effort to
    * repaint the screen afterwards.
-   *
    * @param g place to render
    * @param sx start x-coordinate
    * @param sy start y-coordinate
@@ -29,7 +29,7 @@ public final class WavyLine {
    * @param ty target y-coordinate
    * @param time total time in milliseconds to maintain lightning
    * @param color color to draw with
-   * @exception NullPointerException if <code>g</code> is null.
+   * @throws NullPointerException if <code>g</code> is null.
    */
   public static void draw(final Graphics2D g, final int sx, final int sy, final int tx, final int ty, final int time, final Color color) {
     final Stroke oldStroke = g.getStroke();

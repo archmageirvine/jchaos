@@ -14,12 +14,12 @@ import irvine.util.graphics.Stipple;
 
 /**
  * Convenience for loading images and certain other predefined images.
- *
  * @author Sean A. Irvine
  */
 public final class ImageLoader {
 
-  private ImageLoader() { }
+  private ImageLoader() {
+  }
 
   /**
    * Retrieve a named image resource.
@@ -98,8 +98,8 @@ public final class ImageLoader {
     for (int k = 0; k < width; ++k) {
       argb[k] = c;
       argb[argb.length - 1 - k] = c;
-      argb[k * width] =  c;
-      argb[(k + 1) * width - 1] =  c;
+      argb[k * width] = c;
+      argb[(k + 1) * width - 1] = c;
     }
     return imageFromArray(width, argb);
   }

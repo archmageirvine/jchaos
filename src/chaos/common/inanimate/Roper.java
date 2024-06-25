@@ -19,7 +19,6 @@ import chaos.util.Random;
 
 /**
  * Roper.
- *
  * @author Sean A. Irvine
  */
 public class Roper extends MaterialMonster implements Bonus, Animateable, NoDeadImage, Inanimate {
@@ -33,40 +32,49 @@ public class Roper extends MaterialMonster implements Bonus, Animateable, NoDead
     setDefault(Attribute.MAGICAL_RESISTANCE, 43);
     setSpecialCombatApply(Attribute.LIFE);
   }
+
   @Override
   public long getLosMask() {
     return 0x187E7EFF7F7F7F00L;
   }
+
   @Override
   public int getCastRange() {
     return 9;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_GROWTH | CAST_EMPTY | CAST_LOS | CAST_DEAD;
   }
+
   @Override
   public int getBonus() {
     return 2;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     CastUtils.castStone(this, caster, c, casterCell);
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;
   }
+
   @Override
   public int getDefaultWeight() {
     return -1;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new MindFlayer();
     a.setOwner(getOwner());
     return a;
   }
+
   @Override
   public boolean update(final World world, final Cell cell) {
     if (world != null && cell != null && isMoved() && Random.nextInt(ROPER_MOVE) == 0) {

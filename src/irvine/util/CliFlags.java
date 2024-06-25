@@ -30,39 +30,38 @@ import irvine.util.string.WrappingStringBuffer;
  *
  * <code>
  * public static void main(String[] args) {
- *   // Create the CliFlags
- *   CliFlags flags = new CliFlags(&quot;java Example&quot;);
+ * // Create the CliFlags
+ * CliFlags flags = new CliFlags(&quot;java Example&quot;);
  *
- *   // Simple register, a boolean option, no description
- *   flags.registerOptional(&quot;verbose&quot;);
- *   // Register a required integer flag with usage and long description.
- *   flags.registerRequired(&quot;port&quot;, Integer.class, &quot;NUMBER&quot;, &quot;The port to connect to&quot;); // does type-checking!
- *   Flag&lt;Integer&gt; fallbackTimes = flags.registerRequired(&quot;retries&quot;, Integer.class, &quot;NUMBER&quot;, &quot; How long to wait before retry.&quot;, Integer.valueOf(5)); // A similar thing, supplying a default value and supporting generics.
- *   fallbackTimes.setMaxCount(Integer.MAX_VALUE);   // And let it be supplied multiple times
- *   flags.setRemainderUsage(&quot; &lt; FILE&quot;);
+ * // Simple register, a boolean option, no description
+ * flags.registerOptional(&quot;verbose&quot;);
+ * // Register a required integer flag with usage and long description.
+ * flags.registerRequired(&quot;port&quot;, Integer.class, &quot;NUMBER&quot;, &quot;The port to connect to&quot;); // does type-checking!
+ * Flag&lt;Integer&gt; fallbackTimes = flags.registerRequired(&quot;retries&quot;, Integer.class, &quot;NUMBER&quot;, &quot; How long to wait before retry.&quot;, Integer.valueOf(5)); // A similar thing, supplying a default value and supporting generics.
+ * fallbackTimes.setMaxCount(Integer.MAX_VALUE);   // And let it be supplied multiple times
+ * flags.setRemainderUsage(&quot; &lt; FILE&quot;);
  *
- *   // Set the user-supplied flags with main's String[] args
- *   // This will attempt to parse the flags.
- *   // If it cannot it will print out an appropriate message and call System.exit.
- *   // To override this behaviour, see setInvalidFlagHandler()
- *   flags.setFlags(args);
+ * // Set the user-supplied flags with main's String[] args
+ * // This will attempt to parse the flags.
+ * // If it cannot it will print out an appropriate message and call System.exit.
+ * // To override this behaviour, see setInvalidFlagHandler()
+ * flags.setFlags(args);
  *
- *   // Read the flags
- *   if (flags.isSet(&quot;port&quot;)) {
- *     Integer port = (Integer) flags.getValue(&quot;port&quot;);
- *   }
- *   for (Integer fallback : fallbackFlag.getValues()) { // See, using generics to iterate over the values.
- *      if (connect(port)) {
- *        // So something
- *        break;
- *      }
- *      Thread.currentThread.sleep(fallback * 1000);
- *   }
- *   // More code...
+ * // Read the flags
+ * if (flags.isSet(&quot;port&quot;)) {
+ * Integer port = (Integer) flags.getValue(&quot;port&quot;);
+ * }
+ * for (Integer fallback : fallbackFlag.getValues()) { // See, using generics to iterate over the values.
+ * if (connect(port)) {
+ * // So something
+ * break;
+ * }
+ * Thread.currentThread.sleep(fallback * 1000);
+ * }
+ * // More code...
  *
  * }
  * </code>
- *
  * @author Pablo Mayrgundter
  * @author Len Trigg
  * @author Sean A. Irvine
@@ -81,7 +80,6 @@ public final class CliFlags {
      * Returns false if the current flag settings are not valid. An
      * error message should be supplied by calling
      * <code>flags.setParseMessage()</code>.
-     *
      * @param flags a <code>CliFlags</code>.
      * @return true if the current flag settings are valid.
      */
@@ -97,7 +95,6 @@ public final class CliFlags {
     /**
      * Perform whatever action you want to take if flags are
      * determined to be invalid.
-     *
      * @param flags a <code>CliFlags</code>.
      */
     void handleInvalidFlags(final CliFlags flags);
@@ -135,7 +132,6 @@ public final class CliFlags {
     /**
      * Creates a new <code>Flag</code> for which the name must be
      * supplied on the command line.
-     *
      * @param flagChar a <code>Character</code> which can be supplied
      * by the user as an abbreviation for <code>flagName</code>. May be null.
      * @param flagName a <code>String</code> which is the name that
@@ -176,7 +172,6 @@ public final class CliFlags {
 
     /**
      * Sets the maximum number of times the flag can be specified.
-     *
      * @param count the maximum number of times the flag can be specified
      * @return this object for chaining
      */
@@ -190,7 +185,6 @@ public final class CliFlags {
 
     /**
      * Gets the maximum number of times the flag can be specified.
-     *
      * @return the maximum number of times the flag can be specified
      */
     public int getMaxCount() {
@@ -199,7 +193,6 @@ public final class CliFlags {
 
     /**
      * Sets the minimum number of times the flag can be specified.
-     *
      * @param count the minimum number of times the flag can be specified
      * @return this object for chaining
      */
@@ -216,7 +209,6 @@ public final class CliFlags {
 
     /**
      * Gets the minimum number of times the flag can be specified.
-     *
      * @return the minimum number of times the flag can be specified.
      */
     public int getMinCount() {
@@ -225,7 +217,6 @@ public final class CliFlags {
 
     /**
      * Return the number of times the flag has been set.
-     *
      * @return the number of times the flag has been set.
      */
     public int getCount() {
@@ -242,7 +233,6 @@ public final class CliFlags {
 
     /**
      * Gets the character name of this flag, if set.
-     *
      * @return the character name of this flag, or null if no
      * character name has been set.
      */
@@ -252,7 +242,6 @@ public final class CliFlags {
 
     /**
      * Gets the name of the flag.
-     *
      * @return the name of the flag.
      */
     public String getName() {
@@ -261,7 +250,6 @@ public final class CliFlags {
 
     /**
      * Gets the description of the flag's purpose.
-     *
      * @return the description.
      */
     public String getDescription() {
@@ -272,12 +260,12 @@ public final class CliFlags {
      * Gets the description of the flag parameter. This is usually a
      * single word that indicates a little more than the parameter
      * type.
-     *
      * @return the parameter description, or null for untyped flags.
      */
     public String getParameterDescription() {
       return mParameterDescription;
     }
+
     protected void setParameterDescription(final String desc) {
       mParameterDescription = desc;
     }
@@ -286,7 +274,6 @@ public final class CliFlags {
      * Gets the type of the parameter.  This will return null for
      * untyped (switch) flags. Parameters will be checked that they
      * are of the specified type.
-     *
      * @return the parameter type, or null if the flag is untyped.
      */
     public Class<T> getParameterType() {
@@ -295,7 +282,6 @@ public final class CliFlags {
 
     /**
      * Gets the default value of the parameter.
-     *
      * @return the default value, or null if no default has been specified.
      */
     public T getParameterDefault() {
@@ -305,7 +291,6 @@ public final class CliFlags {
 
     /**
      * Defines the set of strings that are valid for this flag.
-     *
      * @param range a collection of Strings.
      */
     public void setParameterRange(final Collection<String> range) {
@@ -315,7 +300,6 @@ public final class CliFlags {
 
     /**
      * Defines the set of strings that are valid for this flag.
-     *
      * @param range an array of Strings.
      */
     public void setParameterRange(final String[] range) {
@@ -345,7 +329,6 @@ public final class CliFlags {
     /**
      * Gets the list of valid parameter values, if these have been
      * specified.
-     *
      * @return a <code>List</code> containing the permitted values, or
      * null if this has not been set.
      */
@@ -360,7 +343,6 @@ public final class CliFlags {
      * been checked to comply with any parameter typing.  If called on
      * an untyped flag, this will return Boolean.TRUE or Boolean.FALSE
      * appropriately.
-     *
      * @return a value for this flag.
      */
     public T getValue() {
@@ -372,7 +354,6 @@ public final class CliFlags {
      * flags that can be set multiple times. If the flag was not
      * user-set, then the collection contains only the default value
      * (if defined).
-     *
      * @return a <code>Collection</code> of the supplied values.
      */
     public Collection<T> getValues() {
@@ -520,6 +501,7 @@ public final class CliFlags {
 
 
     private static final Set<String> BOOLEAN_AFFIRMATIVE = new HashSet<>();
+
     static {
       BOOLEAN_AFFIRMATIVE.add("yes");
       BOOLEAN_AFFIRMATIVE.add("y");
@@ -578,7 +560,6 @@ public final class CliFlags {
      * flags where the value does not need to be supplied -- if the
      * flag is specified the value is true, otherwise the flag is
      * false.
-     *
      * @param flagChar a <code>Character</code> which can be supplied by the
      * user as an abbreviation for flagName. May be null.
      * @param flagName a <code>String</code> which is the name that the user
@@ -632,6 +613,7 @@ public final class CliFlags {
   public static class AnonymousFlag<T> extends Flag<T> {
 
     private static int sAnonCounter = 0;
+
     private static synchronized int nextAnonCounter() {
       return ++sAnonCounter;
     }
@@ -643,7 +625,6 @@ public final class CliFlags {
      * Constructor for an anonymous <code>Flag</code>. These flags
      * aren't referred to by name on the command line -- their values
      * are assigned based on their position in the command line.
-     *
      * @param flagDescription a name used when printing help messages.
      * @param paramType a <code>Class</code> denoting the type of values to be accepted.
      * @param paramDescription a description of the meaning of the flag.
@@ -696,6 +677,7 @@ public final class CliFlags {
   public static final class FlagValue<T> {
     private final Flag<T> mFlag;
     private final T mValue;
+
     private FlagValue(final Flag<T> flag, final T value) {
       mFlag = flag;
       mValue = value;
@@ -703,7 +685,6 @@ public final class CliFlags {
 
     /**
      * Gets the Flag that this value was supplied to.
-     *
      * @return the Flag that this value was supplied to.
      */
     public Flag<T> getFlag() {
@@ -712,7 +693,6 @@ public final class CliFlags {
 
     /**
      * Gets the value supplied to the flag.
-     *
      * @return the value supplied to the flag.
      */
     public T getValue() {
@@ -721,7 +701,6 @@ public final class CliFlags {
 
     /**
      * Gets a human-readable description of the flag value.
-     *
      * @return a human-readable description of the flag value.
      */
     public String toString() {
@@ -734,13 +713,13 @@ public final class CliFlags {
   }
 
 
-
   /**
    * True if the default InvalidFlagHandler is permitted to call
    * System.exit. This will be set to false if this class is loaded as
    * part of JUnit tests. (To prevent any tests of main from exiting the tests).
    */
   public static final boolean EXIT_OK;
+
   static {
     final StackTraceElement[] trace = new Throwable().getStackTrace();
     boolean exitOk = true;
@@ -754,27 +733,27 @@ public final class CliFlags {
 
   /** The default invalid flag handler. */
   public static final InvalidFlagHandler DEFAULT_INVALID_FLAG_HANDLER = new InvalidFlagHandler() {
-      @Override
-      public void handleInvalidFlags(final CliFlags flags) {
-        final int errorCode;
-        if (flags.isSet(HELP_FLAG)) {
-          flags.printUsage();
-          errorCode = 0;
-        } else {
-          final WrappingStringBuffer wb = new WrappingStringBuffer();
-          wb.setWrapWidth(DEFAULT_WIDTH);
-          flags.appendUsageHeader(wb);
-          flags.appendParseMessage(wb);
-          wb.append(LS + "Try '" + LONG_FLAG_PREFIX + HELP_FLAG + "' for more information");
-          System.err.println(wb.toString());
-          errorCode = 1;
-        }
-        if (!EXIT_OK) {
-          throw new IllegalArgumentException("Exit with: " + errorCode);
-        }
-        System.exit(errorCode);
+    @Override
+    public void handleInvalidFlags(final CliFlags flags) {
+      final int errorCode;
+      if (flags.isSet(HELP_FLAG)) {
+        flags.printUsage();
+        errorCode = 0;
+      } else {
+        final WrappingStringBuffer wb = new WrappingStringBuffer();
+        wb.setWrapWidth(DEFAULT_WIDTH);
+        flags.appendUsageHeader(wb);
+        flags.appendParseMessage(wb);
+        wb.append(LS + "Try '" + LONG_FLAG_PREFIX + HELP_FLAG + "' for more information");
+        System.err.println(wb.toString());
+        errorCode = 1;
       }
-    };
+      if (!EXIT_OK) {
+        throw new IllegalArgumentException("Exit with: " + errorCode);
+      }
+      System.exit(errorCode);
+    }
+  };
 
 
   private static final String SHORT_FLAG_PREFIX = "-";
@@ -799,6 +778,7 @@ public final class CliFlags {
    * the terminal width.
    */
   private static final int DEFAULT_WIDTH;
+
   static {
     int defaultWidth = 80;
     try { // Have a crack at working out a larger default value
@@ -866,7 +846,6 @@ public final class CliFlags {
 
   /**
    * Creates a new <code>CliFlags</code> instance.
-   *
    * @param programName the name of the program.
    * @param programDescription a description of what the program does.
    */
@@ -877,7 +856,6 @@ public final class CliFlags {
 
   /**
    * Creates a new <code>CliFlags</code> instance.
-   *
    * @param programName the name of the program.
    */
   public CliFlags(final String programName) {
@@ -905,7 +883,6 @@ public final class CliFlags {
    * Registers an option. This option is not required to be specified,
    * and has no usage info and no type associated with it.  This
    * method is a shortcut for simple boolean flags.
-   *
    * @param name the option name (without the prefix string).
    * @param description the option description.
    * @return the flag.
@@ -919,7 +896,6 @@ public final class CliFlags {
    * Registers an option. This option is not required to be specified,
    * and has no usage info and no type associated with it.  This
    * method is a shortcut for simple boolean flags.
-   *
    * @param nameChar single letter name.
    * @param name the option name (without the prefix string).
    * @param description the option description.
@@ -934,7 +910,6 @@ public final class CliFlags {
   /**
    * Register an anonymous flag.  An anonymous flag has no name.  Any
    * anonymous flags are processed in the order they are encountered.
-   *
    * @param type the <code>Class</code> of the expected parameter.
    * Supported classes are: <code>Boolean</code>, <code>Byte</code>,
    * <code>Character</code>, <code>Float</code>, <code>Double</code>,
@@ -954,7 +929,6 @@ public final class CliFlags {
   /**
    * Registers a required flag. This flag requires a parameter of a
    * specified type.
-   *
    * @param name the option name (without the prefix string).
    * @param type the <code>Class</code> of the expected parameter.
    * Supported classes are: <code>Boolean</code>, <code>Byte</code>,
@@ -976,7 +950,6 @@ public final class CliFlags {
   /**
    * Registers a required flag. This flag requires a parameter of a
    * specified type.
-   *
    * @param nameChar single letter name.
    * @param name the option name (without the prefix string).
    * @param type the <code>Class</code> of the expected parameter.
@@ -999,9 +972,8 @@ public final class CliFlags {
   // (currently) internal method that uses Character instead of (easier) char
   private <T> Flag<T> registerRequired(final Character nameChar, final String name, final Class<T> type, final String usage, final String description) {
     return register(new Flag<>(nameChar, name, description, 1, 1,
-                             type, usage, null));
+      type, usage, null));
   }
-
 
 
   // Optional flags
@@ -1009,7 +981,6 @@ public final class CliFlags {
   /**
    * Registers an option. When provided, this option requires a
    * parameter of a specified type.
-   *
    * @param name the option name (without the prefix string).
    * @param type the <code>Class</code> of the expected
    * parameter. Supported classes are: <code>Boolean</code>,
@@ -1031,7 +1002,6 @@ public final class CliFlags {
   /**
    * Registers an option. This option requires a parameter of a
    * specified type.
-   *
    * @param name the option name (without the prefix string).
    * @param type the <code>Class</code> of the expected parameter.
    * Supported classes are: <code>Boolean</code>, <code>Byte</code>,
@@ -1054,7 +1024,6 @@ public final class CliFlags {
   /**
    * Registers an option. This option requires a parameter of a
    * specified type.
-   *
    * @param nameChar single letter name.
    * @param name the option name (without the prefix string).
    * @param type the <code>Class</code> of the expected parameter.
@@ -1077,7 +1046,6 @@ public final class CliFlags {
   /**
    * Registers an option. This option requires a parameter of a
    * specified type.
-   *
    * @param nameChar single letter name.
    * @param name the option name (without the prefix string).
    * @param type the <code>Class</code> of the expected parameter.
@@ -1106,7 +1074,6 @@ public final class CliFlags {
 
   /**
    * Register a flag.
-   *
    * @param flag flag to register
    * @param <T> flag type.
    * @return registered instance
@@ -1135,7 +1102,6 @@ public final class CliFlags {
   /**
    * Returns a set of the required flags that have not been fully set
    * during <code>setFlags</code>.
-   *
    * @return a set of flags.
    */
   private Collection<Flag<?>> getPendingRequired() {
@@ -1151,7 +1117,6 @@ public final class CliFlags {
 
   /**
    * Returns a collection of the required flags.
-   *
    * @return a collection of flags.
    */
   public Collection<Flag<?>> getRequired() {
@@ -1167,7 +1132,6 @@ public final class CliFlags {
 
   /**
    * Returns a collection of the optional flags.
-   *
    * @return a collection of flags.
    */
   public Collection<Flag<?>> getOptional() {
@@ -1228,7 +1192,6 @@ public final class CliFlags {
   /**
    * Sets the header text giving usage regarding standard input and
    * output.
-   *
    * @param usageString a short description to append to the header
    * text.
    */
@@ -1239,7 +1202,6 @@ public final class CliFlags {
 
   /**
    * Sets the name of the program reading the arguments. Used when printing usage.
-   *
    * @param progName the name of the program.
    */
   public void setName(final String progName) {
@@ -1249,7 +1211,6 @@ public final class CliFlags {
 
   /**
    * Sets the description of the program reading the arguments. Used when printing usage.
-   *
    * @param description the description.
    */
   public void setDescription(final String description) {
@@ -1293,7 +1254,6 @@ public final class CliFlags {
    * names="joe","bob"), only single-valued properties should be
    * submitted to this method. Multi-valued properties will likely
    * cause an exception in the parsing of the value.
-   *
    * @param properties A Properties instance with single-valued
    * properties only.
    * @return True if properties were successfully used to set flags.
@@ -1328,7 +1288,6 @@ public final class CliFlags {
   /**
    * Parses the command line flags for later use by the
    * <code>getValue(final String flagname)</code> method.
-   *
    * @param args The new flags value.
    * @return True iff all required flags were seen and all seen flags
    * were of set with expected type.
@@ -1403,7 +1362,7 @@ public final class CliFlags {
       // Quickly scan unparsed args to see if it looks like they tried to ask for help
       for (; i < args.length; ++i) {
         if ((LONG_FLAG_PREFIX + HELP_FLAG).equals(args[i])
-            || (SHORT_FLAG_PREFIX + "h").equals(args[i])) {
+          || (SHORT_FLAG_PREFIX + "h").equals(args[i])) {
           setFlag(getFlag(HELP_FLAG), null);
         }
       }
@@ -1440,7 +1399,6 @@ public final class CliFlags {
 
   /**
    * Get an iterator over anonymous flags.
-   *
    * @return iterator over anonymous flags.
    */
   public Iterator<Flag<?>> getAnonymousFlags() {
@@ -1450,7 +1408,6 @@ public final class CliFlags {
 
   /**
    * Get an anonymous flag by index.
-   *
    * @param index the index
    * @return the flag
    */
@@ -1461,7 +1418,6 @@ public final class CliFlags {
 
   /**
    * Get a flag from its name.
-   *
    * @param flag flag name
    * @return the flag.
    */
@@ -1472,7 +1428,6 @@ public final class CliFlags {
 
   /**
    * Gets the value supplied with a flag.
-   *
    * @param flag the name of the flag (without the prefix).
    * @return an <code>Object</code> value. This object will be of type
    * configured during the option registering. You can also get the
@@ -1486,7 +1441,6 @@ public final class CliFlags {
 
   /**
    * Get the values of a flag.
-   *
    * @param flag the flag
    * @return values of the flag
    */
@@ -1497,7 +1451,6 @@ public final class CliFlags {
 
   /**
    * Get an anonymous value.
-   *
    * @param index the index
    * @return the anonymous value
    */
@@ -1508,7 +1461,6 @@ public final class CliFlags {
 
   /**
    * Get the anonymous values.
-   *
    * @param index the index
    * @return anonymous values
    */
@@ -1521,7 +1473,6 @@ public final class CliFlags {
    * Returns an iterator over the values that the user supplied, in
    * the order that they were supplied. Each element of the Iterator
    * is a FlagValue.
-   *
    * @return an <code>Iterator</code> of <code>FlagValue</code>s.
    */
   public Iterator<FlagValue<?>> getReceivedValues() {
@@ -1531,7 +1482,6 @@ public final class CliFlags {
 
   /**
    * Returns true if a particular flag was provided in the arguments.
-   *
    * @param flag the name of the option.
    * @return true if the option was provided in the arguments.
    */
@@ -1545,7 +1495,6 @@ public final class CliFlags {
    * Gets a compact description of the required and optional
    * flags. This contains only the names of the options with their
    * usage parameters (i.e.: not their individual descriptions).
-   *
    * @return a short <code>String</code> listing the options.
    */
   public String getCompactFlagUsage() {
@@ -1607,7 +1556,6 @@ public final class CliFlags {
 
   /**
    * Get the usage string.
-   *
    * @param width width of output
    * @return usage wrapped to given width
    */

@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * King cobra.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -22,10 +21,12 @@ public class KingCobra extends MaterialMonster {
     setCombatApply(Attribute.LIFE_RECOVERY);
     setRangedCombatApply(Attribute.LIFE_RECOVERY);
   }
+
   @Override
   public long getLosMask() {
     return 0x00001838182C1C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GiantBeetle.class;

@@ -17,7 +17,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Swap.
- *
  * @author Sean A. Irvine
  */
 public class Swap extends Castable implements TargetFilter {

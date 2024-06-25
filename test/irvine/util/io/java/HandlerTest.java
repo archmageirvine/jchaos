@@ -6,7 +6,6 @@ import junit.framework.TestCase;
 
 /**
  * Unit test for class Handler.
- *
  * @author Len Trigg
  */
 public class HandlerTest extends TestCase {

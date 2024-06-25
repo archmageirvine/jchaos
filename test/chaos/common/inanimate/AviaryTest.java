@@ -18,7 +18,6 @@ import chaos.common.monster.Vulture;
 
 /**
  * Tests this inanimate.
- *
  * @author Sean A. Irvine
  */
 public class AviaryTest extends AbstractGeneratorTest {

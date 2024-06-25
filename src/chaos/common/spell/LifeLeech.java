@@ -4,7 +4,6 @@ import chaos.common.PowerUps;
 
 /**
  * Life leech.
- *
  * @author Sean A. Irvine
  */
 public class LifeLeech extends AbstractPowerUp {

@@ -19,7 +19,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Disrupt.
- *
  * @author Sean A. Irvine
  */
 public class Disrupt extends FreeCastable {

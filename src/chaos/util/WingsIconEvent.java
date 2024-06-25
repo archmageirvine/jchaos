@@ -2,7 +2,6 @@ package chaos.util;
 
 /**
  * Which cell if any should have the wings icon.
- *
  * @author Sean A. Irvine
  */
 public class WingsIconEvent implements Event {
@@ -11,7 +10,6 @@ public class WingsIconEvent implements Event {
 
   /**
    * Display wings icon in given cell, previous cell will be cleared.
-   *
    * @param cell the cell
    */
   public WingsIconEvent(final int cell) {
@@ -20,7 +18,6 @@ public class WingsIconEvent implements Event {
 
   /**
    * Get the cell.
-   *
    * @return the cell
    */
   public int getCell() {

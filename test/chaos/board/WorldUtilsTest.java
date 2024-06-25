@@ -9,7 +9,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests for the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class WorldUtilsTest extends TestCase {

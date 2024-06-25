@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Shape changer.
- *
  * @author Sean A. Irvine
  */
 public class ShapeChanger extends MaterialMonster implements Bonus {
@@ -18,18 +17,22 @@ public class ShapeChanger extends MaterialMonster implements Bonus {
     setDefault(Attribute.MOVEMENT, 3);
     setDefault(Attribute.COMBAT, 8);
   }
+
   @Override
   public int getBonus() {
     return 2;
   }
+
   @Override
   public int getCastRange() {
     return 3;
   }
+
   @Override
   public long getLosMask() {
     return 0x00787C7E7F7E7E00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return BrownBear.class;

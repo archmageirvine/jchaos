@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Insecurity.
- *
  * @author Sean A. Irvine
  */
 public class Insecurity extends AbstractFreeDecrement {

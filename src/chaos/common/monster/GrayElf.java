@@ -11,7 +11,6 @@ import chaos.common.Rider;
 
 /**
  * Gray elf.
- *
  * @author Sean A. Irvine
  */
 public class GrayElf extends MaterialMonster implements Humanoid, BowShooter, Promotion, Rider {
@@ -28,22 +27,27 @@ public class GrayElf extends MaterialMonster implements Humanoid, BowShooter, Pr
     setDefault(Attribute.RANGE, 6);
     set(PowerUps.ARCHERY, 1);
   }
+
   @Override
   public int getCastRange() {
     return 2;
   }
+
   @Override
   public long getLosMask() {
     return 0x00387C3838181800L;
   }
+
   @Override
   public Class<? extends Monster> promotion() {
     return DarkElf.class;
   }
+
   @Override
   public int promotionCount() {
     return 4;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return WoodElf.class;

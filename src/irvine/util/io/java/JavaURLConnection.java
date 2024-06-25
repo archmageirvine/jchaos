@@ -17,7 +17,6 @@ import java.util.Locale;
  * where <code>resource_name</code> is the name of any resource
  * normally reachable by
  * <code>ClassLoader.getResourceAsStream()</code><p>
- *
  * @author Len Trigg
  */
 public class JavaURLConnection extends URLConnection {

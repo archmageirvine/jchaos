@@ -20,7 +20,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Pablo Mayrgundter
  * @author Sean A. Irvine
  */
@@ -29,7 +28,7 @@ public class CliFlagsTest extends TestCase {
 
   protected CliFlags mFlags;
 
-  /** Used by JUnit (called after each test method)  */
+  /** Used by JUnit (called after each test method) */
   @Override
   protected void setUp() {
     mFlags = new CliFlags();
@@ -37,7 +36,7 @@ public class CliFlagsTest extends TestCase {
   }
 
 
-  /** Used by JUnit (called before each test method)  */
+  /** Used by JUnit (called before each test method) */
   @Override
   protected void tearDown() {
     mFlags = null;
@@ -52,18 +51,18 @@ public class CliFlagsTest extends TestCase {
   public void testRemaining() {
     mFlags.registerRequired("boolean", Boolean.class, "", "");
     assertTrue(!mFlags.setFlags(new String[] {
-        "s1",
-        "--boolean", "true",
-        "s2",
-        "s3"}));
+      "s1",
+      "--boolean", "true",
+      "s2",
+      "s3"}));
   }
 
   public void testRequired() {
     mFlags.registerRequired("boolean", Boolean.class, "a boolean value", "");
     assertTrue(!mFlags.setFlags(new String[] {
-        "s1",
-        "s2",
-        "s3"}));
+      "s1",
+      "s2",
+      "s3"}));
     assertEquals("unexpected arguments s1 s2 s3", mFlags.getParseMessage());
     assertEquals("Error: unexpected arguments s1 s2 s3" + LS + LS + "Required flags: " + LS + "      --boolean=A BOOLEAN VALUE " + LS + LS + "Optional flags: " + LS + "  -h, --help                    Print help on command-line flag usage.", mFlags.getUsageString().trim());
   }
@@ -173,10 +172,10 @@ public class CliFlagsTest extends TestCase {
     mFlags.registerOptional("file", File.class, "", "");
 
     assertTrue(mFlags.setFlags(new String[] {"--boolean", "true", "--byte", "10", "--short", "127",
-                                            "--char", "c",
-                                            "--int", "3", "--float", "4.6", "--long", "64234",
-                                            "--file", "afilename",
-                                            "--double", "64324.234"}));
+      "--char", "c",
+      "--int", "3", "--float", "4.6", "--long", "64234",
+      "--file", "afilename",
+      "--double", "64324.234"}));
 
     validateFlags();
 

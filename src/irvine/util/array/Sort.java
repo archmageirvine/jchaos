@@ -2,7 +2,6 @@ package irvine.util.array;
 
 /**
  * Quick sort for pairs of dynamic arrays.
- *
  * @author Jonathan Purvis
  * @author Sean A. Irvine
  * @author John Cleary
@@ -127,10 +126,9 @@ public final class Sort {
 
   /**
    * Paired sort of two arrays.
-   *
    * @param primary array to sort
    * @param secondary array to keep in sync with <code>primary</code>
-   * @exception IllegalArgumentException if the arrays have different lengths.
+   * @throws IllegalArgumentException if the arrays have different lengths.
    */
   public static void sort(final long[] primary, final long[] secondary) {
     if (primary.length != secondary.length) {
@@ -141,10 +139,9 @@ public final class Sort {
 
   /**
    * Paired sort of two arrays.
-   *
    * @param primary array to sort
    * @param secondary array to keep in sync with <code>primary</code>
-   * @exception IllegalArgumentException if the arrays have different lengths.
+   * @throws IllegalArgumentException if the arrays have different lengths.
    */
   public static void sort(final long[] primary, final int[] secondary) {
     if (primary.length != secondary.length) {
@@ -155,10 +152,9 @@ public final class Sort {
 
   /**
    * Paired sort of two arrays.
-   *
    * @param primary array to sort
    * @param secondary array to keep in sync with <code>primary</code>
-   * @exception IllegalArgumentException if the arrays have different lengths.
+   * @throws IllegalArgumentException if the arrays have different lengths.
    */
   public static void sort(final double[] primary, final long[] secondary) {
     if (primary.length != secondary.length) {
@@ -169,11 +165,10 @@ public final class Sort {
 
   /**
    * Paired sort of two arrays.
-   *
    * @param primary array to sort
    * @param secondary array to keep in sync with <code>primary</code>
    * @param <T> type of array
-   * @exception IllegalArgumentException if the arrays have different lengths.
+   * @throws IllegalArgumentException if the arrays have different lengths.
    */
   public static <T> void sort(final long[] primary, final T[] secondary) {
     if (primary.length != secondary.length) {
@@ -184,11 +179,10 @@ public final class Sort {
 
   /**
    * Paired sort of two arrays.
-   *
    * @param primary array to sort
    * @param secondary array to keep in sync with <code>primary</code>
    * @param <T> type of array
-   * @exception IllegalArgumentException if the arrays have different lengths.
+   * @throws IllegalArgumentException if the arrays have different lengths.
    */
   public static <T> void sort(final double[] primary, final T[] secondary) {
     if (primary.length != secondary.length) {
@@ -200,7 +194,6 @@ public final class Sort {
   /**
    * Sorts the specified sub-array of integers into ascending order. A
    * modified version of the JDK sort to handle three arrays.
-   *
    * @param x The array to do comparisons on
    * @param off offset to start at
    * @param len length the sort
@@ -284,7 +277,6 @@ public final class Sort {
   /**
    * Sorts the specified sub-array of integers into ascending order. A
    * modified version of the JDK sort to handle three arrays.
-   *
    * @param x The array to do comparisons on
    * @param off offset to start at
    * @param len length the sort
@@ -368,7 +360,6 @@ public final class Sort {
   /**
    * Sorts the specified sub-array of integers into ascending order. A
    * modified version of the JDK sort to handle multiple arrays.
-   *
    * @param x The array to do comparisons on
    * @param off offset to start at
    * @param len length the sort
@@ -382,7 +373,7 @@ public final class Sort {
           swapper.swap(j, j - 1);
         }
       }
-     return;
+      return;
     }
 
     // Choose a partition element, v
@@ -452,7 +443,6 @@ public final class Sort {
 
   /**
    * Swaps vector of elements.
-   *
    * @param aa first starting point
    * @param bb second starting point
    * @param n length
@@ -465,7 +455,6 @@ public final class Sort {
 
   /**
    * Returns the index of the median of the three indexed integers.
-   *
    * @param x the array
    * @param a first index
    * @param b second index
@@ -483,7 +472,6 @@ public final class Sort {
 
   /**
    * Returns the index of the median of the three indexed integers.
-   *
    * @param x the array
    * @param a first index
    * @param b second index
@@ -501,7 +489,6 @@ public final class Sort {
 
   /**
    * Returns the index of the median of the three indexed doubles.
-   *
    * @param x the array
    * @param a first index
    * @param b second index

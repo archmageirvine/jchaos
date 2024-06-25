@@ -3,7 +3,6 @@ package chaos.common;
 
 /**
  * Convenience class to implement a standard dragon.
- *
  * @author Sean A. Irvine
  */
 public abstract class Dragon extends Monster implements Rideable {

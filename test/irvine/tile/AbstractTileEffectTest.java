@@ -6,7 +6,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractTileEffectTest extends TestCase {

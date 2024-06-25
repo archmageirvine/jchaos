@@ -18,7 +18,6 @@ import chaos.common.Realm;
 
 /**
  * A screen for testing.
- *
  * @author Sean A. Irvine
  */
 public class MockScreen implements ChaosScreen {
@@ -28,7 +27,6 @@ public class MockScreen implements ChaosScreen {
 
   /**
    * Construct a new mock screen with specified mock graphics.
-   *
    * @param g mock graphics
    */
   public MockScreen(final MockGraphics g) {

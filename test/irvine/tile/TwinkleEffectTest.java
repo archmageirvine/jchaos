@@ -5,18 +5,16 @@ import java.util.Random;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class TwinkleEffectTest extends AbstractTileEffectTest {
-
-
 
 
   @Override
   public TileEffect getEffect() {
     return new TwinkleEffect(16, 0, ~0, 2, new Random(42));
   }
+
   public void testBadCons() {
     try {
       new TwinkleEffect(0, 0, 0, 1);

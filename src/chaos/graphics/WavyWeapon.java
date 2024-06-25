@@ -15,7 +15,8 @@ import irvine.util.graphics.WavyLine;
  */
 public final class WavyWeapon {
 
-  private WavyWeapon() { }
+  private WavyWeapon() {
+  }
 
   static void render(final World world, final ChaosScreen screen, final Graphics2D graphics, final WeaponEffectEvent e, final int width, final int widthBits, final Color color) {
     final int source = e.getSource();

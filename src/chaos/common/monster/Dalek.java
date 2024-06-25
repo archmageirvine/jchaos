@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Dalek.
- *
  * @author Sean A. Irvine
  */
 public class Dalek extends MaterialMonster {
@@ -20,10 +19,12 @@ public class Dalek extends MaterialMonster {
     setDefault(Attribute.RANGE, 3);
     setDefault(Attribute.RANGED_COMBAT, 12);
   }
+
   @Override
   public long getLosMask() {
     return 0x183CBDFF7E3C7E7EL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Robot.class;

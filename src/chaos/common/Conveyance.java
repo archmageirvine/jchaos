@@ -2,21 +2,18 @@ package chaos.common;
 
 /**
  * This interface indicates the Actor is mountable or rideable.
- *
  * @author Sean A. Irvine
  */
 public interface Conveyance {
 
   /**
    * Get the mounted actor, or null if nothing is mounted.
-   *
    * @return mounted actor
    */
   Actor getMount();
 
   /**
    * Set the mounted actors (can be null to clear the mount).
-   *
    * @param actor Actor to mount
    */
   void setMount(Actor actor);

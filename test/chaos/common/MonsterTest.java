@@ -7,7 +7,6 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests general properties of monsters.
- *
  * @author Sean A. Irvine
  */
 public class MonsterTest extends AbstractMonsterTest {
@@ -171,6 +170,7 @@ public class MonsterTest extends AbstractMonsterTest {
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;

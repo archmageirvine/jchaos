@@ -23,7 +23,6 @@ import chaos.util.TextEvent;
 /**
  * This important class is responsible for validating and carrying out
  * all cast requests from the various engines.
- *
  * @author Sean A. Irvine
  */
 public class CastMaster extends DefaultEventGenerator implements Serializable {
@@ -35,7 +34,6 @@ public class CastMaster extends DefaultEventGenerator implements Serializable {
 
   /**
    * Construct a new CastMaster on the given world.
-   *
    * @param w a world
    */
   public CastMaster(final World w) {
@@ -47,7 +45,6 @@ public class CastMaster extends DefaultEventGenerator implements Serializable {
    * Check if it is possible to plant a tree in the indicated cell.
    * Returns false if a tree is in any adjacent cell.  It does not
    * validate that cell itself is allowed.
-   *
    * @param cell cell we are testing
    * @return true if a tree is allowed here
    */
@@ -63,7 +60,6 @@ public class CastMaster extends DefaultEventGenerator implements Serializable {
   /**
    * Tests if a spell casting is legal.  Tests if a cast of <code>spell</code>
    * from <code>source</code> to <code>target</code> is legal.
-   *
    * @param player player owning this caster
    * @param spell what is to be cast
    * @param source location of caster

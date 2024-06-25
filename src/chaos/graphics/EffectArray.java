@@ -14,7 +14,6 @@ import irvine.tile.TwirlEffect;
 
 /**
  * Various arrays of effects.
- *
  * @author Sean A. Irvine
  */
 class EffectArray {

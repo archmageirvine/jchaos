@@ -11,7 +11,6 @@ import chaos.util.EventListener;
 
 /**
  * Tests this spell.
- *
  * @author Sean A. Irvine
  */
 public class DestroyWallTest extends AbstractFreeCastableTest {

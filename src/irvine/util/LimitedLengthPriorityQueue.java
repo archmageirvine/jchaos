@@ -7,9 +7,8 @@ import java.util.TreeSet;
 /**
  * A limited length priority queue where items are scored by a double.
  * Supports both ascending and descending queues.
- *
- * @author Sean A. Irvine
  * @param <T> underlying comparable type
+ * @author Sean A. Irvine
  */
 public class LimitedLengthPriorityQueue<T extends Comparable<T>> extends TreeSet<LimitedLengthPriorityQueue.Node<T>> {
 
@@ -85,7 +84,6 @@ public class LimitedLengthPriorityQueue<T extends Comparable<T>> extends TreeSet
    * Add an value with the given score into the queue.  If the score is too
    * small compared to the existing values and the length of the queue has
    * reached its limit, then the add request is ignored.
-   *
    * @param score score of the value
    * @param value value to add
    * @return true if value was added

@@ -6,7 +6,6 @@ import chaos.common.Monster;
 
 /**
  * Elephant.
- *
  * @author Sean A. Irvine
  */
 public class Elephant extends MaterialMonsterRide {
@@ -19,10 +18,12 @@ public class Elephant extends MaterialMonsterRide {
     setDefault(Attribute.AGILITY, 26);
     setDefault(Attribute.MOVEMENT, 2);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000FF7F7F6F6C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Leopard.class;

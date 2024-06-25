@@ -20,7 +20,8 @@ import irvine.tile.TileImage;
  */
 public final class Plasma {
 
-  private Plasma() { }
+  private Plasma() {
+  }
 
   private static final Random RANDOM = new Random();
 
@@ -136,23 +137,22 @@ public final class Plasma {
     final int rx = (int) ((w + 2) * sinTheta);
     final int ry = (int) ((w + 2) * cosTheta);
     g.fillPolygon(new int[] {
-                    sx + rx,
-                    tx + rx,
-                    tx - rx,
-                    sx - rx,
-                  }, new int[] {
-                    sy - ry,
-                    ty - ry,
-                    ty + ry,
-                    sy + ry,
-                  }, 4);
+      sx + rx,
+      tx + rx,
+      tx - rx,
+      sx - rx,
+    }, new int[] {
+      sy - ry,
+      ty - ry,
+      ty + ry,
+      sy + ry,
+    }, 4);
   }
 
   /**
    * Render a plasma effect into the specified graphics.  Partially unrenders
    * itself at the end of the effect, but the caller should best take effort to
    * repaint the screen afterwards.
-   *
    * @param g place to render
    * @param sx start x-coordinate
    * @param sy start y-coordinate
@@ -161,7 +161,7 @@ public final class Plasma {
    * @param w width parameter
    * @param color color parameter
    * @param time total time in milliseconds to maintain plasma
-   * @exception NullPointerException if <code>g</code> is null.
+   * @throws NullPointerException if <code>g</code> is null.
    */
   public static void plasma(final Graphics g, final int sx, final int sy, final int tx, final int ty, final int w, final int color, final long time) {
     if (sy == ty) {
@@ -175,7 +175,6 @@ public final class Plasma {
 
   /**
    * Just exercises the plasma routines a little bit or produce documentation.
-   *
    * @param args ignored
    * @throws Exception if an error occurs.
    */

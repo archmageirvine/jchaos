@@ -8,7 +8,6 @@ import chaos.common.UndeadMonster;
 
 /**
  * Zombie.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -21,10 +20,12 @@ public class Zombie extends UndeadMonster implements Humanoid, NoDeadImage {
     setDefault(Attribute.AGILITY, 27);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00187818383C3C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Shadow.class;

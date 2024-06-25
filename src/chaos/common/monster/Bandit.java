@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Bandit.
- *
  * @author Sean A. Irvine
  */
 public class Bandit extends MaterialMonster implements Humanoid {
@@ -19,10 +18,12 @@ public class Bandit extends MaterialMonster implements Humanoid {
     setDefault(Attribute.AGILITY, 20);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00187B7F7C181C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Orc.class;

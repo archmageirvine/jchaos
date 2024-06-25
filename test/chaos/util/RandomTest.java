@@ -4,7 +4,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the Random class.
- *
  * @author Sean A. Irvine
  */
 public class RandomTest extends TestCase {

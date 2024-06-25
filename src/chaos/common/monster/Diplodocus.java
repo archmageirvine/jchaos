@@ -19,10 +19,12 @@ public class Diplodocus extends MaterialMonsterRide {
     setDefault(Attribute.AGILITY, 3);
     setDefault(Attribute.MOVEMENT, 2);
   }
+
   @Override
   public long getLosMask() {
     return 0x00000007BEFC7E3CL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Crocodile.class;

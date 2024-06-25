@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Sanctify.
- *
  * @author Sean A. Irvine
  */
 public class Sanctify extends AbstractShield {

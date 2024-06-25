@@ -10,7 +10,6 @@ import chaos.common.monster.Lion;
 
 /**
  * Tests this growth.
- *
  * @author Sean A. Irvine
  */
 public class DarkMatterTest extends AbstractActorTest {

@@ -4,7 +4,6 @@ import chaos.graphics.AbstractGenerateGraphics;
 
 /**
  * Algorithmically generate images
- *
  * @author Sean A. Irvine
  */
 public class GenerateGraphics extends AbstractGenerateGraphics {
@@ -16,9 +15,8 @@ public class GenerateGraphics extends AbstractGenerateGraphics {
 
   /**
    * Algorithmically produce some tiles.
-   *
    * @param args ignored
-   * @exception Exception if an error occurs
+   * @throws Exception if an error occurs
    */
   public static void main(final String[] args) throws Exception {
     new GenerateGraphics().generate();

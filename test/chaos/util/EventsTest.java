@@ -4,7 +4,6 @@ import junit.framework.TestCase;
 
 /**
  * JUnit tests for the low-level event passing mechanism.
- *
  * @author Sean A. Irvine
  */
 public class EventsTest extends TestCase implements EventListener {
@@ -85,6 +84,7 @@ public class EventsTest extends TestCase implements EventListener {
       assertTrue(!mValue);
       mValue = true;
     }
+
     public boolean getValue() {
       return mValue;
     }

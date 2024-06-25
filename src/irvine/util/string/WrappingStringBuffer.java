@@ -3,7 +3,6 @@ package irvine.util.string;
 /**
  * <code>WrappingStringBuffer</code> is sort of like a StringBuilder,
  * that can perform word wrapping.
- *
  * @author Len Trigg
  */
 public class WrappingStringBuffer {
@@ -16,7 +15,6 @@ public class WrappingStringBuffer {
 
   /**
    * A new wrapping buffer.
-   *
    */
   public WrappingStringBuffer() {
     this("");
@@ -24,7 +22,6 @@ public class WrappingStringBuffer {
 
   /**
    * A new wrapping buffer with initial content.
-   *
    * @param initial initial content
    */
   public WrappingStringBuffer(final String initial) {
@@ -34,7 +31,6 @@ public class WrappingStringBuffer {
   /**
    * Sets the number of characters that text will be wrapped at when
    * using the wrapping methods.
-   *
    * @param width the horizontal wrap width. Default value is 0.
    */
   public void setWrapWidth(final int width) {
@@ -51,7 +47,6 @@ public class WrappingStringBuffer {
 
   /**
    * Sets the wrap indent to be the specified string.
-   *
    * @param prefix wrap indent
    */
   public void setWrapIndent(final String prefix) {
@@ -63,7 +58,6 @@ public class WrappingStringBuffer {
 
   /**
    * Sets the wrap indent to be the specified number of space characters.
-   *
    * @param indent indent amount
    */
   public void setWrapIndent(final int indent) {
@@ -76,7 +70,6 @@ public class WrappingStringBuffer {
 
   /**
    * Appends a character without implicit wrapping.
-   *
    * @param c char to append
    * @return the buffer
    */
@@ -90,7 +83,6 @@ public class WrappingStringBuffer {
 
   /**
    * Appends a string without implicit wrapping.
-   *
    * @param s text to wrap.
    * @return the buffer
    */
@@ -104,7 +96,6 @@ public class WrappingStringBuffer {
 
   /**
    * Appends a string, but skipping any leading space characters.
-   *
    * @param s text to wrap.
    */
   private void appendTrimmed(final String s) {
@@ -136,7 +127,6 @@ public class WrappingStringBuffer {
 
   /**
    * Append a word without breaking it, wrapping first if necessary
-   *
    * @param s text to wrap
    * @return the buffer
    */
@@ -161,7 +151,6 @@ public class WrappingStringBuffer {
 
   /**
    * Wraps text.
-   *
    * @param s text to wrap
    * @return the buffer
    * @throws IllegalArgumentException if the input string contains <code>\n</code>

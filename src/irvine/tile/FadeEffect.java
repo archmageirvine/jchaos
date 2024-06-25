@@ -2,7 +2,6 @@ package irvine.tile;
 
 /**
  * An effect that fades one image into another.
- *
  * @author Sean A. Irvine
  */
 public class FadeEffect extends AbstractTileEffect {
@@ -21,15 +20,14 @@ public class FadeEffect extends AbstractTileEffect {
   /**
    * Fade the first image into the second image.  This transformation always
    * takes exactly 8 steps but could be modified for other lengths if required.
-   *
    * @param image1 first image
    * @param image2 second image
-   * @exception NullPointerException if either image is null.
-   * @exception IllegalArgumentException if the images have different sizes
+   * @throws NullPointerException if either image is null.
+   * @throws IllegalArgumentException if the images have different sizes
    */
   public FadeEffect(final TileImage image1, final TileImage image2) {
     if (image1.getWidth() != image2.getWidth()
-        || image1.getHeight() != image2.getHeight()) {
+      || image1.getHeight() != image2.getHeight()) {
       throw new IllegalArgumentException("Size mismatch");
     }
     mImage1 = image1;
@@ -39,10 +37,9 @@ public class FadeEffect extends AbstractTileEffect {
   /**
    * Fade the first image to the given color.  This transformation always
    * takes exactly eight steps but could be modified for other lengths if required.
-   *
    * @param image initial image
    * @param color target color
-   * @exception NullPointerException if the image is null.
+   * @throws NullPointerException if the image is null.
    */
   public FadeEffect(final TileImage image, final int color) {
     mImage2 = new TileImage(image.getWidth(), image.getHeight());
@@ -63,7 +60,7 @@ public class FadeEffect extends AbstractTileEffect {
           final int b = mImage2.getPixel(x, y);
           final int rb = (((a & RB) * (8 - mCurrent) + (b & RB) * mCurrent) >>> 3) & RB;
           final int ag = ((((a >>> 8) & RB) * (8 - mCurrent)
-                           + ((b >>> 8) & RB) * mCurrent) << 5) & AG;
+            + ((b >>> 8) & RB) * mCurrent) << 5) & AG;
           r.setPixel(x, y, rb | ag);
         }
       }

@@ -9,7 +9,6 @@ import chaos.common.spell.Sleep;
 
 /**
  * Faun.
- *
  * @author Sean A. Irvine
  */
 public class Faun extends Unicaster implements Humanoid, Virtuous {
@@ -26,10 +25,12 @@ public class Faun extends Unicaster implements Humanoid, Virtuous {
     setDefault(Attribute.AGILITY, 47);
     setDefault(Attribute.INTELLIGENCE, 80);
   }
+
   @Override
   public long getLosMask() {
     return 0x00387C7C1C1C1C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Druid.class;

@@ -7,7 +7,6 @@ import chaos.common.Monster;
 
 /**
  * Bodak.
- *
  * @author Sean A. Irvine
  */
 public class Bodak extends MaterialMonster implements Humanoid {
@@ -19,10 +18,12 @@ public class Bodak extends MaterialMonster implements Humanoid {
     setDefault(Attribute.MOVEMENT, 2);
     setDefault(Attribute.COMBAT, 13);
   }
+
   @Override
   public long getLosMask() {
     return 0x127F7FFFF828286CL;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Troll.class;

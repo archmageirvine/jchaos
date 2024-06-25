@@ -33,10 +33,12 @@ public class Marid extends Polycaster implements Humanoid {
     setDefault(Attribute.INTELLIGENCE, 90);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x00183E785C3C3C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Necromancer.class;

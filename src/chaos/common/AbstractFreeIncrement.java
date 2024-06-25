@@ -9,21 +9,18 @@ import chaos.util.ShieldGrantedEvent;
 
 /**
  * Abstract superclass for freely castable increment spell.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractFreeIncrement extends FreeCastable {
 
   /**
    * The increment to be applied.
-   *
    * @return increment
    */
   public abstract int increment();
 
   /**
    * The attribute to be incremented.
-   *
    * @return attribute
    */
   public abstract Attribute attribute();

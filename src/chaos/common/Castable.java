@@ -20,7 +20,6 @@ import chaos.util.NameUtils;
  * Other methods provide access to information common to all
  * castables such as the name of the castable, its description,
  * and a hook for its spell table image.
- *
  * @author Sean A. Irvine
  */
 public abstract class Castable implements Serializable {
@@ -59,6 +58,7 @@ public abstract class Castable implements Serializable {
   protected final String mName;
   /** The localized description for this Castable. */
   protected final String mDesc;
+
   {
     final String shortName = NameUtils.getShortName(this);
     mName = shortName + "Name";
@@ -67,6 +67,7 @@ public abstract class Castable implements Serializable {
 
   /** A resource file for names and descriptions */
   private static final ResourceBundle CAST_TEXT_RESOURCE;
+
   static {
     try {
       CAST_TEXT_RESOURCE = ResourceBundle.getBundle("chaos/resources/CastResource");
@@ -82,7 +83,6 @@ public abstract class Castable implements Serializable {
    * its effect will be actioned on the current contents of the
    * cell. The <code>cell</code> may be <code>null</code> in some
    * instances (e.g. spells affecting every cell).
-   *
    * @param world the world where this cast is going to occur
    * @param caster the thing doing the casting
    * @param cell the cell where this Castable is to be invoked
@@ -92,14 +92,12 @@ public abstract class Castable implements Serializable {
 
   /**
    * Return the maximum distance this Castable can be cast.
-   *
    * @return casting range
    */
   public abstract int getCastRange();
 
   /**
    * Return the casting flags.
-   *
    * @return casting flags
    */
   public abstract int getCastFlags();
@@ -107,7 +105,6 @@ public abstract class Castable implements Serializable {
   /**
    * Attempt to get the named resource. If the resource is not
    * available then an empty string is returned.
-   *
    * @param name resource to retrieve
    * @return value of named resource
    */
@@ -122,7 +119,6 @@ public abstract class Castable implements Serializable {
   /**
    * Return a (short) string representing the name of this Castable
    * in a form appropriate for the default locale.
-   *
    * @return the spell name
    */
   public String getName() {
@@ -132,7 +128,6 @@ public abstract class Castable implements Serializable {
   /**
    * Return a string describing this Castable
    * in a form appropriate for the default locale.
-   *
    * @return the spell description
    */
   public String getDescription() {

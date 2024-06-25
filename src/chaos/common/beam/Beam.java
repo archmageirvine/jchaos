@@ -11,7 +11,6 @@ import chaos.util.WeaponEffectType;
 /**
  * General implementation of all spells that affect cells in a straight beam
  * from the wizard to the edge of the world.
- *
  * @author Sean A. Irvine
  */
 public abstract class Beam extends Castable {
@@ -30,7 +29,6 @@ public abstract class Beam extends Castable {
    * Perform this beam's effect on a given cell.  This function is called once
    * for each cell in the path of the beam. Implementations can assume that the
    * passed cell is non-null.
-   *
    * @param cell cell effected
    * @param caster the caster
    * @param casterCell cell containing the caster
@@ -39,7 +37,6 @@ public abstract class Beam extends Castable {
 
   /**
    * Get the attribute affected by this beam.
-   *
    * @return an attribute
    */
   protected abstract Attribute getAttribute();

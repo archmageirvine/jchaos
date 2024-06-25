@@ -5,7 +5,6 @@ import chaos.common.Attribute;
 
 /**
  * Idiocy.
- *
  * @author Sean A. Irvine
  */
 public class Idiocy extends AbstractDecrement {

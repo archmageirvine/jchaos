@@ -4,20 +4,19 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author <a href="mailto:len@reeltwo.com">len</a>
  */
 public class TimerTest extends TestCase {
 
   protected Timer mTimer;
 
-  /** Sets up test fixture.  */
+  /** Sets up test fixture. */
   @Override
   public void setUp() {
     mTimer = Timer.getTimer("TimerTest");
   }
 
-  /** Removes test fixture.  */
+  /** Removes test fixture. */
   @Override
   public void tearDown() {
     Timer.removeTimer("TimerTest");

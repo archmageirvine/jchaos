@@ -9,7 +9,6 @@ import java.awt.event.KeyListener;
  * is currently depressed on the keyboard.  Keys can optionally be consumed to
  * prevent them propagating to other handlers.  Key values outside the standard
  * range may cause various exceptions.
- *
  * @author Sean A. Irvine
  */
 public class Keyboard {
@@ -21,44 +20,42 @@ public class Keyboard {
 
   /**
    * Construct a new keyboard instance on a given component.
-   *
    * @param comp component
-   * @exception NullPointerException if <code>comp</code> is null.
+   * @throws NullPointerException if <code>comp</code> is null.
    */
   public Keyboard(final Component comp) {
     // hide the actual key listener
     comp.addKeyListener(new KeyListener() {
-        @Override
-        public void keyPressed(final KeyEvent e) {
-          final int keyCode = e.getKeyCode();
-          mPressed[keyCode] = true;
-          if (mConsume[keyCode]) {
-            e.consume();
-          }
+      @Override
+      public void keyPressed(final KeyEvent e) {
+        final int keyCode = e.getKeyCode();
+        mPressed[keyCode] = true;
+        if (mConsume[keyCode]) {
+          e.consume();
         }
+      }
 
-        @Override
-        public void keyReleased(final KeyEvent e) {
-          final int keyCode = e.getKeyCode();
-          mPressed[keyCode] = false;
-          if (mConsume[keyCode]) {
-            e.consume();
-          }
+      @Override
+      public void keyReleased(final KeyEvent e) {
+        final int keyCode = e.getKeyCode();
+        mPressed[keyCode] = false;
+        if (mConsume[keyCode]) {
+          e.consume();
         }
+      }
 
-        @Override
-        public void keyTyped(final KeyEvent e) {
-          final int keyCode = e.getKeyCode();
-          if (mConsume[keyCode]) {
-            e.consume();
-          }
+      @Override
+      public void keyTyped(final KeyEvent e) {
+        final int keyCode = e.getKeyCode();
+        if (mConsume[keyCode]) {
+          e.consume();
         }
-      });
+      }
+    });
   }
 
   /**
    * Mark a key to be consumed by this Keyboard object.
-   *
    * @param key key to consume
    */
   public void consume(final int key) {
@@ -67,7 +64,6 @@ public class Keyboard {
 
   /**
    * Mark an array of keys to be consumed.
-   *
    * @param keys keys to consume
    */
   public void consume(final int[] keys) {
@@ -79,7 +75,6 @@ public class Keyboard {
   /**
    * Mark a key to be not consumed by this Keyboard object.  Calling this with
    * keys not already consumed has no effect.
-   *
    * @param key key to not consume
    */
   public void unconsume(final int key) {
@@ -88,7 +83,6 @@ public class Keyboard {
 
   /**
    * Mark an array of keys to be not consumed.
-   *
    * @param keys keys to not consume
    */
   public void unconsume(final int[] keys) {
@@ -101,7 +95,6 @@ public class Keyboard {
    * Test if a given key is currently held down on the keyboard.  Does not
    * remember keys that have been pressed and released since the last call
    * to this method.
-   *
    * @param key key to test
    * @return true if key is currently pressed
    */
@@ -111,7 +104,6 @@ public class Keyboard {
 
   /**
    * Test if any of the listed keys is currently depressed.
-   *
    * @param keys array of keys to test
    * @return true if any of them are pressed
    */

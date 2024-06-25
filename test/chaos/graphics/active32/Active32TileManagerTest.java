@@ -5,7 +5,6 @@ import chaos.graphics.TileManager;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class Active32TileManagerTest extends AbstractActiveTileManagerTest {

@@ -7,12 +7,12 @@ import java.awt.image.BufferedImage;
 
 /**
  * Place a large "X" over an existing tile.
- *
  * @author Sean A. Irvine
  */
 final class AntiTile {
 
-  private AntiTile() { }
+  private AntiTile() {
+  }
 
   private static Polygon[] ex(final int w, final int b) {
     final int[] x1 = {0, w - b, w, b};

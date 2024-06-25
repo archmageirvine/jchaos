@@ -10,7 +10,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests basic functionality that all TileManagers should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractTileManagerTest extends TestCase {
@@ -47,12 +46,15 @@ public abstract class AbstractTileManagerTest extends TestCase {
     public int getCastFlags() {
       return 0;
     }
+
     @Override
     public int getCastRange() {
       return 5;
     }
+
     @Override
-    public void cast(final World w, final Caster c, final Cell cc, final Cell ccc) { }
+    public void cast(final World w, final Caster c, final Cell cc, final Cell ccc) {
+    }
   }
 
   public void testImagery() {

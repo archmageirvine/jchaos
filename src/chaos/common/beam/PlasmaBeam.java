@@ -19,7 +19,6 @@ import chaos.util.Random;
 
 /**
  * Plasma beam.
- *
  * @author Sean A. Irvine
  */
 public class PlasmaBeam extends Beam implements TargetFilter {

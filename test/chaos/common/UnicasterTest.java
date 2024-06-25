@@ -8,7 +8,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class UnicasterTest extends TestCase {
@@ -16,21 +15,26 @@ public class UnicasterTest extends TestCase {
 
   private static class MyUnicaster extends Unicaster {
     private final Castable mC;
+
     MyUnicaster(final Castable c) {
       mC = c;
     }
+
     @Override
     public Castable getCastable() {
       return mC;
     }
+
     @Override
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;
     }
+
     @Override
     public int getOwner() {
       return 1;
@@ -57,10 +61,12 @@ public class UnicasterTest extends TestCase {
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;
     }
+
     {
       Assert.assertEquals(0, mDelay);
       mDelay = 1;
@@ -80,10 +86,12 @@ public class UnicasterTest extends TestCase {
     public Class<? extends Monster> reincarnation() {
       return null;
     }
+
     @Override
     public long getLosMask() {
       return 0;
     }
+
     {
       mDelay = 100000000;
       mCastClass = Lion.class;

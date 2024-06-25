@@ -10,7 +10,6 @@ import chaos.common.growth.Earthquake;
 
 /**
  * Earth elemental.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */
@@ -23,18 +22,22 @@ public class EarthElemental extends MaterialMonster implements Elemental, Bonus 
     setDefault(Attribute.AGILITY, 30);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x003CFFFFFFFF7E7EL;
   }
+
   @Override
   public int getBonus() {
     return 4;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return null;
   }
+
   @Override
   public Actor getElementalReplacement() {
     final Earthquake t = new Earthquake();

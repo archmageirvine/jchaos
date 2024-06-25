@@ -11,7 +11,6 @@ import chaos.common.growth.Fire;
 
 /**
  * Fire elemental.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

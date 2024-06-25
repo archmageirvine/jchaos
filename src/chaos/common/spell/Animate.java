@@ -17,7 +17,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Animate.
- *
  * @author Sean A. Irvine
  */
 public class Animate extends Castable implements TargetFilter {
@@ -73,7 +72,7 @@ public class Animate extends Castable implements TargetFilter {
   public void filter(final Set<Cell> targets, final Caster caster, final World world) {
     // AI should only cast this on thyself
     final int owner = caster.getOwner();
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (a == null || a.getOwner() != owner) {
         it.remove();

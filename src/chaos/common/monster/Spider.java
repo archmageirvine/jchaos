@@ -20,10 +20,12 @@ public class Spider extends MaterialMonster implements Promotion {
     setDefault(Attribute.AGILITY, 100);
     setDefault(Attribute.MOVEMENT, 3);
   }
+
   @Override
   public long getLosMask() {
     return 0x00007E7E7E7E0000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return GiantBeetle.class;

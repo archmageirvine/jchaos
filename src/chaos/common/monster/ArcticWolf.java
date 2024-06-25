@@ -8,7 +8,6 @@ import chaos.common.Virtuous;
 
 /**
  * Arctic wolf.
- *
  * @author Sean A. Irvine
  */
 public class ArcticWolf extends Monster implements AttacksUndead, Virtuous {
@@ -24,10 +23,12 @@ public class ArcticWolf extends Monster implements AttacksUndead, Virtuous {
     setRangedCombatApply(Attribute.LIFE);
     setSpecialCombatApply(Attribute.LIFE);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000477E7E7E0000L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return DireWolf.class;

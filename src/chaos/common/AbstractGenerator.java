@@ -14,7 +14,6 @@ import chaos.util.WeaponEffectType;
 /**
  * This extension of Actor is made for the generators.  It provides
  * calls used in generation.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractGenerator extends Actor implements NoDeadImage, Inanimate {
@@ -25,14 +24,17 @@ public abstract class AbstractGenerator extends Actor implements NoDeadImage, In
     setDefault(Attribute.MAGICAL_RESISTANCE, 100);
     setDefault(Attribute.MAGICAL_RESISTANCE_RECOVERY, 100);
   }
+
   @Override
   public int getCastRange() {
     return 14;
   }
+
   @Override
   public long getLosMask() {
     return ~0L;
   }
+
   @Override
   public int getDefaultWeight() {
     return 0;
@@ -58,7 +60,6 @@ public abstract class AbstractGenerator extends Actor implements NoDeadImage, In
   /**
    * When called should produce an actor to be generated.  If nothing is
    * to be generated then null should be returned.
-   *
    * @return actor to generate
    */
   public abstract Actor chooseWhatToGenerate();

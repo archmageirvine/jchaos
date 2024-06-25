@@ -7,16 +7,15 @@ import chaos.common.State;
 
 /**
  * Restore.
- *
  * @author Sean A. Irvine
  */
 public final class Restore {
 
-  private Restore() { }
+  private Restore() {
+  }
 
   /**
    * Restore an actor to mint condition.
-   *
    * @param a actor to restore
    */
   public static void restore(final Actor a) {

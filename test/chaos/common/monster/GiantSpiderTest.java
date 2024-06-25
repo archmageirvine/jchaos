@@ -9,7 +9,6 @@ import chaos.common.inanimate.Web;
 
 /**
  * Tests this monster.
- *
  * @author Sean A. Irvine
  */
 public class GiantSpiderTest extends AbstractMonsterTest {

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 /**
  * Provides a dynamic array of bytes indexed by an int.
  * See DynamicArray for further information on performance.
- *
  * @author Sean A. Irvine
  */
 public class DynamicByteArray implements Serializable {
@@ -32,7 +31,6 @@ public class DynamicByteArray implements Serializable {
    * Return the length of the array.  This is one more than the
    * highest location which has been assigned a value or zero
    * in the case of an empty array.
-   *
    * @return length of the array
    */
   public int length() {
@@ -41,10 +39,9 @@ public class DynamicByteArray implements Serializable {
 
   /**
    * Get the byte at the specified array index.
-   *
    * @param index array index
    * @return value at specified index
-   * @exception ArrayIndexOutOfBoundsException if the index is negative.
+   * @throws ArrayIndexOutOfBoundsException if the index is negative.
    */
   public byte get(final int index) {
     if (index >= mLength) {
@@ -72,10 +69,9 @@ public class DynamicByteArray implements Serializable {
 
   /**
    * Set the entry at specified index to the given value.
-   *
    * @param index array index
    * @param value value to set at the index
-   * @exception ArrayIndexOutOfBoundsException if the index is negative.
+   * @throws ArrayIndexOutOfBoundsException if the index is negative.
    */
   public void set(final int index, final byte value) {
     getChunk(index)[index & CHUNK_MASK] = value;
@@ -87,9 +83,8 @@ public class DynamicByteArray implements Serializable {
    * Calling <code>truncate(0);</code> empties the entire array.
    * If the array is already the specified length or is shorter
    * then no action is taken.
-   *
    * @param length position to truncate at
-   * @exception ArrayIndexOutOfBoundsException if length is negative.
+   * @throws ArrayIndexOutOfBoundsException if length is negative.
    */
   public void truncate(int length) {
     if (length < mLength) {

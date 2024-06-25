@@ -10,7 +10,6 @@ import chaos.common.spell.RaiseDead;
 
 /**
  * Necromancer.
- *
  * @author Sean A. Irvine
  */
 public class Necromancer extends Polycaster implements Humanoid, Rider {
@@ -22,10 +21,12 @@ public class Necromancer extends Polycaster implements Humanoid, Rider {
     setDefault(Attribute.INTELLIGENCE, 100);
     setDefault(Attribute.MOVEMENT, 1);
   }
+
   @Override
   public long getLosMask() {
     return 0x001FFFFF7C1C7C00L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Azer.class;

@@ -14,7 +14,6 @@ import chaos.common.spell.Protection;
 
 /**
  * Agathion.
- *
  * @author Sean A. Irvine
  */
 @SuppressWarnings("unchecked")

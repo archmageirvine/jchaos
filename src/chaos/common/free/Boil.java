@@ -15,7 +15,6 @@ import chaos.util.PolycellEffectEvent;
 
 /**
  * Boil.
- *
  * @author Sean A. Irvine
  * @author Stephen Smith
  */

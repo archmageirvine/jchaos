@@ -16,7 +16,6 @@ import junit.framework.Assert;
 
 /**
  * Tests this generator.
- *
  * @author Sean A. Irvine
  */
 public class DummyGeneratorTest extends AbstractGeneratorTest {

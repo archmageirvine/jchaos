@@ -22,7 +22,6 @@ import chaos.util.WeaponEffectType;
 
 /**
  * Magic glass.
- *
  * @author Sean A. Irvine
  */
 public class MagicGlass extends MaterialMonster implements Inanimate, Animateable, Bonus, Multiplicity, Blocker, NoFlyOver {
@@ -34,32 +33,39 @@ public class MagicGlass extends MaterialMonster implements Inanimate, Animateabl
     setDefault(Attribute.SPECIAL_COMBAT, 2);
     setSpecialCombatApply(Attribute.INTELLIGENCE);
   }
+
   @Override
   public int getCastRange() {
     return 6;
   }
+
   @Override
   public long getLosMask() {
     return ~0L;
   }
+
   @Override
   public int getCastFlags() {
     return CAST_DEAD | CAST_EMPTY | CAST_LOS;
   }
+
   @Override
   public Actor getAnimatedForm() {
     final Actor a = new Amphisbaena();
     a.setOwner(getOwner());
     return a;
   }
+
   @Override
   public int getBonus() {
     return 1;
   }
+
   @Override
   public int getMultiplicity() {
     return 4;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell c, final Cell casterCell) {
     if (caster != null && c != null) {

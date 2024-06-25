@@ -8,7 +8,6 @@ import chaos.common.Promotion;
 
 /**
  * Gorilla.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */

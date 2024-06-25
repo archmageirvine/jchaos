@@ -19,7 +19,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Fly.
- *
  * @author Sean A. Irvine
  */
 public class Fly extends Castable implements Multiplicity, TargetFilter {
@@ -27,14 +26,17 @@ public class Fly extends Castable implements Multiplicity, TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING;
   }
+
   @Override
   public int getCastRange() {
     return 14;
   }
+
   @Override
   public int getMultiplicity() {
     return 2;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {
@@ -52,7 +54,7 @@ public class Fly extends Castable implements Multiplicity, TargetFilter {
     final Team teams = world.getTeamInformation();
     final int t = teams.getTeam(caster);
     CastUtils.preferAnimates(CastUtils.keepFriends(targets, t, teams));
-    for (final Iterator<Cell> it = targets.iterator(); it.hasNext();) {
+    for (final Iterator<Cell> it = targets.iterator(); it.hasNext(); ) {
       final Actor a = it.next().peek();
       if (!(a instanceof Monster) || a.is(PowerUps.FLYING)) {
         it.remove();

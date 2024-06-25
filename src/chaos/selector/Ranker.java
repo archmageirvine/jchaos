@@ -16,7 +16,6 @@ import chaos.util.RankingComparator;
 
 /**
  * Selector that chooses highest ranking spell that can be cast.
- *
  * @author Sean A. Irvine
  */
 public class Ranker implements Selector {
@@ -27,7 +26,6 @@ public class Ranker implements Selector {
 
   /**
    * Construct a selector.
-   *
    * @param wizard the wizard
    * @param world the world
    * @param castMaster casting rules

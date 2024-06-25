@@ -20,10 +20,12 @@ public class Goblin extends MaterialMonster implements Humanoid, Promotion {
     setDefault(Attribute.MOVEMENT, 1);
     setDefault(Attribute.COMBAT, 6);
   }
+
   @Override
   public long getLosMask() {
     return 0x00183E3F7FBC1C10L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Orc.class;

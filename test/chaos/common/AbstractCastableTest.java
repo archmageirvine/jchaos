@@ -10,7 +10,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests basic functionality that all Castables should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractCastableTest extends TestCase {

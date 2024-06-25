@@ -11,7 +11,6 @@ import chaos.common.Monster;
 
 /**
  * Standard generator.
- *
  * @author Sean A. Irvine
  */
 public class Generator extends AbstractGenerator implements Bonus {

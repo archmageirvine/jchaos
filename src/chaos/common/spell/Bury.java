@@ -17,7 +17,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Bury.
- *
  * @author Sean A. Irvine
  */
 public class Bury extends Castable implements Multiplicity, TargetFilter {
@@ -25,14 +24,17 @@ public class Bury extends Castable implements Multiplicity, TargetFilter {
   public int getCastFlags() {
     return CAST_DEAD;
   }
+
   @Override
   public int getCastRange() {
     return MAX_CAST_RANGE;
   }
+
   @Override
   public int getMultiplicity() {
     return 8;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {

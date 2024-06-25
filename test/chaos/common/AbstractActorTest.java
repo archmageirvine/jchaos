@@ -9,7 +9,6 @@ import chaos.common.monster.Lion;
 
 /**
  * Tests basic functionality that all Actors should satisfy.
- *
  * @author Sean A. Irvine
  */
 public abstract class AbstractActorTest extends AbstractCastableTest {
@@ -54,12 +53,12 @@ public abstract class AbstractActorTest extends AbstractCastableTest {
   public void testState() {
     final Actor a = getActor();
     switch (a.getState()) {
-    case ACTIVE:
-    case DEAD:
-    case ASLEEP:
-      break;
-    default:
-      fail("Invalid state");
+      case ACTIVE:
+      case DEAD:
+      case ASLEEP:
+        break;
+      default:
+        fail("Invalid state");
     }
     a.setState(State.DEAD);
     assertEquals(0, a.getWeight());
@@ -202,6 +201,7 @@ public abstract class AbstractActorTest extends AbstractCastableTest {
   }
 
   static final HashSet<String> ACCEPT = new HashSet<>();
+
   static {
     ACCEPT.add("getDefaultWeight");
     ACCEPT.add("getDefault");

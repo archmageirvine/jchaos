@@ -20,7 +20,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Horror.
- *
  * @author Sean A. Irvine
  */
 public class Horror extends Castable implements TargetFilter {
@@ -28,10 +27,12 @@ public class Horror extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_LOS;
   }
+
   @Override
   public int getCastRange() {
     return 2;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null) {
@@ -51,7 +52,7 @@ public class Horror extends Castable implements TargetFilter {
     final int t = teams.getTeam(caster);
     CastUtils.keepFriends(targets, t, teams);
     // Remove existing horrors and wizards
-    for (final Iterator<Cell> i = targets.iterator(); i.hasNext();) {
+    for (final Iterator<Cell> i = targets.iterator(); i.hasNext(); ) {
       final Actor a = i.next().peek();
       if (a instanceof Monster && (a instanceof Wizard || a.is(PowerUps.HORROR))) {
         i.remove();

@@ -15,7 +15,6 @@ import chaos.util.CellEffectType;
 
 /**
  * Kill.
- *
  * @author Sean A. Irvine
  */
 public class Kill extends Castable implements TargetFilter {
@@ -23,10 +22,12 @@ public class Kill extends Castable implements TargetFilter {
   public int getCastFlags() {
     return CAST_LIVING | CAST_LOS | CAST_NOEXPOSEDWIZARD;
   }
+
   @Override
   public int getCastRange() {
     return 6;
   }
+
   @Override
   public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
     if (cell != null && caster != null) {

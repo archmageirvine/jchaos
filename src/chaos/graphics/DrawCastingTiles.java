@@ -21,7 +21,8 @@ import chaos.common.spell.Archery;
  */
 final class DrawCastingTiles {
 
-  private DrawCastingTiles() { }
+  private DrawCastingTiles() {
+  }
 
   private static final StandardWall WALL = new StandardWall();
   private static final Lion LION = new Lion();
@@ -31,6 +32,7 @@ final class DrawCastingTiles {
   private static final RedDragon DRAGON = new RedDragon();
   private static final FireDemon DEMON = new FireDemon();
   private static final Lion DEAD_LION = new Lion();
+
   static {
     DEAD_LION.setState(State.DEAD);
   }

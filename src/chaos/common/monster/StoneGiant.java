@@ -9,7 +9,6 @@ import chaos.common.Virtuous;
 
 /**
  * Stone giant.  Was just called "Giant" in Spectrum Chaos.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -22,18 +21,22 @@ public class StoneGiant extends MaterialMonster implements Bonus, Humanoid, Virt
     setDefault(Attribute.MOVEMENT, 2);
     setDefault(Attribute.COMBAT, 13);
   }
+
   @Override
   public int getBonus() {
     return 2;
   }
+
   @Override
   public int getCastRange() {
     return 3;
   }
+
   @Override
   public long getLosMask() {
     return 0x48FEFEFF1F141436L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return ShapeChanger.class;

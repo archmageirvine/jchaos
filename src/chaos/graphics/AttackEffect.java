@@ -16,7 +16,6 @@ import chaos.util.Sleep;
 
 /**
  * Attack graphics.
- *
  * @author Sean A. Irvine
  */
 public class AttackEffect extends AbstractEffect {

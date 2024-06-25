@@ -7,7 +7,6 @@ import chaos.common.Virtuous;
 
 /**
  * Giant rat.
- *
  * @author Sean A. Irvine
  * @author Julian Gollop
  */
@@ -24,10 +23,12 @@ public class GiantRat extends Monster implements Virtuous {
     setRangedCombatApply(Attribute.LIFE);
     setSpecialCombatApply(Attribute.LIFE);
   }
+
   @Override
   public long getLosMask() {
     return 0x0000070F7DFF7800L;
   }
+
   @Override
   public Class<? extends Monster> reincarnation() {
     return Python.class;
