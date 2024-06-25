@@ -36,7 +36,7 @@ public abstract class AbstractGenerateGraphics {
   }
 
   public TileSet getTileSet() {
-    return new TileSet(getWidthBits(), System.getProperty("user.home") + "/chaos/src/chaos/graphics/active" + getWidth() + "/");
+    return new TileSet(getWidthBits(), System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active" + getWidth() + "/");
   }
 
   private void write(final int tilePosition, final BufferedImage i) throws IOException {

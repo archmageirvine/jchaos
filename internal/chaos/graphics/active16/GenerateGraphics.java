@@ -331,7 +331,7 @@ public class GenerateGraphics extends AbstractGenerateGraphics {
     final TileImage image = getShield(fg, bg, edge).over(4, 2, getImage(res));
     writeImage(stat + (edge == 0xFFFF0000 ? "q" : "") + ".ppm", image);
     if (tilePosition >= 0) {
-      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/chaos/src/chaos/graphics/active16/");
+      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active16/");
       ts.setImage(tilePosition, image.toBufferedImage());
     }
   }
@@ -341,7 +341,7 @@ public class GenerateGraphics extends AbstractGenerateGraphics {
     final TileImage image = getCartouche(fg, bg, edge).over(4, 4, getImage(res));
     writeImage(stat + suffix + ".ppm", image);
     if (tilePosition >= 0) {
-      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/chaos/src/chaos/graphics/active16/");
+      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active16/");
       ts.setImage(tilePosition, image.toBufferedImage());
     }
   }
@@ -354,7 +354,7 @@ public class GenerateGraphics extends AbstractGenerateGraphics {
     final TileImage image = getWizardSpecial(imageData, fg, bg, edge);
     writeImage(stat + "w.ppm", image);
     if (tilePosition >= 0) {
-      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/chaos/src/chaos/graphics/active16/");
+      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active16/");
       ts.setImage(tilePosition, image.toBufferedImage());
     }
   }
@@ -364,7 +364,7 @@ public class GenerateGraphics extends AbstractGenerateGraphics {
     final TileImage image = getWizardSpecial(PLAIN_DATA, 0, bg, 0).over(4, 4, getImage(res));
     writeImage(stat + "w.ppm", image);
     if (tilePosition >= 0) {
-      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/chaos/src/chaos/graphics/active16/");
+      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active16/");
       ts.setImage(tilePosition, image.toBufferedImage());
     }
   }
@@ -374,7 +374,7 @@ public class GenerateGraphics extends AbstractGenerateGraphics {
     final TileImage image = getWizardSpecial(CIRCLE_DATA, fg, bg, ~0).over(4, 4, getImage(res));
     writeImage(stat + "w.ppm", image);
     if (tilePosition >= 0) {
-      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/chaos/src/chaos/graphics/active16/");
+      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active16/");
       ts.setImage(tilePosition, image.toBufferedImage());
     }
   }

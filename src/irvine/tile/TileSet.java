@@ -139,13 +139,13 @@ public class TileSet {
     // Usage: TileSet [-s] index file.png [bits]
     if ("-s".equals(args[0])) {
       final int bits = args.length > 3 ? Integer.parseInt(args[3]) : 4;
-      final TileSet ts = new TileSet(bits, System.getProperty("user.home") + "/chaos/src/chaos/graphics/active" + (1 << bits) + "/");
+      final TileSet ts = new TileSet(bits, System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active" + (1 << bits) + "/");
       final int index = IntegerUtils.parseValue(args[1]);
       final BufferedImage bi = ImageIO.read(new File(args[2]));
       ts.setImage(index, bi);
     } else {
       final int bits = args.length > 2 ? Integer.parseInt(args[2]) : 4;
-      final TileSet ts = new TileSet(bits, System.getProperty("user.home") + "/chaos/src/chaos/graphics/active" + (1 << bits) + "/");
+      final TileSet ts = new TileSet(bits, System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active" + (1 << bits) + "/");
       final int index = IntegerUtils.parseValue(args[0]);
       final BufferedImage i = ts.getImage(index);
       ImageIO.write(i, "PNG", new File(args[1]));

@@ -111,7 +111,7 @@ public final class GenerateOwnerChangers {
   private static void makeSpecial(final String imageData, final int fg, final int bg, final int face, final int tilePosition) throws IOException {
     final TileImage image = getImage(imageData, fg, bg, face);
     if (tilePosition >= 0) {
-      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/chaos/src/chaos/graphics/active16/");
+      final TileSet ts = new TileSet(4, System.getProperty("user.home") + "/jchaos/src/chaos/graphics/active16/");
       ts.setImage(tilePosition, image.toBufferedImage());
     }
   }
