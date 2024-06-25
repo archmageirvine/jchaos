@@ -37,6 +37,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(CarnivorousApeTest.class);
     suite.addTestSuite(CatLordTest.class);
     suite.addTestSuite(CentaurTest.class);
+    suite.addTestSuite(CeresTest.class);
     suite.addTestSuite(CheetahTest.class);
     suite.addTestSuite(ChronomancerTest.class);
     suite.addTestSuite(CrimsonDeathTest.class);

@@ -432,5 +432,6 @@ MagicCastle_M   p       471,472,473
 ShadowCity_M    x       474
 SkeletonLord    p       475,476,477,478,479
 Acromantula     p       47a,47b,47c     47d
+Ceres           x       47e             47f
 
-#next free 47e
+#next free 480

@@ -422,3 +422,4 @@ chaos.common.monster.Vampyr                     0
 chaos.common.free.NoMount                       5
 chaos.common.monster.SkeletonLord               0
 chaos.common.monster.Acromantula                0
+chaos.common.monster.Ceres                      1       B

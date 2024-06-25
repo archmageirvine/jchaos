@@ -22,7 +22,6 @@ import junit.framework.TestCase;
 
 /**
  * Tests masks make sense.
- *
  * @author Sean A. Irvine
  */
 public class MaskTest extends TestCase {
@@ -85,9 +84,7 @@ public class MaskTest extends TestCase {
   }
 
   /**
-   * Compute best mask for each actor and check it matches the one in the
-   * Castable.
-   *
+   * Compute best mask for each actor and check it matches the one in the Castable.
    * @exception Exception if an error occurs
    */
   public void testMasks() throws Exception {

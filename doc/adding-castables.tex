@@ -108,7 +108,7 @@ This section provides additional detail for each of the steps listed in the prev
     {\small\tt java irvine.tile.TileSet 0x100 output.png 5}
   \end{center}
 
-  The game supports $16\times16$, $32\times32$, and $64\times64$ pixel tile sets. The most important of these is the $32\times32$ set.  Images can be designed at $64\times64$ or $32\times32$ and then scaled to produce images at the other required sizes.  The {\tt rescale-image.sh} script is useful for automatically updating the $16\times16$ and $64\times64$ images once the $32\times32$ images are inserted.
+  The game supports $16\times16$ and $32\times32$ pixel tile sets. The most important of these is the $32\times32$ set.  Images can be designed at $32\times32$ and then scaled to produce images at the other required sizes.  The {\tt rescale-image.sh} script is useful for automatically updating the $16\times16$ images once the $32\times32$ images are inserted.
 
   After setting all the tiles for the new castable, check the changes in the packed tile files look correct. Note that {\tt git status} will conveniently indicate which files have changed. For some image viewers it may be necessary to copy the image files to something with a \verb|.png| extension before viewing.
 

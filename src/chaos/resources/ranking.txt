@@ -87,7 +87,7 @@ chaos.common.monster.Centaur,chaos.common.monster.Bolter,chaos.common.monster.St
 chaos.common.spell.Free
 chaos.common.free.Arborist,chaos.common.free.Ride,chaos.common.free.Repulsion,chaos.common.free.ForceSlam
 chaos.common.spell.Dexterity,chaos.common.spell.Nullify
-chaos.common.monster.MullacDeIrvine,chaos.common.growth.VioletFungi,chaos.common.growth.GooeyBlob,chaos.common.growth.GreenOoze,chaos.common.growth.OrangeJelly,chaos.common.growth.Spiky
+chaos.common.monster.MullacDeIrvine,chaos.common.monster.Ceres,chaos.common.growth.VioletFungi,chaos.common.growth.GooeyBlob,chaos.common.growth.GreenOoze,chaos.common.growth.OrangeJelly,chaos.common.growth.Spiky
 chaos.common.inanimate.Pool,chaos.common.inanimate.Spring,chaos.common.inanimate.Arsenal,chaos.common.inanimate.Armoury
 chaos.common.spell.Vanish,chaos.common.spell.DragonAscent
 chaos.common.free.MassResurrect
