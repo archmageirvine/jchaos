@@ -101,9 +101,7 @@ public final class FrequencyTable {
   }
 
   /**
-   * Instantiate a castable from its name.  Assumes the supplied class is
-   * valid.
-   *
+   * Instantiate a castable from its name.  Assumes the supplied class is valid.
    * @param clazz class to instantiate
    * @return instance of the spell
    * @exception RuntimeException if an instantiation problem occurs.

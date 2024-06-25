@@ -34,6 +34,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(FrequencyTableTest.class);
     suite.addTestSuite(GrowthHelperTest.class);
     suite.addTestSuite(HumanoidTest.class);
+    suite.addTestSuite(ListCasterTest.class);
     suite.addTestSuite(MaterialGrowthTest.class);
     suite.addTestSuite(MaterialMonsterTest.class);
     suite.addTestSuite(MaterialMonsterMountTest.class);

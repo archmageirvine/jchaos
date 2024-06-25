@@ -7,11 +7,9 @@ import chaos.common.wizard.Wizard1;
 
 /**
  * Tests the corresponding class.
- *
  * @author Sean A. Irvine
  */
 public class PolycasterTest extends TestCase {
-
 
   private static final class MyPolycaster extends Polycaster {
     private final Castable mC;

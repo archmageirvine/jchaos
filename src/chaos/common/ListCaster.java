@@ -5,25 +5,25 @@ import chaos.board.Cell;
 import chaos.util.Random;
 
 /**
- * A type of Caster which periodically casts any of a set list of spells.
+ * A type of Caster which casts down a predefined list of spells.
+ * The Caster will cast the items in the list in the order they are given.
+ * The list may contain <code>null</code> to indicate a turn where nothing is cast.
+ * Once the list is exhausted no further casts are made.
  * @author Sean A. Irvine
  */
-public abstract class Polycaster extends Caster {
+public abstract class ListCaster extends Caster {
 
-  /** Castables used by this Polycaster */
+  /** Castables used by this caster */
   protected final Class<? extends Castable>[] mCastClass;
-  /** The expected delay between casts */
-  protected final int mDelay;
+  private int mNext = 0;
 
   /**
    * A caster capable of casting multiple spells.
-   * @param delay delay between casts
    * @param castables list of castables
    */
   @SuppressWarnings("unchecked")
-  public Polycaster(final int delay, final Class<? extends Castable>... castables) {
+  public ListCaster(final Class<? extends Castable>... castables) {
     super();
-    mDelay = delay;
     mCastClass = castables;
   }
 
@@ -33,7 +33,11 @@ public abstract class Polycaster extends Caster {
    */
   @Override
   public Castable getCastable() {
-    return Random.nextInt(mDelay) == 0 ? FrequencyTable.instantiate(mCastClass[Random.nextInt(mCastClass.length)]) : null;
+    if (mNext >= mCastClass.length) {
+      return null;
+    }
+    final Class<? extends Castable> spell = mCastClass[mNext++];
+    return spell == null ? null : FrequencyTable.instantiate(spell);
   }
 
   /**
