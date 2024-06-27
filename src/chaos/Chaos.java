@@ -142,11 +142,11 @@ public final class Chaos implements Serializable {
     }
   }
 
-  private boolean keepPlaying() throws IOException {
+  private boolean keepPlaying(final ChaosScreen screen) throws IOException {
     if (mTurns != -1 && --mTurns == 0) {
       return false;
     }
-    if (ScenarioUtils.isScenarioChainDone(this)) {
+    if (ScenarioUtils.isScenarioChainDone(this, screen)) {
       return false;
     }
     final int alive = mWorld.getWizardManager().getActiveCount();
@@ -215,7 +215,7 @@ public final class Chaos implements Serializable {
   }
 
   void playChaos(final ChaosScreen screen, final ScoreDisplay scoredisplay, final int turnLimit) throws IOException {
-    while (keepPlaying() && (turnLimit == 0 || mCurrentTurn < turnLimit)) {
+    while (keepPlaying(screen) && (turnLimit == 0 || mCurrentTurn < turnLimit)) {
       if (scoredisplay != null) {
         writePhase(screen, "SCORES", null, null);
         scoredisplay.showScores(mCurrentTurn);
@@ -549,7 +549,7 @@ public final class Chaos implements Serializable {
     if (headless) {
       final Chaos c = new Chaos(config, texas);
       if (scenario != null) {
-        scenario.init(c);
+        scenario.init(c, null);
       }
       sChaos = c; // ideally wouldn't need this singleton
       c.prepareReporting();
@@ -577,7 +577,7 @@ public final class Chaos implements Serializable {
       } else {
         Chaos lchaos = new Chaos(config, texas);
         if (scenario != null) {
-          scenario.init(lchaos);
+          scenario.init(lchaos, screen);
         } else {
           final boolean[] conditions = new GenericSetUp(config, screen, lchaos, false).setUp();
           if (conditions[1]) {
@@ -585,7 +585,7 @@ public final class Chaos implements Serializable {
             final Scenario raven = Scenario.load("chaos/resources/scenario/raven/beetle_mania.scn");
             final Configuration c = new Configuration(minimumWidth, minimumHeight, false, raven.getHeight(), raven.getWidth());
             lchaos = new Chaos(c, false); // force non-texas
-            raven.init(lchaos);
+            raven.init(lchaos, screen);
           } else if (conditions[0]) {
             // User selected load from start up screen
             try {

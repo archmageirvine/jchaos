@@ -23,12 +23,15 @@ import chaos.common.inanimate.Exit;
 import chaos.common.wizard.Wizard;
 import chaos.engine.AiEngine;
 import chaos.engine.HumanEngine;
+import chaos.graphics.ChaosScreen;
+import chaos.graphics.InformationPanel;
 import chaos.selector.RandomAiSelector;
+import chaos.util.BlockUntilEvent;
 import irvine.util.Pair;
 import irvine.util.string.StringUtils;
 
 /**
- * Manager for a scrolling level read from a resource.
+ * Manager for a scenario read from a resource.
  * @author Sean A. Irvine
  */
 public final class Scenario implements Serializable {
@@ -140,11 +143,10 @@ public final class Scenario implements Serializable {
   }
 
   /**
-   * Perform initialization for the scenario.  This includes setting up the wizards for the
-   * scenario.
+   * Perform initialization for the scenario.  This includes setting up the wizards for the scenario.
    * @param chaos the universe
    */
-  public void init(final Chaos chaos) {
+  public void init(final Chaos chaos, final ChaosScreen screen) {
     chaos.setScenario(this);
     final World world = chaos.getWorld();
 
@@ -186,6 +188,14 @@ public final class Scenario implements Serializable {
         wizard.setState(State.DEAD);
       }
       ++wiz;
+    }
+
+    final String title = mHeader.get("title");
+    if (screen != null && title != null) {
+      synchronized (screen.lock()) {
+        InformationPanel.scenarioTitleDisplay(screen, screen.getGraphics(), title, mHeader.getOrDefault("description", ""));
+        BlockUntilEvent.blockUntilEvent(screen, 60000);
+      }
     }
   }
 

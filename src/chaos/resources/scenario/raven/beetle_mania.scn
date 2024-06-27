@@ -1,6 +1,8 @@
 #Scenario=V1.0
 #width=32
 #height=24
+#title=Beetle Mania
+#description=Clean out the beetle infestation.
 #wizard1=(0,12)[Horse,Lion,Bat,Eagle,Eagle,ElfBoots,Idiocy,Bless]
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,GiantBeetle,GiantBeetle,GiantBeetle,,,,,,,,,,,

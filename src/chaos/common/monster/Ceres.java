@@ -5,8 +5,10 @@ import chaos.common.Humanoid;
 import chaos.common.ListCaster;
 import chaos.common.Monster;
 import chaos.common.Singleton;
+import chaos.common.free.Assurance;
 import chaos.common.free.Bless;
 import chaos.common.growth.Wheat;
+import chaos.common.inanimate.Elm;
 
 /**
  * Ceres.
@@ -36,7 +38,7 @@ public class Ceres extends ListCaster implements Humanoid, Singleton {
   /** Ceres. */
   @SuppressWarnings("unchecked")
   public Ceres() {
-    super(Wheat.class, Bless.class, Eagle.class, Wheat.class);
+    super(Wheat.class, Elm.class, Bless.class, Horse.class, Assurance.class, Eagle.class, null, Wheat.class, null, Bless.class);
     setCombatApply(Attribute.LIFE);
     setRangedCombatApply(Attribute.LIFE);
     setSpecialCombatApply(Attribute.LIFE);

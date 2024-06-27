@@ -120,7 +120,7 @@ public class ScenarioTest extends TestCase {
     assertTrue(scenario.isValid());
     final Configuration config = new Configuration(scenario.getHeight(), scenario.getWidth());
     final Chaos chaos = new Chaos(config, false);
-    scenario.init(chaos);
+    scenario.init(chaos, null);
     final World world = chaos.getWorld();
     assertTrue(world.getCell(0, 12).peek() instanceof Wizard);
     assertTrue(world.getCell(31, 12).peek() instanceof Exit);

@@ -598,10 +598,8 @@ public class HumanEngine extends DefaultEventGenerator implements PlayerEngine, 
       }
     } else {
       if (c != mOldCell) {
-        //     new Thread(() -> {
         updateInfoDisplay(mWorld.actor(c), 1);
         mOldCell = c;
-        //   }).start();
       }
       if (mState != HumanEngineState.MOVE_IN_PROGRESS && mState != HumanEngineState.SHOOTING && mState != HumanEngineState.MOUNTED_SHOOTING) {
         mScreen.highlightContinue(false); // unhighlight continue
@@ -707,8 +705,7 @@ public class HumanEngine extends DefaultEventGenerator implements PlayerEngine, 
               // Don't hold up the event handling queue when doing the information
               // display.  This is critical not only for performance, but because
               // we rely on this very queue to terminate the information window!
-              final Thread t = new Thread(() -> informationDisplay(mOldCell));
-              t.start();
+              new Thread(() -> informationDisplay(mOldCell)).start();
             }
             break;
           default:

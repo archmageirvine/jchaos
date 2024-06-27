@@ -422,5 +422,5 @@ chaos.common.monster.Vampyr                     0
 chaos.common.free.NoMount                       5
 chaos.common.monster.SkeletonLord               0
 chaos.common.monster.Acromantula                0
-chaos.common.monster.Ceres                      100
-chaos.common.growth.Wheat                       100
+chaos.common.monster.Ceres                      1       B
+chaos.common.growth.Wheat                       1       B

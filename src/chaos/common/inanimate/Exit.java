@@ -97,7 +97,7 @@ public class Exit extends Actor implements Inanimate, Mountable, Named {
   private boolean mIsOpen = false;
 
   /**
-   * Set whether or not this exit is currently open.
+   * Set whether this exit is currently open.
    * @param status open status
    */
   public void setOpen(final boolean status) {

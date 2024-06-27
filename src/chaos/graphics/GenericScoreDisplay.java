@@ -8,10 +8,6 @@ import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.TexturePaint;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -28,7 +24,7 @@ import chaos.common.State;
 import chaos.common.inanimate.Generator;
 import chaos.common.wizard.Wizard;
 import chaos.engine.HumanEngine;
-import chaos.util.BooleanLock;
+import chaos.util.BlockUntilEvent;
 import chaos.util.ChaosProperties;
 import irvine.heraldry.Shape;
 import irvine.heraldry.ShapeFactory;
@@ -38,7 +34,7 @@ import irvine.util.graphics.Stipple;
  * Draw the current scores.
  * @author Sean A. Irvine
  */
-public class GenericScoreDisplay implements ScoreDisplay, MouseListener, KeyListener {
+public class GenericScoreDisplay implements ScoreDisplay {
 
   private static final String LIFE_LABEL = "Life";
 
@@ -49,8 +45,6 @@ public class GenericScoreDisplay implements ScoreDisplay, MouseListener, KeyList
   private static final int NO_HUMAN_SLEEP = ChaosProperties.properties().getIntProperty("chaos.scoredisplay.nohuman.delay", 5000);
 
   private static final String TITLE = "Current Standings";
-  /** Provides model locking. */
-  private final BooleanLock mLock = new BooleanLock();
 
   private final World mWorld;
   private final ChaosScreen mScreen;
@@ -254,55 +248,8 @@ public class GenericScoreDisplay implements ScoreDisplay, MouseListener, KeyList
         // remember order for next time
         mPreviousWizardOrder = new Wizard[mWizards.length];
         System.arraycopy(mWizards, 0, mPreviousWizardOrder, 0, mWizards.length);
-        mLock.setValue(false);
-        mScreen.addMouseListener(this);
-        mScreen.addKeyListener(this);
-        try {
-          // only a short delay if there are no humans
-          mLock.waitUntilTrue(isThereAHuman() ? 60000 : NO_HUMAN_SLEEP);
-        } catch (final InterruptedException e) {
-          // too bad
-        }
-        mScreen.removeKeyListener(this);
-        mScreen.removeMouseListener(this);
+        BlockUntilEvent.blockUntilEvent(mScreen, isThereAHuman() ? 60000 : NO_HUMAN_SLEEP);
       }
     }
-  }
-
-  @Override
-  public void mousePressed(final MouseEvent e) {
-  }
-
-  @Override
-  public void mouseReleased(final MouseEvent e) {
-  }
-
-  @Override
-  public void mouseEntered(final MouseEvent e) {
-  }
-
-  @Override
-  public void mouseExited(final MouseEvent e) {
-  }
-
-  @Override
-  public void keyPressed(final KeyEvent e) {
-  }
-
-  @Override
-  public void keyTyped(final KeyEvent e) {
-  }
-
-  @Override
-  public void keyReleased(final KeyEvent e) {
-    mLock.setValue(true);
-    e.consume();
-  }
-
-
-  @Override
-  public void mouseClicked(final MouseEvent e) {
-    mLock.setValue(true);
-    e.consume();
   }
 }

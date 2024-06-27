@@ -49,8 +49,7 @@ public final class InformationPanel {
       return;
     }
     final Image baseImage = ImageLoader.getImage(NameUtils.getBackdropResource(c));
-    // Need to halt the animator for this step, because we are going to
-    // be drawing in the main play area.
+    // Need to halt the animator for this step, because we are going to be drawing in the main play area.
     final int mw = screen.getMainWidth();
     final int mh = screen.getMainHeight();
     synchronized (graphics) {
@@ -79,6 +78,59 @@ public final class InformationPanel {
       final int fuzzyEdge = (int) Math.round(0.644 * mw);
       final int ox = screen.getXOffset() + (int) Math.round(0.166 * mw);
       final int oy = screen.getYOffset() + iy + baseImage.getHeight(null) + 2 * lineSpacing;
+      for (final String token : tokens) {
+        final int w = stringWidth(fm2, token);
+        if (x + w > fuzzyEdge) {
+          // move to next line
+          x = 0;
+          y += lineSpacing;
+        }
+        graphics.drawString(token, ox + x, oy + y);
+        x += w;
+        x += sp;
+        // add a few more pixels for a sentence break
+        if (token.endsWith(".")) {
+          x += 3 * sp / 2;
+        }
+      }
+    }
+  }
+
+  /**
+   * Display the title of a scenario
+   * @param screen screen to display on
+   * @param graphics graphics to draw into
+   * @param text title
+   * @param description description of the level
+   */
+  public static void scenarioTitleDisplay(final ChaosScreen screen, final Graphics graphics, final String text, final String description) {
+    System.out.println("Title display: " + text + " " + description + " " + screen);
+    if (text == null || screen == null) {
+      return;
+    }
+    // Need to halt the animator for this step, because we are going to be drawing in the main play area.
+    final int mw = screen.getMainWidth();
+    final int mh = screen.getMainHeight();
+    synchronized (graphics) {
+      // draw the scroll and spell image
+      Render.renderImage(graphics, getScrollImage(screen), screen.getXOffset(), screen.getYOffset());
+      final int iy = screen.getYOffset() + mh / 6;
+      graphics.setColor(new Color(0x951010));
+      graphics.setFont(screen.getTitleFont());
+      final FontMetrics fm = graphics.getFontMetrics();
+      graphics.drawString(text, screen.getXOffset() + (mw - stringWidth(fm, text)) / 2, mh / 6);
+      graphics.setColor(Color.BLACK);
+      graphics.setFont(screen.getTextFont());
+      // reget metrics because we changed the font
+      final FontMetrics fm2 = graphics.getFontMetrics();
+      final int sp = stringWidth(fm2, " ");
+      final String[] tokens = description.split("\\s+");
+      int x = 0;
+      int y = 0;
+      final int lineSpacing = mh * 7 / 240;
+      final int fuzzyEdge = (int) Math.round(0.644 * mw);
+      final int ox = screen.getXOffset() + (int) Math.round(0.166 * mw);
+      final int oy = screen.getYOffset() + iy + 2 * lineSpacing;
       for (final String token : tokens) {
         final int w = stringWidth(fm2, token);
         if (x + w > fuzzyEdge) {

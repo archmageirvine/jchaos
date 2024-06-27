@@ -13,6 +13,7 @@ import chaos.common.Monster;
 import chaos.common.State;
 import chaos.common.inanimate.Exit;
 import chaos.common.wizard.Wizard;
+import chaos.graphics.ChaosScreen;
 
 /**
  * Utility functions associated with scenarios.
@@ -91,12 +92,13 @@ public final class ScenarioUtils {
   /**
    * This is the main workhorse for detecting the completion of a scenario. Normally
    * this will return false, indicating that the current play should continue.
-   * Otherwise a whole new instance of Chaos is needed.
+   * Otherwise, a whole new instance of Chaos is needed.
    * @param chaos current universe
+   * @param screen screen we are using
    * @return false if existing play should continue
    * @throws java.io.IOException if the next scenario does not exist.
    */
-  public static boolean isScenarioChainDone(final Chaos chaos) throws IOException {
+  public static boolean isScenarioChainDone(final Chaos chaos, final ChaosScreen screen) throws IOException {
     // Handle Exit
     boolean exit = false;
     String nextScenario = null;
@@ -129,7 +131,7 @@ public final class ScenarioUtils {
         c.pop();
       }
     }
-    scenario.init(chaos);
+    scenario.init(chaos, screen);
     return false;
   }
 }
