@@ -104,7 +104,6 @@ public final class InformationPanel {
    * @param description description of the level
    */
   public static void scenarioTitleDisplay(final ChaosScreen screen, final Graphics graphics, final String text, final String description) {
-    System.out.println("Title display: " + text + " " + description + " " + screen);
     if (text == null || screen == null) {
       return;
     }

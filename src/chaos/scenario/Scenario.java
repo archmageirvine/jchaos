@@ -197,6 +197,7 @@ public final class Scenario implements Serializable {
         BlockUntilEvent.blockUntilEvent(screen, 60000);
       }
     }
+    chaos.getUpdater().update(); // Ensures exit's that should be open are marked at such
   }
 
   /**

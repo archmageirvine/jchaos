@@ -706,7 +706,7 @@ public class Animator implements EventListener {
     return animator;
   }
 
-  void stop() {
+  public void stop() {
     mAnimationThread.interrupt();
     try {
       mAnimationThread.join();

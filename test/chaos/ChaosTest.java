@@ -24,7 +24,6 @@ import chaos.engine.AiEngine;
 import chaos.engine.HumanEngine;
 import chaos.engine.PlayerEngine;
 import chaos.graphics.MockScreen;
-import chaos.graphics.ScoreDisplay;
 import chaos.graphics.TextScoreDisplay;
 import chaos.scenario.Scenario;
 import chaos.scenario.ScenarioUtils;
@@ -226,8 +225,8 @@ public class ChaosTest extends StandardIoTestCase {
     final WizardManager wm = world.getWizardManager();
     final Wizard wiz1 = wm.getWizard(1);
     final Wizard wiz2 = wm.getWizard(2);
-    final ScoreDisplay scoreDisplay = new TextScoreDisplay(world, new Wizard[] {wiz1, wiz2}, new Wizard1());
-    chaos.playChaos(screen, scoreDisplay, 1);
+    chaos.setScoreDisplay(new TextScoreDisplay(world, new Wizard[] {wiz1, wiz2}, new Wizard1()));
+    chaos.playChaos(screen, 1);
     assertTrue(getOut().contains("Every wizard is dead"));
     assertEquals("", screen.toString());
     assertEquals(0, chaos.getCurrentTurn());
@@ -245,7 +244,7 @@ public class ChaosTest extends StandardIoTestCase {
     team.separate(1);
     wiz1.increment(PowerUps.FROZEN);
     wiz2.increment(PowerUps.FROZEN);
-    chaos.playChaos(screen, scoreDisplay, 1);
+    chaos.playChaos(screen, 1);
     final String s = screen.toString();
     //mOldOut.println(s);
     TestUtils.containsAll(s,

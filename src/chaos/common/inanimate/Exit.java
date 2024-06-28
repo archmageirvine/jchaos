@@ -36,7 +36,7 @@ public class Exit extends Actor implements Inanimate, Mountable, Named {
 
   /**
    * Construct an exit with a specified following scenario (can be null).
-   * @param nextScenarioResource follow on resource
+   * @param nextScenarioResource the next scenario
    * @param exitType the type of the exit
    */
   public Exit(final String nextScenarioResource, final ExitType exitType) {

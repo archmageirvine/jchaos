@@ -92,7 +92,8 @@ public final class Chaos implements Serializable {
   private transient Updater mUpdater = null;
   private transient PlayerEngine mAI = null;
   private transient TileManager mTM = null;
-
+  private transient Animator mAnimator = null;
+  private transient ScoreDisplay mScoreDisplay = null;
 
   /** Number of turns remaining, or -1 for infinite turns. */
   private int mTurns = -1;
@@ -168,6 +169,10 @@ public final class Chaos implements Serializable {
     return false;
   }
 
+  public void setScoreDisplay(final ScoreDisplay scoreDisplay) {
+    mScoreDisplay = scoreDisplay;
+  }
+
   void doMovement(final ChaosScreen screen) {
     final boolean catLordAlive = MovementUtils.markAllCatsAsMoved(mWorld);
     for (final Wizard w : mWorld.getWizardManager().getWizards()) {
@@ -214,11 +219,11 @@ public final class Chaos implements Serializable {
     }
   }
 
-  void playChaos(final ChaosScreen screen, final ScoreDisplay scoredisplay, final int turnLimit) throws IOException {
+  void playChaos(final ChaosScreen screen, final int turnLimit) throws IOException {
     while (keepPlaying(screen) && (turnLimit == 0 || mCurrentTurn < turnLimit)) {
-      if (scoredisplay != null) {
+      if (mScoreDisplay != null) {
         writePhase(screen, "SCORES", null, null);
-        scoredisplay.showScores(mCurrentTurn);
+        mScoreDisplay.showScores(mCurrentTurn);
       }
       try {
         if (screen != null) {
@@ -473,6 +478,10 @@ public final class Chaos implements Serializable {
     return mAI;
   }
 
+  public Updater getUpdater() {
+    return mUpdater;
+  }
+
   private void prepareReporting() {
     if (isVerbose()) {
       System.out.println("This game has: " + FrequencyTable.DEFAULT.getNumberOfSpells() + " spells");
@@ -489,12 +498,15 @@ public final class Chaos implements Serializable {
     t.showScores(mCurrentTurn);
   }
 
-  private void initWizardEngines(final ChaosScreen screen, final EventListener animator) {
+  private void initWizardEngines(final ChaosScreen screen, final EventListener animator, final EventListener oldAnimator) {
     for (final Wizard w : getWorld().getWizardManager().getWizards()) {
       if (w != null) {
         if (w.getPlayerEngine() instanceof HumanEngine) {
           final HumanEngine eng = (HumanEngine) w.getPlayerEngine();
           eng.setScreen(screen, getTileManager());
+          if (oldAnimator != null) {
+            eng.deregister(oldAnimator);
+          }
           eng.register(animator);
           final GenericScreenSelector selector = new GenericScreenSelector(w, getConfig(), getTileManager(), getWorld(), getCastMaster());
           selector.setScreen(screen);
@@ -504,17 +516,36 @@ public final class Chaos implements Serializable {
     }
   }
 
+  /**
+   * Update some more play options.
+   * @param screen screen
+   */
+  public void prepareToPlay(final ChaosScreen screen) {
+    if (screen != null) {
+      final World w = getWorld();
+      final Animator oldAnimator = mAnimator;
+      if (oldAnimator != null) {
+        oldAnimator.stop();
+        w.deregister(oldAnimator);
+        getMoveMaster().deregister(oldAnimator);
+      }
+      mAnimator = new Animator(w, screen, getTileManager());
+      initWizardEngines(screen, mAnimator, oldAnimator);
+      w.register(mAnimator);
+      getMoveMaster().register(mAnimator);
+      setScoreDisplay(new GenericScoreDisplay(getConfig(), getWorld(), screen));
+      mAnimator.start();
+      System.out.println("New animator started");
+    }
+  }
+
   private void exec(final ChaosScreen screen, final int turnLimit) throws IOException {
     // Main entry point after loading or starting a new game.
     // We have to set up the animator, various engines, and other GUI related items
-    final World w = getWorld();
-    final Animator animator = new Animator(w, screen, getTileManager());
-    w.register(animator);
-    getMoveMaster().register(animator);
-    initWizardEngines(screen, animator);
-    final ScoreDisplay scoredisplay = new GenericScoreDisplay(getConfig(), w, screen);
-    animator.start();
-    playChaos(screen, scoredisplay, turnLimit);
+    prepareToPlay(screen);
+    System.out.println("Let's play");
+    playChaos(screen, turnLimit);
+    System.out.println("Done playing");
     printFinalScores();
   }
 
@@ -591,7 +622,7 @@ public final class Chaos implements Serializable {
           final boolean[] conditions = new GenericSetUp(config, screen, lchaos, false).setUp();
           if (conditions[1]) {
             // User selected Raven
-            final Scenario raven = Scenario.load("chaos/resources/scenario/raven/beetle_mania.scn");
+            final Scenario raven = Scenario.load("chaos/resources/scenario/raven/choose.scn");
             final Configuration c = new Configuration(minimumWidth, minimumHeight, false, raven.getHeight(), raven.getWidth());
             lchaos = new Chaos(c, false); // force non-texas
             raven.init(lchaos, screen);
@@ -613,7 +644,7 @@ public final class Chaos implements Serializable {
       sChaos = chaos; // ideally wouldn't need this singleton
       chaos.prepareReporting();
       chaos.exec(screen, getTurnLimit(flags));
-    } catch (final Exception e) {
+    } catch (final Throwable e) {
       e.printStackTrace();
     } finally {
       if (screen != null) {

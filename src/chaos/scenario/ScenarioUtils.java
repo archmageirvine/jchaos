@@ -121,17 +121,10 @@ public final class ScenarioUtils {
     System.out.println("Switch to scenario: " + nextScenario);
     final int worldRows = scenario.getHeight();
     final int worldCols = scenario.getWidth();
-    if (worldRows != chaos.getConfig().getWorldRows() || worldCols != chaos.getConfig().getWorldCols()) {
-      System.out.println("Change in scenario dimensions not currently supported: " + chaos.getConfig().getWorldRows() + " -> " + worldRows + ", " + chaos.getConfig().getWorldCols() + " -> " + worldCols);
-      return true;
-    }
-    // This is very ugly -- it would be better to create a new world?
-    for (final Cell c : chaos.getWorld()) {
-      while (c.peek() != null) {
-        c.pop();
-      }
-    }
+    chaos.setWorld(new World(worldCols, worldRows));
     scenario.init(chaos, screen);
+    chaos.prepareToPlay(screen);
+    chaos.getUpdater().update(); // Ensures exit's that should be open are marked at such
     return false;
   }
 }

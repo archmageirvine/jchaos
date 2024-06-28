@@ -1,0 +1,8 @@
+#Scenario=V1.0
+#width=3
+#height=3
+#title=Choose Your Door
+#wizard1=(1,1)[?]
+,,Exit[chaos/resources/scenario/raven/beetle_mania.scn]:1
+,,
+,,Exit[chaos/resources/scenario/raven/ceres.scn]:1

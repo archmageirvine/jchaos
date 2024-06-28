@@ -13,7 +13,6 @@ import chaos.common.wizard.Wizard;
 import chaos.engine.AiEngine;
 import chaos.engine.EngineFactory;
 import chaos.engine.PlayerEngine;
-import chaos.graphics.ScoreDisplay;
 import chaos.graphics.TextScoreDisplay;
 import chaos.selector.Selector;
 import chaos.selector.SelectorFactory;
@@ -53,8 +52,10 @@ public final class ChaosExperimental implements Serializable {
       final Wizard wiz = w.getWizardManager().getWizard(i + 1);
       w.getCell(pos[0][i], pos[1][i]).push(wiz);
     }
-    final ScoreDisplay scoredisplay = verbose ? new TextScoreDisplay(w, w.getWizardManager().getWizards(), w.getWizardManager().getIndependent()) : null;
-    chaos.playChaos(null, scoredisplay, turnLimit);
+    if (verbose) {
+      chaos.setScoreDisplay(new TextScoreDisplay(w, w.getWizardManager().getWizards(), w.getWizardManager().getIndependent()));
+    }
+    chaos.playChaos(null, turnLimit);
     chaos.printFinalScores();
   }
 
@@ -77,7 +78,7 @@ public final class ChaosExperimental implements Serializable {
       world.getCell(pos[0][i], pos[1][i]).push(w);
     }
     WorldUtils.insertGenerators(world, generators);
-    chaos.playChaos(null, null, turnLimit);
+    chaos.playChaos(null, turnLimit);
     chaos.printFinalScores();
   }
 }
