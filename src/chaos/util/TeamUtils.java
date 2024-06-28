@@ -9,6 +9,7 @@ import chaos.common.Actor;
 import chaos.common.Conveyance;
 import chaos.common.State;
 import chaos.common.wizard.Wizard;
+import chaos.sound.Sound;
 
 /**
  * Team utility functions.
@@ -44,9 +45,9 @@ public final class TeamUtils {
       }
       if (seen.size() <= 1) {
         // Everything visisble and active on the screen is on the same team.
-        // Therefore smash the current teams.
+        // Therefore, smash the current teams.
         world.notify(new TextEvent("Teams are smashed!"));
-        world.notify(new AudioEvent("team_killer"));
+        Sound.getSoundEngine().play("team_killer", Sound.SOUND_INTELLIGENT);
         for (final Wizard w : world.getWizardManager().getWizards()) {
           if (w != null && w.getState() == State.ACTIVE) {
             team.separate(w.getOwner());
