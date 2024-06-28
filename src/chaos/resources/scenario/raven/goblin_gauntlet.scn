@@ -1,6 +1,7 @@
 #Scenario=V1.0
 #width=32
 #height=24
+#title=Goblin Gauntlet
 #wizard1=(0,1)[+,GrayElf,Manticore,Skeleton,Skeleton,Helmet,Command,Orc]
 ,,,Goblin,GoblinBomb,GoblinBomb,Goblin,GoblinBomb,GoblinBomb,Goblin,GoblinBomb,GoblinBomb,Goblin,GoblinBomb,GoblinBomb,Goblin,GoblinBomb,GoblinBomb,Goblin,GoblinBomb,GoblinBomb,Goblin,Goblin,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Exit[chaos/resources/scenario/raven/put_me_in_the_zoo.scn]:1

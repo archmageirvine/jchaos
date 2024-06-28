@@ -1,6 +1,7 @@
 #Scenario=V1.0
 #width=32
 #height=24
+#title=Outer Wall
 #wizard1=(0,12)[+,Lion,BrownBear,Crocodile,Crocodile]
 ,,,,,,,,,,,,,,,,,StandardWall,StandardWall,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,StandardWall,StandardWall,,,,,,,,,,,,,

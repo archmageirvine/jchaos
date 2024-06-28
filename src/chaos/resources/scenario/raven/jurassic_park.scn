@@ -1,6 +1,7 @@
 #Scenario=V1.0
 #width=32
 #height=24
+#title=Jurassic Park
 #wizard1=(2,20)[+,Falcon,Falcon,Falcon,Vulture,FireBat,MagicKnife,MagicSword,WoodElf,StoneGolem,Centaur,MagicBolt,MagicBolt,MagicBolt,MrStrong]
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

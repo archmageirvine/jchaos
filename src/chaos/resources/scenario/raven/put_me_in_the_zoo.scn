@@ -1,11 +1,12 @@
 #Scenario=V1.0
 #width=32
 #height=24
+#title=Put Me in the Zoo
 #wizard1=(2,23)[+,BlackDragon,FireDemon,Vampire,Balrog,Iridium,Shocker,Talisman,Armour,Reincarnate,Nuke,MagicBow,Merge,IrvinesInvulnerability,Double,Heal]
 Achiyalabopa,AerialServant,Bat,BirdLord,Eagle,Falcon,FireBat,FloatingEye,Harpy,Spectator,Vulture,Phoenix,,,,,,,,,,,,,,,,,,,,Aviary
 BlueDragon,EmeraldDragon,GoldenDragon,GreenDragon,HiddenHorror,PlatinumDragon,RedDragon,ShadowDragon,BlackDragon,WhiteDragon,,,,,,,,,,,,,,,,,,,,,,DragonNest
 Ghast,Ghoul,Haunt,Imp,Shadow,Skeleton,SkeletonWarrior,Solar,Spectre,Wight,Wraith,Zombie,JujuZombie,Vampire,Ghost,CrimsonDeath,Drelb,Nightmare,Shadowmare,,,,,,Demon,FireDemon,Balrog,LesserDevil,HigherDevil,,Necromancer,Tombstone
-CatLord,Cheetah,Jaguar,Leopard,Lion,SnowLeopard,Tiger,Flerken,,,,,,,NamedDeity,,,,Skulkrin,Cylinder,Horace,DiamondSword,Pliers,Orange,SwissKnife,,,,Alien8,Superman,DarthVader,MrStrong
+CatLord,Cheetah,Jaguar,Leopard,Lion,SnowLeopard,Tiger,Flerken,,,,,,,NamedDeity,Ceres,,,Skulkrin,Cylinder,Horace,DiamondSword,Pliers,Orange,SwissKnife,,,,Alien8,Superman,DarthVader,MrStrong
 ArcticWolf,DireWolf,Wolverine,,,,Pyrohydra,Hydra,Crocodile,Basilisk,BrownBear,GrizzlyBear,Elephant,,,,,StoneGiant,StoneGolem,BasaltGolem,ClayGolem,TRex,Diplodocus,,,,Spider,GiantSpider,GiantRat,,Megabeetle,GiantBeetle
 MindFlayer,NeoOtyugh,Pseudodragon,Robot,Dalek,Generator,Bodak,Dao,Jann,Marid,MullacDeIrvine,Priest,,,,KingCobra,Amphisbaena,Python,NamedSnake,,,,,,,,,,,,,
 Abath,Camel,Hybsil,Centaur,NamedCentaur,Gryphon,Opinicus,Horse,Thundermare,Iridium,Manticore,Pegasus,Unicorn,,,,,,,,,,,,,,,,WaterElemental,FireElemental,EarthElemental,AirElemental
@@ -14,7 +15,7 @@ Aesculapius,Azer,Baboon,Banderlog,CarnivorousApe,Gorilla,Chronomancer,Derro,Trol
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Tempest,,,Fire,Balefire,,GooeyBlob,,Spiky,,Earthquake,Magma,,,OrangeJelly,,,,,,VioletFungi,,,DarkMatter,,GreenOoze,,,Flood,,,Vortex
+Tempest,,,Fire,Balefire,,GooeyBlob,,Spiky,,Earthquake,Magma,,,OrangeJelly,,,Wheat,,,VioletFungi,,,DarkMatter,,GreenOoze,,,Flood,,,Vortex
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Pit,Nuked,CrackedEgg,Gollop,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 FenceVertical,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

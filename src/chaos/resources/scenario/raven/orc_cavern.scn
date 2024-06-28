@@ -1,6 +1,7 @@
 #Scenario=V1.0
 #width=32
 #height=24
+#title=Orc Cavern
 #wizard1=(0,0)[+,WoodElf,WoodElf,WoodElf,WoodElf,WoodElf,WoodElf,Centaur]
 ,,Pit,,,,,,,,,,,MightyOrc,,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit,Pit
 ,,Pit,,Pit,Pit,Pit,Pit,Pit,Pit,,,Pit,Pit,,,,,,,Goblin,Goblin,,,,,,,,,,

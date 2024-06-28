@@ -79,10 +79,10 @@ public final class Chaos implements Serializable {
   private final CatLord mCatLord = new CatLord();
   private final Solar mSolar = new Solar();
 
-  private final World mWorld;
+  private World mWorld;
   private final Configuration mConfig;
   private final boolean mTexasTradeEm;
-  private final MoveMaster mMoveMaster;
+  private MoveMaster mMoveMaster;
 
   // This should be private!
   Scenario mScenario = null;
@@ -417,10 +417,9 @@ public final class Chaos implements Serializable {
    * @param texas true for texas trade'em mode
    */
   public Chaos(final Configuration config, final boolean texas) {
-    mWorld = new World(config.getWorldCols(), config.getWorldRows());
     mConfig = config;
     mTexasTradeEm = texas;
-    mMoveMaster = new MoveMaster(mWorld);
+    setWorld(new World(config.getWorldCols(), config.getWorldRows()));
     initTransients();
   }
 
@@ -434,6 +433,16 @@ public final class Chaos implements Serializable {
     mGrower = new Grower(mWorld);
     mUpdater = new Updater(mWorld);
     mAI = new AiEngine(mWorld, mMoveMaster, mCastMaster);
+  }
+
+  /**
+   * Set the world (including updating other objects that need to know).
+   * @param world the world
+   */
+  public void setWorld(final World world) {
+    mWorld = world;
+    mMoveMaster = new MoveMaster(mWorld);
+    initTransients();
   }
 
   public void setScenario(final Scenario scenario) {

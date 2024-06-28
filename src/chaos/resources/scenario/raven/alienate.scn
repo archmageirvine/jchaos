@@ -1,6 +1,8 @@
 #Scenario=V1.0
 #width=32
 #height=24
+#title=Alienate
+#description=To understand this world you need to play Alien 8.
 #wizard1=(16,2)[+,Manticore,Robot,Dalek,Agathion,Wisdom,MagicSword,Subversion,GrizzlyBear,Cheetah,Lich]
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
