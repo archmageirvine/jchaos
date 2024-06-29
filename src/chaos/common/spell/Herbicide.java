@@ -12,6 +12,7 @@ import chaos.common.Caster;
 import chaos.common.Growth;
 import chaos.common.PowerUps;
 import chaos.common.TargetFilter;
+import chaos.common.growth.Wheat;
 import chaos.util.CastUtils;
 import chaos.util.CellEffectEvent;
 import chaos.util.CellEffectType;
@@ -49,9 +50,9 @@ public class Herbicide extends Castable implements TargetFilter {
     final int t = teams.getTeam(caster);
     for (final Iterator<Cell> i = targets.iterator(); i.hasNext(); ) {
       final Actor a = i.next().peek();
-      if (a == null || !(a instanceof Growth)) {
+      if (!(a instanceof Growth)) {
         i.remove();
-      } else {
+      } else if (!(a instanceof Wheat)) {
         final Growth g = (Growth) a;
         if (a.is(PowerUps.NO_GROW) || g.getGrowthType() != Growth.GROW_OVER) {
           i.remove();
