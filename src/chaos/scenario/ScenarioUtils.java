@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import chaos.Chaos;
 import chaos.board.Cell;
+import chaos.board.WizardManager;
 import chaos.board.World;
 import chaos.common.Actor;
 import chaos.common.Conveyance;
@@ -13,6 +14,8 @@ import chaos.common.Monster;
 import chaos.common.State;
 import chaos.common.inanimate.Exit;
 import chaos.common.wizard.Wizard;
+import chaos.engine.HumanEngine;
+import chaos.engine.PlayerEngine;
 import chaos.graphics.ChaosScreen;
 
 /**
@@ -89,6 +92,21 @@ public final class ScenarioUtils {
     return false;
   }
 
+  private static void refreshHumanEngines(final Chaos chaos, final ChaosScreen screen) {
+    final WizardManager wm = chaos.getWorld().getWizardManager();
+    for (int k = 0; k < wm.getMaximumPlayerNumber(); ++k) {
+      final Wizard wiz = wm.getWizard(k);
+      if (wiz != null) {
+        final PlayerEngine eng = wiz.getPlayerEngine();
+        if (eng instanceof HumanEngine) {
+          final HumanEngine newEngine = new HumanEngine(chaos, chaos.getTileManager().getWidthBits());
+          newEngine.setScreen(screen, chaos.getTileManager());
+          wiz.setPlayerEngine(newEngine);
+        }
+      }
+    }
+  }
+
   /**
    * This is the main workhorse for detecting the completion of a scenario. Normally
    * this will return false, indicating that the current play should continue.
@@ -116,14 +134,17 @@ public final class ScenarioUtils {
     if (nextScenario == null) {
       return true; // We are done, but there is no next scenario
     }
-    // Actually switch to the new scenario
+    // Switch to the new scenario
     final Scenario scenario = Scenario.load(nextScenario);
     System.out.println("Switch to scenario: " + nextScenario);
     final int worldRows = scenario.getHeight();
     final int worldCols = scenario.getWidth();
-    chaos.setWorld(new World(worldCols, worldRows));
+    final World newWorld = new World(worldCols, worldRows, chaos.getWorld().getWizardManager());
+    chaos.setWorld(newWorld);
     scenario.init(chaos, screen);
+    refreshHumanEngines(chaos, screen);
     chaos.prepareToPlay(screen);
+    System.out.println("Prepare done");
     chaos.getUpdater().update(); // Ensures exit's that should be open are marked at such
     return false;
   }

@@ -2,6 +2,7 @@
 #width=3
 #height=3
 #title=Choose Your Door
+#description=Be careful not to waste your spells.
 #wizard1=(1,1)[?]
 ,,Exit[chaos/resources/scenario/raven/beetle_mania.scn]:1
 ,,

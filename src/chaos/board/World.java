@@ -30,16 +30,17 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
   private final WizardManager mWizardManager;
 
   /** List of objects listening to events. */
-  private transient HashSet<EventListener> mListeners;
+  private transient Set<EventListener> mListeners;
 
   /**
    * Construct a new world of specified width and height.
    * @param width number of cells across the board
    * @param height number of cells down the board
    * @param team the Team object for this world
+   * @param wizardManager wizard manager for the world
    * @throws NullPointerException if <code>team</code> is null
    */
-  public World(final int width, final int height, final Team team) {
+  public World(final int width, final int height, final Team team, final WizardManager wizardManager) {
     super(width, height);
     mListeners = new HashSet<>();
     if (team == null) {
@@ -50,7 +51,29 @@ public class World extends FlatWorld<Cell> implements EventGenerator {
     }
     mTeam = team;
     mWarpSpace = new WarpSpace();
-    mWizardManager = new WizardManager();
+    mWizardManager = wizardManager;
+  }
+
+  /**
+   * Construct a new world of specified width and height.
+   * @param width number of cells across the board
+   * @param height number of cells down the board
+   * @param wizardManager wizard manager for the world
+   * @throws NullPointerException if <code>team</code> is null
+   */
+  public World(final int width, final int height, final WizardManager wizardManager) {
+    this(width, height, new Team(), wizardManager);
+  }
+
+  /**
+   * Construct a new world of specified width and height.
+   * @param width number of cells across the board
+   * @param height number of cells down the board
+   * @param team the Team object for this world
+   * @throws NullPointerException if <code>team</code> is null
+   */
+  public World(final int width, final int height, final Team team) {
+    this(width, height, team, new WizardManager());
   }
 
   /**

@@ -71,7 +71,7 @@ public abstract class Caster extends Monster {
       Cell casterCell = cell;
       final PlayerEngine engine = getPlayerEngine();
       if (engine == null) {
-        // Ideally this should not happen, if does just skip the cast
+        // Ideally this should not happen, if it does just skip the cast
         System.err.println("Huh! Null player engine for " + getName());
         Thread.dumpStack();
       } else if (castable instanceof Meditation && engine instanceof AiEngine) {

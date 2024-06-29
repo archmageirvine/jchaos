@@ -164,6 +164,8 @@ public final class Scenario implements Serializable {
       final int y = pos.right() >= 0 ? pos.right() : world.height() - 1 + pos.right();
       final Wizard w = wm.getWizard(wiz);
       w.setState(State.ACTIVE);
+      w.setMoved(false);
+      w.resetShotsMade();
       if (w.getPlayerEngine() == null) {
         // Only set a player engine if one is not already defined.  This it typically only
         // set once on the first scenario loaded.  This is important because the outside
@@ -176,6 +178,9 @@ public final class Scenario implements Serializable {
           w.setPlayerEngine(new HumanEngine(chaos, chaos.getTileManager().getWidthBits()));
         }
         w.setCastableList(new CastableList(100, 0, 24));
+      } else if (w.getPlayerEngine() instanceof HumanEngine) {
+        // Refresh the human engine for thw new world
+        w.setPlayerEngine(new HumanEngine(chaos, chaos.getTileManager().getWidthBits()));
       }
       updateCastables(w, wizardDescriptor);
       //System.err.println(w.getCastableList());

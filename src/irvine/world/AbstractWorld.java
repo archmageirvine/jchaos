@@ -157,7 +157,7 @@ abstract class AbstractWorld<C> implements World<C>, Iterable<C> {
   }
 
   /** Workspace for <code>getCells</code> and <code>shortestPath</code>. */
-  private static final int[] GC_TEMP = new int[2];
+  private final int[] mGcTemp = new int[2];
 
   private void addIfAccepted(final CellFilter<C> filter, final Set<C> result, final int x, final int y) {
     final C c = getCell(x, y);
@@ -172,11 +172,11 @@ abstract class AbstractWorld<C> implements World<C>, Iterable<C> {
       throw new IllegalArgumentException("Bad radius");
     }
     final Set<C> result = new HashSet<>();
-    if (!getCellCoordinates(origin, GC_TEMP)) {
+    if (!getCellCoordinates(origin, mGcTemp)) {
       throw new IllegalArgumentException("Bad origin");
     }
-    final int x = GC_TEMP[0];
-    final int y = GC_TEMP[1];
+    final int x = mGcTemp[0];
+    final int y = mGcTemp[1];
     final int limit = mRadialLimit[min(mRadialLimit.length - 1, maxRadius)];
     if (filter == null) {
       // faster version when no filter needs to be applied
@@ -312,9 +312,9 @@ abstract class AbstractWorld<C> implements World<C>, Iterable<C> {
       }
       mPriority.remove(tuple);
       if (mShortestPathDistance[current] >= d) {
-        getCellCoordinates(current, GC_TEMP);
-        final int x = GC_TEMP[0];
-        final int y = GC_TEMP[1];
+        getCellCoordinates(current, mGcTemp);
+        final int x = mGcTemp[0];
+        final int y = mGcTemp[1];
         for (int k = 0; k < DELTAX.length; ++k) {
           // process all the neighbours of a cell
           final int cn = getCellNumber(x + DELTAX[k], y + DELTAY[k]);

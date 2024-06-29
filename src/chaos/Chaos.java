@@ -535,7 +535,6 @@ public final class Chaos implements Serializable {
       getMoveMaster().register(mAnimator);
       setScoreDisplay(new GenericScoreDisplay(getConfig(), getWorld(), screen));
       mAnimator.start();
-      System.out.println("New animator started");
     }
   }
 
@@ -543,9 +542,7 @@ public final class Chaos implements Serializable {
     // Main entry point after loading or starting a new game.
     // We have to set up the animator, various engines, and other GUI related items
     prepareToPlay(screen);
-    System.out.println("Let's play");
     playChaos(screen, turnLimit);
-    System.out.println("Done playing");
     printFinalScores();
   }
 

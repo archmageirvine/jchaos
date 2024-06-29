@@ -14,18 +14,12 @@ import chaos.common.monster.Lion;
 import junit.framework.TestCase;
 
 /**
- * JUnit tests for the corresponding class.
+ * Test the corresponding class.
  * @author Sean A. Irvine
  */
 public class WorldTest extends TestCase {
 
   public void testDodgyConstruction() {
-    try {
-      new World(5, 5, null);
-      fail("Accepted null teams");
-    } catch (final NullPointerException e) {
-      // ok
-    }
     final Team t = new Team();
     try {
       new World(-1, 5, t);

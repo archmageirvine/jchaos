@@ -1,6 +1,7 @@
 package chaos.util;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Superclass for all classes capable of generating <code>Event</code>
@@ -10,7 +11,7 @@ import java.util.HashSet;
 public class DefaultEventGenerator implements EventGenerator {
 
   /** List of objects listening to events. */
-  private final HashSet<EventListener> mListeners = new HashSet<>();
+  private final Set<EventListener> mListeners = new HashSet<>();
 
   @Override
   public void register(final EventListener el) {

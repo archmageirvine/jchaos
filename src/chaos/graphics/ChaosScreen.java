@@ -215,7 +215,7 @@ public interface ChaosScreen {
 
   /**
    * Highlight status of the continue gadget.
-   * @param state whether or not the continue gadget is highlighted
+   * @param state whether the continue gadget is highlighted
    */
   void highlightContinue(boolean state);
 
