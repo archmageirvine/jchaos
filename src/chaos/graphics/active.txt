@@ -434,5 +434,7 @@ SkeletonLord    p       475,476,477,478,479
 Acromantula     p       47a,47b,47c     47d
 Ceres           x       47e             47f
 Wheat           p       480,481,482,483,484
+Pallas          p       485,486         487
+SabreMan        p       488,489,48a,48b    48c
 
-#next free 485
+#next free 48d

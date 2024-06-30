@@ -112,6 +112,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(OgreMageTest.class);
     suite.addTestSuite(OgreWarriorTest.class);
     suite.addTestSuite(OpinicusTest.class);
+    suite.addTestSuite(PallasTest.class);
     suite.addTestSuite(PegasusTest.class);
     suite.addTestSuite(PhoenixTest.class);
     suite.addTestSuite(PriestTest.class);

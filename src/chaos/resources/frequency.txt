@@ -424,3 +424,5 @@ chaos.common.monster.SkeletonLord               0
 chaos.common.monster.Acromantula                0
 chaos.common.monster.Ceres                      1       B
 chaos.common.growth.Wheat                       1       B
+chaos.common.monster.Pallas                     1       B
+chaos.common.mythos.SabreMan                    1       B

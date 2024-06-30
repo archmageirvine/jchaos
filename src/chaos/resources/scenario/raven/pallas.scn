@@ -1,0 +1,18 @@
+#Scenario=V1.0
+#width=15
+#height=12
+#title=Pallas
+#description=Destroy the war-mongering Pallas.
+#wizard1=(2,10)[+]
+,,,,,,,,,,,,,,
+,,,,,,Pallas,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,Exit[chaos/resources/scenario/raven/choose.scn]:1,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
