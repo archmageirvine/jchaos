@@ -11,3 +11,4 @@ fi
 java irvine.tile.TileSet "${tile}" "${tile}.png" 5
 pngtopnm <"${tile}".png | pnmscale -w 16 -h 16 | pnmtopng >"${tile}-16.png"
 java irvine.tile.TileSet -s "${tile}" "${tile}-16.png" 4
+rm "${tile}.png" "${tile}-16.png"

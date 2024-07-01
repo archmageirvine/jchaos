@@ -4,7 +4,7 @@ import chaos.common.Attribute;
 import chaos.common.Humanoid;
 import chaos.common.Monster;
 import chaos.common.MythosMonster;
-import chaos.common.monster.Derro;
+import chaos.common.monster.Bandit;
 
 /**
  * Sabre Man.
@@ -30,6 +30,6 @@ public class SabreMan extends MythosMonster implements Humanoid {
 
   @Override
   public Class<? extends Monster> reincarnation() {
-    return Derro.class;
+    return Bandit.class;
   }
 }

@@ -6,7 +6,6 @@ import chaos.common.Monster;
 import chaos.common.MythosMonster;
 import chaos.common.NoDeadImage;
 import chaos.common.PowerUps;
-import chaos.common.monster.GiantSpider;
 
 /**
  * Horace.
@@ -31,7 +30,7 @@ public class Horace extends MythosMonster implements Humanoid, NoDeadImage {
 
   @Override
   public Class<? extends Monster> reincarnation() {
-    return GiantSpider.class;
+    return SpaceRaider.class;
   }
 
   @Override

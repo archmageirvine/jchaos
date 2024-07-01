@@ -436,5 +436,7 @@ Ceres           x       47e             47f
 Wheat           p       480,481,482,483,484
 Pallas          p       485,486         487
 SabreMan        p       488,489,48a,48b    48c
+Juno            x       48d                48e
+SpaceRaider     p       48f,490            491
 
-#next free 48d
+#next free 492

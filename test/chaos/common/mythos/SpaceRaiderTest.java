@@ -7,15 +7,15 @@ import chaos.common.Castable;
  * Tests this monster.
  * @author Sean A. Irvine
  */
-public class Alien8Test extends AbstractMonsterTest {
+public class SpaceRaiderTest extends AbstractMonsterTest {
 
   @Override
   public Castable getCastable() {
-    return new Alien8();
+    return new SpaceRaider();
   }
 
   @Override
   public void testReincarnation() {
-    assertNull(new Alien8().reincarnation());
+    assertNull(new SpaceRaider().reincarnation());
   }
 }

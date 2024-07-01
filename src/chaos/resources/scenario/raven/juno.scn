@@ -1,0 +1,15 @@
+#Scenario=V1.0
+#width=15
+#height=9
+#title=Juno
+#description=Defeat Juno and her creations.
+#wizard1=(2,3)[+]
+,,,,,,,,,,,,,,
+,Exit[chaos/resources/scenario/raven/choose.scn]:1,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,Juno

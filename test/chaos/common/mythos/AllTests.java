@@ -23,6 +23,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(QuazatronTest.class);
     suite.addTestSuite(SabreManTest.class);
     suite.addTestSuite(SkulkrinTest.class);
+    suite.addTestSuite(SpaceRaiderTest.class);
     suite.addTestSuite(SupermanTest.class);
     suite.addTestSuite(SwissKnifeTest.class);
     return suite;

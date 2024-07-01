@@ -40,7 +40,7 @@ chaos.common.spell.Reveal,chaos.common.free.Turmoil
 chaos.common.monster.Spectator
 chaos.common.spell.FireShield,chaos.common.spell.FloodShield,chaos.common.spell.EarthquakeShield,chaos.common.spell.Protection,chaos.common.free.MagicShield,chaos.common.free.Amulet,chaos.common.spell.Wisdom
 chaos.common.monster.AerialServant
-chaos.common.monster.MindFlayer,chaos.common.monster.Chronomancer
+chaos.common.monster.MindFlayer,chaos.common.monster.Chronomancer,chaos.common.mythos.SpaceRaider
 chaos.common.monster.GiantRat,chaos.common.monster.GiantSpider,chaos.common.monster.GiantBeetle,chaos.common.monster.GoblinBomb,chaos.common.monster.Goblin,chaos.common.monster.Orc,chaos.common.monster.Spider,chaos.common.monster.Python,chaos.common.monster.KingCobra
 chaos.common.spell.Disease,chaos.common.spell.BowBreaker
 chaos.common.spell.MagicSword,chaos.common.free.MagicKnife
@@ -94,7 +94,7 @@ chaos.common.free.MassResurrect
 chaos.common.monster.FireElemental,chaos.common.monster.AirElemental,chaos.common.monster.EarthElemental,chaos.common.monster.WaterElemental,chaos.common.monster.Pyrohydra,chaos.common.monster.TRex,chaos.common.mythos.DarthVader,chaos.common.mythos.MrStrong,chaos.common.mythos.Superman,chaos.common.mythos.Orange,chaos.common.mythos.Pliers,chaos.common.mythos.DiamondSword,chaos.common.mythos.SwissKnife,chaos.common.mythos.Horace,chaos.common.monster.Priest,chaos.common.mythos.Alien8,chaos.common.mythos.Cylinder,chaos.common.mythos.Skulkrin,chaos.common.mythos.Quazatron,chaos.common.mythos.SabreMan
 chaos.common.inanimate.DarkWood,chaos.common.inanimate.Conifer
 chaos.common.beam.PlasmaBeam,chaos.common.free.SpaceMaker
-chaos.common.monster.Dao,chaos.common.monster.Necromancer,chaos.common.monster.Agathion,chaos.common.monster.NamedDeity,chaos.common.monster.NamedSnake,chaos.common.monster.Pallas
+chaos.common.monster.Dao,chaos.common.monster.Necromancer,chaos.common.monster.Agathion,chaos.common.monster.NamedDeity,chaos.common.monster.NamedSnake,chaos.common.monster.Pallas,chaos.common.monster.Juno
 chaos.common.monster.FloatingEye,chaos.common.monster.Thundermare,chaos.common.monster.NamedCentaur,chaos.common.monster.Shadowmare
 chaos.common.spell.Sanctify
 chaos.common.free.Elixir,chaos.common.spell.Reflector
