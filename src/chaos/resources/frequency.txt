@@ -428,3 +428,4 @@ chaos.common.monster.Pallas                     1       B
 chaos.common.mythos.SabreMan                    1       B
 chaos.common.monster.Juno                       1       B
 chaos.common.mythos.SpaceRaider                 1       B
+chaos.common.inanimate.MarbleColumn             5       B

@@ -34,6 +34,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(MagicGlassTest.class);
     suite.addTestSuite(MagicWoodTest.class);
     suite.addTestSuite(ManaBatteryTest.class);
+    suite.addTestSuite(MarbleColumnTest.class);
     suite.addTestSuite(NukedTest.class);
     suite.addTestSuite(PentagramTest.class);
     suite.addTestSuite(PitTest.class);
