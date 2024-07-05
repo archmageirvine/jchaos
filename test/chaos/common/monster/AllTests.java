@@ -142,6 +142,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(UnicornTest.class);
     suite.addTestSuite(VampireTest.class);
     suite.addTestSuite(VampyrTest.class);
+    suite.addTestSuite(VestaTest.class);
     suite.addTestSuite(VultureTest.class);
     suite.addTestSuite(WaterElementalTest.class);
     suite.addTestSuite(WightTest.class);

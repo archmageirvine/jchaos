@@ -1,0 +1,14 @@
+#Scenario=V1.0
+#width=15
+#height=7
+#title=Vesta
+#description=Be wary of Vesta's intense dislike of the undead.
+#wizard1=(13,3)[+]
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+MarbleColumn,MarbleColumn,MarbleColumn,MarbleColumn,Willy,,,,,,,,,,
+Exit[chaos/resources/scenario/raven/choose.scn]:1,Vesta,,Generator,,,,,,,,,,,
+MarbleColumn,MarbleColumn,MarbleColumn,MarbleColumn,Willy,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+
