@@ -440,5 +440,6 @@ Juno            x       48d                48e
 SpaceRaider     p       48f,490            491
 MarbleColumn    x       492
 Vesta           p       493,494    47f
+Astraea         p       495,496,497,498
 
-#next free 495
+#next free 499

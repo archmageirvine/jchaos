@@ -1,0 +1,26 @@
+#Scenario=V1.0
+#width=30
+#height=20
+#title=Astraea
+#description=Here there be aliens.
+#wizard1=(3,10)[+]
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,,,
+,,,,,,,,ForceFence,,,,,,,,,,,,,,,,,,ForceFence,,,
+,,,,,,,,ForceFence,,,,,,,,,,,,,,,,,,ForceFence,,,
+,,,,,,,,ForceFence,,,,,,,,,Astraea,,,,,,,,,ForceFence,,,
+,,,,,,,,ForceFence,,,,,,,,,,,,,,,,,,ForceFence,,,
+,,,,,,,,ForceFence,,,,,,,,,,,,,,,,,,ForceFence,,,
+,,,,,,,,ForceFence,,,,,,,,,,,,,,,,,,ForceFence,,,
+,,,,,,,,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,ForceFence,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,CrackedEgg,CrackedEgg,CrackedEgg,CrackedEgg,CrackedEgg,CrackedEgg,,,,,,,,,
+,,,,,,,,,,,,,,,CrackedEgg,,,,Alien8,CrackedEgg,,,,,,,,,
+,,,,,Spiky,,,,,,,,,,CrackedEgg,CrackedEgg,CrackedEgg,CrackedEgg,CrackedEgg,CrackedEgg,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,Spiky,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,Exit[chaos/resources/scenario/raven/choose.scn]:1,,,,,,,,,
+,,,,,Spiky,,,,,,,,,,,,,,,,,,,,,,,,
