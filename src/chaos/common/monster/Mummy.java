@@ -1,6 +1,7 @@
 package chaos.common.monster;
 
 import chaos.common.Attribute;
+import chaos.common.Humanoid;
 import chaos.common.Monster;
 import chaos.common.NoDeadImage;
 import chaos.common.UndeadMonster;
@@ -10,7 +11,7 @@ import chaos.common.Virtuous;
  * Mummy.
  * @author Sean A. Irvine
  */
-public class Mummy extends UndeadMonster implements NoDeadImage, Virtuous {
+public class Mummy extends UndeadMonster implements Humanoid, NoDeadImage, Virtuous {
   {
     setDefault(Attribute.LIFE, 14);
     setDefault(Attribute.INTELLIGENCE, 4);

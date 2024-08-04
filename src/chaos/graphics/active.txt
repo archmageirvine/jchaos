@@ -442,5 +442,6 @@ MarbleColumn    x       492
 Vesta           p       493,494    47f
 Astraea         p       495,496,497,498
 Mummy           p       499,49a,49b
+Hebe            x       49d             49e
 
 #next free 49d

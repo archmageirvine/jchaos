@@ -1,0 +1,18 @@
+#Scenario=V1.0
+#width=12
+#height=12
+#title=Hebe
+#description=Things are not as peaceful as they seem.
+#wizard1=(2,5)[+]
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,Mummy,,,,,,
+,,,,,,Hebe,,,,,Exit[chaos/resources/scenario/raven/choose.scn]:1
+,,,,,Mummy,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,

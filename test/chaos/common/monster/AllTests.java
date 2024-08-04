@@ -77,6 +77,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(HalflingTest.class);
     suite.addTestSuite(HarpyTest.class);
     suite.addTestSuite(HauntTest.class);
+    suite.addTestSuite(HebeTest.class);
     suite.addTestSuite(HiddenHorrorTest.class);
     suite.addTestSuite(HigherDevilTest.class);
     suite.addTestSuite(HippocratesTest.class);
