@@ -44,6 +44,6 @@ public class TombstoneTest extends AbstractGeneratorTest {
     assertTrue(h.contains(Skeleton.class));
     assertTrue(h.contains(SkeletonWarrior.class));
     assertTrue(h.contains(Vampire.class));
-    assertEquals(15, h.size());
+    assertEquals(16, h.size());
   }
 }
