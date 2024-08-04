@@ -100,6 +100,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(MindFlayerTest.class);
     suite.addTestSuite(MudManTest.class);
     suite.addTestSuite(MullacDeIrvineTest.class);
+    suite.addTestSuite(MummyTest.class);
     suite.addTestSuite(NamedCentaurTest.class);
     suite.addTestSuite(NamedDeityTest.class);
     suite.addTestSuite(NamedSnakeTest.class);

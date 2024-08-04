@@ -26,6 +26,6 @@ public class Ghast extends UndeadMonster implements NoDeadImage {
 
   @Override
   public Class<? extends Monster> reincarnation() {
-    return Skeleton.class;
+    return Mummy.class;
   }
 }

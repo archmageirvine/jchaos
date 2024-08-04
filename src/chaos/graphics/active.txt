@@ -413,7 +413,7 @@ Shadowmare      p       426,427,428
 NamedSnake      p       42c,42d,42e     42f
 Balrog          p       430,431,432
 DiamondSword    p       433,434
-Tombstone       s       435
+Tombstone       s       435,49c
 Flerken         p       436,437,438,439,43a     43b
 Nilbog          p       43f,440,441             442
 Hyadic          x       443
@@ -441,5 +441,6 @@ SpaceRaider     p       48f,490            491
 MarbleColumn    x       492
 Vesta           p       493,494    47f
 Astraea         p       495,496,497,498
+Mummy           p       499,49a,49b
 
-#next free 499
+#next free 49d

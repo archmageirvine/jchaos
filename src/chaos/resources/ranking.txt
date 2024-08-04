@@ -39,7 +39,7 @@ chaos.common.spell.CursedSword,chaos.common.spell.DemonicTouch
 chaos.common.spell.Reveal,chaos.common.free.Turmoil
 chaos.common.monster.Spectator
 chaos.common.spell.FireShield,chaos.common.spell.FloodShield,chaos.common.spell.EarthquakeShield,chaos.common.spell.Protection,chaos.common.free.MagicShield,chaos.common.free.Amulet,chaos.common.spell.Wisdom
-chaos.common.monster.AerialServant
+chaos.common.monster.AerialServant,chaos.common.monster.Mummy
 chaos.common.monster.MindFlayer,chaos.common.monster.Chronomancer,chaos.common.mythos.SpaceRaider,chaos.common.monster.Vesta
 chaos.common.monster.GiantRat,chaos.common.monster.GiantSpider,chaos.common.monster.GiantBeetle,chaos.common.monster.GoblinBomb,chaos.common.monster.Goblin,chaos.common.monster.Orc,chaos.common.monster.Spider,chaos.common.monster.Python,chaos.common.monster.KingCobra
 chaos.common.spell.Disease,chaos.common.spell.BowBreaker

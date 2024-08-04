@@ -15,6 +15,7 @@ import chaos.common.monster.Ghost;
 import chaos.common.monster.Ghoul;
 import chaos.common.monster.Haunt;
 import chaos.common.monster.JujuZombie;
+import chaos.common.monster.Mummy;
 import chaos.common.monster.Shadow;
 import chaos.common.monster.Skeleton;
 import chaos.common.monster.SkeletonWarrior;
@@ -31,24 +32,25 @@ import chaos.util.Random;
  */
 public class Tombstone extends AbstractGenerator implements Bonus {
 
-  private static final ArrayList<Class<? extends Actor>> GENERATEES = new ArrayList<>();
+  private static final ArrayList<Class<? extends Actor>> GENERATES = new ArrayList<>();
 
   static {
-    GENERATEES.add(Skeleton.class);
-    GENERATEES.add(SkeletonWarrior.class);
-    GENERATEES.add(Spectre.class);
-    GENERATEES.add(Zombie.class);
-    GENERATEES.add(JujuZombie.class);
-    GENERATEES.add(Wight.class);
-    GENERATEES.add(Wraith.class);
-    GENERATEES.add(Vampire.class);
-    GENERATEES.add(Haunt.class);
-    GENERATEES.add(Ghost.class);
-    GENERATEES.add(Ghast.class);
-    GENERATEES.add(Ghoul.class);
-    GENERATEES.add(CrimsonDeath.class);
-    GENERATEES.add(Drelb.class);
-    GENERATEES.add(Shadow.class);
+    GENERATES.add(Skeleton.class);
+    GENERATES.add(SkeletonWarrior.class);
+    GENERATES.add(Spectre.class);
+    GENERATES.add(Zombie.class);
+    GENERATES.add(JujuZombie.class);
+    GENERATES.add(Wight.class);
+    GENERATES.add(Wraith.class);
+    GENERATES.add(Vampire.class);
+    GENERATES.add(Haunt.class);
+    GENERATES.add(Ghost.class);
+    GENERATES.add(Ghast.class);
+    GENERATES.add(Ghoul.class);
+    GENERATES.add(CrimsonDeath.class);
+    GENERATES.add(Drelb.class);
+    GENERATES.add(Shadow.class);
+    GENERATES.add(Mummy.class);
   }
 
   {
@@ -71,7 +73,7 @@ public class Tombstone extends AbstractGenerator implements Bonus {
   public Actor chooseWhatToGenerate() {
     if (Random.nextInt(4) == 0) {
       // Generates 1 in 4 turns on average
-      return (Actor) FrequencyTable.instantiate(GENERATEES.get(Random.nextInt(GENERATEES.size())));
+      return (Actor) FrequencyTable.instantiate(GENERATES.get(Random.nextInt(GENERATES.size())));
     } else {
       return null;
     }
