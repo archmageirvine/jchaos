@@ -443,5 +443,7 @@ Vesta           p       493,494    47f
 Astraea         p       495,496,497,498
 Mummy           p       499,49a,49b
 Hebe            x       49d             49e
+Iris            p       49f,4a0,4a1,4a2,4a3,4a4
+Obscurity       x       4a5
 
-#next free 49d
+#next free 4a6

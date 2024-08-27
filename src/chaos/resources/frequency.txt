@@ -433,3 +433,6 @@ chaos.common.mythos.SpaceRaider                 1       B
 chaos.common.inanimate.MarbleColumn             5       B
 chaos.common.mythos.Astraea                     1       B
 chaos.common.monster.Mummy                      3       B
+chaos.common.spell.Obscurity                    3       B
+chaos.common.mythos.Iris                        1       B
+

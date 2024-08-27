@@ -16,14 +16,14 @@ import chaos.common.inanimate.ShadowWood;
 import chaos.common.spell.Protection;
 
 /**
- * Pallas.
+ * Hebe.
  * @author Sean A. Irvine
  */
 public class Hebe extends ListCaster implements Humanoid, Singleton {
   {
     setDefault(Attribute.LIFE, 18);
     setDefault(Attribute.LIFE_RECOVERY, 7);
-    setDefault(Attribute.MAGICAL_RESISTANCE,32);
+    setDefault(Attribute.MAGICAL_RESISTANCE, 32);
     setDefault(Attribute.MAGICAL_RESISTANCE_RECOVERY, 7);
     setDefault(Attribute.COMBAT, 1);
     setDefault(Attribute.AGILITY, 10);

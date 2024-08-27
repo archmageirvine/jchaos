@@ -63,6 +63,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(MergeTest.class);
     suite.addTestSuite(NukeTest.class);
     suite.addTestSuite(NullifyTest.class);
+    suite.addTestSuite(ObscurityTest.class);
     suite.addTestSuite(PoisonDaggerTest.class);
     suite.addTestSuite(PromoteTest.class);
     suite.addTestSuite(ProtectionTest.class);

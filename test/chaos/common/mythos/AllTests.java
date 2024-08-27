@@ -18,6 +18,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(DiamondSwordTest.class);
     suite.addTestSuite(FlerkenTest.class);
     suite.addTestSuite(HoraceTest.class);
+    suite.addTestSuite(IrisTest.class);
     suite.addTestSuite(MrStrongTest.class);
     suite.addTestSuite(OrangeTest.class);
     suite.addTestSuite(PliersTest.class);

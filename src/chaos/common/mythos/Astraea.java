@@ -2,6 +2,7 @@ package chaos.common.mythos;
 
 import chaos.common.Attribute;
 import chaos.common.Monster;
+import chaos.common.Realm;
 import chaos.common.Singleton;
 import chaos.common.Unicaster;
 import chaos.common.monster.Solar;
@@ -22,6 +23,7 @@ public class Astraea extends Unicaster implements Singleton {
     setCombatApply(Attribute.LIFE);
     setRangedCombatApply(Attribute.LIFE);
     setSpecialCombatApply(Attribute.LIFE);
+    setRealm(Realm.MYTHOS);
     mDelay = 3;
     mCastClass = Cylinder.class;
   }
