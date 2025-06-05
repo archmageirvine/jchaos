@@ -144,7 +144,6 @@ public final class ScenarioUtils {
     scenario.init(chaos, screen);
     refreshHumanEngines(chaos, screen);
     chaos.prepareToPlay(screen);
-    System.out.println("Prepare done");
     chaos.getUpdater().update(); // Ensures exit's that should be open are marked at such
     return false;
   }

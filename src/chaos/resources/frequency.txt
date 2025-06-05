@@ -435,4 +435,4 @@ chaos.common.mythos.Astraea                     1       B
 chaos.common.monster.Mummy                      3       B
 chaos.common.spell.Obscurity                    3       B
 chaos.common.mythos.Iris                        1       B
-
+chaos.common.inanimate.DancingDaisy             5       B
