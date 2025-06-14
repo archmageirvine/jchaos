@@ -1,8 +1,7 @@
-package chaos.common.inanimate;
+package chaos.common.growth;
 
 import chaos.common.AbstractMonsterTest;
 import chaos.common.Castable;
-import chaos.common.growth.Wheat;
 
 /**
  * Tests this inanimate.
@@ -13,10 +12,5 @@ public class DancingDaisyTest extends AbstractMonsterTest {
   @Override
   public Castable getCastable() {
     return new DancingDaisy();
-  }
-
-  @Override
-  public void testReincarnation() {
-    assertNull(new Wheat().reincarnation());
   }
 }

@@ -1,6 +1,5 @@
 package chaos.common.growth;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import chaos.board.Cell;
@@ -12,29 +11,26 @@ import chaos.common.FrequencyTable;
 import chaos.common.GrowthHelper;
 import chaos.common.MaterialMonster;
 import chaos.common.Monster;
-import chaos.common.NoDeadImage;
 import chaos.common.PowerUps;
 import chaos.common.State;
 import chaos.common.UndyingGrowth;
-import chaos.util.CellEffectType;
-import chaos.util.PolycellEffectEvent;
 import chaos.util.Random;
 
 /**
- * Wheat.
+ * Thistle.
  * @author Sean A. Irvine
  */
-public class Wheat extends MaterialMonster implements NoDeadImage, UndyingGrowth {
+public class Thistle extends MaterialMonster implements UndyingGrowth {
 
   {
     setDefault(Attribute.LIFE, 1);
-    setDefault(Attribute.SPECIAL_COMBAT, -1);
+    setDefault(Attribute.SPECIAL_COMBAT, 1);
     setSpecialCombatApply(Attribute.LIFE);
   }
 
   @Override
   public int getCastRange() {
-    return 1; // this is ignored but cannot be 0!
+    return 18;
   }
 
   @Override
@@ -44,7 +40,7 @@ public class Wheat extends MaterialMonster implements NoDeadImage, UndyingGrowth
 
   @Override
   public long getLosMask() {
-    return 0x0;
+    return 0x000019183C7C3C10L;
   }
 
   @Override
@@ -104,26 +100,6 @@ public class Wheat extends MaterialMonster implements NoDeadImage, UndyingGrowth
 
   @Override
   public Class<? extends Actor> sproutClass() {
-    return Wheat.class;
-  }
-
-  @Override
-  public void cast(final World world, final Caster caster, final Cell cell, final Cell casterCell) {
-    // cell is ignored here, this is effectively a free castable
-    if (world != null && casterCell != null) {
-      final HashSet<Cell> affected = new HashSet<>();
-      for (final Cell c : world.getCells(casterCell.getCellNumber(), 2, 2, false)) {
-        if (c.peek() == null || c.peek().getState() == State.DEAD) {
-          affected.add(c);
-        }
-      }
-      world.notify(new PolycellEffectEvent(affected, CellEffectType.MONSTER_CAST_EVENT, this));
-      for (final Cell c : affected) {
-        final Actor a = (Actor) FrequencyTable.instantiate(Wheat.class);
-        a.setOwner(caster.getOwner());
-        c.push(a);
-      }
-      world.notify(new PolycellEffectEvent(affected, CellEffectType.REDRAW_CELL, caster));
-    }
+    return DancingDaisy.class;
   }
 }

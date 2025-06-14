@@ -23,7 +23,7 @@ chaos.common.monster.Shadowmare chaos/resources/sound/special/hic
 
 chaos.common.inanimate.DarkWood chaos/resources/sound/special/tree_attack
 chaos.common.inanimate.Conifer chaos/resources/sound/special/crowd
-chaos.common.inanimate.DancingDaisy chaos/resources/sound/special/crowd
+chaos.common.growth.DancingDaisy chaos/resources/sound/special/crowd
 chaos.common.inanimate.Fir chaos/resources/sound/special/crowd
 chaos.common.inanimate.MagicGlass chaos/resources/sound/special/gasps
 chaos.common.inanimate.ToxicWaste chaos/resources/sound/special/drain

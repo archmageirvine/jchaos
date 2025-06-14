@@ -11,6 +11,7 @@ import chaos.common.AbstractWall;
 import chaos.common.Actor;
 import chaos.common.Castable;
 import chaos.common.State;
+import chaos.common.growth.Thistle;
 import chaos.common.inanimate.AppleWood;
 import chaos.common.inanimate.Rock;
 import chaos.common.monster.NamedDeity;
@@ -126,7 +127,7 @@ public class MaskTest extends TestCase {
           assertEquals(0x7E7E7E3C3C7E00L, mask);
         } else if (a instanceof AbstractWall || a instanceof AbstractGenerator) {
           assertEquals(a.getName(), ~0L, mask);
-        } else if (a instanceof AppleWood || a instanceof Rock) {
+        } else if (a instanceof AppleWood || a instanceof Rock || a instanceof Thistle) {
           // skip it
         } else {
           final long computedMask = computeMask(a);

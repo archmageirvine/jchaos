@@ -313,7 +313,7 @@ public class ImageUtilsTest extends TestCase {
         }
       }
       if (s <= 25) {
-        assertTrue(whiteBorderCount > 13 * (s + w - 2) / 10);
+        assertTrue("Failed at size: " + s, whiteBorderCount > 13 * (s + w - 2) / 10);
       } else {
         final int expected = 2 * (s + w - 2);
         assertEquals(expected, whiteBorderCount);

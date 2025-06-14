@@ -34,7 +34,7 @@ chaos.common.free.MeteorStorm,chaos.common.spell.Swap,chaos.common.free.Pyrotech
 chaos.common.growth.Fire,chaos.common.growth.Balefire,chaos.common.growth.DarkMatter,chaos.common.growth.Earthquake,chaos.common.growth.Magma,chaos.common.growth.Flood,chaos.common.free.Still,chaos.common.free.AcidRain,chaos.common.free.Quench,chaos.common.spell.Restoration,chaos.common.free.Boil,chaos.common.free.Storm,chaos.common.free.DestroyWall
 chaos.common.spell.PoisonDagger
 chaos.common.free.ElfBoots,chaos.common.free.Mutate,chaos.common.free.Disection,chaos.common.free.Meddle,chaos.common.free.Virtue
-chaos.common.free.Assurance,chaos.common.free.Insecurity,chaos.common.free.Stupidity,chaos.common.spell.Idiocy,chaos.common.inanimate.DancingDaisy
+chaos.common.free.Assurance,chaos.common.free.Insecurity,chaos.common.free.Stupidity,chaos.common.spell.Idiocy,chaos.common.growth.DancingDaisy,chaos.common.growth.Thistle
 chaos.common.spell.CursedSword,chaos.common.spell.DemonicTouch
 chaos.common.spell.Reveal,chaos.common.free.Turmoil
 chaos.common.monster.Spectator

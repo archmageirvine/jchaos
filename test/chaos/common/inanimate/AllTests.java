@@ -1,5 +1,6 @@
 package chaos.common.inanimate;
 
+import chaos.common.growth.DancingDaisyTest;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
@@ -18,7 +19,6 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(BipedalGeneratorTest.class);
     suite.addTestSuite(ConiferTest.class);
     suite.addTestSuite(CrackedEggTest.class);
-    suite.addTestSuite(DancingDaisyTest.class);
     suite.addTestSuite(DarkCitadelTest.class);
     suite.addTestSuite(DarkWoodTest.class);
     suite.addTestSuite(DragonNestTest.class);
