@@ -447,5 +447,6 @@ Iris            p       49f,4a0,4a1,4a2,4a3,4a4
 Obscurity       x       4a5
 DancingDaisy    p       4a6,4a7,4a8     4a9
 Thistle         s       4aa,4ab,4ac     4ad
+Triffid         p       4ae,4af,4b0     4b1
 
-#next free 4ae
+#next free 4b2

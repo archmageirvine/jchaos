@@ -140,6 +140,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(ThundermareTest.class);
     suite.addTestSuite(TigerTest.class);
     suite.addTestSuite(TRexTest.class);
+    suite.addTestSuite(TriffidTest.class);
     suite.addTestSuite(TrollTest.class);
     suite.addTestSuite(UnicornTest.class);
     suite.addTestSuite(VampireTest.class);

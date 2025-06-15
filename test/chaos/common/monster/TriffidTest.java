@@ -7,10 +7,10 @@ import chaos.common.Castable;
  * Tests this monster.
  * @author Sean A. Irvine
  */
-public class BolterTest extends AbstractMonsterTest {
+public class TriffidTest extends AbstractMonsterTest {
 
   @Override
   public Castable getCastable() {
-    return new Bolter();
+    return new Triffid();
   }
 }

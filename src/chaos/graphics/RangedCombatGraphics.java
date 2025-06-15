@@ -27,6 +27,7 @@ import chaos.common.monster.Manticore;
 import chaos.common.monster.OgreMage;
 import chaos.common.monster.Pseudodragon;
 import chaos.common.monster.Pyrohydra;
+import chaos.common.monster.Triffid;
 import chaos.common.mythos.Flerken;
 import chaos.sound.Sound;
 import chaos.util.BooleanLock;
@@ -140,7 +141,7 @@ public class RangedCombatGraphics {
         mBeam.boltWeapon(source, target, Color.CYAN);
         mAnimator.drawCell(source);
       }
-    } else if (a instanceof Manticore || a instanceof Flerken) {
+    } else if (a instanceof Manticore || a instanceof Flerken || a instanceof Triffid) {
       s = sound.play("chaos/resources/sound/ranged/bolter", SoundLevel.whatSoundLevel(a, t));
       synchronized (mScreen.lock()) {
         mBeam.boltWeapon(source, target, Color.RED);
