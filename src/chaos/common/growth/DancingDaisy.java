@@ -26,7 +26,7 @@ import chaos.util.Random;
 public class DancingDaisy extends MaterialMonster implements Inanimate, Multiplicity, UndyingGrowth {
   {
     setDefault(Attribute.LIFE, 1);
-    setDefault(Attribute.SPECIAL_COMBAT, -1);
+    setDefault(Attribute.SPECIAL_COMBAT, 1);
     setRealm(Realm.MATERIAL);
     setSpecialCombatApply(Attribute.INTELLIGENCE);
     set(PowerUps.TALISMAN, 3);
