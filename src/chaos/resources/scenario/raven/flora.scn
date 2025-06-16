@@ -1,0 +1,18 @@
+#Scenario=V1.0
+#width=12
+#height=12
+#title=Iris
+#description=Plants can be dangerous too.
+#wizard1=(0,0)[+]
+,,,,,,,,,,Bat,Bat
+,,,MagicWood,,,,,,,Bat,Bat
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,Flora,Spring,,,,,
+,,,,,,,,,,,
+Horse,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,ShadowWood,,,,,,,,
+,,,,,,,,,,,Exit[chaos/resources/scenario/raven/choose.scn]:1

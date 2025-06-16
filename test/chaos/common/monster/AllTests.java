@@ -61,6 +61,7 @@ public class AllTests extends TestSuite {
     suite.addTestSuite(FireDemonTest.class);
     suite.addTestSuite(FireElementalTest.class);
     suite.addTestSuite(FloatingEyeTest.class);
+    suite.addTestSuite(FloraTest.class);
     suite.addTestSuite(GhastTest.class);
     suite.addTestSuite(GhostTest.class);
     suite.addTestSuite(GhoulTest.class);

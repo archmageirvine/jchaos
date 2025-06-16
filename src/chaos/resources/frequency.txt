@@ -438,3 +438,4 @@ chaos.common.mythos.Iris                        1       B
 chaos.common.growth.DancingDaisy                3       B
 chaos.common.growth.Thistle                     3       B
 chaos.common.monster.Triffid                    2       B
+chaos.common.monster.Flora                      1       B
